@@ -17,6 +17,9 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
-        
+        private void lbLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
