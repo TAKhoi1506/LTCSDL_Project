@@ -1,0 +1,16 @@
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\bin\Debug\net8.0\DAL.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\bin\Debug\net8.0\DAL.pdb
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\bin\Debug\net8.0\DTO.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\bin\Debug\net8.0\DTO.pdb
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\DAL.pdb
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DAL\obj\Debug\net8.0\ref\DAL.dll

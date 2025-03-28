@@ -1,0 +1,12 @@
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\bin\Debug\net8.0\DTO.deps.json
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\bin\Debug\net8.0\DTO.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\bin\Debug\net8.0\DTO.pdb
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.sourcelink.json
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\refint\DTO.dll
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.pdb
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\ref\DTO.dll
