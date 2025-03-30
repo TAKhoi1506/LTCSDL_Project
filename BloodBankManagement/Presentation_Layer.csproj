@@ -107,6 +107,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Donors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donors.Designer.cs">
+      <DependentUpon>Donors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     <Compile Include="UC_ReceivingUnit.Designer.cs">
       <DependentUpon>UC_ReceivingUnit.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Donors.resx">
+      <DependentUpon>Donors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

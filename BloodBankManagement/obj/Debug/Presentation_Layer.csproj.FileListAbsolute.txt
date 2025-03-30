@@ -40,3 +40,47 @@ D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManage
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Home.resources
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_BloodDonationRequirement.resources
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_ReceivingUnit.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\BloodBankManagement.exe.config
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\BloodBankManagement.exe
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\BloodBankManagement.pdb
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Bunifu.Licensing.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Bunifu.UI.WinForms.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Newtonsoft.Json.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\RestSharp.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Buffers.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.CodeDom.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Memory.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Numerics.Vectors.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Text.Encodings.Web.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Text.Json.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.ValueTuple.dll
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Bunifu.UI.WinForms.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\Newtonsoft.Json.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\RestSharp.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Buffers.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.CodeDom.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Memory.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Numerics.Vectors.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Text.Encodings.Web.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Text.Json.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\bin\Debug\System.ValueTuple.xml
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.AssemblyReference.cache
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Home.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Login.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Properties.Resources.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.UC_BloodDonationRequirement.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Home.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.UC_ReceivingUnit.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.GenerateResource.cache
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.CoreCompileInputs.cache
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2Date
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.exe
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Donors.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Events.resources
