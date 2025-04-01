@@ -58,18 +58,18 @@
             this.btEvents = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.uC_ReceivingUnit1 = new BloodBankManagement.UC_ReceivingUnit();
+            this.uC_BloodDonationRequirement1 = new BloodBankManagement.UC_BloodDonationRequirement();
             this.btRegistforReceiving = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btRegistforDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btRegister = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.uC_ReceivingUnit1 = new BloodBankManagement.UC_ReceivingUnit();
-            this.uC_BloodDonationRequirement1 = new BloodBankManagement.UC_BloodDonationRequirement();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -1057,6 +1057,23 @@
             this.bunifuPanel3.Size = new System.Drawing.Size(1016, 599);
             this.bunifuPanel3.TabIndex = 3;
             // 
+            // uC_ReceivingUnit1
+            // 
+            this.uC_ReceivingUnit1.Location = new System.Drawing.Point(0, 18);
+            this.uC_ReceivingUnit1.Margin = new System.Windows.Forms.Padding(1);
+            this.uC_ReceivingUnit1.Name = "uC_ReceivingUnit1";
+            this.uC_ReceivingUnit1.Size = new System.Drawing.Size(1016, 599);
+            this.uC_ReceivingUnit1.TabIndex = 1;
+            // 
+            // uC_BloodDonationRequirement1
+            // 
+            this.uC_BloodDonationRequirement1.Location = new System.Drawing.Point(14, 8);
+            this.uC_BloodDonationRequirement1.Margin = new System.Windows.Forms.Padding(1);
+            this.uC_BloodDonationRequirement1.Name = "uC_BloodDonationRequirement1";
+            this.uC_BloodDonationRequirement1.Size = new System.Drawing.Size(1000, 573);
+            this.uC_BloodDonationRequirement1.TabIndex = 0;
+            this.uC_BloodDonationRequirement1.Visible = false;
+            // 
             // btRegistforReceiving
             // 
             this.btRegistforReceiving.AllowAnimations = true;
@@ -1265,6 +1282,22 @@
             this.pnHome.Size = new System.Drawing.Size(1370, 67);
             this.pnHome.TabIndex = 2;
             // 
+            // bunifuPictureBox2
+            // 
+            this.bunifuPictureBox2.AllowFocused = false;
+            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox2.AutoSizeHeight = true;
+            this.bunifuPictureBox2.BorderRadius = 23;
+            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
+            this.bunifuPictureBox2.IsCircle = true;
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(13, 9);
+            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(47, 47);
+            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuPictureBox2.TabIndex = 5;
+            this.bunifuPictureBox2.TabStop = false;
+            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
@@ -1368,7 +1401,7 @@
             this.btHome.Size = new System.Drawing.Size(143, 48);
             this.btHome.TabIndex = 1;
             this.btHome.TabStop = false;
-            this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btHome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btHome.TextMarginLeft = 0;
             this.btHome.TextPadding = new System.Windows.Forms.Padding(0);
@@ -1460,7 +1493,7 @@
             this.btRegister.Size = new System.Drawing.Size(144, 48);
             this.btRegister.TabIndex = 1;
             this.btRegister.TabStop = false;
-            this.btRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btRegister.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btRegister.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btRegister.TextMarginLeft = 0;
             this.btRegister.TextPadding = new System.Windows.Forms.Padding(0);
@@ -1552,7 +1585,7 @@
             this.btLogin.Size = new System.Drawing.Size(114, 48);
             this.btLogin.TabIndex = 1;
             this.btLogin.TabStop = false;
-            this.btLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btLogin.TextMarginLeft = 0;
             this.btLogin.TextPadding = new System.Windows.Forms.Padding(0);
@@ -1644,7 +1677,7 @@
             this.bunifuButton22.Size = new System.Drawing.Size(180, 48);
             this.bunifuButton22.TabIndex = 1;
             this.bunifuButton22.TabStop = false;
-            this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
@@ -1667,39 +1700,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1370, 0);
             this.bunifuPanel1.TabIndex = 0;
             // 
-            // bunifuPictureBox2
-            // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 23;
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(13, 9);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(47, 47);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuPictureBox2.TabIndex = 5;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // uC_ReceivingUnit1
-            // 
-            this.uC_ReceivingUnit1.Location = new System.Drawing.Point(0, 18);
-            this.uC_ReceivingUnit1.Margin = new System.Windows.Forms.Padding(1);
-            this.uC_ReceivingUnit1.Name = "uC_ReceivingUnit1";
-            this.uC_ReceivingUnit1.Size = new System.Drawing.Size(1016, 599);
-            this.uC_ReceivingUnit1.TabIndex = 1;
-            // 
-            // uC_BloodDonationRequirement1
-            // 
-            this.uC_BloodDonationRequirement1.Location = new System.Drawing.Point(14, 8);
-            this.uC_BloodDonationRequirement1.Margin = new System.Windows.Forms.Padding(1);
-            this.uC_BloodDonationRequirement1.Name = "uC_BloodDonationRequirement1";
-            this.uC_BloodDonationRequirement1.Size = new System.Drawing.Size(1000, 573);
-            this.uC_BloodDonationRequirement1.TabIndex = 0;
-            this.uC_BloodDonationRequirement1.Visible = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1711,9 +1711,10 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.pnHome);
             this.Controls.Add(this.bunifuPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "KVN BLOOD BANK";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);

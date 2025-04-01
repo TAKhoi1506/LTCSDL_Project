@@ -84,3 +84,7 @@ F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagem
 F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
 F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Donors.resources
 F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Events.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.RegisterRU.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.Register.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.RegisterDonor.resources
+F:\OU COURSES\LTCSDL\FinalProject\BloodBankManagement\obj\Debug\BloodBankManagement.BloodRequirement.resources

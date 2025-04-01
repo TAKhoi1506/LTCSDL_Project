@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\Bussiness_Layer\\Bussiness_Layer.csproj": {}
+    "F:\\OU COURSES\\LTCSDL\\FinalProject\\Bussiness_Layer\\Bussiness_Layer.csproj": {}
   },
   "projects": {
-    "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\Bussiness_Layer\\Bussiness_Layer.csproj": {
+    "F:\\OU COURSES\\LTCSDL\\FinalProject\\Bussiness_Layer\\Bussiness_Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\Bussiness_Layer\\Bussiness_Layer.csproj",
+        "projectUniqueName": "F:\\OU COURSES\\LTCSDL\\FinalProject\\Bussiness_Layer\\Bussiness_Layer.csproj",
         "projectName": "Bussiness_Layer",
-        "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\Bussiness_Layer\\Bussiness_Layer.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\Bussiness_Layer\\obj\\",
+        "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\Bussiness_Layer\\Bussiness_Layer.csproj",
+        "packagesPath": "C:\\Users\\tuong\\.nuget\\packages\\",
+        "outputPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\Bussiness_Layer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\DAL.csproj"
+              "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj"
               },
-              "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj"
+              "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj": {
+                "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj"
               }
             }
           }
@@ -46,7 +50,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -67,21 +72,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\DAL.csproj": {
+    "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\DAL.csproj",
+        "projectUniqueName": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DAL\\obj\\",
+        "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\tuong\\.nuget\\packages\\",
+        "outputPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,8 +104,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj"
+              "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj": {
+                "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj"
               }
             }
           }
@@ -110,7 +119,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -131,21 +141,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj": {
+    "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj",
+        "projectUniqueName": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\OU\\HK8\\LTCSDL\\BloodBankManagement_Project\\BloodBankManagement\\DTO\\obj\\",
+        "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\tuong\\.nuget\\packages\\",
+        "outputPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,7 +184,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -191,7 +206,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
