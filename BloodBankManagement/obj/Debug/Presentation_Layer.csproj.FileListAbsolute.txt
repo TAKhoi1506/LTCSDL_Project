@@ -39,4 +39,8 @@ D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManage
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Home.resources
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_BloodDonationRequirement.resources
-D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_ReceivingUnit.resources
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_RegisterforBloodDonation.resources
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Events.resources
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_UserManagement.resources
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_RegisterForBloodRequirement.resources
+D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Test.resources

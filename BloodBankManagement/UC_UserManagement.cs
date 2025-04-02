@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace BloodBankManagement
 {
-    public partial class UC_ReceivingUnit : UserControl
+    public partial class UC_UserManagement : UserControl
     {
-        public UC_ReceivingUnit()
+        public UC_UserManagement()
         {
             InitializeComponent();
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
