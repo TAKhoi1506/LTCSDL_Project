@@ -91,8 +91,6 @@
             this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(47, 132);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -144,10 +142,6 @@
             this.bunifuTextBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.bunifuTextBox1.HideSelection = true;
             this.bunifuTextBox1.IconLeft = global::BloodBankManagement.Properties.Resources.loupe;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
             this.bunifuTextBox1.Location = new System.Drawing.Point(794, 51);
             this.bunifuTextBox1.MaxLength = 32767;

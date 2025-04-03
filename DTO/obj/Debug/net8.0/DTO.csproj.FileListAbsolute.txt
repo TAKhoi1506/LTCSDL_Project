@@ -10,3 +10,15 @@ D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\n
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\refint\DTO.dll
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\DTO.pdb
 D:\OU\HK8\LTCSDL\BloodBankManagement_Project\BloodBankManagement\DTO\obj\Debug\net8.0\ref\DTO.dll
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\bin\Debug\net8.0\DTO.deps.json
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\bin\Debug\net8.0\DTO.dll
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\bin\Debug\net8.0\DTO.pdb
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.sourcelink.json
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.dll
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\refint\DTO.dll
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\DTO.pdb
+F:\OU COURSES\LTCSDL\PrjTestMerge\DTO\obj\Debug\net8.0\ref\DTO.dll

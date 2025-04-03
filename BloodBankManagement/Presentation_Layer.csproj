@@ -107,29 +107,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BloodRequirement.cs">
+    <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BloodRequirement.Designer.cs">
-      <DependentUpon>BloodRequirement.cs</DependentUpon>
+    <Compile Include="FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Donors.cs">
+    <Compile Include="FrmDonor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Donors.Designer.cs">
-      <DependentUpon>Donors.cs</DependentUpon>
+    <Compile Include="FrmDonor.Designer.cs">
+      <DependentUpon>FrmDonor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events.cs">
+    <Compile Include="FrmReceivingUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Events.Designer.cs">
-      <DependentUpon>Events.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="FrmReceivingUnit.Designer.cs">
+      <DependentUpon>FrmReceivingUnit.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -145,29 +139,29 @@
     <Compile Include="RegisterDonor.Designer.cs">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisterRU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegisterRU.Designer.cs">
-      <DependentUpon>RegisterRU.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_BloodDonationRequirement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_BloodDonationRequirement.Designer.cs">
       <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BloodStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BloodStock.Designer.cs">
+      <DependentUpon>UC_BloodStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Donors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Donors.Designer.cs">
+      <DependentUpon>UC_Donors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Events.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Events.Designer.cs">
+      <DependentUpon>UC_Events.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
@@ -175,23 +169,38 @@
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_ReceivingUnit.cs">
+    <Compile Include="UC_ReceivingUnits.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_ReceivingUnit.Designer.cs">
-      <DependentUpon>UC_ReceivingUnit.cs</DependentUpon>
+    <Compile Include="UC_ReceivingUnits.Designer.cs">
+      <DependentUpon>UC_ReceivingUnits.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BloodRequirement.resx">
-      <DependentUpon>BloodRequirement.cs</DependentUpon>
+    <Compile Include="UC_RegisterforBloodDonation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_RegisterforBloodDonation.Designer.cs">
+      <DependentUpon>UC_RegisterforBloodDonation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_RegisterForBloodRequirement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_RegisterForBloodRequirement.Designer.cs">
+      <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_UserManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_UserManagement.Designer.cs">
+      <DependentUpon>UC_UserManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Donors.resx">
-      <DependentUpon>Donors.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDonor.resx">
+      <DependentUpon>FrmDonor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Events.resx">
-      <DependentUpon>Events.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReceivingUnit.resx">
+      <DependentUpon>FrmReceivingUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -209,20 +218,32 @@
     <EmbeddedResource Include="RegisterDonor.resx">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterRU.resx">
-      <DependentUpon>RegisterRU.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_BloodDonationRequirement.resx">
       <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BloodStock.resx">
+      <DependentUpon>UC_BloodStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Donors.resx">
+      <DependentUpon>UC_Donors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Events.resx">
+      <DependentUpon>UC_Events.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_ReceivingUnit.resx">
-      <DependentUpon>UC_ReceivingUnit.cs</DependentUpon>
+    <EmbeddedResource Include="UC_ReceivingUnits.resx">
+      <DependentUpon>UC_ReceivingUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RegisterforBloodDonation.resx">
+      <DependentUpon>UC_RegisterforBloodDonation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RegisterForBloodRequirement.resx">
+      <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_UserManagement.resx">
+      <DependentUpon>UC_UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

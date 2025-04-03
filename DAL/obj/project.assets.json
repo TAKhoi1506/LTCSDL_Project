@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj",
+      "projectUniqueName": "F:\\OU COURSES\\LTCSDL\\PrjTestMerge\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\DAL.csproj",
+      "projectPath": "F:\\OU COURSES\\LTCSDL\\PrjTestMerge\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\tuong\\.nuget\\packages\\",
-      "outputPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DAL\\obj\\",
+      "outputPath": "F:\\OU COURSES\\LTCSDL\\PrjTestMerge\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj": {
-              "projectPath": "F:\\OU COURSES\\LTCSDL\\FinalProject\\DTO\\DTO.csproj"
+            "F:\\OU COURSES\\LTCSDL\\PrjTestMerge\\DTO\\DTO.csproj": {
+              "projectPath": "F:\\OU COURSES\\LTCSDL\\PrjTestMerge\\DTO\\DTO.csproj"
             }
           }
         }

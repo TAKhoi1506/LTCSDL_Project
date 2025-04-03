@@ -16,7 +16,7 @@ namespace BloodBankManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BloodRequirement());
+            Application.Run(new FrmAdmin());
         }
     }
 }
