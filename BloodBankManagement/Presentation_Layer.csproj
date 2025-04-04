@@ -151,6 +151,12 @@
     <Compile Include="UC_BloodStock.Designer.cs">
       <DependentUpon>UC_BloodStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Donations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Donations.Designer.cs">
+      <DependentUpon>UC_Donations.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Donors.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_BloodStock.resx">
       <DependentUpon>UC_BloodStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Donations.resx">
+      <DependentUpon>UC_Donations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Donors.resx">
       <DependentUpon>UC_Donors.cs</DependentUpon>

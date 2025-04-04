@@ -61,6 +61,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -80,6 +84,8 @@
             this.cbUnitType = new System.Windows.Forms.ComboBox();
             this.dgvReceivingUnits = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btAddUnit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.txtContactName = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceivingUnits)).BeginInit();
             this.SuspendLayout();
             // 
@@ -389,7 +395,7 @@
             this.txtUsername.Padding = new System.Windows.Forms.Padding(3);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtUsername.PlaceholderText = "Username";
+            this.txtUsername.PlaceholderText = "Enter username";
             this.txtUsername.ReadOnly = false;
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
@@ -403,7 +409,7 @@
             this.txtUsername.TextMarginBottom = 0;
             this.txtUsername.TextMarginLeft = 3;
             this.txtUsername.TextMarginTop = 1;
-            this.txtUsername.TextPlaceholder = "Username";
+            this.txtUsername.TextPlaceholder = "Enter username";
             this.txtUsername.UseSystemPasswordChar = false;
             this.txtUsername.WordWrap = true;
             // 
@@ -588,7 +594,7 @@
             this.txtPhoneNo.IconRight = null;
             this.txtPhoneNo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhoneNo.Lines = new string[0];
-            this.txtPhoneNo.Location = new System.Drawing.Point(782, 53);
+            this.txtPhoneNo.Location = new System.Drawing.Point(782, 90);
             this.txtPhoneNo.MaxLength = 32767;
             this.txtPhoneNo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPhoneNo.Modified = false;
@@ -617,7 +623,7 @@
             this.txtPhoneNo.Padding = new System.Windows.Forms.Padding(3);
             this.txtPhoneNo.PasswordChar = '\0';
             this.txtPhoneNo.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtPhoneNo.PlaceholderText = "Phone number";
+            this.txtPhoneNo.PlaceholderText = "Enter phone number";
             this.txtPhoneNo.ReadOnly = false;
             this.txtPhoneNo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPhoneNo.SelectedText = "";
@@ -631,7 +637,7 @@
             this.txtPhoneNo.TextMarginBottom = 0;
             this.txtPhoneNo.TextMarginLeft = 3;
             this.txtPhoneNo.TextMarginTop = 1;
-            this.txtPhoneNo.TextPlaceholder = "Phone number";
+            this.txtPhoneNo.TextPlaceholder = "Enter phone number";
             this.txtPhoneNo.UseSystemPasswordChar = false;
             this.txtPhoneNo.WordWrap = true;
             // 
@@ -642,7 +648,7 @@
             this.bunifuLabel9.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel9.Location = new System.Drawing.Point(604, 58);
+            this.bunifuLabel9.Location = new System.Drawing.Point(604, 89);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(129, 22);
@@ -680,7 +686,7 @@
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(782, 90);
+            this.txtEmail.Location = new System.Drawing.Point(783, 122);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -709,7 +715,7 @@
             this.txtEmail.Padding = new System.Windows.Forms.Padding(3);
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.PlaceholderText = "Enter email";
             this.txtEmail.ReadOnly = false;
             this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtEmail.SelectedText = "";
@@ -723,7 +729,7 @@
             this.txtEmail.TextMarginBottom = 0;
             this.txtEmail.TextMarginLeft = 3;
             this.txtEmail.TextMarginTop = 1;
-            this.txtEmail.TextPlaceholder = "Email";
+            this.txtEmail.TextPlaceholder = "Enter email";
             this.txtEmail.UseSystemPasswordChar = false;
             this.txtEmail.WordWrap = true;
             // 
@@ -734,7 +740,7 @@
             this.bunifuLabel8.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel8.Location = new System.Drawing.Point(604, 92);
+            this.bunifuLabel8.Location = new System.Drawing.Point(604, 120);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(52, 22);
@@ -750,7 +756,7 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(604, 124);
+            this.bunifuLabel1.Location = new System.Drawing.Point(604, 151);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(78, 22);
@@ -766,7 +772,7 @@
             "Hospital",
             "Clinic",
             "Nursing home"});
-            this.cbUnitType.Location = new System.Drawing.Point(782, 125);
+            this.cbUnitType.Location = new System.Drawing.Point(782, 154);
             this.cbUnitType.Name = "cbUnitType";
             this.cbUnitType.Size = new System.Drawing.Size(231, 21);
             this.cbUnitType.TabIndex = 44;
@@ -789,7 +795,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvReceivingUnits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvReceivingUnits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceivingUnits.ColumnHeadersHeight = 40;
             this.dgvReceivingUnits.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvReceivingUnits.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvReceivingUnits.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -919,10 +925,104 @@
             this.btAddUnit.TextPadding = new System.Windows.Forms.Padding(0);
             this.btAddUnit.UseDefaultRadiusAndThickness = true;
             // 
+            // txtContactName
+            // 
+            this.txtContactName.AcceptsReturn = false;
+            this.txtContactName.AcceptsTab = false;
+            this.txtContactName.AnimationSpeed = 200;
+            this.txtContactName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtContactName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtContactName.AutoSizeHeight = true;
+            this.txtContactName.BackColor = System.Drawing.Color.Transparent;
+            this.txtContactName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtContactName.BackgroundImage")));
+            this.txtContactName.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtContactName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtContactName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtContactName.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtContactName.BorderRadius = 1;
+            this.txtContactName.BorderThickness = 1;
+            this.txtContactName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtContactName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContactName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContactName.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContactName.DefaultText = "";
+            this.txtContactName.FillColor = System.Drawing.Color.White;
+            this.txtContactName.HideSelection = true;
+            this.txtContactName.IconLeft = null;
+            this.txtContactName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContactName.IconPadding = 10;
+            this.txtContactName.IconRight = null;
+            this.txtContactName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContactName.Lines = new string[0];
+            this.txtContactName.Location = new System.Drawing.Point(782, 58);
+            this.txtContactName.MaxLength = 32767;
+            this.txtContactName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtContactName.Modified = false;
+            this.txtContactName.Multiline = false;
+            this.txtContactName.Name = "txtContactName";
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContactName.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtContactName.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContactName.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContactName.OnIdleState = stateProperties32;
+            this.txtContactName.Padding = new System.Windows.Forms.Padding(3);
+            this.txtContactName.PasswordChar = '\0';
+            this.txtContactName.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtContactName.PlaceholderText = "Enter representative\'s name";
+            this.txtContactName.ReadOnly = false;
+            this.txtContactName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtContactName.SelectedText = "";
+            this.txtContactName.SelectionLength = 0;
+            this.txtContactName.SelectionStart = 0;
+            this.txtContactName.ShortcutsEnabled = true;
+            this.txtContactName.Size = new System.Drawing.Size(231, 25);
+            this.txtContactName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtContactName.TabIndex = 48;
+            this.txtContactName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContactName.TextMarginBottom = 0;
+            this.txtContactName.TextMarginLeft = 3;
+            this.txtContactName.TextMarginTop = 1;
+            this.txtContactName.TextPlaceholder = "Enter representative\'s name";
+            this.txtContactName.UseSystemPasswordChar = false;
+            this.txtContactName.WordWrap = true;
+            // 
+            // bunifuLabel10
+            // 
+            this.bunifuLabel10.AllowParentOverrides = false;
+            this.bunifuLabel10.AutoEllipsis = false;
+            this.bunifuLabel10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel10.Location = new System.Drawing.Point(604, 58);
+            this.bunifuLabel10.Name = "bunifuLabel10";
+            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel10.Size = new System.Drawing.Size(122, 22);
+            this.bunifuLabel10.TabIndex = 47;
+            this.bunifuLabel10.Text = "Contact name:";
+            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UC_ReceivingUnits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtContactName);
+            this.Controls.Add(this.bunifuLabel10);
             this.Controls.Add(this.btAddUnit);
             this.Controls.Add(this.dgvReceivingUnits);
             this.Controls.Add(this.cbUnitType);
@@ -971,5 +1071,7 @@
         private System.Windows.Forms.ComboBox cbUnitType;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvReceivingUnits;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btAddUnit;
+        private Bunifu.UI.WinForms.BunifuTextBox txtContactName;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
     }
 }
