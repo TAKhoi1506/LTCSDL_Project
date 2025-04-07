@@ -139,6 +139,12 @@
     <Compile Include="RegisterDonor.Designer.cs">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Benefits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Benefits.Designer.cs">
+      <DependentUpon>UC_Benefits.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_BloodDonationRequirement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,11 +175,23 @@
     <Compile Include="UC_Events.Designer.cs">
       <DependentUpon>UC_Events.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_HistoryDonations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_HistoryDonations.Designer.cs">
+      <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PersonalInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PersonalInformation.Designer.cs">
+      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ReceivingUnits.cs">
       <SubType>UserControl</SubType>
@@ -193,11 +211,11 @@
     <Compile Include="UC_RegisterForBloodRequirement.Designer.cs">
       <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_UserManagement.cs">
+    <Compile Include="UC_UnitInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_UserManagement.Designer.cs">
-      <DependentUpon>UC_UserManagement.cs</DependentUpon>
+    <Compile Include="UC_UnitInformation.Designer.cs">
+      <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
@@ -224,6 +242,9 @@
     <EmbeddedResource Include="RegisterDonor.resx">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Benefits.resx">
+      <DependentUpon>UC_Benefits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_BloodDonationRequirement.resx">
       <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,8 +260,14 @@
     <EmbeddedResource Include="UC_Events.resx">
       <DependentUpon>UC_Events.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_HistoryDonations.resx">
+      <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PersonalInformation.resx">
+      <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ReceivingUnits.resx">
       <DependentUpon>UC_ReceivingUnits.cs</DependentUpon>
@@ -251,8 +278,8 @@
     <EmbeddedResource Include="UC_RegisterForBloodRequirement.resx">
       <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_UserManagement.resx">
-      <DependentUpon>UC_UserManagement.cs</DependentUpon>
+    <EmbeddedResource Include="UC_UnitInformation.resx">
+      <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

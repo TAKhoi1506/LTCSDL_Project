@@ -131,9 +131,9 @@
             this.bunifuLabel6.Location = new System.Drawing.Point(47, 151);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(25, 22);
+            this.bunifuLabel6.Size = new System.Drawing.Size(62, 22);
             this.bunifuLabel6.TabIndex = 31;
-            this.bunifuLabel6.Text = "ID:";
+            this.bunifuLabel6.Text = "Unit ID:";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -199,7 +199,7 @@
             this.txtPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtPassword.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtPassword.BorderRadius = 1;
+            this.txtPassword.BorderRadius = 20;
             this.txtPassword.BorderThickness = 1;
             this.txtPassword.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -275,7 +275,7 @@
             this.txtUnitName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUnitName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUnitName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUnitName.BorderRadius = 1;
+            this.txtUnitName.BorderRadius = 20;
             this.txtUnitName.BorderThickness = 1;
             this.txtUnitName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUnitName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -351,7 +351,7 @@
             this.txtUsername.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUsername.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUsername.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUsername.BorderRadius = 1;
+            this.txtUsername.BorderRadius = 20;
             this.txtUsername.BorderThickness = 1;
             this.txtUsername.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -427,7 +427,7 @@
             this.txtId.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtId.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtId.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtId.BorderRadius = 1;
+            this.txtId.BorderRadius = 20;
             this.txtId.BorderThickness = 1;
             this.txtId.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -471,7 +471,7 @@
             this.txtId.Padding = new System.Windows.Forms.Padding(3);
             this.txtId.PasswordChar = '\0';
             this.txtId.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtId.PlaceholderText = "Enter ID";
+            this.txtId.PlaceholderText = "Enter unit ID";
             this.txtId.ReadOnly = false;
             this.txtId.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtId.SelectedText = "";
@@ -485,7 +485,7 @@
             this.txtId.TextMarginBottom = 0;
             this.txtId.TextMarginLeft = 3;
             this.txtId.TextMarginTop = 1;
-            this.txtId.TextPlaceholder = "Enter ID";
+            this.txtId.TextPlaceholder = "Enter unit ID";
             this.txtId.UseSystemPasswordChar = false;
             this.txtId.WordWrap = true;
             // 
@@ -503,7 +503,7 @@
             this.txtAddress.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtAddress.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtAddress.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtAddress.BorderRadius = 1;
+            this.txtAddress.BorderRadius = 20;
             this.txtAddress.BorderThickness = 1;
             this.txtAddress.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -579,7 +579,7 @@
             this.txtPhoneNo.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtPhoneNo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtPhoneNo.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtPhoneNo.BorderRadius = 1;
+            this.txtPhoneNo.BorderRadius = 20;
             this.txtPhoneNo.BorderThickness = 1;
             this.txtPhoneNo.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtPhoneNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -671,7 +671,7 @@
             this.txtEmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtEmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtEmail.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 1;
+            this.txtEmail.BorderRadius = 20;
             this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -877,7 +877,7 @@
             this.btAddUnit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btAddUnit.IconSize = 25;
             this.btAddUnit.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddUnit.IdleBorderRadius = 1;
+            this.btAddUnit.IdleBorderRadius = 20;
             this.btAddUnit.IdleBorderThickness = 1;
             this.btAddUnit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.btAddUnit.IdleIconLeftImage = null;
@@ -886,7 +886,7 @@
             this.btAddUnit.Location = new System.Drawing.Point(861, 182);
             this.btAddUnit.Name = "btAddUnit";
             this.btAddUnit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btAddUnit.OnDisabledState.BorderRadius = 1;
+            this.btAddUnit.OnDisabledState.BorderRadius = 20;
             this.btAddUnit.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddUnit.OnDisabledState.BorderThickness = 1;
             this.btAddUnit.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -894,7 +894,7 @@
             this.btAddUnit.OnDisabledState.IconLeftImage = null;
             this.btAddUnit.OnDisabledState.IconRightImage = null;
             this.btAddUnit.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btAddUnit.onHoverState.BorderRadius = 1;
+            this.btAddUnit.onHoverState.BorderRadius = 20;
             this.btAddUnit.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddUnit.onHoverState.BorderThickness = 1;
             this.btAddUnit.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -902,7 +902,7 @@
             this.btAddUnit.onHoverState.IconLeftImage = null;
             this.btAddUnit.onHoverState.IconRightImage = null;
             this.btAddUnit.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddUnit.OnIdleState.BorderRadius = 1;
+            this.btAddUnit.OnIdleState.BorderRadius = 20;
             this.btAddUnit.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddUnit.OnIdleState.BorderThickness = 1;
             this.btAddUnit.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
@@ -910,7 +910,7 @@
             this.btAddUnit.OnIdleState.IconLeftImage = null;
             this.btAddUnit.OnIdleState.IconRightImage = null;
             this.btAddUnit.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btAddUnit.OnPressedState.BorderRadius = 1;
+            this.btAddUnit.OnPressedState.BorderRadius = 20;
             this.btAddUnit.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddUnit.OnPressedState.BorderThickness = 1;
             this.btAddUnit.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -939,7 +939,7 @@
             this.txtContactName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtContactName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtContactName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtContactName.BorderRadius = 1;
+            this.txtContactName.BorderRadius = 20;
             this.txtContactName.BorderThickness = 1;
             this.txtContactName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtContactName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;

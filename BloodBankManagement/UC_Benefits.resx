@@ -117,64 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbTitle.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 3px;font-family: 'Arial Rounded MT Bold'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial Rounded MT Bold'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century'; font-size: 14.25pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
-  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>- Being provided with information about the signs and symptoms of diseases caused by hepatitis viruses, HIV, and other blood-borne infections.
+
+- Being informed about the blood donation process, potential adverse reactions, and the tests conducted before and after donation.
+
+- Having confidentiality ensured regarding clinical examination results and test outcomes; receiving counseling on any abnormalities detected during health screening or blood donation; receiving health care guidance; and being counseled on abnormal test results in accordance with Clause 4, Article 17 of Circular No. 26/2013/TT-BYT.
+
+- Receiving care and treatment in case of any adverse reactions during or after blood donation as stipulated in Appendix 4 issued with Circular No. 26/2013/TT-BYT. Being supported with treatment and care costs if adverse reactions occur. The funding for this support shall comply with legal regulations.
+
+- Being considered for recognition, commendation, and other spiritual and material benefits by competent authorities in accordance with the law. (Article 12, Circular No. 26/2013/TT-BYT)</value>
   </data>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="donorID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="eventID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="bunifuLabel14.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <data name="bunifuLabel18.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'Arial'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(160, 160, 160); text-align: right; }</value>
-  </data>
-  <data name="bunifuLabel15.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>(1) Age: From 18 to 60 years old.
+
+(2) Health:
+- Individuals weighing at least 42 kg (for women) or 45 kg (for men) are eligible to donate whole blood.
+     + Individuals weighing from 42 kg to under 45 kg may donate no more than 250 ml of whole blood per donation.
+     + Individuals weighing 45 kg or more may donate no more than 9 ml of whole blood per kilogram of body weight, and not exceeding 500 ml per donation.
+- Individuals weighing at least 50 kg may donate blood components through apheresis.
+     + A donor may give one or more blood components per apheresis session, but the total volume must not exceed 500 ml.
+     + Individuals weighing at least 60 kg may donate up to 650 ml of total blood components per session.
+- Donors must not have chronic or acute diseases related to the nervous, psychiatric, respiratory, circulatory, urinary, digestive, hepatobiliary, endocrine systems, blood and hematopoietic organs, systemic or autoimmune diseases, or severe allergic conditions. Women must not be pregnant at the time of donation.
+- Donors must have no history of organ removal, donation, or transplantation.
+- Must not be addicted to drugs or alcohol.
+- Must not have severe or particularly severe disabilities as defined in the Law on Persons with Disabilities.
+- Must not be using certain medications as specified in Appendix 1 of Circular No. 26/2013/TT-BYT.
+- Must not have any blood-borne or sexually transmitted infections at the time of donation.
+
+Clinical Evaluation:
+- Alert and responsive.
+- Systolic blood pressure between 100 mmHg and under 160 mmHg; diastolic pressure between 60 mmHg and under 100 mmHg.
+- Heart rate regular, between 60 and 90 beats per minute.
+- Must not exhibit any of the following: emaciation, rapid weight loss (more than 10% of body weight in 6 months); pale skin or mucous membranes; dizziness or lightheadedness; night sweats; enlarged lymph nodes in multiple areas; fever; swelling; cough or shortness of breath; diarrhea; any type of bleeding; abnormal skin lesions or signs.
+
+Testing:
+- For whole blood and component donations via apheresis: hemoglobin must be at least 120 g/l; for whole blood donations exceeding 350 ml, at least 125 g/l.
+- For plasma donation via apheresis: total serum protein must be at least 60 g/l, tested within one month of donation.
+- For platelet, granulocyte, or stem cell donation via apheresis: platelet count must be ≥150 × 10⁹/l.
+
+(3) In addition to criteria (1) and (2), eligibility for blood donation is subject to the evaluation and decision of the physician responsible for donor selection.
+ (Article 4, Circular No. 26/2013/TT-BYT)
+</value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtFullName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARIAAAAgCAYAAADe8vcxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKySURBVHhe7d2/ihpRFMfxKVNumTKPsOWWeYKw5T5CSJcy
-        kAdIl26LwBapUgTSBVJlHa9ORMRFRKLBPysishhxjSSDK2LOGY8bRNfRSFK43w/cwp25s9X9cebemTse
-        APw35+fnx6lU6n06nb7QlkgkpjQabb/afHzrWJcxfyLtgUXA35OLHDjnXvm+Py4UCtedTmfa7/ejBmD/
-        zMe3jvVisThIJpOhBMsbyYKHFgvbkUR6Iq1fq9XCyWRi/wbAfaJjv9lsjiULBhIozyweNiOdnufz+d54
-        PLbLAbjPNFBKpVIvCIIzi4n1NES0g/UHgFv1ej2UMHlncbGa3s5oJWJ9AGBJpVIZOOdeWGws0skUvQ9i
-        PgTAOpoRmUzmu2TGocXHHzozq5Mqdi4A3Knb7epS8WeLjxldK9ZlHqoRAJuSIBlKdjyyGImC5ETXjO04
-        AMSqVquh7/svLUai25qPV1dXdhgA4umDa5IdFxYj0WrN18GAggTA5sIwnDrnuhYjnqc/9I8AsA19P8di
-        xPP0BwBsiyABsDOCBMDOCBIAO1sIkmQyORiNRnYIADazECSpVKo+HA7tEADE0+JDixCLkeiBtC+9Hi/9
-        AticFh9ahFiMRI/IPy2Xyz/tOADEajQaunPaa4uR2RYCzjmCBMDGstlsX7LjyGJkRl8J1leDASDO0m3N
-        nCTLYSaTubbzAOBO+lUJyYxji49FQRCcyn3PDzsXAJa02+0buYP5YLGxmoSJ3+l0bqwPANzSXQIkI4pS
-        jaz/cJaeoGFyeXn5y/oCgH40SyuRb5IRBxYX8SRMznK5XJ+v6gH3m06s6pyIZMKn2EpkFen0WHdA0mWe
-        VqsVbWQCYP/pWG+321MtJnR1RrJg9cTqNuQiR865U90ASZ+tp9Fo+910rEuAvNViwmIAAP4lz/sNTGtV
-        b0oyN1YAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btAddDonation.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAnCAYAAAARgpr4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHnSURBVHhe7dyxSgNBFEbhgZ3dWFpaWvoIlpaWllZuGt/C
-        wgcQBF9DsAtYBaxSWtgLKWwUUVEUtND/JiOSzUYkZnKbM/BhdDaxOcxmip0wa9QhrNRluVvH2OvGeCl3
-        3bL8BH5lnYx76aufrjpaTUn9bdRFsa3o7vUBT63/APiLGJ/lQRHup7RmD6tUF5/pjQ9THwTMSQvZo34O
-        1NdaSm1ypPCGqvS9+WZgIayvTmc9JfczbMUjPGSn74MpufGw73ia4FaLZXhRb4fj8GxXa5uL9guBhbPe
-        6qraCLYd1lL43HYRkIOa+9DPY/uu129OAtnFeB20BN60TgIZ2eoX9OK1OQEsg8XXOgHkRnxwQ3xwQ3xw
-        Q3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwQ3xwYw8Q2cMcrZNATvYAEQcAwYXddgfN
-        PwK52YNrtvId6Je35iSQVYynwQ5u0QuOysDS2KlVdVXtjI7M2CvLI208OLUA2amzd8V3PgrPhp3X0q2q
-        q7aLgUVSeLd2HF9Kbzzs4BZNsvNFNlr17uui2ErJTQ5Vuanvf0NdyAYEC5Nutbczw/seo1twWZ4ImxD8
-        n53rXRQXU7fa34ZVatthfQCHgmMer1rtelr1dlNSjRHCF4k/peGmXxaNAAAAAElFTkSuQmCC
-</value>
+    <value>#bunifu-label { padding: 0px; font-family: 'Century'; font-size: 14.25pt; width: 100%; height: 100%; font-style: italic; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
 </root>

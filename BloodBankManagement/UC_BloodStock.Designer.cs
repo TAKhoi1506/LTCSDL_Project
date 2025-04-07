@@ -127,7 +127,6 @@
             this.dgvStock.EnableHeadersVisualStyles = false;
             this.dgvStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvStock.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvStock.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvStock.HeaderForeColor = System.Drawing.Color.White;
             this.dgvStock.Location = new System.Drawing.Point(39, 242);
             this.dgvStock.Name = "dgvStock";
@@ -361,7 +360,6 @@
             this.dgvBloodDetails.EnableHeadersVisualStyles = false;
             this.dgvBloodDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodDetails.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvBloodDetails.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodDetails.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBloodDetails.Location = new System.Drawing.Point(347, 242);
             this.dgvBloodDetails.Name = "dgvBloodDetails";

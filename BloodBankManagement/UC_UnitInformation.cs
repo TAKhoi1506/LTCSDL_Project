@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace BloodBankManagement
 {
-    public partial class FrmAdmin : Form
+    public partial class UC_UnitInformation: UserControl
     {
-        public FrmAdmin()
+        public UC_UnitInformation()
         {
             InitializeComponent();
         }

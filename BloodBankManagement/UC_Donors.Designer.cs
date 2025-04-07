@@ -54,7 +54,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.dpLastDonationDate = new System.Windows.Forms.DateTimePicker();
+            this.dpLastDonationDate = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.dpDateOfBirth = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btAddDonor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtPhoneNo = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -65,7 +66,6 @@
             this.txtFullName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -73,6 +73,19 @@
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvDonors = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cbBloodType = new System.Windows.Forms.ComboBox();
+            this.donorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastDonationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonors)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +98,10 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 10;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.cbBloodType);
+            this.bunifuPanel3.Controls.Add(this.bunifuLabel1);
             this.bunifuPanel3.Controls.Add(this.dpLastDonationDate);
+            this.bunifuPanel3.Controls.Add(this.dpDateOfBirth);
             this.bunifuPanel3.Controls.Add(this.bunifuLabel10);
             this.bunifuPanel3.Controls.Add(this.btAddDonor);
             this.bunifuPanel3.Controls.Add(this.txtPhoneNo);
@@ -96,7 +112,6 @@
             this.bunifuPanel3.Controls.Add(this.txtFullName);
             this.bunifuPanel3.Controls.Add(this.cbGender);
             this.bunifuPanel3.Controls.Add(this.bunifuLabel7);
-            this.bunifuPanel3.Controls.Add(this.dpDateOfBirth);
             this.bunifuPanel3.Controls.Add(this.bunifuLabel6);
             this.bunifuPanel3.Controls.Add(this.bunifuLabel5);
             this.bunifuPanel3.Controls.Add(this.bunifuLabel4);
@@ -113,10 +128,55 @@
             // 
             // dpLastDonationDate
             // 
-            this.dpLastDonationDate.Location = new System.Drawing.Point(774, 123);
+            this.dpLastDonationDate.BackColor = System.Drawing.Color.White;
+            this.dpLastDonationDate.BorderColor = System.Drawing.Color.Black;
+            this.dpLastDonationDate.BorderRadius = 17;
+            this.dpLastDonationDate.Color = System.Drawing.Color.Black;
+            this.dpLastDonationDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dpLastDonationDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpLastDonationDate.DisabledColor = System.Drawing.Color.Gray;
+            this.dpLastDonationDate.DisplayWeekNumbers = false;
+            this.dpLastDonationDate.DPHeight = 0;
+            this.dpLastDonationDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpLastDonationDate.FillDatePicker = false;
+            this.dpLastDonationDate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dpLastDonationDate.ForeColor = System.Drawing.Color.Black;
+            this.dpLastDonationDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpLastDonationDate.Icon")));
+            this.dpLastDonationDate.IconColor = System.Drawing.Color.Gray;
+            this.dpLastDonationDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpLastDonationDate.LeftTextMargin = 5;
+            this.dpLastDonationDate.Location = new System.Drawing.Point(774, 152);
+            this.dpLastDonationDate.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpLastDonationDate.Name = "dpLastDonationDate";
-            this.dpLastDonationDate.Size = new System.Drawing.Size(230, 20);
-            this.dpLastDonationDate.TabIndex = 33;
+            this.dpLastDonationDate.Size = new System.Drawing.Size(220, 32);
+            this.dpLastDonationDate.TabIndex = 35;
+            this.dpLastDonationDate.Value = new System.DateTime(2025, 4, 6, 11, 26, 0, 0);
+            // 
+            // dpDateOfBirth
+            // 
+            this.dpDateOfBirth.BackColor = System.Drawing.Color.White;
+            this.dpDateOfBirth.BorderColor = System.Drawing.Color.Black;
+            this.dpDateOfBirth.BorderRadius = 17;
+            this.dpDateOfBirth.Color = System.Drawing.Color.Black;
+            this.dpDateOfBirth.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dpDateOfBirth.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpDateOfBirth.DisabledColor = System.Drawing.Color.Gray;
+            this.dpDateOfBirth.DisplayWeekNumbers = false;
+            this.dpDateOfBirth.DPHeight = 0;
+            this.dpDateOfBirth.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpDateOfBirth.FillDatePicker = false;
+            this.dpDateOfBirth.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dpDateOfBirth.ForeColor = System.Drawing.Color.Black;
+            this.dpDateOfBirth.Icon = ((System.Drawing.Image)(resources.GetObject("dpDateOfBirth.Icon")));
+            this.dpDateOfBirth.IconColor = System.Drawing.Color.Gray;
+            this.dpDateOfBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpDateOfBirth.LeftTextMargin = 5;
+            this.dpDateOfBirth.Location = new System.Drawing.Point(194, 162);
+            this.dpDateOfBirth.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dpDateOfBirth.Name = "dpDateOfBirth";
+            this.dpDateOfBirth.Size = new System.Drawing.Size(220, 32);
+            this.dpDateOfBirth.TabIndex = 34;
+            this.dpDateOfBirth.Value = new System.DateTime(2025, 4, 6, 11, 26, 0, 0);
             // 
             // bunifuLabel10
             // 
@@ -125,7 +185,7 @@
             this.bunifuLabel10.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel10.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel10.Location = new System.Drawing.Point(596, 121);
+            this.bunifuLabel10.Location = new System.Drawing.Point(596, 151);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel10.Size = new System.Drawing.Size(160, 22);
@@ -175,16 +235,16 @@
             this.btAddDonor.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btAddDonor.IconSize = 25;
             this.btAddDonor.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddDonor.IdleBorderRadius = 1;
+            this.btAddDonor.IdleBorderRadius = 20;
             this.btAddDonor.IdleBorderThickness = 1;
             this.btAddDonor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.btAddDonor.IdleIconLeftImage = null;
             this.btAddDonor.IdleIconRightImage = null;
             this.btAddDonor.IndicateFocus = false;
-            this.btAddDonor.Location = new System.Drawing.Point(852, 164);
+            this.btAddDonor.Location = new System.Drawing.Point(852, 195);
             this.btAddDonor.Name = "btAddDonor";
             this.btAddDonor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btAddDonor.OnDisabledState.BorderRadius = 1;
+            this.btAddDonor.OnDisabledState.BorderRadius = 20;
             this.btAddDonor.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.OnDisabledState.BorderThickness = 1;
             this.btAddDonor.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -192,7 +252,7 @@
             this.btAddDonor.OnDisabledState.IconLeftImage = null;
             this.btAddDonor.OnDisabledState.IconRightImage = null;
             this.btAddDonor.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btAddDonor.onHoverState.BorderRadius = 1;
+            this.btAddDonor.onHoverState.BorderRadius = 20;
             this.btAddDonor.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.onHoverState.BorderThickness = 1;
             this.btAddDonor.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -200,7 +260,7 @@
             this.btAddDonor.onHoverState.IconLeftImage = null;
             this.btAddDonor.onHoverState.IconRightImage = null;
             this.btAddDonor.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddDonor.OnIdleState.BorderRadius = 1;
+            this.btAddDonor.OnIdleState.BorderRadius = 20;
             this.btAddDonor.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.OnIdleState.BorderThickness = 1;
             this.btAddDonor.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
@@ -208,7 +268,7 @@
             this.btAddDonor.OnIdleState.IconLeftImage = null;
             this.btAddDonor.OnIdleState.IconRightImage = null;
             this.btAddDonor.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btAddDonor.OnPressedState.BorderRadius = 1;
+            this.btAddDonor.OnPressedState.BorderRadius = 20;
             this.btAddDonor.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.OnPressedState.BorderThickness = 1;
             this.btAddDonor.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -237,7 +297,7 @@
             this.txtPhoneNo.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtPhoneNo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtPhoneNo.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtPhoneNo.BorderRadius = 1;
+            this.txtPhoneNo.BorderRadius = 20;
             this.txtPhoneNo.BorderThickness = 1;
             this.txtPhoneNo.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtPhoneNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -252,7 +312,7 @@
             this.txtPhoneNo.IconRight = null;
             this.txtPhoneNo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhoneNo.Lines = new string[0];
-            this.txtPhoneNo.Location = new System.Drawing.Point(774, 48);
+            this.txtPhoneNo.Location = new System.Drawing.Point(774, 78);
             this.txtPhoneNo.MaxLength = 32767;
             this.txtPhoneNo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPhoneNo.Modified = false;
@@ -288,7 +348,7 @@
             this.txtPhoneNo.SelectionLength = 0;
             this.txtPhoneNo.SelectionStart = 0;
             this.txtPhoneNo.ShortcutsEnabled = true;
-            this.txtPhoneNo.Size = new System.Drawing.Size(230, 25);
+            this.txtPhoneNo.Size = new System.Drawing.Size(220, 32);
             this.txtPhoneNo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPhoneNo.TabIndex = 30;
             this.txtPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -306,7 +366,7 @@
             this.bunifuLabel9.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel9.Location = new System.Drawing.Point(596, 53);
+            this.bunifuLabel9.Location = new System.Drawing.Point(596, 85);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(129, 22);
@@ -329,7 +389,7 @@
             this.txtEmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtEmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtEmail.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 1;
+            this.txtEmail.BorderRadius = 20;
             this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -344,7 +404,7 @@
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(774, 85);
+            this.txtEmail.Location = new System.Drawing.Point(774, 115);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -380,7 +440,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(230, 25);
+            this.txtEmail.Size = new System.Drawing.Size(220, 32);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 28;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -398,7 +458,7 @@
             this.bunifuLabel8.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel8.Location = new System.Drawing.Point(596, 87);
+            this.bunifuLabel8.Location = new System.Drawing.Point(596, 118);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(52, 22);
@@ -421,7 +481,7 @@
             this.txtPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtPassword.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtPassword.BorderRadius = 1;
+            this.txtPassword.BorderRadius = 20;
             this.txtPassword.BorderThickness = 1;
             this.txtPassword.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -436,7 +496,7 @@
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(194, 87);
+            this.txtPassword.Location = new System.Drawing.Point(194, 90);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -472,7 +532,7 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(230, 25);
+            this.txtPassword.Size = new System.Drawing.Size(220, 32);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 26;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -497,7 +557,7 @@
             this.txtFullName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtFullName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtFullName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtFullName.BorderRadius = 1;
+            this.txtFullName.BorderRadius = 20;
             this.txtFullName.BorderThickness = 1;
             this.txtFullName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtFullName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -512,7 +572,7 @@
             this.txtFullName.IconRight = null;
             this.txtFullName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.Lines = new string[0];
-            this.txtFullName.Location = new System.Drawing.Point(194, 120);
+            this.txtFullName.Location = new System.Drawing.Point(194, 126);
             this.txtFullName.MaxLength = 32767;
             this.txtFullName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFullName.Modified = false;
@@ -548,7 +608,7 @@
             this.txtFullName.SelectionLength = 0;
             this.txtFullName.SelectionStart = 0;
             this.txtFullName.ShortcutsEnabled = true;
-            this.txtFullName.Size = new System.Drawing.Size(230, 25);
+            this.txtFullName.Size = new System.Drawing.Size(220, 32);
             this.txtFullName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFullName.TabIndex = 25;
             this.txtFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -565,9 +625,9 @@
             this.cbGender.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.cbGender.Location = new System.Drawing.Point(194, 181);
+            this.cbGender.Location = new System.Drawing.Point(774, 52);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(230, 21);
+            this.cbGender.Size = new System.Drawing.Size(220, 21);
             this.cbGender.TabIndex = 24;
             // 
             // bunifuLabel7
@@ -577,7 +637,7 @@
             this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(58, 181);
+            this.bunifuLabel7.Location = new System.Drawing.Point(596, 52);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(69, 22);
@@ -586,13 +646,6 @@
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // dpDateOfBirth
-            // 
-            this.dpDateOfBirth.Location = new System.Drawing.Point(194, 153);
-            this.dpDateOfBirth.Name = "dpDateOfBirth";
-            this.dpDateOfBirth.Size = new System.Drawing.Size(230, 20);
-            this.dpDateOfBirth.TabIndex = 22;
-            // 
             // bunifuLabel6
             // 
             this.bunifuLabel6.AllowParentOverrides = false;
@@ -600,7 +653,7 @@
             this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(58, 150);
+            this.bunifuLabel6.Location = new System.Drawing.Point(58, 162);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(108, 22);
@@ -616,7 +669,7 @@
             this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(58, 119);
+            this.bunifuLabel5.Location = new System.Drawing.Point(58, 127);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(87, 22);
@@ -632,7 +685,7 @@
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(58, 88);
+            this.bunifuLabel4.Location = new System.Drawing.Point(58, 92);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(84, 22);
@@ -655,7 +708,7 @@
             this.txtUsername.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUsername.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUsername.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUsername.BorderRadius = 1;
+            this.txtUsername.BorderRadius = 20;
             this.txtUsername.BorderThickness = 1;
             this.txtUsername.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -706,7 +759,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(230, 25);
+            this.txtUsername.Size = new System.Drawing.Size(220, 32);
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsername.TabIndex = 16;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -752,6 +805,18 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDonors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDonors.ColumnHeadersHeight = 40;
+            this.dgvDonors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.donorID,
+            this.username,
+            this.password,
+            this.fullName,
+            this.gender,
+            this.dateOfBirth,
+            this.bloodType,
+            this.phoneNumber,
+            this.address,
+            this.lastDonationDate,
+            this.email});
             this.dgvDonors.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvDonors.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDonors.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -781,14 +846,13 @@
             this.dgvDonors.EnableHeadersVisualStyles = false;
             this.dgvDonors.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDonors.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvDonors.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDonors.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDonors.Location = new System.Drawing.Point(52, 220);
+            this.dgvDonors.Location = new System.Drawing.Point(35, 240);
             this.dgvDonors.Name = "dgvDonors";
             this.dgvDonors.RowHeadersVisible = false;
             this.dgvDonors.RowTemplate.Height = 40;
             this.dgvDonors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDonors.Size = new System.Drawing.Size(952, 353);
+            this.dgvDonors.Size = new System.Drawing.Size(999, 333);
             this.dgvDonors.TabIndex = 7;
             this.dgvDonors.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -808,6 +872,105 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(58, 203);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(96, 22);
+            this.bunifuLabel1.TabIndex = 36;
+            this.bunifuLabel1.Text = "Blood type:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cbBloodType
+            // 
+            this.cbBloodType.FormattingEnabled = true;
+            this.cbBloodType.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
+            this.cbBloodType.Location = new System.Drawing.Point(194, 204);
+            this.cbBloodType.Name = "cbBloodType";
+            this.cbBloodType.Size = new System.Drawing.Size(220, 21);
+            this.cbBloodType.TabIndex = 37;
+            // 
+            // donorID
+            // 
+            this.donorID.FillWeight = 102.4458F;
+            this.donorID.HeaderText = "Donor ID";
+            this.donorID.Name = "donorID";
+            // 
+            // username
+            // 
+            this.username.FillWeight = 102.4458F;
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            // 
+            // password
+            // 
+            this.password.FillWeight = 102.4458F;
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            // 
+            // fullName
+            // 
+            this.fullName.FillWeight = 102.4458F;
+            this.fullName.HeaderText = "Full name";
+            this.fullName.Name = "fullName";
+            // 
+            // gender
+            // 
+            this.gender.FillWeight = 102.4458F;
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            // 
+            // dateOfBirth
+            // 
+            this.dateOfBirth.FillWeight = 102.4458F;
+            this.dateOfBirth.HeaderText = "Date of birth";
+            this.dateOfBirth.Name = "dateOfBirth";
+            // 
+            // bloodType
+            // 
+            this.bloodType.FillWeight = 102.4458F;
+            this.bloodType.HeaderText = "Blood type";
+            this.bloodType.Name = "bloodType";
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.FillWeight = 102.4458F;
+            this.phoneNumber.HeaderText = "Phone number";
+            this.phoneNumber.Name = "phoneNumber";
+            // 
+            // address
+            // 
+            this.address.FillWeight = 102.4458F;
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            // 
+            // lastDonationDate
+            // 
+            this.lastDonationDate.FillWeight = 102.4458F;
+            this.lastDonationDate.HeaderText = "Last donation date";
+            this.lastDonationDate.Name = "lastDonationDate";
+            // 
+            // email
+            // 
+            this.email.FillWeight = 102.4458F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
             // UC_Donors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,7 +988,6 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private System.Windows.Forms.DateTimePicker dpLastDonationDate;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btAddDonor;
         private Bunifu.UI.WinForms.BunifuTextBox txtPhoneNo;
@@ -836,7 +998,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtFullName;
         private System.Windows.Forms.ComboBox cbGender;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
-        private System.Windows.Forms.DateTimePicker dpDateOfBirth;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
@@ -844,5 +1005,20 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDonors;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuDatePicker dpLastDonationDate;
+        private Bunifu.UI.WinForms.BunifuDatePicker dpDateOfBirth;
+        private System.Windows.Forms.ComboBox cbBloodType;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bloodType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastDonationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

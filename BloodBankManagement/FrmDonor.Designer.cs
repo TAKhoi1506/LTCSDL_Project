@@ -49,6 +49,9 @@
             this.btInfor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.uC_Benefits1 = new BloodBankManagement.UC_Benefits();
+            this.uC_HistoryDonations1 = new BloodBankManagement.UC_HistoryDonations();
+            this.uC_PersonalInformation = new BloodBankManagement.UC_PersonalInformation();
             this.uC_Home1 = new BloodBankManagement.UC_Home();
             this.uC_RegisterforBloodDonation1 = new BloodBankManagement.UC_RegisterforBloodDonation();
             this.pnHome.SuspendLayout();
@@ -796,6 +799,9 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 10;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.uC_Benefits1);
+            this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations1);
+            this.bunifuPanel3.Controls.Add(this.uC_PersonalInformation);
             this.bunifuPanel3.Controls.Add(this.uC_Home1);
             this.bunifuPanel3.Controls.Add(this.uC_RegisterforBloodDonation1);
             this.bunifuPanel3.Location = new System.Drawing.Point(57, 49);
@@ -804,6 +810,31 @@
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(1051, 571);
             this.bunifuPanel3.TabIndex = 3;
+            // 
+            // uC_Benefits1
+            // 
+            this.uC_Benefits1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Benefits1.Name = "uC_Benefits1";
+            this.uC_Benefits1.Size = new System.Drawing.Size(1058, 592);
+            this.uC_Benefits1.TabIndex = 4;
+            this.uC_Benefits1.Visible = false;
+            // 
+            // uC_HistoryDonations1
+            // 
+            this.uC_HistoryDonations1.Location = new System.Drawing.Point(0, 0);
+            this.uC_HistoryDonations1.Name = "uC_HistoryDonations1";
+            this.uC_HistoryDonations1.Size = new System.Drawing.Size(1058, 592);
+            this.uC_HistoryDonations1.TabIndex = 3;
+            this.uC_HistoryDonations1.Visible = false;
+            // 
+            // uC_PersonalInformation
+            // 
+            this.uC_PersonalInformation.BackColor = System.Drawing.Color.Transparent;
+            this.uC_PersonalInformation.Location = new System.Drawing.Point(0, 0);
+            this.uC_PersonalInformation.Name = "uC_PersonalInformation";
+            this.uC_PersonalInformation.Size = new System.Drawing.Size(1051, 571);
+            this.uC_PersonalInformation.TabIndex = 2;
+            this.uC_PersonalInformation.Visible = false;
             // 
             // uC_Home1
             // 
@@ -859,5 +890,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
         private UC_RegisterforBloodDonation uC_RegisterforBloodDonation1;
         private UC_Home uC_Home1;
+        private UC_PersonalInformation uC_PersonalInformation;
+        private UC_HistoryDonations uC_HistoryDonations1;
+        private UC_Benefits uC_Benefits1;
     }
 }

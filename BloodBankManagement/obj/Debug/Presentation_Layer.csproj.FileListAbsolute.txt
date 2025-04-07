@@ -93,7 +93,6 @@ F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagem
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.Properties.Resources.resources
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.RegisterDonor.resources
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_BloodDonationRequirement.resources
-F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_UserManagement.resources
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.GenerateResource.cache
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.CoreCompileInputs.cache
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.exe
@@ -139,3 +138,8 @@ F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagem
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.FrmReceivingUnit.resources
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Home.resources
 F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_BloodStock.resources
+F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Donations.resources
+F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_PersonalInformation.resources
+F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_HistoryDonations.resources
+F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_Benefits.resources
+F:\OU COURSES\LTCSDL\PrjTestMerge\BloodBankManagement\obj\Debug\BloodBankManagement.UC_UnitInformation.resources
