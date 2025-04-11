@@ -39,7 +39,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.lbForgotPw = new System.Windows.Forms.LinkLabel();
@@ -51,11 +50,9 @@
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbLogin = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
-            this.pnHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -64,8 +61,8 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel1);
             this.bunifuGradientPanel1.Controls.Add(this.lbLogin);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuShadowPanel1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(205)))), ((int)(((byte)(158)))));
@@ -75,7 +72,7 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1144, 537);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1370, 684);
             this.bunifuGradientPanel1.TabIndex = 6;
             // 
             // bunifuShadowPanel1
@@ -93,12 +90,12 @@
             this.bunifuShadowPanel1.Controls.Add(this.bunifuTextBox1);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Horizontal;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(486, 199);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(507, 160);
             this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowDepth = 10;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
@@ -494,12 +491,13 @@
             this.lbLogin.AutoEllipsis = false;
             this.lbLogin.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbLogin.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 32F);
-            this.lbLogin.Location = new System.Drawing.Point(600, 130);
+            this.lbLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F);
+            this.lbLogin.ForeColor = System.Drawing.Color.Black;
+            this.lbLogin.Location = new System.Drawing.Point(636, 101);
             this.lbLogin.Margin = new System.Windows.Forms.Padding(2);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbLogin.Size = new System.Drawing.Size(117, 50);
+            this.lbLogin.Size = new System.Drawing.Size(99, 43);
             this.lbLogin.TabIndex = 0;
             this.lbLogin.Text = "Login";
             this.lbLogin.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -519,100 +517,8 @@
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1144, 0);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1370, 0);
             this.bunifuPanel1.TabIndex = 4;
-            // 
-            // btLogin
-            // 
-            this.btLogin.AllowAnimations = true;
-            this.btLogin.AllowMouseEffects = true;
-            this.btLogin.AllowToggling = false;
-            this.btLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLogin.AnimationSpeed = 200;
-            this.btLogin.AutoGenerateColors = false;
-            this.btLogin.AutoRoundBorders = false;
-            this.btLogin.AutoSizeLeftIcon = true;
-            this.btLogin.AutoSizeRightIcon = true;
-            this.btLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btLogin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLogin.BackgroundImage")));
-            this.btLogin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogin.ButtonText = "Logout";
-            this.btLogin.ButtonTextMarginLeft = 0;
-            this.btLogin.ColorContrastOnClick = 45;
-            this.btLogin.ColorContrastOnHover = 45;
-            this.btLogin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btLogin.CustomizableEdges = borderEdges3;
-            this.btLogin.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btLogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btLogin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btLogin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btLogin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.ForeColor = System.Drawing.Color.White;
-            this.btLogin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btLogin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btLogin.IconMarginLeft = 11;
-            this.btLogin.IconPadding = 10;
-            this.btLogin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLogin.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btLogin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btLogin.IconSize = 25;
-            this.btLogin.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
-            this.btLogin.IdleBorderRadius = 20;
-            this.btLogin.IdleBorderThickness = 1;
-            this.btLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btLogin.IdleIconLeftImage = null;
-            this.btLogin.IdleIconRightImage = null;
-            this.btLogin.IndicateFocus = false;
-            this.btLogin.Location = new System.Drawing.Point(1009, 8);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btLogin.OnDisabledState.BorderRadius = 20;
-            this.btLogin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogin.OnDisabledState.BorderThickness = 1;
-            this.btLogin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btLogin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btLogin.OnDisabledState.IconLeftImage = null;
-            this.btLogin.OnDisabledState.IconRightImage = null;
-            this.btLogin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btLogin.onHoverState.BorderRadius = 20;
-            this.btLogin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogin.onHoverState.BorderThickness = 1;
-            this.btLogin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btLogin.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btLogin.onHoverState.IconLeftImage = null;
-            this.btLogin.onHoverState.IconRightImage = null;
-            this.btLogin.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
-            this.btLogin.OnIdleState.BorderRadius = 20;
-            this.btLogin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogin.OnIdleState.BorderThickness = 1;
-            this.btLogin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btLogin.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btLogin.OnIdleState.IconLeftImage = null;
-            this.btLogin.OnIdleState.IconRightImage = null;
-            this.btLogin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btLogin.OnPressedState.BorderRadius = 20;
-            this.btLogin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogin.OnPressedState.BorderThickness = 1;
-            this.btLogin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btLogin.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btLogin.OnPressedState.IconLeftImage = null;
-            this.btLogin.OnPressedState.IconRightImage = null;
-            this.btLogin.Size = new System.Drawing.Size(114, 47);
-            this.btLogin.TabIndex = 1;
-            this.btLogin.TabStop = false;
-            this.btLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btLogin.TextMarginLeft = 0;
-            this.btLogin.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btLogin.UseDefaultRadiusAndThickness = true;
             // 
             // pnHome
             // 
@@ -622,13 +528,12 @@
             this.pnHome.BorderColor = System.Drawing.Color.Transparent;
             this.pnHome.BorderRadius = 3;
             this.pnHome.BorderThickness = 1;
-            this.pnHome.Controls.Add(this.btLogin);
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHome.Location = new System.Drawing.Point(0, 0);
             this.pnHome.Margin = new System.Windows.Forms.Padding(2);
             this.pnHome.Name = "pnHome";
             this.pnHome.ShowBorders = true;
-            this.pnHome.Size = new System.Drawing.Size(1144, 65);
+            this.pnHome.Size = new System.Drawing.Size(1370, 65);
             this.pnHome.TabIndex = 5;
             // 
             // Login
@@ -637,20 +542,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1144, 602);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.pnHome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KVN BLOOD BANK";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
-            this.pnHome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,7 +566,6 @@
 
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btLogin;
         private Bunifu.UI.WinForms.BunifuPanel pnHome;
         private Bunifu.UI.WinForms.BunifuLabel lbLogin;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;

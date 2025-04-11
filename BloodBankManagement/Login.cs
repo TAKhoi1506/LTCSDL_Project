@@ -17,6 +17,10 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
         private void lbLogin_Click(object sender, EventArgs e)
         {
 

@@ -8,3 +8,13 @@ D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.dll
 D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.dll.config
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.dll
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.pdb
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DTO.dll
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DTO.pdb
+F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.Up2Date
+F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.dll
+F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.pdb

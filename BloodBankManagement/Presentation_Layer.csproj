@@ -125,6 +125,12 @@
     <Compile Include="FrmReceivingUnit.Designer.cs">
       <DependentUpon>FrmReceivingUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,46 +145,46 @@
     <Compile Include="RegisterDonor.Designer.cs">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Benefits.cs">
+    <Compile Include="Donor\UC_Benefits.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Benefits.Designer.cs">
+    <Compile Include="Donor\UC_Benefits.Designer.cs">
       <DependentUpon>UC_Benefits.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_BloodDonationRequirement.cs">
+    <Compile Include="Admin\UC_BloodDonationRequirement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_BloodDonationRequirement.Designer.cs">
+    <Compile Include="Admin\UC_BloodDonationRequirement.Designer.cs">
       <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_BloodStock.cs">
+    <Compile Include="Admin\UC_BloodStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_BloodStock.Designer.cs">
+    <Compile Include="Admin\UC_BloodStock.Designer.cs">
       <DependentUpon>UC_BloodStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Donations.cs">
+    <Compile Include="Admin\UC_Donations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Donations.Designer.cs">
+    <Compile Include="Admin\UC_Donations.Designer.cs">
       <DependentUpon>UC_Donations.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Donors.cs">
+    <Compile Include="Admin\UC_Donors.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Donors.Designer.cs">
+    <Compile Include="Admin\UC_Donors.Designer.cs">
       <DependentUpon>UC_Donors.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Events.cs">
+    <Compile Include="Admin\UC_Events.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Events.Designer.cs">
+    <Compile Include="Admin\UC_Events.Designer.cs">
       <DependentUpon>UC_Events.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_HistoryDonations.cs">
+    <Compile Include="Donor\UC_HistoryDonations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_HistoryDonations.Designer.cs">
+    <Compile Include="Donor\UC_HistoryDonations.Designer.cs">
       <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Home.cs">
@@ -187,34 +193,34 @@
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_PersonalInformation.cs">
+    <Compile Include="Donor\UC_PersonalInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_PersonalInformation.Designer.cs">
+    <Compile Include="Donor\UC_PersonalInformation.Designer.cs">
       <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_ReceivingUnits.cs">
+    <Compile Include="Admin\UC_ReceivingUnits.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_ReceivingUnits.Designer.cs">
+    <Compile Include="Admin\UC_ReceivingUnits.Designer.cs">
       <DependentUpon>UC_ReceivingUnits.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_RegisterforBloodDonation.cs">
+    <Compile Include="Donor\UC_RegisterforBloodDonation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_RegisterforBloodDonation.Designer.cs">
+    <Compile Include="Donor\UC_RegisterforBloodDonation.Designer.cs">
       <DependentUpon>UC_RegisterforBloodDonation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_RegisterForBloodRequirement.cs">
+    <Compile Include="ReceivingUnit\UC_RegisterForBloodRequirement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_RegisterForBloodRequirement.Designer.cs">
+    <Compile Include="ReceivingUnit\UC_RegisterForBloodRequirement.Designer.cs">
       <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_UnitInformation.cs">
+    <Compile Include="ReceivingUnit\UC_UnitInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_UnitInformation.Designer.cs">
+    <Compile Include="ReceivingUnit\UC_UnitInformation.Designer.cs">
       <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReceivingUnit.resx">
       <DependentUpon>FrmReceivingUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -242,43 +251,43 @@
     <EmbeddedResource Include="RegisterDonor.resx">
       <DependentUpon>RegisterDonor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Benefits.resx">
+    <EmbeddedResource Include="Donor\UC_Benefits.resx">
       <DependentUpon>UC_Benefits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_BloodDonationRequirement.resx">
+    <EmbeddedResource Include="Admin\UC_BloodDonationRequirement.resx">
       <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_BloodStock.resx">
+    <EmbeddedResource Include="Admin\UC_BloodStock.resx">
       <DependentUpon>UC_BloodStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Donations.resx">
+    <EmbeddedResource Include="Admin\UC_Donations.resx">
       <DependentUpon>UC_Donations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Donors.resx">
+    <EmbeddedResource Include="Admin\UC_Donors.resx">
       <DependentUpon>UC_Donors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Events.resx">
+    <EmbeddedResource Include="Admin\UC_Events.resx">
       <DependentUpon>UC_Events.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_HistoryDonations.resx">
+    <EmbeddedResource Include="Donor\UC_HistoryDonations.resx">
       <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_PersonalInformation.resx">
+    <EmbeddedResource Include="Donor\UC_PersonalInformation.resx">
       <DependentUpon>UC_PersonalInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_ReceivingUnits.resx">
+    <EmbeddedResource Include="Admin\UC_ReceivingUnits.resx">
       <DependentUpon>UC_ReceivingUnits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_RegisterforBloodDonation.resx">
+    <EmbeddedResource Include="Donor\UC_RegisterforBloodDonation.resx">
       <DependentUpon>UC_RegisterforBloodDonation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_RegisterForBloodRequirement.resx">
+    <EmbeddedResource Include="ReceivingUnit\UC_RegisterForBloodRequirement.resx">
       <DependentUpon>UC_RegisterForBloodRequirement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_UnitInformation.resx">
+    <EmbeddedResource Include="ReceivingUnit\UC_UnitInformation.resx">
       <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

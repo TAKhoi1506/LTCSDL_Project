@@ -17,8 +17,6 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
-     
-
         private void FrmDonor_Load(object sender, EventArgs e)
         {
             uC_Home2.Visible = true;

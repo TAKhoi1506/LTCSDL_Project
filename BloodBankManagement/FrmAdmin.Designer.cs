@@ -50,6 +50,10 @@
             this.btEvents = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.uC_Donations = new BloodBankManagement.UC_Donations();
             this.uC_BloodStock = new BloodBankManagement.UC_BloodStock();
             this.uC_Home1 = new BloodBankManagement.UC_Home();
@@ -58,10 +62,6 @@
             this.uC_Donors = new BloodBankManagement.UC_Donors();
             this.uC_ReceivingUnits1 = new BloodBankManagement.UC_ReceivingUnits();
             this.uC_Events1 = new BloodBankManagement.UC_Events();
-            this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -955,71 +955,6 @@
             this.bunifuPanel3.Size = new System.Drawing.Size(1051, 596);
             this.bunifuPanel3.TabIndex = 3;
             // 
-            // uC_Donations
-            // 
-            this.uC_Donations.Location = new System.Drawing.Point(0, 1);
-            this.uC_Donations.Name = "uC_Donations";
-            this.uC_Donations.Size = new System.Drawing.Size(1058, 592);
-            this.uC_Donations.TabIndex = 5;
-            // 
-            // uC_BloodStock
-            // 
-            this.uC_BloodStock.Location = new System.Drawing.Point(0, 1);
-            this.uC_BloodStock.Name = "uC_BloodStock";
-            this.uC_BloodStock.Size = new System.Drawing.Size(1058, 592);
-            this.uC_BloodStock.TabIndex = 5;
-            this.uC_BloodStock.Visible = false;
-            // 
-            // uC_Home1
-            // 
-            this.uC_Home1.Location = new System.Drawing.Point(-6, -40);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(1075, 665);
-            this.uC_Home1.TabIndex = 5;
-            this.uC_Home1.Visible = false;
-            // 
-            // uC_RegisterForBloodRequirement1
-            // 
-            this.uC_RegisterForBloodRequirement1.Location = new System.Drawing.Point(24, 8);
-            this.uC_RegisterForBloodRequirement1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_RegisterForBloodRequirement1.Name = "uC_RegisterForBloodRequirement1";
-            this.uC_RegisterForBloodRequirement1.Size = new System.Drawing.Size(1016, 584);
-            this.uC_RegisterForBloodRequirement1.TabIndex = 9;
-            this.uC_RegisterForBloodRequirement1.Visible = false;
-            // 
-            // uC_Events
-            // 
-            this.uC_Events.Location = new System.Drawing.Point(16, 0);
-            this.uC_Events.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Events.Name = "uC_Events";
-            this.uC_Events.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Events.TabIndex = 8;
-            this.uC_Events.Visible = false;
-            // 
-            // uC_Donors
-            // 
-            this.uC_Donors.Location = new System.Drawing.Point(16, 9);
-            this.uC_Donors.Name = "uC_Donors";
-            this.uC_Donors.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Donors.TabIndex = 6;
-            this.uC_Donors.Visible = false;
-            // 
-            // uC_ReceivingUnits1
-            // 
-            this.uC_ReceivingUnits1.Location = new System.Drawing.Point(-6, 3);
-            this.uC_ReceivingUnits1.Name = "uC_ReceivingUnits1";
-            this.uC_ReceivingUnits1.Size = new System.Drawing.Size(1062, 599);
-            this.uC_ReceivingUnits1.TabIndex = 5;
-            this.uC_ReceivingUnits1.Visible = false;
-            // 
-            // uC_Events1
-            // 
-            this.uC_Events1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Events1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Events1.Name = "uC_Events1";
-            this.uC_Events1.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Events1.TabIndex = 0;
-            // 
             // pnHome
             // 
             this.pnHome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
@@ -1087,6 +1022,71 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1370, 0);
             this.bunifuPanel1.TabIndex = 0;
+            // 
+            // uC_Donations
+            // 
+            this.uC_Donations.Location = new System.Drawing.Point(0, 1);
+            this.uC_Donations.Name = "uC_Donations";
+            this.uC_Donations.Size = new System.Drawing.Size(1058, 592);
+            this.uC_Donations.TabIndex = 5;
+            // 
+            // uC_BloodStock
+            // 
+            this.uC_BloodStock.Location = new System.Drawing.Point(0, 1);
+            this.uC_BloodStock.Name = "uC_BloodStock";
+            this.uC_BloodStock.Size = new System.Drawing.Size(1058, 592);
+            this.uC_BloodStock.TabIndex = 5;
+            this.uC_BloodStock.Visible = false;
+            // 
+            // uC_Home1
+            // 
+            this.uC_Home1.Location = new System.Drawing.Point(-6, -40);
+            this.uC_Home1.Name = "uC_Home1";
+            this.uC_Home1.Size = new System.Drawing.Size(1075, 665);
+            this.uC_Home1.TabIndex = 5;
+            this.uC_Home1.Visible = false;
+            // 
+            // uC_RegisterForBloodRequirement1
+            // 
+            this.uC_RegisterForBloodRequirement1.Location = new System.Drawing.Point(24, 8);
+            this.uC_RegisterForBloodRequirement1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_RegisterForBloodRequirement1.Name = "uC_RegisterForBloodRequirement1";
+            this.uC_RegisterForBloodRequirement1.Size = new System.Drawing.Size(1016, 584);
+            this.uC_RegisterForBloodRequirement1.TabIndex = 9;
+            this.uC_RegisterForBloodRequirement1.Visible = false;
+            // 
+            // uC_Events
+            // 
+            this.uC_Events.Location = new System.Drawing.Point(16, 0);
+            this.uC_Events.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Events.Name = "uC_Events";
+            this.uC_Events.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Events.TabIndex = 8;
+            this.uC_Events.Visible = false;
+            // 
+            // uC_Donors
+            // 
+            this.uC_Donors.Location = new System.Drawing.Point(16, 9);
+            this.uC_Donors.Name = "uC_Donors";
+            this.uC_Donors.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Donors.TabIndex = 6;
+            this.uC_Donors.Visible = false;
+            // 
+            // uC_ReceivingUnits1
+            // 
+            this.uC_ReceivingUnits1.Location = new System.Drawing.Point(-6, 3);
+            this.uC_ReceivingUnits1.Name = "uC_ReceivingUnits1";
+            this.uC_ReceivingUnits1.Size = new System.Drawing.Size(1062, 599);
+            this.uC_ReceivingUnits1.TabIndex = 5;
+            this.uC_ReceivingUnits1.Visible = false;
+            // 
+            // uC_Events1
+            // 
+            this.uC_Events1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Events1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Events1.Name = "uC_Events1";
+            this.uC_Events1.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Events1.TabIndex = 0;
             // 
             // FrmAdmin
             // 
