@@ -16,5 +16,10 @@ namespace BloodBankManagement
         {
             InitializeComponent();
         }
+
+        private void uC_Home1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
