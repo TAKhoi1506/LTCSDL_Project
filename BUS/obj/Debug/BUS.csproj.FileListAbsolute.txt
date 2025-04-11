@@ -1,0 +1,12 @@
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\BUS.dll
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\BUS.pdb
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\DAL.dll.config
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\obj\Debug\BUS.dll
+D:\OU\HK8\LTCSDL\LTCSDL_Project\BUS\obj\Debug\BUS.pdb
