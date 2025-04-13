@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace BloodBankManagement
 {
@@ -24,6 +25,24 @@ namespace BloodBankManagement
         private void lbLogin_Click(object sender, EventArgs e)
         {
 
+        }
+        DonorBUS donorBUS = new DonorBUS();
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+
+            if (donorBUS.Login(username, password))
+            {
+                MessageBox.Show("Login successful!");
+                // Mở giao diện chính (MainForm chẳng hạn)
+                this.Hide();
+                new FrmDonor().Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.");
+            }
         }
     }
 }

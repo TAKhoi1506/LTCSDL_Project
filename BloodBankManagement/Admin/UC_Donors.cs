@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace BloodBankManagement
 {
@@ -15,6 +17,40 @@ namespace BloodBankManagement
         public UC_Donors()
         {
             InitializeComponent();
+        }
+
+        private DonorBUS donorBUS = new DonorBUS();
+        private void btAddDonor_Click(object sender, EventArgs e)
+        {
+            Donor donor = new Donor()
+            {
+                Username = txtUsername.Text,
+                Password = txtPassword.Text,
+                FullName = txtFullName.Text,
+                DateOfBirth = dpDateOfBirth.Value,
+                BloodType = cbBloodType.Text,
+                Gender = cbGender.Text,
+                PhoneNumber = txtPhoneNo.Text,
+                Email = txtEmail.Text,
+                LastDonationDate = dpLastDonationDate.Value,
+                //Address = txtAddress.Text,
+            };
+
+            bool result = donorBUS.AddDonor(donor);
+            if (result)
+            {
+                MessageBox.Show("Donor added successfully.");
+                LoadDonors(); // Cập nhật lại DataGridView
+            }
+            else
+            {
+                MessageBox.Show("Failed to add donor.");
+            }
+
+        }
+        private void LoadDonors()
+        {
+            dgvDonors.DataSource = donorBUS.GetAllDonors();
         }
     }
 }
