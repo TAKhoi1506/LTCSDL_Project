@@ -22,3 +22,8 @@ F:\OU COURSES\LTCSDL\Prj1104\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 F:\OU COURSES\LTCSDL\Prj1104\BUS\obj\Debug\BUS.csproj.Up2Date
 F:\OU COURSES\LTCSDL\Prj1104\BUS\obj\Debug\BUS.dll
 F:\OU COURSES\LTCSDL\Prj1104\BUS\obj\Debug\BUS.pdb
+F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\BUS.dll.config
+F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.dll
+F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.SqlServer.dll
+F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.xml
+F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.SqlServer.xml

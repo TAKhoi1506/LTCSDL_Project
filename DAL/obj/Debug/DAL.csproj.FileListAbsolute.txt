@@ -18,3 +18,7 @@ F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.Up2Date
 F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.dll
 F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.pdb
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.dll
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.xml
+F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.xml

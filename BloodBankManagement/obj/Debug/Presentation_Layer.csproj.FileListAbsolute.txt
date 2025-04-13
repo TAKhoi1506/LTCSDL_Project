@@ -262,3 +262,8 @@ F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2
 F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
 F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\obj\Debug\BloodBankManagement.FrmSplash.resources
+F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\bin\Debug\EntityFramework.dll
+F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\bin\Debug\EntityFramework.SqlServer.dll
+F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\bin\Debug\BUS.dll.config
+F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\bin\Debug\EntityFramework.xml
+F:\OU COURSES\LTCSDL\Prj1104\BloodBankManagement\bin\Debug\EntityFramework.SqlServer.xml
