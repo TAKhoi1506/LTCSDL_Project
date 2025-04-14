@@ -44,5 +44,10 @@ namespace BloodBankManagement
                 MessageBox.Show("Invalid username or password.");
             }
         }
+
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
