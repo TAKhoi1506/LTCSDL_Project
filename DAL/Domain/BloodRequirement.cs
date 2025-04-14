@@ -15,11 +15,11 @@ namespace DAL.Domain
         [StringLength(10)]
         public string RU_ID { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string BloodType { get; set; }
+        //[Required]
+        //[StringLength(10)]
+        //public string BloodType { get; set; }
 
-        public double Amount { get; set; }
+        //public double Amount { get; set; }
 
         public DateTime RequestDate { get; set; }
 
@@ -30,5 +30,7 @@ namespace DAL.Domain
         public string Status { get; set; }
 
         public virtual ReceivingUnit ReceivingUnit { get; set; }
+        public virtual ICollection<BloodRequirementDetail> DetailList { get; set; }
+
     }
 }

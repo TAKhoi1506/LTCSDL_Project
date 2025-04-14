@@ -14,7 +14,7 @@ namespace DAL
 
         public DataProvider() 
         {
-            string snStr = "Data Source=LAPTOP-3RVB0QLD;Initial Catalog=BloodBank;Integrated Security=True";
+            string snStr = "Data Source=ZY-COM;Initial Catalog=BloodBank;Integrated Security=True";
             cn = new SqlConnection(snStr);
         }
 

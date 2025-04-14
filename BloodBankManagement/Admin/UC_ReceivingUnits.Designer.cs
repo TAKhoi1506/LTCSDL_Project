@@ -825,7 +825,6 @@
             this.dgvReceivingUnits.EnableHeadersVisualStyles = false;
             this.dgvReceivingUnits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvReceivingUnits.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvReceivingUnits.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvReceivingUnits.HeaderForeColor = System.Drawing.Color.White;
             this.dgvReceivingUnits.Location = new System.Drawing.Point(47, 237);
             this.dgvReceivingUnits.Name = "dgvReceivingUnits";

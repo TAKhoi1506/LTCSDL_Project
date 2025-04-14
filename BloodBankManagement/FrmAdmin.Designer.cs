@@ -457,6 +457,7 @@
             this.btRequirements.TextMarginLeft = 0;
             this.btRequirements.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btRequirements.UseDefaultRadiusAndThickness = true;
+            this.btRequirements.Click += new System.EventHandler(this.btRequirements_Click);
             // 
             // btDashboard
             // 
@@ -1029,6 +1030,7 @@
             this.uC_Donations.Name = "uC_Donations";
             this.uC_Donations.Size = new System.Drawing.Size(1058, 592);
             this.uC_Donations.TabIndex = 5;
+            this.uC_Donations.Visible = false;
             // 
             // uC_BloodStock
             // 

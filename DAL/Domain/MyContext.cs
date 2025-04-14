@@ -1,4 +1,4 @@
-namespace DAL.Domain
+﻿namespace DAL.Domain
 {
     using System;
     using System.Data.Entity;
@@ -14,6 +14,8 @@ namespace DAL.Domain
 
         public virtual DbSet<BloodDetail> BloodDetails { get; set; }
         public virtual DbSet<BloodRequirement> BloodRequirements { get; set; }
+        public virtual DbSet<BloodRequirementDetail> BloodRequirementDetails { get; set; }
+
         public virtual DbSet<BloodStock> BloodStocks { get; set; }
         public virtual DbSet<Donation> Donations { get; set; }
         public virtual DbSet<Donor> Donors { get; set; }
@@ -25,6 +27,17 @@ namespace DAL.Domain
             modelBuilder.Entity<BloodRequirement>()
                 .Property(e => e.RU_ID)
                 .IsFixedLength();
+
+            modelBuilder.Entity<BloodRequirementDetail>()
+                .Property(e => e.BloodType)
+                .IsRequired()
+                .HasMaxLength(10);
+
+            modelBuilder.Entity<BloodRequirementDetail>()
+                .HasRequired(e => e.BloodRequirement)
+                .WithMany(e => e.DetailList)
+                .HasForeignKey(e => e.RequirementID)
+                .WillCascadeOnDelete(false); // không xóa các chi tiết nếu xóa bản ghi cha (an toàn hơn)
 
             modelBuilder.Entity<BloodStock>()
                 .HasMany(e => e.BloodDetails)

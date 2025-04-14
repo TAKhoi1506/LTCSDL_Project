@@ -58,9 +58,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BloodBankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BloodRequirementDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Domain\BloodDetail.cs" />
     <Compile Include="Domain\BloodRequirement.cs" />
+    <Compile Include="Domain\BloodRequirementDetail.cs" />
     <Compile Include="Domain\BloodStock.cs" />
     <Compile Include="Domain\Donation.cs" />
     <Compile Include="Domain\Donor.cs" />
@@ -74,6 +76,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReceivingUnitDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

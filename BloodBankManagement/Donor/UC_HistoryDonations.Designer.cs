@@ -103,7 +103,6 @@
             this.dgvDonors.EnableHeadersVisualStyles = false;
             this.dgvDonors.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDonors.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvDonors.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDonors.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDonors.Location = new System.Drawing.Point(61, 130);
             this.dgvDonors.Name = "dgvDonors";

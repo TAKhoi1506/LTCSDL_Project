@@ -11,8 +11,9 @@ namespace DAL
 {
     public class DonorDAL
     {
-        private string connectionString = "Data Source=MSI\\NHAN;Initial Catalog=bloodbank;Integrated Security=True";
+        private string connectionString = "Data Source=ZY-COM;Initial Catalog=bloodbank;Integrated Security=True";
 
+        // admin
         public bool AddDonor(Donor donor)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

@@ -134,7 +134,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtQuanABminus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtABMinus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -142,7 +142,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanABplus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtABPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -150,7 +150,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanOminus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtOMinus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -158,7 +158,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanOplus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtOPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -166,7 +166,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanBminus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtBMinus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -174,7 +174,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanBplus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtBPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -182,7 +182,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanAminus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txAMinus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
@@ -190,7 +190,7 @@
         Jhw04aAJB+0HV1XvHO7+jdWyGa+IA4E87Jp7vhVkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtQuanAplus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtAPlus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAZCAYAAADQfBuCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dGxCcBADARB9V+VhMpwGS7Aj0CJO/iFXbjk
