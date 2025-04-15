@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="DonorBUS.cs" />
     <Compile Include="DonorBUS_CF.cs" />
+    <Compile Include="HistoryDonationBUS.cs" />
+    <Compile Include="NotificationsBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,10 @@ namespace DAL.Domain
         public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<ReceivingUnit> ReceivingUnits { get; set; }
 
+        public virtual DbSet<Notification> Notifications { get; set; }
+        public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }    
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BloodRequirement>()
@@ -65,6 +69,9 @@ namespace DAL.Domain
                 .HasMany(e => e.BloodRequirements)
                 .WithRequired(e => e.ReceivingUnit)
                 .WillCascadeOnDelete(false);
+
+
+           
         }
     }
 }

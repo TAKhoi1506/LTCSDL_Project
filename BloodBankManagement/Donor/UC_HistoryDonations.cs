@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+
 
 namespace BloodBankManagement
 {
     public partial class UC_HistoryDonations: UserControl
     {
+        private readonly HistoryDonationBUS historyDonationBUS = new HistoryDonationBUS();
         public UC_HistoryDonations()
         {
             InitializeComponent();
+        }
+
+        public void LoadHistoryDonation()
+        {
+            dgvDonors.DataSource = historyDonationBUS.GetHistoryDonations();
         }
     }
 }

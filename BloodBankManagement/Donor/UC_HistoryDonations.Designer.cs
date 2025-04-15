@@ -45,11 +45,10 @@
             this.lbTitle.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbTitle.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.lbTitle.Location = new System.Drawing.Point(320, 14);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.lbTitle.Location = new System.Drawing.Point(480, 22);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbTitle.Size = new System.Drawing.Size(408, 40);
+            this.lbTitle.Size = new System.Drawing.Size(612, 62);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "History donations";
             this.lbTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,23 +104,26 @@
             this.dgvDonors.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDonors.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDonors.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDonors.Location = new System.Drawing.Point(61, 130);
+            this.dgvDonors.Location = new System.Drawing.Point(92, 200);
+            this.dgvDonors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDonors.Name = "dgvDonors";
             this.dgvDonors.RowHeadersVisible = false;
+            this.dgvDonors.RowHeadersWidth = 62;
             this.dgvDonors.RowTemplate.Height = 40;
             this.dgvDonors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDonors.Size = new System.Drawing.Size(932, 413);
+            this.dgvDonors.Size = new System.Drawing.Size(1398, 635);
             this.dgvDonors.TabIndex = 8;
             this.dgvDonors.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // UC_HistoryDonations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvDonors);
             this.Controls.Add(this.lbTitle);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_HistoryDonations";
-            this.Size = new System.Drawing.Size(1058, 592);
+            this.Size = new System.Drawing.Size(1587, 911);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonors)).EndInit();
             this.ResumeLayout(false);
 

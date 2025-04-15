@@ -17,5 +17,10 @@ namespace BloodBankManagement
         {
             InitializeComponent();
         }
+
+        private void btDonors_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,3 +27,20 @@ F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.dll
 F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.SqlServer.dll
 F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.xml
 F:\OU COURSES\LTCSDL\Prj1104\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\BUS.dll.config
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\BUS.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\BUS.pdb
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\EntityFramework.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\EntityFramework.SqlServer.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\DAL.dll.config
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\EntityFramework.xml
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\obj\Debug\BUS.dll
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BUS\obj\Debug\BUS.pdb

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace BloodBankManagement
 {
     public partial class FrmDonor: Form
     {
+        
+
         public FrmDonor()
         {
             InitializeComponent();
@@ -43,6 +46,10 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = false;
             uC_Benefits2.Visible = false;
+
+
+            uC_HistoryDonations2.LoadHistoryDonation(); 
+
         }
 
         private void btRegisterForDonation_Click(object sender, EventArgs e)

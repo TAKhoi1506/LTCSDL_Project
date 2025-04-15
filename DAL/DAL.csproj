@@ -67,10 +67,12 @@
     <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\HistoryDonation.cs" />
     <Compile Include="Domain\MyContext.cs" />
+    <Compile Include="Domain\Notification.cs" />
     <Compile Include="Domain\ReceivingUnit.cs" />
     <Compile Include="DonorDAL.cs" />
     <Compile Include="DonorDAL_CF.cs" />
     <Compile Include="HistoryDonationDAL.cs" />
+    <Compile Include="NotitficationsDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
