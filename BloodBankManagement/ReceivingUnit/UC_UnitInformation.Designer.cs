@@ -75,6 +75,7 @@
             this.bunifuLabel18 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtContactName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtAddress = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUnitId = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -84,7 +85,6 @@
             this.txtUnitName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbAvatar = new System.Windows.Forms.LinkLabel();
-            this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +121,7 @@
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.AutoSize = false;
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
@@ -137,7 +138,7 @@
             // 
             this.pbAvatar.AllowFocused = false;
             this.pbAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbAvatar.AutoSizeHeight = true;
+            this.pbAvatar.AutoSizeHeight = false;
             this.pbAvatar.BorderRadius = 40;
             this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
             this.pbAvatar.IsCircle = false;
@@ -153,6 +154,7 @@
             // 
             this.bunifuLabel12.AllowParentOverrides = false;
             this.bunifuLabel12.AutoEllipsis = false;
+            this.bunifuLabel12.AutoSize = false;
             this.bunifuLabel12.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel12.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel12.CursorType = System.Windows.Forms.Cursors.Default;
@@ -170,6 +172,7 @@
             // 
             this.bunifuLabel13.AllowParentOverrides = false;
             this.bunifuLabel13.AutoEllipsis = false;
+            this.bunifuLabel13.AutoSize = false;
             this.bunifuLabel13.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel13.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel13.CursorType = System.Windows.Forms.Cursors.Default;
@@ -187,6 +190,7 @@
             // 
             this.bunifuLabel14.AllowParentOverrides = false;
             this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.AutoSize = false;
             this.bunifuLabel14.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel14.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel14.CursorType = System.Windows.Forms.Cursors.Default;
@@ -204,6 +208,7 @@
             // 
             this.bunifuLabel15.AllowParentOverrides = false;
             this.bunifuLabel15.AutoEllipsis = false;
+            this.bunifuLabel15.AutoSize = false;
             this.bunifuLabel15.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel15.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel15.CursorType = System.Windows.Forms.Cursors.Default;
@@ -221,6 +226,7 @@
             // 
             this.bunifuLabel16.AllowParentOverrides = false;
             this.bunifuLabel16.AutoEllipsis = false;
+            this.bunifuLabel16.AutoSize = false;
             this.bunifuLabel16.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel16.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel16.CursorType = System.Windows.Forms.Cursors.Default;
@@ -238,6 +244,7 @@
             // 
             this.bunifuLabel17.AllowParentOverrides = false;
             this.bunifuLabel17.AutoEllipsis = false;
+            this.bunifuLabel17.AutoSize = false;
             this.bunifuLabel17.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel17.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel17.CursorType = System.Windows.Forms.Cursors.Default;
@@ -255,6 +262,7 @@
             // 
             this.bunifuLabel18.AllowParentOverrides = false;
             this.bunifuLabel18.AutoEllipsis = false;
+            this.bunifuLabel18.AutoSize = false;
             this.bunifuLabel18.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bunifuLabel18.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel18.CursorType = System.Windows.Forms.Cursors.Default;
@@ -359,6 +367,7 @@
             this.btUpdate.TextMarginLeft = 0;
             this.btUpdate.TextPadding = new System.Windows.Forms.Padding(0);
             this.btUpdate.UseDefaultRadiusAndThickness = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // bunifuPanel1
             // 
@@ -392,6 +401,24 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(546, 436);
             this.bunifuPanel1.TabIndex = 91;
+            // 
+            // bunifuLabel19
+            // 
+            this.bunifuLabel19.AllowParentOverrides = false;
+            this.bunifuLabel19.AutoEllipsis = false;
+            this.bunifuLabel19.AutoSize = false;
+            this.bunifuLabel19.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.bunifuLabel19.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel19.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel19.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel19.Location = new System.Drawing.Point(27, 222);
+            this.bunifuLabel19.Name = "bunifuLabel19";
+            this.bunifuLabel19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel19.Size = new System.Drawing.Size(77, 22);
+            this.bunifuLabel19.TabIndex = 92;
+            this.bunifuLabel19.Text = "Address:";
+            this.bunifuLabel19.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel19.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtContactName
             // 
@@ -604,7 +631,7 @@
             this.txtUnitId.PasswordChar = '\0';
             this.txtUnitId.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUnitId.PlaceholderText = "";
-            this.txtUnitId.ReadOnly = false;
+            this.txtUnitId.ReadOnly = true;
             this.txtUnitId.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUnitId.SelectedText = "";
             this.txtUnitId.SelectionLength = 0;
@@ -1003,7 +1030,6 @@
             // 
             // lbAvatar
             // 
-            this.lbAvatar.AutoSize = true;
             this.lbAvatar.BackColor = System.Drawing.Color.Transparent;
             this.lbAvatar.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAvatar.Location = new System.Drawing.Point(30, 113);
@@ -1011,25 +1037,8 @@
             this.lbAvatar.Name = "lbAvatar";
             this.lbAvatar.Size = new System.Drawing.Size(78, 14);
             this.lbAvatar.TabIndex = 4;
-            this.lbAvatar.TabStop = true;
             this.lbAvatar.Text = "Choose avatar";
-            // 
-            // bunifuLabel19
-            // 
-            this.bunifuLabel19.AllowParentOverrides = false;
-            this.bunifuLabel19.AutoEllipsis = false;
-            this.bunifuLabel19.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.bunifuLabel19.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel19.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel19.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel19.Location = new System.Drawing.Point(27, 222);
-            this.bunifuLabel19.Name = "bunifuLabel19";
-            this.bunifuLabel19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel19.Size = new System.Drawing.Size(77, 22);
-            this.bunifuLabel19.TabIndex = 92;
-            this.bunifuLabel19.Text = "Address:";
-            this.bunifuLabel19.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel19.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbAvatar.Click += new System.EventHandler(this.lbAvatar_Click);
             // 
             // UC_UnitInformation
             // 
@@ -1041,9 +1050,9 @@
             this.Controls.Add(this.bunifuLabel11);
             this.Name = "UC_UnitInformation";
             this.Size = new System.Drawing.Size(1016, 584);
+            this.Load += new System.EventHandler(this.UC_UnitInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

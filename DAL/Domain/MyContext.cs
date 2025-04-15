@@ -8,7 +8,7 @@
     public partial class MyContext : DbContext
     {
         public MyContext()
-            : base("name=MyContext")
+        : base(@"data source=ZY-COM;initial catalog=BloodBank;integrated security=True")
         {
         }
 

@@ -13,7 +13,7 @@ namespace BUS
     {
         private DonorDAL donorDAL = new DonorDAL();
 
-        public bool AddDonor(Donor donor)
+        public bool AddDonor(DonorDTO donor)
         {
             return donorDAL.AddDonor(donor);
         }
@@ -23,7 +23,7 @@ namespace BUS
             return donorDAL.GetAllDonors();
         }
 
-        public bool RegisterDonor(Donor donor)
+        public bool RegisterDonor(DonorDTO donor)
         {
             if (string.IsNullOrWhiteSpace(donor.Username) || string.IsNullOrWhiteSpace(donor.Password))
                 return false;

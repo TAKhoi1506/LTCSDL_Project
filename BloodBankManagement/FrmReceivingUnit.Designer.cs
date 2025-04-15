@@ -625,6 +625,7 @@
             this.uC_UnitInformation1.Name = "uC_UnitInformation1";
             this.uC_UnitInformation1.Size = new System.Drawing.Size(1016, 584);
             this.uC_UnitInformation1.TabIndex = 11;
+            this.uC_UnitInformation1.Visible = false;
             // 
             // uC_Home
             // 
@@ -652,6 +653,7 @@
             this.Controls.Add(this.pnHome);
             this.Name = "FrmReceivingUnit";
             this.Text = "Receiving Unit";
+            this.Load += new System.EventHandler(this.FrmReceivingUnit_Load);
             this.pnHome.ResumeLayout(false);
             this.pnHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
