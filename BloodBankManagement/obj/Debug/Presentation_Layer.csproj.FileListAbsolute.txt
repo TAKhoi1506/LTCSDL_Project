@@ -335,3 +335,4 @@ D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BloodBankManagement\obj\Debug\Pre
 D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2Date
 D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
+D:\OU\HK8\LTCSDL\Project_backup\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Donor.UC_Notifications.resources

@@ -37,7 +37,7 @@ namespace BloodBankManagement
                 return;
             }
 
-            Donor donor = new Donor
+            DTO.Donor donor = new DTO.Donor
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text,

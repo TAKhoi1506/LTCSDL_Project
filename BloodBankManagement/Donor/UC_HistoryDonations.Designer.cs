@@ -124,6 +124,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_HistoryDonations";
             this.Size = new System.Drawing.Size(1587, 911);
+            this.Load += new System.EventHandler(this.UC_HistoryDonations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonors)).EndInit();
             this.ResumeLayout(false);
 

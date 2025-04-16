@@ -23,6 +23,12 @@ namespace BloodBankManagement
         public void LoadHistoryDonation()
         {
             dgvDonors.DataSource = historyDonationBUS.GetHistoryDonations();
+            dgvDonors.ReadOnly = true;
+        }
+
+        private void UC_HistoryDonations_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

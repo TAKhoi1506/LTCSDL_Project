@@ -22,7 +22,7 @@ namespace BloodBankManagement
         private DonorBUS donorBUS = new DonorBUS();
         private void btAddDonor_Click(object sender, EventArgs e)
         {
-            Donor donor = new Donor()
+            DTO.Donor donor = new DTO.Donor()
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text,
@@ -51,6 +51,11 @@ namespace BloodBankManagement
         private void LoadDonors()
         {
             dgvDonors.DataSource = donorBUS.GetAllDonors();
+        }
+
+        private void bunifuPanel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

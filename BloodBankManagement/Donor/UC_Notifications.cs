@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,13 @@ namespace BloodBankManagement.Donor
         public UC_Notifications()
         {
             InitializeComponent();
+           
         }
 
         private void UC_Notifications_Load(object sender, EventArgs e)
         {
+            SetUpControl();
+            LoadNotifications();
 
         }
 
@@ -32,12 +36,12 @@ namespace BloodBankManagement.Donor
         private void SetUpControl()
         {
             //Thiết lập splitContainer 
-            splitContainer1.Dock = DockStyle.Fill;
+           
             splitContainer1.SplitterDistance = this.Width / 3;
 
 
             //Thiết lập Listview cho danh sách tin nhắn
-            listViewMessage.Dock = DockStyle.Fill;
+
             listViewMessage.View = View.Details;
             listViewMessage.Columns.Add("Tiêu đề", 200);
             listViewMessage.Columns.Add("Ngày", 100);
@@ -47,7 +51,7 @@ namespace BloodBankManagement.Donor
 
 
             //Thiết lập RichTextBox cho nội dung tin nhắn
-            MessageContent.Dock = DockStyle.Fill;
+          
             MessageContent.ReadOnly = true;
             
 
@@ -61,9 +65,16 @@ namespace BloodBankManagement.Donor
         //Tải danh sách thông báo từ database
         public void LoadNotifications()
         {
-            notificationsList = notificationsBUS.GetNotificationsList();   
-            //Cập nhật danh sách
-            UpdateNotificationListView();
+            //try
+            //{
+                notificationsList = notificationsBUS.GetNotificationsList();
+                //Cập nhật danh sách
+                UpdateNotificationListView();
+            //}
+            //catch(Exception) 
+            //{
+            //    MessageBox.Show("Không thể tải danh sách thông báo","Lỗi tải dữ liệu",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //}
         }
 
 
@@ -104,7 +115,7 @@ namespace BloodBankManagement.Donor
 
 
                 //Lấy nội dung đầy đủ của thông báo
-
+                DisplayNotificationContent(notificationId);
 
 
                 //Đánh dấu thông báo đã đọc
@@ -116,8 +127,56 @@ namespace BloodBankManagement.Donor
 
 
                 //Cập nhật trạng thái trong danh sách cục bộ
-                var notification = notificationsList.
+                var notification = notificationsList.Find(n => n.NotifiID == notificationId);
+                if (notification != null)
+                {
+                    notification.IsRead = true;
+                }
+
             }
+        }
+
+
+
+        //Hiển thị nội dung thông báo
+        private void DisplayNotificationContent(int notificationId) 
+        {
+            //Lấy thông tin đầy đủ của thông báo từ database
+
+            Notifications notifications = notificationsBUS.GetMessageById(notificationId);
+
+            if (notifications != null) 
+            {
+                MessageContent.Clear();
+
+
+                //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
+                MessageContent.AppendText(notifications.Title + "\n");
+
+
+                //Thêm ngày tạo thông báo
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+
+
+                //Thêm nội dung thông báo
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
+                MessageContent.AppendText(notifications.Message);
+
+
+
+            }
+            
+        }
+
+        public void RefreshNotifications()
+        {
+            LoadNotifications();
+        }
+
+        private void btRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshNotifications();
         }
     }
 }

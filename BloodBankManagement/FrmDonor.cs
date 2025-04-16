@@ -27,6 +27,7 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = false;
             uC_Benefits2.Visible = false;
+            uC_Notifications1.Visible = false;
         }
 
         private void btInfor_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = true;
             uC_RegistBloodDonation.Visible = false;
             uC_Benefits2.Visible = false;
+            uC_Notifications1.Visible = false;
         }
 
      
@@ -46,8 +48,9 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = false;
             uC_Benefits2.Visible = false;
+            uC_Notifications1.Visible = false;
 
-
+            
             uC_HistoryDonations2.LoadHistoryDonation(); 
 
         }
@@ -59,6 +62,7 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = true;
             uC_Benefits2.Visible = false;
+            uC_Notifications1.Visible = false;
         }
 
         private void btBenefit_Click(object sender, EventArgs e)
@@ -67,7 +71,20 @@ namespace BloodBankManagement
             uC_HistoryDonations2.Visible = false;
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = false;
+            uC_Notifications1.Visible = false;
             uC_Benefits2.Visible = true;
+        }
+
+        private void btNotification_Click(object sender, EventArgs e)
+        {
+            uC_Home2.Visible = false;
+            uC_HistoryDonations2.Visible = false;
+            uC_PersonalInformation.Visible = false;
+            uC_RegistBloodDonation.Visible = false;
+            uC_Benefits2.Visible = false;
+            uC_Notifications1.Visible = true;
+
+            uC_Notifications1.RefreshNotifications();   
         }
     }
 }
