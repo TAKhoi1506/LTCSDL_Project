@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 using BUS;
 using DTO;
 
@@ -9,89 +12,165 @@ namespace BloodBankManagement
     public partial class UC_RegisterForBloodRequirement : UserControl
     {
         private BloodRequirementBUS requirementBUS = new BloodRequirementBUS();
+        private Dictionary<string, BunifuTextBox> bloodTypeTextBoxMap;
 
         public UC_RegisterForBloodRequirement()
         {
             InitializeComponent();
+            LoadRequirementsToGrid();
         }
 
         private void UC_RegisterForBloodRequirement_Load(object sender, EventArgs e)
         {
-            dgvBloodRequirement.ColumnCount = 5;
-            dgvBloodRequirement.Columns[0].Name = "Receiving Unit ID";
-            dgvBloodRequirement.Columns[1].Name = "Blood Type";
-            dgvBloodRequirement.Columns[2].Name = "Amount (ml)";
-            // thêm cột request date 
-            dgvBloodRequirement.Columns[3].Name = "Supply Date";
-            dgvBloodRequirement.Columns[4].Name = "Status";
+            // Map từng loại máu đến textbox tương ứng
+            bloodTypeTextBoxMap = new Dictionary<string, BunifuTextBox>
+            {
+                { "A+", txtAPlus },
+                { "A-", txtAMinus },
+                { "B+", txtBPlus },
+                { "B-", txtBMinus },
+                { "AB+", txtABPlus },
+                { "AB-", txtABMinus },
+                { "O+", txtOPlus },
+                { "O-", txtOMinus }
+            };
+
+            // lấy thông tin người dùng lên => HIỆN TẠI CHƯA LÀM LOGIN NÊN CHƯA CÓ 
+            //if (!string.IsNullOrEmpty(CurrentUnitID))
+            //{
+            //    ReceivingUnitBUS ruBUS = new ReceivingUnitBUS();
+            //    var unit = ruBUS.GetByID(CurrentUnitID);
+            //    if (unit != null)
+            //    {
+            //        txtUnitID.Text = unit.UnitID;
+            //        txtUnitName.Text = unit.UnitName;
+            //    }
+            //}
+        }
+
+        private void LoadRequirementsToGrid()
+        {
+            try
+            {
+                //dgvBloodRequirement.Rows.Clear();
+                //dgvBloodRequirement.Columns.Clear();
+
+                //dgvBloodRequirement.Columns.Add("UnitID", "Mã đơn vị");
+                //dgvBloodRequirement.Columns.Add("RequestDate", "Ngày yêu cầu");
+                //dgvBloodRequirement.Columns.Add("SupplyDate", "Ngày cung cấp");
+                //dgvBloodRequirement.Columns.Add("BloodType", "Nhóm máu");
+                //dgvBloodRequirement.Columns.Add("Amount", "Số lượng");
+                //dgvBloodRequirement.Columns.Add("Status", "Trạng thái");
+
+                var requirements = new BloodRequirementBUS().GetAllRequirements();
+                var detailBUS = new BloodRequirementDetailBUS();
+
+
+                foreach (var req in requirements)
+                {
+                    // Lấy danh sách chi tiết loại máu cho mỗi yêu cầu
+                    var details = detailBUS.GetByRequirementID(req.ID);
+
+                    foreach (var detail in details)
+                    {
+                        dgvBloodRequirement.Rows.Add(
+                            req.RU_ID,
+                            req.RequestDate.ToString("dd/MM/yyyy"),
+                            req.SupplyDate.ToString("dd/MM/yyyy"),
+                            detail.BloodType,
+                            detail.Amount,
+                            req.Status
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading blood request data: " + ex.Message);
+            }
+        }
+
+        private void ClearForm()
+        {
+            // Giữ nguyên txtUnitID và txtUnitName
+            dpSupplyDate.Value = DateTime.Now;
+
+            // Bỏ chọn tất cả các blood type trong CheckedListBox
+            for (int i = 0; i < clbBloodType.Items.Count; i++)
+            {
+                clbBloodType.SetItemChecked(i, false);
+            }
+
+            // Clear các TextBox số lượng máu
+            txtAPlus.Clear();
+            txtAMinus.Clear();
+            txtBPlus.Clear();
+            txtBMinus.Clear();
+            txtABPlus.Clear();
+            txtABMinus.Clear();
+            txtOPlus.Clear();
+            txtOMinus.Clear();
         }
 
         private void btSent_Click(object sender, EventArgs e)
         {
-            var ruId = txtId.Text.Trim();
-            var supplyDate = dpSupplyDate.Value;
-
-            if (string.IsNullOrEmpty(ruId))
+            try
             {
-                MessageBox.Show("Please enter Receiving Unit ID");
-                return;
-            }
-
-            // Tạo danh sách các loại máu được chọn
-            var detailList = new List<BloodRequirementDetailDTO>();
-
-            foreach (var checkedItem in clbBloodType.CheckedItems)
-            {
-                string bloodType = checkedItem.ToString(); // e.g., "A+" hoặc "O-"
-                string txtName = "txt" + bloodType.Replace("+", "Plus").Replace("-", "Minus");
-
-                // DEBUG
-                Console.WriteLine("Looking for TextBox: " + txtName);
-
-                // Tìm textbox tương ứng
-                var txtBoxArray = this.Controls.Find(txtName, true);
-
-                if (txtBoxArray.Length > 0 && double.TryParse(txtBoxArray[0].Text, out double amount) && amount > 0)
+                if (string.IsNullOrEmpty(txtUnitId.Text.Trim()))
                 {
-                    detailList.Add(new BloodRequirementDetailDTO
+                    MessageBox.Show("Please enter Receiving Unit ID");
+                    return;
+                }
+
+                if (clbBloodType.CheckedItems.Count == 0)
+                {
+                    MessageBox.Show("Please select at least one blood type!");
+                    return;
+                }
+
+                // 1. Tạo yêu cầu máu chính
+                var brDTO = new BloodRequirementDTO
+                {
+                    RU_ID = txtUnitId.Text,
+                    RequestDate = DateTime.Now,
+                    SupplyDate = dpSupplyDate.Value,
+                    Status = "Pending"
+                };
+
+                var brBUS = new BloodRequirementBUS();
+                int newRequirementID = brBUS.AddRequirement(brDTO); // Trả về ID vừa tạo
+
+                // 2. Duyệt các nhóm máu đã check để lưu detail
+                var brDetailBUS = new BloodRequirementDetailBUS();
+
+                foreach (var item in clbBloodType.CheckedItems)
+                {
+                    string bloodType = item.ToString();
+
+                    if (bloodTypeTextBoxMap.TryGetValue(bloodType, out BunifuTextBox amountTextBox))
                     {
-                        BloodType = bloodType,
-                        Amount = amount
-                    });
+                        if (int.TryParse(amountTextBox.Text.Trim(), out int amount) && amount > 0)
+                        {
+                            var detailDTO = new BloodRequirementDetailDTO
+                            {
+                                RequirementID = newRequirementID,
+                                BloodType = bloodType,
+                                Amount = amount
+                            };
+
+                            brDetailBUS.AddDetail(detailDTO);
+                        }
+                    }
                 }
+
+                MessageBox.Show("Blood requirement submitted successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadRequirementsToGrid(); // Refresh lại DataGridView
+                ClearForm();
             }
-
-            if (detailList.Count == 0)
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select at least one blood type and enter a valid amount.");
-                return;
+                MessageBox.Show("Error registering a blood request: " + ex.Message);
             }
-
-            // Tạo DTO yêu cầu chính
-            var requirementDTO = new BloodRequirementDTO
-            {
-                RU_ID = ruId,
-                SupplyDate = supplyDate,
-                RequestDate = DateTime.Now,
-                Status = "Pending",
-                DetailList = detailList
-            };
-
-            bool result = requirementBUS.SendBloodRequirement(requirementDTO);
-
-            if (result)
-            {
-                MessageBox.Show("Blood requirement submitted successfully!");
-                dgvBloodRequirement.Rows.Clear();
-                foreach (var detail in detailList)
-                {
-                    dgvBloodRequirement.Rows.Add(ruId, detail.BloodType, detail.Amount, supplyDate.ToShortDateString(), "Pending");
-                }
-            }
-            else
-                MessageBox.Show("Failed to submit blood requirement.");
         }
-
-        
     }
 }

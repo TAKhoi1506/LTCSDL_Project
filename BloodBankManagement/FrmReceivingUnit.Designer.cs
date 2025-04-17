@@ -308,6 +308,7 @@
             this.btHome.TextMarginLeft = 0;
             this.btHome.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btHome.UseDefaultRadiusAndThickness = true;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btNoti
             // 
@@ -490,6 +491,7 @@
             this.btViewRequire.TextMarginLeft = 0;
             this.btViewRequire.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btViewRequire.UseDefaultRadiusAndThickness = true;
+            this.btViewRequire.Click += new System.EventHandler(this.btViewRequire_Click);
             // 
             // btInfor
             // 
@@ -581,6 +583,7 @@
             this.btInfor.TextMarginLeft = 0;
             this.btInfor.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btInfor.UseDefaultRadiusAndThickness = true;
+            this.btInfor.Click += new System.EventHandler(this.btInfor_Click);
             // 
             // bunifuGradientPanel1
             // 

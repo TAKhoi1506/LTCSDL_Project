@@ -14,7 +14,7 @@ namespace DAL
         private string connectionString = "Data Source=ZY-COM;Initial Catalog=bloodbank;Integrated Security=True";
 
         // admin
-        public bool AddDonor(Donor donor)
+        public bool AddDonor(DonorDTO donor)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -37,7 +37,7 @@ namespace DAL
             }
         }
 
-        public bool InsertDonor(Donor donor)
+        public bool InsertDonor(DonorDTO donor)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DAL.Domain;
+using DTO;
+using System.Data.Entity;
 
 namespace DAL
 {
@@ -63,42 +65,81 @@ namespace DAL
     {
         private MyContext db = new MyContext();
 
-        // Lấy danh sách tất cả yêu cầu (entity → entity, có thể map sang DTO ở tầng BUS)
-        public List<BloodRequirement> GetAllRequirements()
+        // Lấy tất cả yêu cầu
+        public List<BloodRequirementDTO> GetAllRequirements()
         {
             return db.BloodRequirements
-                     .Include("DetailList")
-                     .Include("ReceivingUnit")
+                     .Select(br => new BloodRequirementDTO
+                     {
+                         ID = br.ID,
+                         RU_ID = br.RU_ID,
+                         RequestDate = br.RequestDate,
+                         SupplyDate = br.SupplyDate,
+                         Status = br.Status
+                     })
                      .ToList();
         }
 
-        // Thêm mới yêu cầu và danh sách chi tiết (DTO → entity)
-        public bool InsertBloodRequirement(BloodRequirement requirement)
+        // Lấy yêu cầu theo mã đơn vị nhận
+        public BloodRequirementDTO GetByUnitID(string unitID)
         {
-            using (var transaction = db.Database.BeginTransaction())
+            var entity = db.BloodRequirements
+                           .FirstOrDefault(br => br.RU_ID == unitID);
+
+            if (entity == null) return null;
+
+            return new BloodRequirementDTO
             {
-                try
-                {
-                    // Thêm requirement chính
-                    db.BloodRequirements.Add(requirement);
-                    db.SaveChanges();
+                ID = entity.ID,
+                RU_ID = entity.RU_ID,
+                RequestDate = entity.RequestDate,
+                SupplyDate = entity.SupplyDate,
+                Status = entity.Status
+            };
+        }
 
-                    // Giả sử các BloodRequirementDetail đã có sẵn trong requirement.DetailList
-                    foreach (var detail in requirement.DetailList)
-                    {
-                        detail.RequirementID = requirement.ID; // thiết lập khoá ngoại
-                        db.BloodRequirementDetails.Add(detail);
-                    }
+        // Thêm yêu cầu mới
+        public int AddRequirement(BloodRequirementDTO brDTO)
+        {
+            var entity = new BloodRequirement
+            {
+                RU_ID = brDTO.RU_ID,
+                RequestDate = DateTime.Now,
+                SupplyDate = brDTO.SupplyDate,
+                Status = string.IsNullOrEmpty(brDTO.Status) ? "Pending" : brDTO.Status
+            };
 
-                    db.SaveChanges();
-                    transaction.Commit();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    transaction.Rollback();
-                    return false;
-                }
+            db.BloodRequirements.Add(entity);
+            db.SaveChanges();
+
+
+            // Cập nhật ID vừa thêm vào DTO nếu cần
+            return entity.ID;
+        }
+
+        // Xoá yêu cầu theo ID
+        public void DeleteRequirement(int id)
+        {
+            var entity = db.BloodRequirements.Find(id);
+            if (entity != null)
+            {
+                db.BloodRequirements.Remove(entity);
+                db.SaveChanges();
+            }
+        }
+
+        // Cập nhật yêu cầu
+        public void UpdateRequirement(BloodRequirementDTO brDTO)
+        {
+            var entity = db.BloodRequirements.Find(brDTO.ID);
+            if (entity != null)
+            {
+                entity.RU_ID = brDTO.RU_ID;
+                entity.SupplyDate = brDTO.SupplyDate;
+                entity.Status = brDTO.Status;
+
+                db.Entry(entity).State = EntityState.Modified;
+                db.SaveChanges();
             }
         }
     }

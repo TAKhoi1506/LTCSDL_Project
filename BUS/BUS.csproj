@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BloodRequirementBUS.cs" />
+    <Compile Include="BloodRequirementDetailBUS.cs" />
     <Compile Include="DonorBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceivingUnitBUS.cs" />

@@ -12,7 +12,7 @@ namespace DTO
         public string RU_ID { get; set; }
         //public string BloodType { get; set; }
         //public double Amount { get; set; }
-        public DateTime RequestDate { get; set; }
+        public DateTime RequestDate { get; set; } = DateTime.Now;
         public DateTime SupplyDate { get; set; }
         public string Status { get; set; } = "Pending";
 

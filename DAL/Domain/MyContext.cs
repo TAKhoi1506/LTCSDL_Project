@@ -22,6 +22,9 @@
         public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<ReceivingUnit> ReceivingUnits { get; set; }
 
+        public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }
+        public virtual DbSet<Notification> Notifications { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BloodRequirement>()

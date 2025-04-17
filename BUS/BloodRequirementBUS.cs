@@ -12,61 +12,58 @@ namespace BUS
     public class BloodRequirementBUS
     {
         private MyContext db = new MyContext();
+        private BloodRequirementDAL brDAL = new BloodRequirementDAL();
 
-        public bool SendBloodRequirement(BloodRequirementDTO requirementDTO)
+
+        // Thêm yêu cầu máu mới
+        public int AddRequirement(BloodRequirementDTO brDTO)
         {
-            try
-            {
-                // Bước 1: Map từ DTO sang Entity
-                var requirementEntity = new BloodRequirement
-                {
-                    RU_ID = requirementDTO.RU_ID,
-                    SupplyDate = requirementDTO.SupplyDate,
-                    RequestDate = requirementDTO.RequestDate,
-                    Status = requirementDTO.Status,
-                    DetailList = new List<BloodRequirementDetail>()
-                };
+            if (string.IsNullOrWhiteSpace(brDTO.RU_ID))
+                throw new ArgumentException("Receiving Unit ID must not be null!");
 
-                foreach (var detail in requirementDTO.DetailList)
-                {
-                    requirementEntity.DetailList.Add(new BloodRequirementDetail
-                    {
-                        BloodType = detail.BloodType,
-                        Amount = detail.Amount
-                    });
-                }
+            if (brDTO.SupplyDate < DateTime.Now.Date)
+                throw new ArgumentException("The date of supply must not be less than the date of request!");
 
-                // Bước 2: Thêm vào context và lưu thay đổi
-                db.BloodRequirements.Add(requirementEntity);
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-                return false;
-            }
+            return brDAL.AddRequirement(brDTO); // Trả về ID
         }
 
-        public List<BloodRequirementDTO> GetAllRequirementsByRU(string ruId)
+        // Lấy toàn bộ yêu cầu
+        public List<BloodRequirementDTO> GetAllRequirements()
         {
-            var list = db.BloodRequirements
-                         .Where(r => r.RU_ID == ruId)
-                         .Select(r => new BloodRequirementDTO
-                         {
-                             ID = r.ID,
-                             RU_ID = r.RU_ID,
-                             RequestDate = r.RequestDate,
-                             SupplyDate = r.SupplyDate,
-                             Status = r.Status,
-                             DetailList = r.DetailList.Select(d => new BloodRequirementDetailDTO
-                             {
-                                 BloodType = d.BloodType,
-                                 Amount = d.Amount
-                             }).ToList()
-                         }).ToList();
+            return brDAL.GetAllRequirements();
+        }
 
-            return list;
+        // Lấy yêu cầu theo Receiving Unit ID
+        public BloodRequirementDTO GetByUnitID(string unitID)
+        {
+            if (string.IsNullOrWhiteSpace(unitID))
+                throw new ArgumentException("Unit ID is invalid!");
+
+            return brDAL.GetByUnitID(unitID);
+        }
+
+        // Xoá yêu cầu theo ID
+        public void DeleteRequirement(int id)
+        {
+            if (id <= 0)
+                throw new ArgumentException("Requirement ID is invalid!");
+
+            brDAL.DeleteRequirement(id);
+        }
+
+        // Cập nhật yêu cầu
+        public void UpdateRequirement(BloodRequirementDTO brDTO)
+        {
+            if (brDTO.ID <= 0)
+                throw new ArgumentException("Requirement ID is invalid!");
+
+            if (string.IsNullOrWhiteSpace(brDTO.RU_ID))
+                throw new ArgumentException("Receiving Unit ID must not be null!");
+
+            if (brDTO.SupplyDate < DateTime.Now.Date)
+                throw new ArgumentException("The date of supply must not be less than the date of request!");
+
+            brDAL.UpdateRequirement(brDTO);
         }
     }
 }

@@ -55,6 +55,7 @@ namespace BloodBankManagement
                 txtUsername.Text = dto.Username;
                 txtPassword.Text = dto.Password;
                 txtUnitId.Text = dto.RU_ID;
+                txtUnitId.ForeColor = Color.Silver;
                 txtUnitName.Text = dto.UnitName;
                 txtAddress.Text = dto.Address;
                 txtContactName.Text = dto.ContactName;

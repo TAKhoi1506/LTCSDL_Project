@@ -165,17 +165,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BloodBankDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BloodBankDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BloodBankDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BloodBankDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="BloodRequirementDAL.cs" />
+    <Compile Include="BloodRequirementDetailDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Domain\BloodDetail.cs" />
     <Compile Include="Domain\BloodRequirement.cs" />
@@ -184,7 +180,9 @@
     <Compile Include="Domain\Donation.cs" />
     <Compile Include="Domain\Donor.cs" />
     <Compile Include="Domain\Event.cs" />
+    <Compile Include="Domain\HistoryDonation.cs" />
     <Compile Include="Domain\MyContext.cs" />
+    <Compile Include="Domain\Notification.cs" />
     <Compile Include="Domain\ReceivingUnit.cs" />
     <Compile Include="DonorDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,17 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="BloodBankDataSet.xsc">
-      <DependentUpon>BloodBankDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BloodBankDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BloodBankDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BloodBankDataSet.xss">
-      <DependentUpon>BloodBankDataSet.xsd</DependentUpon>
-    </None>
     <None Include="BloodBankDataSet1.xsc">
       <DependentUpon>BloodBankDataSet1.xsd</DependentUpon>
     </None>
