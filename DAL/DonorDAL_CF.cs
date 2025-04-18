@@ -30,7 +30,7 @@ namespace DAL
                     UserName = donorDTO.Username,
                     Password = donorDTO.Password,
                     FullName = donorDTO.FullName,
-                    BirthDate = donorDTO.DateOfBirth,
+                    DateOfBirth = donorDTO.DateOfBirth,
                     BloodType = donorDTO.BloodType,
                     Gender = donorDTO.Gender,
                     PhoneNumber = donorDTO.PhoneNumber,
@@ -60,7 +60,7 @@ namespace DAL
                     UserName = donorDTO.Username,
                     Password = donorDTO.Password,
                     FullName = donorDTO.FullName,
-                    BirthDate = donorDTO.DateOfBirth,
+                    DateOfBirth = donorDTO.DateOfBirth,
                     Gender = donorDTO.Gender,
                     PhoneNumber = donorDTO.PhoneNumber,
                     Email = donorDTO.Email,
@@ -89,7 +89,7 @@ namespace DAL
                 Username = d.UserName,
                 Password = d.Password,
                 FullName = d.FullName,
-                DateOfBirth = d.BirthDate,
+                DateOfBirth = d.DateOfBirth,
                 BloodType = d.BloodType,
                 Gender = d.Gender,
                 PhoneNumber = d.PhoneNumber,
@@ -121,7 +121,7 @@ namespace DAL
                 donor.UserName = donorDTO.Username;
                 donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
-                donor.BirthDate = donorDTO.DateOfBirth;
+                donor.DateOfBirth = donorDTO.DateOfBirth;
                 donor.BloodType = donorDTO.BloodType;
                 donor.Gender = donorDTO.Gender;
                 donor.PhoneNumber = donorDTO.PhoneNumber;
@@ -153,7 +153,7 @@ namespace DAL
                 donor.UserName = donorDTO.Username;
                 donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
-                donor.BirthDate = donorDTO.DateOfBirth;
+                donor.DateOfBirth = donorDTO.DateOfBirth;
                 donor.Gender = donorDTO.Gender;
                 donor.PhoneNumber = donorDTO.PhoneNumber;
                 donor.Email = donorDTO.Email;
@@ -186,6 +186,14 @@ namespace DAL
             {
                 Console.WriteLine(ex);
                 return false;
+            }
+        }
+        public int? GetDonorIdByUsername(string username)
+        {
+            using (var context = new MyContext())
+            {
+                var donor = context.Donors.FirstOrDefault(d => d.UserName == username);
+                return donor?.DonorID;
             }
         }
 

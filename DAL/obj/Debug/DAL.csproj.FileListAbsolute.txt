@@ -22,3 +22,17 @@ F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.dll
 F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.dll
 F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.xml
 F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+D:\masterLTCSDL\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\masterLTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\masterLTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\masterLTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\masterLTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+D:\masterLTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodStock.cs" />
+    <Compile Include="DonationDTO.cs" />
     <Compile Include="Donor.cs" />
+    <Compile Include="EventDTO.cs" />
     <Compile Include="HistoryDonation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

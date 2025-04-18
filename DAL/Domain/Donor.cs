@@ -34,7 +34,7 @@ namespace DAL.Domain
         public string BloodType { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime BirthDate { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         [Required]
         [StringLength(11)]

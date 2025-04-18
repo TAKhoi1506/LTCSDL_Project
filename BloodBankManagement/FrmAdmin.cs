@@ -17,5 +17,56 @@ namespace BloodBankManagement
         {
             InitializeComponent();
         }
+        private UC_BloodStock ucBloodStock;
+        private UC_Home ucHome;
+        private UC_Events ucEvents;
+        private UC_Donations ucDonations;
+        private void btBloodStock_Click(object sender, EventArgs e)
+        {
+            if (ucBloodStock == null)
+            {
+                ucBloodStock = new UC_BloodStock();
+                ucBloodStock.Dock = DockStyle.Fill;
+                this.Controls.Add(ucBloodStock);
+            }
+
+            ucBloodStock.BringToFront();
+        }
+
+        private void bunifuButton26_Click(object sender, EventArgs e)
+        {
+             if (ucHome == null)
+            {
+                ucHome = new UC_Home();
+                ucHome.Dock = DockStyle.Fill;
+                this.Controls.Add(ucHome);
+            }
+
+            ucHome.BringToFront();
+        }
+
+        private void btEvents_Click(object sender, EventArgs e)
+        {
+            if (ucEvents == null)
+            {
+                ucEvents = new UC_Events();
+                ucEvents.Dock = DockStyle.Fill;
+                this.Controls.Add(ucEvents);
+            }
+
+            ucEvents.BringToFront();
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            if (ucDonations == null)
+            {
+                ucDonations = new UC_Donations();
+                ucDonations.Dock = DockStyle.Fill;
+                this.Controls.Add(ucDonations);
+            }
+
+            ucDonations.BringToFront();
+        }
     }
 }

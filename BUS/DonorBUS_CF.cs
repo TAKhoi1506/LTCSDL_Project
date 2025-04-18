@@ -25,5 +25,10 @@ namespace BUS
             return donorDAL.GetAllDonors();
         }
 
+        public int? GetDonorIdByUsername(string username)
+        {
+            return donorDAL.GetDonorIdByUsername(username);
+        }
+
     }
 }
