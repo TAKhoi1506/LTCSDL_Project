@@ -37,5 +37,12 @@ namespace BUS
         {
             detailDAL.UpdateDetail(detailDTO);
         }
+
+        //public List<BloodRequirementDetailDTO> SearchByBloodType(string bloodType)
+        //{
+        //    return detailDAL.SearchByBloodType(bloodType);
+        //}
+
+        
     }
 }

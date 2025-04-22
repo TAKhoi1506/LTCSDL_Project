@@ -11,7 +11,7 @@ namespace BUS
 {
     public class BloodRequirementBUS
     {
-        private MyContext db = new MyContext();
+        private readonly MyContext db = new MyContext();
         private BloodRequirementDAL brDAL = new BloodRequirementDAL();
 
 
@@ -64,6 +64,36 @@ namespace BUS
                 throw new ArgumentException("The date of supply must not be less than the date of request!");
 
             brDAL.UpdateRequirement(brDTO);
+        }
+
+        // Tim kiem yeu cau theo unit ID 
+        public List<BloodRequirementDTO> SearchRequirementByID(string unitID)
+        {
+            return brDAL.SearchRequirementByID(unitID);
+        }
+
+        // Sort 
+        public List<(BloodRequirementDTO Requirement, BloodRequirementDetailDTO Detail)> SortRequirements(string sortBy)
+        {
+            var results = brDAL.Sort(sortBy);
+
+            return results.Select(x => (
+                new BloodRequirementDTO
+                {
+                    ID = x.Requirement.ID,
+                    RU_ID = x.Requirement.RU_ID,
+                    RequestDate = x.Requirement.RequestDate,
+                    SupplyDate = x.Requirement.SupplyDate,
+                    Status = x.Requirement.Status
+                },
+                new BloodRequirementDetailDTO
+                {
+                    DetailID = x.Detail.DetailID,
+                    RequirementID = x.Detail.RequirementID,
+                    BloodType = x.Detail.BloodType,
+                    Amount = x.Detail.Amount
+                }
+            )).ToList();
         }
     }
 }

@@ -63,7 +63,7 @@ namespace DAL
     //}
     public class BloodRequirementDAL
     {
-        private MyContext db = new MyContext();
+        private readonly MyContext db = new MyContext();
 
         // Lấy tất cả yêu cầu
         public List<BloodRequirementDTO> GetAllRequirements()
@@ -141,6 +141,62 @@ namespace DAL
                 db.Entry(entity).State = EntityState.Modified;
                 db.SaveChanges();
             }
+        }
+
+        // Search 
+        public List<BloodRequirementDTO> SearchRequirementByID(string unitID)
+        {
+            var requirements = db.BloodRequirements
+                                 .Where(r => r.RU_ID == unitID)
+                                 .Select(r => new BloodRequirementDTO
+                                 {
+                                     ID = r.ID,
+                                     RU_ID = r.RU_ID,
+                                     RequestDate = r.RequestDate,
+                                     SupplyDate = r.SupplyDate,
+                                     Status = r.Status
+                                 })
+                                 .ToList();
+
+            return requirements;
+        }
+
+
+        // Sắp xếp 
+        public List<(BloodRequirement Requirement, BloodRequirementDetail Detail)> Sort(string sortBy)
+        {
+            var query = from requirement in db.BloodRequirements
+                        join detail in db.BloodRequirementDetails
+                        on requirement.ID equals detail.RequirementID
+                        select new { requirement, detail };
+
+            switch (sortBy)
+            {
+                case "Unit ID":
+                    query = query.OrderBy(x => x.requirement.RU_ID);
+                    break;
+                case "Request date":
+                    query = query.OrderBy(x => x.requirement.RequestDate);
+                    break;
+                case "Supply date":
+                    query = query.OrderBy(x => x.requirement.SupplyDate);
+                    break;
+                case "Blood type":
+                    query = query.OrderBy(x => x.detail.BloodType);
+                    break;
+                case "Amount":
+                    query = query.OrderBy(x => x.detail.Amount);
+                    break;
+                case "Status":
+                    query = query.OrderBy(x => x.requirement.Status);
+                    break;
+                default:
+                    break;
+            }
+
+            return query.ToList()
+                        .Select(x => (x.requirement, x.detail))
+                        .ToList();
         }
     }
 

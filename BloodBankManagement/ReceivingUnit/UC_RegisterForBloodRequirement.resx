@@ -117,21 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial Rounded MT Bold'; font-size: 14pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  <data name="lbSortBy.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAL4AAAAhCAYAAABnRBELAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVHhe7dy/TsJQFIDxOzL6CI6OPomzj+Dis5j4DL6C
-        K9B/yM4gE8SkxGDTmJrUBhtSz8GTGMITcM/3S+5Ab9m+lpbhBABiMpncFkUxzrKsmk6nA4t1rksblpZf
-        pOk7y/uUbF7oSYvFoqmqaui6bgDOmTZc1/WwXC7bPM9fpfFLy/2fRr/dbu0rQFyaphmk8TeJf2TJh5Cm
-        6b1cFV92DhCl1WrVSfyPlv3f3V5/EoCYtW2rz/0byz6EJEm++763bSBe+tJr2YegHwAPCB8uET5cIny4
-        RPhwifDhEuHDJcKHS4QPlwgfLhE+XCJ8uET4cInw4RLhwyXCh0uED5cIHy4RPlw6Cj9Jkn6/39sWEK+j
-        8HXYjs4dAWK22+2GNE0by/4Q/sN6vWbMAqKmA9OKoni27A/jA0cS/ztjAxErfZSfzWafJ2ME5cC1XA0f
-        ZVn+MGMHsdDgdRbsfD6v5eZ+Y7kfk/h1cOyTDpjSlwAW69yX/nEjTY+l7SvLHPAqhF9Afy5/dq7XOAAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAANoAAAAhCAYAAAC/SLUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGKSURBVHhe7d2xSsNgEMDxb+zoIzg6+iTOPoKLzyL4DL6C
+        a9OkTe3ewU4tQkVqCBIhhhpKvKsHUrpU/bgu/x/c0CQd/4RkuAQAR5AkyWWe5/3hcFgMBoOOYZjDRpuR
+        dh6koSvLaZ+cPNGLptNpVRRF1zRNB+Bw2kxZlt1sNqtHo9GjNHVqef3QyFarlf0FwH9UVdVJU08SW88S
+        CyHLsmup8N2uARDBfD5vJLZby+z7bqa3PADx1HWtz23PllkIaZp+tG1rpwHEoi9JLLMQ9AeA+AgNcEBo
+        gANCAxwQGuCA0AAHhAY4IDTAAaEBDggNcEBogANCAxwQGuCA0AAHhAY4IDTAAaEBDggNcEBogIOd0NI0
+        bTebjZ0CEMtOaLrsUffQAYhnvV53WZZVltk2tJvFYsEaLCAiXUic5/m9ZbZdB96T2F5YAw7EoY9i4/H4
+        bW8tuBw4l/pel8vlJzsegb/RwPTbFZPJpJSb14XltUti0w9d3OlCVX2IYxjmd6MvFqWhvrR0ZlkB8BHC
+        F00yiFoTSsvgAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtABMinus.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -276,4 +276,16 @@
   <metadata name="Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="btSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAF0AAAAhCAYAAAC7kad5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFxSURBVGhD7ZqhUgMxEIYzs0mLRCKRSGQlj4Csy0lkZWXf
+        AsljIJFIJBJZWXkSdtPtML3bQm/IEvPvzCfaTU583W5yk4TfIs9mN5noLqfUMRtwkk493aq66ZFjXHVE
+        711Kn2AiRB/lhwjhQnX+HFLZPPF19CAwHS5aLt6FqrVD/iI8uB9NBn+Cxa9V8XFohUO4E9LvVfV3cAIt
+        xZct9/hL1a2Lpj0Q1IToSZVzlfNqaw4CtelLtcu+0kgCJ3jtvBfpSysJfCg7GfTz/0VemqTSN1YS+ADp
+        DYD0BkB6AyC9AZDeAEhvAKQ3ANIbAOkNgPQG7KXHuLaSwIdDpcu5qDkA1OdQ6QsrCXxg6csgdzP4w26Y
+        BD7k+fx6f1yX0uMwCRwgeivCJbjar/jL7WgQqEnPreX4yp2c3RkDQSXKMZ0VnESb8eFZFduhW0gsrHXo
+        T1b4MLTHvwweAKZwzuVRK2R7wxMfZEMPziTGldwLVYVGhPAFkm7o1GBSDHkAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

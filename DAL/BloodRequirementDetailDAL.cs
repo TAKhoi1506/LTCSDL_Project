@@ -11,7 +11,7 @@ namespace DAL
 {
     public class BloodRequirementDetailDAL
     {
-        private MyContext db = new MyContext();
+        private readonly MyContext db = new MyContext();
 
         // Lấy toàn bộ chi tiết yêu cầu máu
         public List<BloodRequirementDetailDTO> GetAllDetails()
@@ -82,5 +82,21 @@ namespace DAL
                 db.SaveChanges();
             }
         }
+
+        // Tìm kiếm bằng nhóm máu (blood type) => các lớp trên chưa phát triển
+        //public List<BloodRequirementDetailDTO> SearchByBloodType(string bloodType)
+        //{
+        //    return db.BloodRequirementDetails
+        //             .Where(d => d.BloodType == bloodType)
+        //             .Select(d => new BloodRequirementDetailDTO
+        //             {
+        //                 DetailID = d.DetailID,
+        //                 RequirementID = d.RequirementID,
+        //                 BloodType = d.BloodType,
+        //                 Amount = d.Amount
+        //             })
+        //             .ToList();
+        //}
+
     }
 }

@@ -233,6 +233,12 @@
     <Compile Include="ReceivingUnit\UC_UnitInformation.Designer.cs">
       <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Notifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Notifications.Designer.cs">
+      <DependentUpon>UC_Notifications.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceivingUnit\UC_UnitInformation.resx">
       <DependentUpon>UC_UnitInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Notifications.resx">
+      <DependentUpon>UC_Notifications.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

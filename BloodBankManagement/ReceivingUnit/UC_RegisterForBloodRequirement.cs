@@ -11,13 +11,16 @@ namespace BloodBankManagement
 {
     public partial class UC_RegisterForBloodRequirement : UserControl
     {
-        private BloodRequirementBUS requirementBUS = new BloodRequirementBUS();
+        private BloodRequirementBUS brBUS = new BloodRequirementBUS();
+        private BloodRequirementDetailBUS brDetailBUS = new BloodRequirementDetailBUS();
+
         private Dictionary<string, BunifuTextBox> bloodTypeTextBoxMap;
 
         public UC_RegisterForBloodRequirement()
         {
             InitializeComponent();
             LoadRequirementsToGrid();
+            txtSearch.TextChanged += txtSearch_TextChanged;
         }
 
         private void UC_RegisterForBloodRequirement_Load(object sender, EventArgs e)
@@ -42,34 +45,29 @@ namespace BloodBankManagement
             //    var unit = ruBUS.GetByID(CurrentUnitID);
             //    if (unit != null)
             //    {
-            //        txtUnitID.Text = unit.UnitID;
+            //        txtUnitId.Text = unit.UnitID;
             //        txtUnitName.Text = unit.UnitName;
+            //        txtUnitId.ForeColor = Color.Silver;
+            //        txtUnitName.ForeColor = Color.Silver;
+            //        txtUnitId.ReadOnly = true;
+            //        txtUnitName.ReadOnly = true;
             //    }
             //}
         }
 
+        // Cách 1: load không tham số 
         private void LoadRequirementsToGrid()
         {
             try
             {
-                //dgvBloodRequirement.Rows.Clear();
-                //dgvBloodRequirement.Columns.Clear();
-
-                //dgvBloodRequirement.Columns.Add("UnitID", "Mã đơn vị");
-                //dgvBloodRequirement.Columns.Add("RequestDate", "Ngày yêu cầu");
-                //dgvBloodRequirement.Columns.Add("SupplyDate", "Ngày cung cấp");
-                //dgvBloodRequirement.Columns.Add("BloodType", "Nhóm máu");
-                //dgvBloodRequirement.Columns.Add("Amount", "Số lượng");
-                //dgvBloodRequirement.Columns.Add("Status", "Trạng thái");
+                dgvBloodRequirement.Rows.Clear(); // Xóa tất cả dòng cũ trước khi load mới
 
                 var requirements = new BloodRequirementBUS().GetAllRequirements();
-                var detailBUS = new BloodRequirementDetailBUS();
-
 
                 foreach (var req in requirements)
                 {
                     // Lấy danh sách chi tiết loại máu cho mỗi yêu cầu
-                    var details = detailBUS.GetByRequirementID(req.ID);
+                    var details = brDetailBUS.GetByRequirementID(req.ID);
 
                     foreach (var detail in details)
                     {
@@ -90,6 +88,33 @@ namespace BloodBankManagement
             }
         }
 
+        // Cách 2: load có tham số 
+        private void LoadRequirementsToGrid(List<(BloodRequirementDTO Requirement, BloodRequirementDetailDTO Detail)> sortedList)
+        {
+            try
+            {
+                dgvBloodRequirement.Rows.Clear(); // Xóa tất cả dữ liệu cũ
+
+                foreach (var item in sortedList)
+                {
+                    dgvBloodRequirement.Rows.Add(
+                        item.Requirement.RU_ID,
+                        item.Requirement.RequestDate.ToString("dd/MM/yyyy"),
+                        item.Requirement.SupplyDate.ToString("dd/MM/yyyy"),
+                        item.Detail.BloodType,
+                        item.Detail.Amount,
+                        item.Requirement.Status
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading blood request data: " + ex.Message);
+            }
+        }
+
+
+        // Sau khi SentBloodRequirement những dữ liệu trên control bị xóa đi 
         private void ClearForm()
         {
             // Giữ nguyên txtUnitID và txtUnitName
@@ -137,11 +162,9 @@ namespace BloodBankManagement
                     Status = "Pending"
                 };
 
-                var brBUS = new BloodRequirementBUS();
                 int newRequirementID = brBUS.AddRequirement(brDTO); // Trả về ID vừa tạo
 
                 // 2. Duyệt các nhóm máu đã check để lưu detail
-                var brDetailBUS = new BloodRequirementDetailBUS();
 
                 foreach (var item in clbBloodType.CheckedItems)
                 {
@@ -171,6 +194,64 @@ namespace BloodBankManagement
             {
                 MessageBox.Show("Error registering a blood request: " + ex.Message);
             }
+        }
+
+        // Search by unit ID 
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            dgvBloodRequirement.Rows.Clear();
+            string unitID = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(unitID))
+            {
+                MessageBox.Show("Please enter Unit ID to search!");
+                return;
+            }
+
+            var requirementList = brBUS.SearchRequirementByID(unitID);
+
+            if (requirementList != null && requirementList.Count > 0)
+            {
+                foreach (var requirement in requirementList)
+                {
+                    var details = brDetailBUS.GetByRequirementID(requirement.ID);
+                    foreach (var detail in details)
+                    {
+                        dgvBloodRequirement.Rows.Add(
+                            requirement.RU_ID,
+                            requirement.RequestDate.ToString("dd/MM/yyyy"),
+                            requirement.SupplyDate.ToString("dd/MM/yyyy"),
+                            detail.BloodType,
+                            detail.Amount,
+                            requirement.Status
+                        );
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Not found!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // Nếu ô tìm kiếm rỗng, hiển thị lại toàn bộ dữ liệu
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                LoadRequirementsToGrid();
+            }
+        }
+
+        // Sort
+        private void cbSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedColumn = cbSort.SelectedItem.ToString(); // Lấy cột cần sắp xếp
+
+            var sortedList = brBUS.SortRequirements(selectedColumn); // Sắp xếp danh sách
+
+            LoadRequirementsToGrid(sortedList); // Hiển thị danh sách đã sắp xếp
         }
     }
 }

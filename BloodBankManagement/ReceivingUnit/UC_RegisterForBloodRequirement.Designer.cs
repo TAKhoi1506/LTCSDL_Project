@@ -77,12 +77,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lbSortBy = new Bunifu.UI.WinForms.BunifuLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.cbSort = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtABMinus = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtABPlus = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtOMinus = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -108,26 +106,9 @@
             this.BloodType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.AutoSize = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Arial", 11F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(511, 328);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(62, 16);
-            this.bunifuLabel2.TabIndex = 15;
-            this.bunifuLabel2.Text = "Unit Type";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbSortBy
             // 
@@ -136,141 +117,112 @@
             this.lbSortBy.AutoSize = false;
             this.lbSortBy.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbSortBy.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbSortBy.Font = new System.Drawing.Font("Arial", 11F);
-            this.lbSortBy.Location = new System.Drawing.Point(769, 328);
+            this.lbSortBy.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.lbSortBy.Location = new System.Drawing.Point(700, 328);
             this.lbSortBy.Margin = new System.Windows.Forms.Padding(2);
             this.lbSortBy.Name = "lbSortBy";
             this.lbSortBy.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbSortBy.Size = new System.Drawing.Size(47, 16);
+            this.lbSortBy.Size = new System.Drawing.Size(70, 25);
             this.lbSortBy.TabIndex = 16;
             this.lbSortBy.Text = "Sort by";
             this.lbSortBy.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbSortBy.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // comboBox2
+            // cbSort
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Clinic",
-            "Hopsital",
-            "Nursing Home"});
-            this.comboBox2.Location = new System.Drawing.Point(590, 328);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(156, 25);
-            this.comboBox2.TabIndex = 13;
+            this.cbSort.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSort.FormattingEnabled = true;
+            this.cbSort.Items.AddRange(new object[] {
+            "Unit ID",
+            "Request date",
+            "Supply date",
+            "Blood type",
+            "Amount",
+            "Status"});
+            this.cbSort.Location = new System.Drawing.Point(785, 328);
+            this.cbSort.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSort.Name = "cbSort";
+            this.cbSort.Size = new System.Drawing.Size(144, 25);
+            this.cbSort.TabIndex = 14;
+            this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
             // 
-            // comboBox1
+            // txtSearch
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Donors",
-            "Receiving Units",
-            "Event",
-            "Date"});
-            this.comboBox1.Location = new System.Drawing.Point(831, 328);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 25);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.AutoSize = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(40, 320);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(238, 42);
-            this.bunifuLabel1.TabIndex = 11;
-            this.bunifuLabel1.Text = "Blood Requirements list";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuTextBox1
-            // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.AutoSizeHeight = true;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.White;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.White;
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 10;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = global::BloodBankManagement.Properties.Resources.loupe;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(305, 320);
-            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.txtSearch.AcceptsReturn = false;
+            this.txtSearch.AcceptsTab = false;
+            this.txtSearch.AnimationSpeed = 200;
+            this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSearch.AutoSizeHeight = true;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch.BackgroundImage")));
+            this.txtSearch.BorderColorActive = System.Drawing.Color.White;
+            this.txtSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSearch.BorderColorHover = System.Drawing.Color.White;
+            this.txtSearch.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderThickness = 1;
+            this.txtSearch.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultFont = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.FillColor = System.Drawing.Color.White;
+            this.txtSearch.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtSearch.HideSelection = true;
+            this.txtSearch.IconLeft = global::BloodBankManagement.Properties.Resources.loupe;
+            this.txtSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.IconPadding = 10;
+            this.txtSearch.IconRight = null;
+            this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(77, 320);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSearch.Modified = false;
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
             stateProperties1.BorderColor = System.Drawing.Color.White;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties1;
+            this.txtSearch.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox1.OnDisabledState = stateProperties2;
+            this.txtSearch.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.White;
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties3;
+            this.txtSearch.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Search";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(190, 33);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 12;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 3;
-            this.bunifuTextBox1.TextMarginTop = 1;
-            this.bunifuTextBox1.TextPlaceholder = "Search";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.txtSearch.OnIdleState = stateProperties4;
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(2);
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.PlaceholderText = "Search by unit ID";
+            this.txtSearch.ReadOnly = false;
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.Size = new System.Drawing.Size(218, 33);
+            this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSearch.TabIndex = 12;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearch.TextMarginBottom = 0;
+            this.txtSearch.TextMarginLeft = 3;
+            this.txtSearch.TextMarginTop = 1;
+            this.txtSearch.TextPlaceholder = "Search by unit ID";
+            this.txtSearch.UseSystemPasswordChar = false;
+            this.txtSearch.WordWrap = true;
             // 
             // txtABMinus
             // 
@@ -1303,7 +1255,6 @@
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBloodRequirement.Location = new System.Drawing.Point(40, 368);
             this.dgvBloodRequirement.Name = "dgvBloodRequirement";
@@ -1346,10 +1297,104 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
+            // btSearch
+            // 
+            this.btSearch.AllowAnimations = true;
+            this.btSearch.AllowMouseEffects = true;
+            this.btSearch.AllowToggling = false;
+            this.btSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSearch.AnimationSpeed = 200;
+            this.btSearch.AutoGenerateColors = false;
+            this.btSearch.AutoRoundBorders = false;
+            this.btSearch.AutoSizeLeftIcon = true;
+            this.btSearch.AutoSizeRightIcon = true;
+            this.btSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btSearch.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSearch.BackgroundImage")));
+            this.btSearch.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btSearch.ButtonText = "Search";
+            this.btSearch.ButtonTextMarginLeft = 0;
+            this.btSearch.ColorContrastOnClick = 45;
+            this.btSearch.ColorContrastOnHover = 45;
+            this.btSearch.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btSearch.CustomizableEdges = borderEdges2;
+            this.btSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btSearch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btSearch.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btSearch.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.ForeColor = System.Drawing.Color.White;
+            this.btSearch.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSearch.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btSearch.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btSearch.IconMarginLeft = 11;
+            this.btSearch.IconPadding = 10;
+            this.btSearch.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSearch.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btSearch.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btSearch.IconSize = 25;
+            this.btSearch.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
+            this.btSearch.IdleBorderRadius = 20;
+            this.btSearch.IdleBorderThickness = 1;
+            this.btSearch.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btSearch.IdleIconLeftImage = null;
+            this.btSearch.IdleIconRightImage = null;
+            this.btSearch.IndicateFocus = false;
+            this.btSearch.Location = new System.Drawing.Point(321, 320);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btSearch.OnDisabledState.BorderRadius = 20;
+            this.btSearch.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btSearch.OnDisabledState.BorderThickness = 1;
+            this.btSearch.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btSearch.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btSearch.OnDisabledState.IconLeftImage = null;
+            this.btSearch.OnDisabledState.IconRightImage = null;
+            this.btSearch.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btSearch.onHoverState.BorderRadius = 20;
+            this.btSearch.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btSearch.onHoverState.BorderThickness = 1;
+            this.btSearch.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btSearch.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btSearch.onHoverState.IconLeftImage = null;
+            this.btSearch.onHoverState.IconRightImage = null;
+            this.btSearch.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
+            this.btSearch.OnIdleState.BorderRadius = 20;
+            this.btSearch.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btSearch.OnIdleState.BorderThickness = 1;
+            this.btSearch.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btSearch.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btSearch.OnIdleState.IconLeftImage = null;
+            this.btSearch.OnIdleState.IconRightImage = null;
+            this.btSearch.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btSearch.OnPressedState.BorderRadius = 20;
+            this.btSearch.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btSearch.OnPressedState.BorderThickness = 1;
+            this.btSearch.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btSearch.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btSearch.OnPressedState.IconLeftImage = null;
+            this.btSearch.OnPressedState.IconRightImage = null;
+            this.btSearch.Size = new System.Drawing.Size(93, 33);
+            this.btSearch.TabIndex = 59;
+            this.btSearch.TabStop = false;
+            this.btSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btSearch.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btSearch.TextMarginLeft = 0;
+            this.btSearch.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btSearch.UseDefaultRadiusAndThickness = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
             // UC_RegisterForBloodRequirement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.dgvBloodRequirement);
             this.Controls.Add(this.btSent);
             this.Controls.Add(this.dpSupplyDate);
@@ -1369,12 +1414,9 @@
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
-            this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.lbSortBy);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.bunifuTextBox1);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.cbSort);
+            this.Controls.Add(this.txtSearch);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_RegisterForBloodRequirement";
             this.Size = new System.Drawing.Size(1016, 584);
@@ -1386,13 +1428,9 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel lbSortBy;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.ComboBox cbSort;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
         private Bunifu.UI.WinForms.BunifuTextBox txtABMinus;
         private Bunifu.UI.WinForms.BunifuTextBox txtABPlus;
         private Bunifu.UI.WinForms.BunifuTextBox txtOMinus;
@@ -1418,5 +1456,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         protected Bunifu.UI.WinForms.BunifuDataGridView dgvBloodRequirement;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btSearch;
     }
 }

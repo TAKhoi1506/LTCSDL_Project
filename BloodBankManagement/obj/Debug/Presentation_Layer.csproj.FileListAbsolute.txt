@@ -398,3 +398,4 @@ F:\OU COURSES\Prj1304\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.Co
 F:\OU COURSES\Prj1304\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2Date
 F:\OU COURSES\Prj1304\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 F:\OU COURSES\Prj1304\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
+F:\OU COURSES\Prj1304\BloodBankManagement\obj\Debug\BloodBankManagement.Donor.UC_Notifications.resources

@@ -1,2 +1,29 @@
 .vs
 .git
+bin/
+debug/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# File cấu hình build và người dùng
+*.user
+*.suo
+
+.vs/
+*.vscode/
+*.log
+
+# Thư mục tạm thời của hệ thống
+*.tmp
+*.cache
+*.temp
+
+# File lock
+*.lock
+
+# File biên dịch tự động
+*.exe
+*.dll
+*.pdb
