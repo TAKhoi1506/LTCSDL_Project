@@ -57,6 +57,7 @@
     <Compile Include="DonorBUS_CF.cs" />
     <Compile Include="EventBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceivingUnitBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

@@ -21,6 +21,7 @@ namespace BloodBankManagement
         private UC_Home ucHome;
         private UC_Events ucEvents;
         private UC_Donations ucDonations;
+        private UC_ReceivingUnits ucReceivingUnits;
         private void btBloodStock_Click(object sender, EventArgs e)
         {
             if (ucBloodStock == null)
@@ -67,6 +68,22 @@ namespace BloodBankManagement
             }
 
             ucDonations.BringToFront();
+        }
+
+        private void btReUnits_Click(object sender, EventArgs e)
+        {
+            if(ucReceivingUnits == null)
+            {
+                ucReceivingUnits = new UC_ReceivingUnits();
+                ucReceivingUnits.Dock = DockStyle.Fill;
+                this.Controls.Add(ucReceivingUnits);
+            }
+            ucReceivingUnits.BringToFront();
+        }
+
+        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

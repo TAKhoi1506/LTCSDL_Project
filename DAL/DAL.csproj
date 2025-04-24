@@ -80,6 +80,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReceivingUnitDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
