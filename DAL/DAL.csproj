@@ -184,6 +184,7 @@
     <Compile Include="Domain\MyContext.cs" />
     <Compile Include="Domain\Notification.cs" />
     <Compile Include="Domain\ReceivingUnit.cs" />
+    <Compile Include="Domain\UserAccount.cs" />
     <Compile Include="DonorDAL.cs" />
     <Compile Include="NotitficationsDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -193,6 +194,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ReceivingUnitDAL.cs" />
+    <Compile Include="UserAccountDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

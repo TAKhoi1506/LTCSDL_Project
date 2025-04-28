@@ -55,7 +55,7 @@ namespace BloodBankManagement
         // chưa tạo uc notification 
         private void btNoti_Click(object sender, EventArgs e)
         {
-            ShowUserControl(uC_Notifications1);
+            //ShowUserControl(uC_Notifications1);
         }
     }
 }

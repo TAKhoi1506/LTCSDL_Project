@@ -24,7 +24,10 @@
 
         public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
+        public virtual DbSet<UserAccount> UserAccounts { get; set; } // mới thêm 28/04
 
+        // phương thức trong lớp DbContext
+        // dùng để cấu hình chi tiết cách ánh xạ các entity vào database bằng Fluent API
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BloodRequirement>()
@@ -47,13 +50,13 @@
                 .WithRequired(e => e.BloodStock)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Donor>()
-                .Property(e => e.UserName)
-                .IsFixedLength();
+            //modelBuilder.Entity<Donor>()
+            //    .Property(e => e.UserName)
+            //    .IsFixedLength();
 
-            modelBuilder.Entity<Donor>()
-                .Property(e => e.Password)
-                .IsFixedLength();
+            //modelBuilder.Entity<Donor>()
+            //    .Property(e => e.Password)
+            //    .IsFixedLength();
 
             modelBuilder.Entity<Donor>()
                 .Property(e => e.PhoneNumber)
@@ -73,10 +76,7 @@
                 .Property(e => e.RU_ID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<ReceivingUnit>()
-                .Property(e => e.Password)
-                .IsFixedLength();
-
+            
             modelBuilder.Entity<ReceivingUnit>()
                 .HasMany(e => e.BloodRequirements)
                 .WithRequired(e => e.ReceivingUnit)

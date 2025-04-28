@@ -13,35 +13,68 @@ namespace BloodBankManagement
 {
     public partial class Login : Form
     {
+        private UserAccountBUS userBus = new UserAccountBUS();
+
         public Login()
         {
             InitializeComponent();
+            this.AcceptButton = btLogin;
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        private void lbLogin_Click(object sender, EventArgs e)
-        {
 
-        }
-        DonorBUS donorBUS = new DonorBUS();
+        // Button Login 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (donorBUS.Login(username, password))
+            var user = userBus.Login(username, password);
+
+            if (user != null)
             {
-                MessageBox.Show("Login successful!");
-                // Mở giao diện chính (MainForm chẳng hạn)
+                // Mở form tương ứng theo vai trò user
+                Form formToOpen = null;
+
+                switch (user.Role)  // hoặc user.UserType, tùy thuộc vào tên thuộc tính
+                {
+                    case "Admin":
+                        formToOpen = new FrmAdmin();
+                        break;
+
+                    case "Donor":
+                        formToOpen = new FrmDonor();
+                        break;
+
+                    case "ReceivingUnit":
+                        formToOpen = new FrmReceivingUnit();
+                        break;
+
+                    default:
+                        // không xác định được role
+                        MessageBox.Show("Invalid user role!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // dừng hàm, không mở form nào
+                }
+                formToOpen.Show();
                 this.Hide();
-                new FrmDonor().Show();
             }
             else
             {
-                MessageBox.Show("Invalid username or password.");
+                DialogResult result = MessageBox.Show(
+                    "Invalid username or password.",
+                    "Error!",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Error);
+
+                if (result == DialogResult.Retry)
+                {
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    txtUsername.Focus();
+                }
             }
         }
     }

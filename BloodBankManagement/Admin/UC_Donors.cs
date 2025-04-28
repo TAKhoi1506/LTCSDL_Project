@@ -22,35 +22,35 @@ namespace BloodBankManagement
         private DonorBUS donorBUS = new DonorBUS();
         private void btAddDonor_Click(object sender, EventArgs e)
         {
-            DonorDTO donor = new DonorDTO()
-            {
-                Username = txtUsername.Text,
-                Password = txtPassword.Text,
-                FullName = txtFullName.Text,
-                DateOfBirth = dpDateOfBirth.Value,
-                BloodType = cbBloodType.Text,
-                Gender = cbGender.Text,
-                PhoneNumber = txtPhoneNo.Text,
-                Email = txtEmail.Text,
-                LastDonationDate = dpLastDonationDate.Value,
-                //Address = txtAddress.Text,
-            };
+            //DonorDTO donor = new DonorDTO()
+            //{
+            //    Username = txtUsername.Text,
+            //    Password = txtPassword.Text,
+            //    FullName = txtFullName.Text,
+            //    DateOfBirth = dpDateOfBirth.Value,
+            //    BloodType = cbBloodType.Text,
+            //    Gender = cbGender.Text,
+            //    PhoneNumber = txtPhoneNo.Text,
+            //    Email = txtEmail.Text,
+            //    LastDonationDate = dpLastDonationDate.Value,
+            //    //Address = txtAddress.Text,
+            //};
 
-            bool result = donorBUS.AddDonor(donor);
-            if (result)
-            {
-                MessageBox.Show("Donor added successfully.");
-                LoadDonors(); // Cập nhật lại DataGridView
-            }
-            else
-            {
-                MessageBox.Show("Failed to add donor.");
-            }
+            //bool result = donorBUS.AddDonor(donor);
+            //if (result)
+            //{
+            //    MessageBox.Show("Donor added successfully.");
+            //    LoadDonors(); // Cập nhật lại DataGridView
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Failed to add donor.");
+            //}
 
         }
         private void LoadDonors()
         {
-            dgvDonors.DataSource = donorBUS.GetAllDonors();
+            //dgvDonors.DataSource = donorBUS.GetAllDonors();
         }
     }
 }

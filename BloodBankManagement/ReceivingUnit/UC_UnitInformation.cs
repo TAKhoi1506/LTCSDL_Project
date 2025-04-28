@@ -28,8 +28,8 @@ namespace BloodBankManagement
             var sample = new ReceivingUnitDTO
             {
                 RU_ID = "RU001",
-                Username = "ruuser1",
-                Password = "123456",
+                //Username = "ruuser1",
+                //Password = "123456",
                 UnitName = "Bệnh viện Huyết học",
                 ContactName = "Nguyễn Văn A",
                 Address = "123 Lê Lợi, Quận 1, TP.HCM",
@@ -52,8 +52,8 @@ namespace BloodBankManagement
 
             if (dto != null)
             {
-                txtUsername.Text = dto.Username;
-                txtPassword.Text = dto.Password;
+                //txtUsername.Text = dto.Username;
+                //txtPassword.Text = dto.Password;
                 txtUnitId.Text = dto.RU_ID;
                 txtUnitId.ForeColor = Color.Silver;
                 txtUnitName.Text = dto.UnitName;
@@ -84,8 +84,8 @@ namespace BloodBankManagement
             // Lấy dữ liệu từ các control trên form
             ReceivingUnitDTO updatedUnit = new ReceivingUnitDTO
             {
-                Username = txtUsername.Text.Trim(),
-                Password = txtPassword.Text.Trim(),
+                //Username = txtUsername.Text.Trim(),
+                //Password = txtPassword.Text.Trim(),
                 RU_ID = txtUnitId.Text.Trim(),
                 UnitName = txtUnitName.Text.Trim(),
                 Address = txtAddress.Text.Trim(),

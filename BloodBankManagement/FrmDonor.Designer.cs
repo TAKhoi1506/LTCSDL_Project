@@ -53,12 +53,7 @@
             this.uC_Home2 = new BloodBankManagement.UC_Home();
             this.uC_RegistBloodDonation = new BloodBankManagement.UC_RegisterforBloodDonation();
             this.uC_HistoryDonations2 = new BloodBankManagement.UC_HistoryDonations();
-            this.uC_PersonalInfor = new BloodBankManagement.UC_PersonalInformation();
-            this.uC_Benefits1 = new BloodBankManagement.UC_Benefits();
-            this.uC_HistoryDonations1 = new BloodBankManagement.UC_HistoryDonations();
             this.uC_PersonalInformation = new BloodBankManagement.UC_PersonalInformation();
-            this.uC_Home1 = new BloodBankManagement.UC_Home();
-            this.uC_RegisterforBloodDonation1 = new BloodBankManagement.UC_RegisterforBloodDonation();
             this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
@@ -813,12 +808,7 @@
             this.bunifuPanel3.Controls.Add(this.uC_Home2);
             this.bunifuPanel3.Controls.Add(this.uC_RegistBloodDonation);
             this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations2);
-            this.bunifuPanel3.Controls.Add(this.uC_PersonalInfor);
-            this.bunifuPanel3.Controls.Add(this.uC_Benefits1);
-            this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations1);
             this.bunifuPanel3.Controls.Add(this.uC_PersonalInformation);
-            this.bunifuPanel3.Controls.Add(this.uC_Home1);
-            this.bunifuPanel3.Controls.Add(this.uC_RegisterforBloodDonation1);
             this.bunifuPanel3.Location = new System.Drawing.Point(57, 49);
             this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel3.Name = "bunifuPanel3";
@@ -855,32 +845,8 @@
             this.uC_HistoryDonations2.Size = new System.Drawing.Size(1058, 592);
             this.uC_HistoryDonations2.TabIndex = 6;
             // 
-            // uC_PersonalInfor
-            // 
-            this.uC_PersonalInfor.BackColor = System.Drawing.Color.Transparent;
-            this.uC_PersonalInfor.Location = new System.Drawing.Point(0, 0);
-            this.uC_PersonalInfor.Name = "uC_PersonalInfor";
-            this.uC_PersonalInfor.Size = new System.Drawing.Size(1051, 571);
-            this.uC_PersonalInfor.TabIndex = 5;
-            // 
-            // uC_Benefits1
-            // 
-            this.uC_Benefits1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Benefits1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uC_Benefits1.Name = "uC_Benefits1";
-            this.uC_Benefits1.Size = new System.Drawing.Size(1058, 592);
-            this.uC_Benefits1.TabIndex = 4;
-            this.uC_Benefits1.Visible = false;
-            // 
-            // uC_HistoryDonations1
-            // 
-            this.uC_HistoryDonations1.Location = new System.Drawing.Point(0, 0);
-            this.uC_HistoryDonations1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uC_HistoryDonations1.Name = "uC_HistoryDonations1";
-            this.uC_HistoryDonations1.Size = new System.Drawing.Size(1058, 592);
-            this.uC_HistoryDonations1.TabIndex = 3;
-            this.uC_HistoryDonations1.Visible = false;
-            // 
+         
+            
             // uC_PersonalInformation
             // 
             this.uC_PersonalInformation.BackColor = System.Drawing.Color.Transparent;
@@ -891,24 +857,7 @@
             this.uC_PersonalInformation.TabIndex = 2;
             this.uC_PersonalInformation.Visible = false;
             // 
-            // uC_Home1
-            // 
-            this.uC_Home1.Location = new System.Drawing.Point(0, -11);
-            this.uC_Home1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(1058, 592);
-            this.uC_Home1.TabIndex = 1;
-            this.uC_Home1.Visible = false;
-            // 
-            // uC_RegisterforBloodDonation1
-            // 
-            this.uC_RegisterforBloodDonation1.Location = new System.Drawing.Point(0, 0);
-            this.uC_RegisterforBloodDonation1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.uC_RegisterforBloodDonation1.Name = "uC_RegisterforBloodDonation1";
-            this.uC_RegisterforBloodDonation1.Size = new System.Drawing.Size(1016, 584);
-            this.uC_RegisterforBloodDonation1.TabIndex = 0;
-            this.uC_RegisterforBloodDonation1.Visible = false;
-            // 
+           
             // FrmDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

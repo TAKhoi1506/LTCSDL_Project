@@ -10,57 +10,6 @@ using System.Data.Entity;
 
 namespace DAL
 {
-    //public class BloodRequirementDAL
-    //{
-    //    private string connectionString = @"Data Source=ZY-COM.;Initial Catalog=BloodBank;Integrated Security=True";
-
-    //    private MyContext db = new MyContext();
-
-    //    // Lấy danh sách tất cả yêu cầu và chuyển sang DTO => entity --> DTO 
-    //    public List<BloodRequirement> GetAllRequirements()
-    //    {
-    //        var entities = db.BloodRequirements.ToList();
-
-    //        List<BloodRequirement> result = new List<BloodRequirement>();
-
-    //        foreach (var entity in entities)
-    //        {
-    //            result.Add(new BloodRequirement
-    //            {
-    //                ID = entity.ID,
-    //                RU_ID = entity.RU_ID,
-    //                RequestDate = entity.RequestDate,
-    //                SupplyDate = entity.SupplyDate,
-    //                Status = entity.Status,
-    //                DetailList = entity.DetailList
-    //            });
-    //        }
-
-    //        return result;
-    //    }
-
-    //    // Chuyển DTO --> entity 
-    //    public bool InsertBloodRequirement(BloodRequirement requirement)
-    //    {
-    //        using (SqlConnection conn = new SqlConnection(connectionString))
-    //        {
-    //            string query = "INSERT INTO BloodRequirement (RU_ID, BloodType, Amount, SupplyDate) " +
-    //                           "VALUES (@RU_ID, @BloodType, @Amount, @SupplyDate, @Status)";
-    //            // RequestDate và Status đã có DEFAULT, không cần truyền vào
-    //            SqlCommand cmd = new SqlCommand(query, conn);
-    //            cmd.Parameters.AddWithValue("@RU_ID", requirement.RU_ID);
-    //            cmd.Parameters.AddWithValue("@BloodType", requirement.BloodType);
-    //            cmd.Parameters.AddWithValue("@Amount", requirement.Amount);
-    //            cmd.Parameters.AddWithValue("@SupplyDate", requirement.SupplyDate);
-
-
-    //            conn.Open();
-    //            int rows = cmd.ExecuteNonQuery();
-    //            return rows > 0;
-    //        }
-    //    }
-
-    //}
     public class BloodRequirementDAL
     {
         private readonly MyContext db = new MyContext();

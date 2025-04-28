@@ -17,8 +17,8 @@ namespace DAL
             return db.ReceivingUnits.Select(u => new ReceivingUnitDTO
             {
                 RU_ID = u.RU_ID,
-                Username = u.Username,
-                Password = u.Password,
+                //Username = u.Username,
+                //Password = u.Password,
                 UnitName = u.UnitName,
                 ContactName = u.ContactName,
                 Address = u.Address,
@@ -36,8 +36,8 @@ namespace DAL
             return new ReceivingUnitDTO
             {
                 RU_ID = u.RU_ID,
-                Username = u.Username,
-                Password = u.Password,
+                //Username = u.Username,
+                //Password = u.Password,
                 UnitName = u.UnitName,
                 ContactName = u.ContactName,
                 Address = u.Address,
@@ -54,8 +54,8 @@ namespace DAL
                 var entity = new ReceivingUnit
                 {
                     RU_ID = dto.RU_ID,
-                    Username = dto.Username,
-                    Password = dto.Password,
+                    //Username = dto.Username,
+                    //Password = dto.Password,
                     UnitName = dto.UnitName,
                     ContactName = dto.ContactName,
                     Address = dto.Address,
@@ -81,8 +81,8 @@ namespace DAL
                 var entity = db.ReceivingUnits.Find(dto.RU_ID);
                 if (entity == null) return false;
 
-                entity.Username = dto.Username;
-                entity.Password = dto.Password;
+                //entity.Username = dto.Username;
+                //entity.Password = dto.Password;
                 entity.UnitName = dto.UnitName;
                 entity.ContactName = dto.ContactName;
                 entity.Address = dto.Address;

@@ -48,7 +48,6 @@
             this.uC_UnitInformation1 = new BloodBankManagement.UC_UnitInformation();
             this.uC_Home = new BloodBankManagement.UC_Home();
             this.uC_RegisterForBloodRequirement1 = new BloodBankManagement.UC_RegisterForBloodRequirement();
-            this.uC_Notifications1 = new BloodBankManagement.Donor.UC_Notifications();
             this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
@@ -614,7 +613,7 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 10;
             this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.uC_Notifications1);
+
             this.bunifuPanel3.Controls.Add(this.uC_UnitInformation1);
             this.bunifuPanel3.Controls.Add(this.uC_Home);
             this.bunifuPanel3.Controls.Add(this.uC_RegisterForBloodRequirement1);
@@ -649,14 +648,7 @@
             this.uC_RegisterForBloodRequirement1.Size = new System.Drawing.Size(1015, 551);
             this.uC_RegisterForBloodRequirement1.TabIndex = 10;
             // 
-            // uC_Notifications1
-            // 
-            this.uC_Notifications1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Notifications1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_Notifications1.Name = "uC_Notifications1";
-            this.uC_Notifications1.Size = new System.Drawing.Size(1058, 592);
-            this.uC_Notifications1.TabIndex = 12;
-            // 
+            
             // FrmReceivingUnit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,6 +686,5 @@
         private UC_RegisterForBloodRequirement uC_RegisterForBloodRequirement1;
         private UC_Home uC_Home;
         private UC_UnitInformation uC_UnitInformation1;
-        private Donor.UC_Notifications uC_Notifications1;
     }
 }
