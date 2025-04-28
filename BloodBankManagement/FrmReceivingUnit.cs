@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodBankManagement.Static;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,17 @@ namespace BloodBankManagement
         private void btNoti_Click(object sender, EventArgs e)
         {
             //ShowUserControl(uC_Notifications1);
+        }
+
+        private void btLogOut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+
+            this.Close();
+
+            // Mở lại form Login
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
 }

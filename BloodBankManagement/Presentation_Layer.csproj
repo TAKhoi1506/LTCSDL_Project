@@ -197,6 +197,7 @@
     <Compile Include="Donor\UC_HistoryDonations.Designer.cs">
       <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Static\UserSession.cs" />
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>

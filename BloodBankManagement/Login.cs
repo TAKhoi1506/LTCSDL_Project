@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BloodBankManagement.Static;
 using BUS;
 
 namespace BloodBankManagement
@@ -18,7 +19,7 @@ namespace BloodBankManagement
         public Login()
         {
             InitializeComponent();
-            this.AcceptButton = btLogin;
+            this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -36,6 +37,11 @@ namespace BloodBankManagement
 
             if (user != null)
             {
+                UserSession.AccountID = user.AccountID;
+                UserSession.Username = user.Username;
+                UserSession.Role = user.Role;
+                UserSession.ObjectID = user.ObjectID;
+
                 // Mở form tương ứng theo vai trò user
                 Form formToOpen = null;
 

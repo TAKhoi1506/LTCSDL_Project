@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
@@ -33,6 +34,17 @@ namespace BloodBankManagement
             uC_Donations.Visible = false;
             uC_BloodStock.Visible = false;
             uC_Donors.Visible = false;
+        }
+
+        private void btLogOut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+
+            this.Close();
+
+            // Mở lại form Login
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodBankManagement.Static;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,6 +62,17 @@ namespace BloodBankManagement
             uC_PersonalInformation.Visible = false;
             uC_RegistBloodDonation.Visible = false;
             uC_Benefits2.Visible = true;
+        }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+
+            this.Close();
+
+            // Mở lại form Login
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
 }

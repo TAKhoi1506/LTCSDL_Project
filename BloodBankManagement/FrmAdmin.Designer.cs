@@ -40,7 +40,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.btLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btLogOut = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuButton26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btRequirements = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btDashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -50,10 +50,6 @@
             this.btEvents = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.uC_Donations = new BloodBankManagement.UC_Donations();
             this.uC_BloodStock = new BloodBankManagement.UC_BloodStock();
             this.uC_Home1 = new BloodBankManagement.UC_Home();
@@ -62,6 +58,10 @@
             this.uC_Donors = new BloodBankManagement.UC_Donors();
             this.uC_ReceivingUnits1 = new BloodBankManagement.UC_ReceivingUnits();
             this.uC_Events1 = new BloodBankManagement.UC_Events();
+            this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -78,7 +78,7 @@
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.bunifuButton21);
-            this.bunifuPanel2.Controls.Add(this.btLogout);
+            this.bunifuPanel2.Controls.Add(this.btLogOut);
             this.bunifuPanel2.Controls.Add(this.bunifuButton26);
             this.bunifuPanel2.Controls.Add(this.btRequirements);
             this.bunifuPanel2.Controls.Add(this.btDashboard);
@@ -185,96 +185,97 @@
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             // 
-            // btLogout
+            // btLogOut
             // 
-            this.btLogout.AllowAnimations = true;
-            this.btLogout.AllowMouseEffects = true;
-            this.btLogout.AllowToggling = false;
-            this.btLogout.AnimationSpeed = 200;
-            this.btLogout.AutoGenerateColors = false;
-            this.btLogout.AutoRoundBorders = false;
-            this.btLogout.AutoSizeLeftIcon = true;
-            this.btLogout.AutoSizeRightIcon = true;
-            this.btLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btLogout.BackColor1 = System.Drawing.Color.White;
-            this.btLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLogout.BackgroundImage")));
-            this.btLogout.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.ButtonText = "Log Out";
-            this.btLogout.ButtonTextMarginLeft = 0;
-            this.btLogout.ColorContrastOnClick = 45;
-            this.btLogout.ColorContrastOnHover = 45;
-            this.btLogout.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btLogOut.AllowAnimations = true;
+            this.btLogOut.AllowMouseEffects = true;
+            this.btLogOut.AllowToggling = false;
+            this.btLogOut.AnimationSpeed = 200;
+            this.btLogOut.AutoGenerateColors = false;
+            this.btLogOut.AutoRoundBorders = false;
+            this.btLogOut.AutoSizeLeftIcon = true;
+            this.btLogOut.AutoSizeRightIcon = true;
+            this.btLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btLogOut.BackColor1 = System.Drawing.Color.White;
+            this.btLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLogOut.BackgroundImage")));
+            this.btLogOut.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btLogOut.ButtonText = "Log Out";
+            this.btLogOut.ButtonTextMarginLeft = 0;
+            this.btLogOut.ColorContrastOnClick = 45;
+            this.btLogOut.ColorContrastOnHover = 45;
+            this.btLogOut.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
             borderEdges2.TopRight = true;
-            this.btLogout.CustomizableEdges = borderEdges2;
-            this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btLogout.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btLogout.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btLogout.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btLogout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogout.ForeColor = System.Drawing.Color.Gray;
-            this.btLogout.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogout.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btLogout.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btLogout.IconMarginLeft = 11;
-            this.btLogout.IconPadding = 10;
-            this.btLogout.IconRightAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogout.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btLogout.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btLogout.IconSize = 25;
-            this.btLogout.IdleBorderColor = System.Drawing.Color.White;
-            this.btLogout.IdleBorderRadius = 1;
-            this.btLogout.IdleBorderThickness = 1;
-            this.btLogout.IdleFillColor = System.Drawing.Color.White;
-            this.btLogout.IdleIconLeftImage = null;
-            this.btLogout.IdleIconRightImage = null;
-            this.btLogout.IndicateFocus = false;
-            this.btLogout.Location = new System.Drawing.Point(0, 608);
-            this.btLogout.Margin = new System.Windows.Forms.Padding(2);
-            this.btLogout.Name = "btLogout";
-            this.btLogout.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btLogout.OnDisabledState.BorderRadius = 1;
-            this.btLogout.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.OnDisabledState.BorderThickness = 1;
-            this.btLogout.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btLogout.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btLogout.OnDisabledState.IconLeftImage = null;
-            this.btLogout.OnDisabledState.IconRightImage = null;
-            this.btLogout.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(50)))), ((int)(((byte)(234)))));
-            this.btLogout.onHoverState.BorderRadius = 1;
-            this.btLogout.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.onHoverState.BorderThickness = 1;
-            this.btLogout.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(50)))), ((int)(((byte)(234)))));
-            this.btLogout.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btLogout.onHoverState.IconLeftImage = null;
-            this.btLogout.onHoverState.IconRightImage = null;
-            this.btLogout.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btLogout.OnIdleState.BorderRadius = 1;
-            this.btLogout.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.OnIdleState.BorderThickness = 1;
-            this.btLogout.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.btLogout.OnIdleState.ForeColor = System.Drawing.Color.Gray;
-            this.btLogout.OnIdleState.IconLeftImage = null;
-            this.btLogout.OnIdleState.IconRightImage = null;
-            this.btLogout.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btLogout.OnPressedState.BorderRadius = 1;
-            this.btLogout.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.OnPressedState.BorderThickness = 1;
-            this.btLogout.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btLogout.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btLogout.OnPressedState.IconLeftImage = null;
-            this.btLogout.OnPressedState.IconRightImage = null;
-            this.btLogout.Size = new System.Drawing.Size(192, 33);
-            this.btLogout.TabIndex = 0;
-            this.btLogout.TabStop = false;
-            this.btLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLogout.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btLogout.TextMarginLeft = 0;
-            this.btLogout.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btLogout.UseDefaultRadiusAndThickness = true;
+            this.btLogOut.CustomizableEdges = borderEdges2;
+            this.btLogOut.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btLogOut.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btLogOut.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btLogOut.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btLogOut.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btLogOut.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogOut.ForeColor = System.Drawing.Color.Gray;
+            this.btLogOut.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLogOut.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btLogOut.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btLogOut.IconMarginLeft = 11;
+            this.btLogOut.IconPadding = 10;
+            this.btLogOut.IconRightAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLogOut.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btLogOut.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btLogOut.IconSize = 25;
+            this.btLogOut.IdleBorderColor = System.Drawing.Color.White;
+            this.btLogOut.IdleBorderRadius = 1;
+            this.btLogOut.IdleBorderThickness = 1;
+            this.btLogOut.IdleFillColor = System.Drawing.Color.White;
+            this.btLogOut.IdleIconLeftImage = null;
+            this.btLogOut.IdleIconRightImage = null;
+            this.btLogOut.IndicateFocus = false;
+            this.btLogOut.Location = new System.Drawing.Point(0, 608);
+            this.btLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btLogOut.Name = "btLogOut";
+            this.btLogOut.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btLogOut.OnDisabledState.BorderRadius = 1;
+            this.btLogOut.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btLogOut.OnDisabledState.BorderThickness = 1;
+            this.btLogOut.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btLogOut.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btLogOut.OnDisabledState.IconLeftImage = null;
+            this.btLogOut.OnDisabledState.IconRightImage = null;
+            this.btLogOut.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(50)))), ((int)(((byte)(234)))));
+            this.btLogOut.onHoverState.BorderRadius = 1;
+            this.btLogOut.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btLogOut.onHoverState.BorderThickness = 1;
+            this.btLogOut.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(50)))), ((int)(((byte)(234)))));
+            this.btLogOut.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btLogOut.onHoverState.IconLeftImage = null;
+            this.btLogOut.onHoverState.IconRightImage = null;
+            this.btLogOut.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btLogOut.OnIdleState.BorderRadius = 1;
+            this.btLogOut.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btLogOut.OnIdleState.BorderThickness = 1;
+            this.btLogOut.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btLogOut.OnIdleState.ForeColor = System.Drawing.Color.Gray;
+            this.btLogOut.OnIdleState.IconLeftImage = null;
+            this.btLogOut.OnIdleState.IconRightImage = null;
+            this.btLogOut.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btLogOut.OnPressedState.BorderRadius = 1;
+            this.btLogOut.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btLogOut.OnPressedState.BorderThickness = 1;
+            this.btLogOut.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btLogOut.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btLogOut.OnPressedState.IconLeftImage = null;
+            this.btLogOut.OnPressedState.IconRightImage = null;
+            this.btLogOut.Size = new System.Drawing.Size(192, 33);
+            this.btLogOut.TabIndex = 0;
+            this.btLogOut.TabStop = false;
+            this.btLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLogOut.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btLogOut.TextMarginLeft = 0;
+            this.btLogOut.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btLogOut.UseDefaultRadiusAndThickness = true;
+            this.btLogOut.Click += new System.EventHandler(this.btLogOut_Click);
             // 
             // bunifuButton26
             // 
@@ -956,6 +957,72 @@
             this.bunifuPanel3.Size = new System.Drawing.Size(1051, 596);
             this.bunifuPanel3.TabIndex = 3;
             // 
+            // uC_Donations
+            // 
+            this.uC_Donations.Location = new System.Drawing.Point(0, 1);
+            this.uC_Donations.Name = "uC_Donations";
+            this.uC_Donations.Size = new System.Drawing.Size(1058, 592);
+            this.uC_Donations.TabIndex = 5;
+            this.uC_Donations.Visible = false;
+            // 
+            // uC_BloodStock
+            // 
+            this.uC_BloodStock.Location = new System.Drawing.Point(0, 1);
+            this.uC_BloodStock.Name = "uC_BloodStock";
+            this.uC_BloodStock.Size = new System.Drawing.Size(1058, 592);
+            this.uC_BloodStock.TabIndex = 5;
+            this.uC_BloodStock.Visible = false;
+            // 
+            // uC_Home1
+            // 
+            this.uC_Home1.Location = new System.Drawing.Point(-6, -40);
+            this.uC_Home1.Name = "uC_Home1";
+            this.uC_Home1.Size = new System.Drawing.Size(1075, 665);
+            this.uC_Home1.TabIndex = 5;
+            this.uC_Home1.Visible = false;
+            // 
+            // uC_RegisterForBloodRequirement1
+            // 
+            this.uC_RegisterForBloodRequirement1.Location = new System.Drawing.Point(24, 8);
+            this.uC_RegisterForBloodRequirement1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_RegisterForBloodRequirement1.Name = "uC_RegisterForBloodRequirement1";
+            this.uC_RegisterForBloodRequirement1.Size = new System.Drawing.Size(1016, 584);
+            this.uC_RegisterForBloodRequirement1.TabIndex = 9;
+            this.uC_RegisterForBloodRequirement1.Visible = false;
+            // 
+            // uC_Events
+            // 
+            this.uC_Events.Location = new System.Drawing.Point(16, 0);
+            this.uC_Events.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Events.Name = "uC_Events";
+            this.uC_Events.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Events.TabIndex = 8;
+            this.uC_Events.Visible = false;
+            // 
+            // uC_Donors
+            // 
+            this.uC_Donors.Location = new System.Drawing.Point(16, 9);
+            this.uC_Donors.Name = "uC_Donors";
+            this.uC_Donors.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Donors.TabIndex = 6;
+            this.uC_Donors.Visible = false;
+            // 
+            // uC_ReceivingUnits1
+            // 
+            this.uC_ReceivingUnits1.Location = new System.Drawing.Point(-6, 3);
+            this.uC_ReceivingUnits1.Name = "uC_ReceivingUnits1";
+            this.uC_ReceivingUnits1.Size = new System.Drawing.Size(1062, 599);
+            this.uC_ReceivingUnits1.TabIndex = 5;
+            this.uC_ReceivingUnits1.Visible = false;
+            // 
+            // uC_Events1
+            // 
+            this.uC_Events1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Events1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Events1.Name = "uC_Events1";
+            this.uC_Events1.Size = new System.Drawing.Size(1016, 584);
+            this.uC_Events1.TabIndex = 0;
+            // 
             // pnHome
             // 
             this.pnHome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
@@ -1024,72 +1091,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1370, 0);
             this.bunifuPanel1.TabIndex = 0;
             // 
-            // uC_Donations
-            // 
-            this.uC_Donations.Location = new System.Drawing.Point(0, 1);
-            this.uC_Donations.Name = "uC_Donations";
-            this.uC_Donations.Size = new System.Drawing.Size(1058, 592);
-            this.uC_Donations.TabIndex = 5;
-            this.uC_Donations.Visible = false;
-            // 
-            // uC_BloodStock
-            // 
-            this.uC_BloodStock.Location = new System.Drawing.Point(0, 1);
-            this.uC_BloodStock.Name = "uC_BloodStock";
-            this.uC_BloodStock.Size = new System.Drawing.Size(1058, 592);
-            this.uC_BloodStock.TabIndex = 5;
-            this.uC_BloodStock.Visible = false;
-            // 
-            // uC_Home1
-            // 
-            this.uC_Home1.Location = new System.Drawing.Point(-6, -40);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(1075, 665);
-            this.uC_Home1.TabIndex = 5;
-            this.uC_Home1.Visible = false;
-            // 
-            // uC_RegisterForBloodRequirement1
-            // 
-            this.uC_RegisterForBloodRequirement1.Location = new System.Drawing.Point(24, 8);
-            this.uC_RegisterForBloodRequirement1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_RegisterForBloodRequirement1.Name = "uC_RegisterForBloodRequirement1";
-            this.uC_RegisterForBloodRequirement1.Size = new System.Drawing.Size(1016, 584);
-            this.uC_RegisterForBloodRequirement1.TabIndex = 9;
-            this.uC_RegisterForBloodRequirement1.Visible = false;
-            // 
-            // uC_Events
-            // 
-            this.uC_Events.Location = new System.Drawing.Point(16, 0);
-            this.uC_Events.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Events.Name = "uC_Events";
-            this.uC_Events.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Events.TabIndex = 8;
-            this.uC_Events.Visible = false;
-            // 
-            // uC_Donors
-            // 
-            this.uC_Donors.Location = new System.Drawing.Point(16, 9);
-            this.uC_Donors.Name = "uC_Donors";
-            this.uC_Donors.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Donors.TabIndex = 6;
-            this.uC_Donors.Visible = false;
-            // 
-            // uC_ReceivingUnits1
-            // 
-            this.uC_ReceivingUnits1.Location = new System.Drawing.Point(-6, 3);
-            this.uC_ReceivingUnits1.Name = "uC_ReceivingUnits1";
-            this.uC_ReceivingUnits1.Size = new System.Drawing.Size(1062, 599);
-            this.uC_ReceivingUnits1.TabIndex = 5;
-            this.uC_ReceivingUnits1.Visible = false;
-            // 
-            // uC_Events1
-            // 
-            this.uC_Events1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Events1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Events1.Name = "uC_Events1";
-            this.uC_Events1.Size = new System.Drawing.Size(1016, 584);
-            this.uC_Events1.TabIndex = 0;
-            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1125,7 +1126,7 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btEvents;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btDonors;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btLogout;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btLogOut;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btReUnits;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton26;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btDashboard;

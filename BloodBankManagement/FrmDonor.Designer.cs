@@ -73,7 +73,7 @@
             this.pnHome.Controls.Add(this.bunifuLabel1);
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHome.Location = new System.Drawing.Point(0, 0);
-            this.pnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnHome.Margin = new System.Windows.Forms.Padding(2);
             this.pnHome.Name = "pnHome";
             this.pnHome.ShowBorders = true;
             this.pnHome.Size = new System.Drawing.Size(1370, 67);
@@ -129,7 +129,7 @@
             this.bunifuPanel2.Controls.Add(this.btInfor);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuPanel2.Location = new System.Drawing.Point(0, 67);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(219, 681);
@@ -183,7 +183,7 @@
             this.btHistoryDonations.IdleIconRightImage = null;
             this.btHistoryDonations.IndicateFocus = false;
             this.btHistoryDonations.Location = new System.Drawing.Point(2, 166);
-            this.btHistoryDonations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btHistoryDonations.Margin = new System.Windows.Forms.Padding(2);
             this.btHistoryDonations.Name = "btHistoryDonations";
             this.btHistoryDonations.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHistoryDonations.OnDisabledState.BorderRadius = 1;
@@ -275,7 +275,7 @@
             this.btLogout.IdleIconRightImage = null;
             this.btLogout.IndicateFocus = false;
             this.btLogout.Location = new System.Drawing.Point(2, 608);
-            this.btLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btLogout.Name = "btLogout";
             this.btLogout.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btLogout.OnDisabledState.BorderRadius = 1;
@@ -317,6 +317,7 @@
             this.btLogout.TextMarginLeft = 0;
             this.btLogout.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btLogout.UseDefaultRadiusAndThickness = true;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
             // btHome
             // 
@@ -366,7 +367,7 @@
             this.btHome.IdleIconRightImage = null;
             this.btHome.IndicateFocus = false;
             this.btHome.Location = new System.Drawing.Point(2, 78);
-            this.btHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btHome.Margin = new System.Windows.Forms.Padding(2);
             this.btHome.Name = "btHome";
             this.btHome.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHome.OnDisabledState.BorderRadius = 1;
@@ -458,7 +459,7 @@
             this.btBenefit.IdleIconRightImage = null;
             this.btBenefit.IndicateFocus = false;
             this.btBenefit.Location = new System.Drawing.Point(2, 301);
-            this.btBenefit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBenefit.Margin = new System.Windows.Forms.Padding(2);
             this.btBenefit.Name = "btBenefit";
             this.btBenefit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btBenefit.OnDisabledState.BorderRadius = 1;
@@ -550,7 +551,7 @@
             this.btRegisterForDonation.IdleIconRightImage = null;
             this.btRegisterForDonation.IndicateFocus = false;
             this.btRegisterForDonation.Location = new System.Drawing.Point(1, 255);
-            this.btRegisterForDonation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btRegisterForDonation.Margin = new System.Windows.Forms.Padding(2);
             this.btRegisterForDonation.Name = "btRegisterForDonation";
             this.btRegisterForDonation.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRegisterForDonation.OnDisabledState.BorderRadius = 1;
@@ -642,7 +643,7 @@
             this.btNoti.IdleIconRightImage = null;
             this.btNoti.IndicateFocus = false;
             this.btNoti.Location = new System.Drawing.Point(2, 211);
-            this.btNoti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btNoti.Margin = new System.Windows.Forms.Padding(2);
             this.btNoti.Name = "btNoti";
             this.btNoti.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btNoti.OnDisabledState.BorderRadius = 1;
@@ -733,7 +734,7 @@
             this.btInfor.IdleIconRightImage = null;
             this.btInfor.IndicateFocus = false;
             this.btInfor.Location = new System.Drawing.Point(2, 122);
-            this.btInfor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btInfor.Margin = new System.Windows.Forms.Padding(2);
             this.btInfor.Name = "btInfor";
             this.btInfor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btInfor.OnDisabledState.BorderRadius = 1;
@@ -790,7 +791,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(150)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(219, 67);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1151, 681);
@@ -810,7 +811,7 @@
             this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations2);
             this.bunifuPanel3.Controls.Add(this.uC_PersonalInformation);
             this.bunifuPanel3.Location = new System.Drawing.Point(57, 49);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(1051, 571);
@@ -833,7 +834,7 @@
             // uC_RegistBloodDonation
             // 
             this.uC_RegistBloodDonation.Location = new System.Drawing.Point(2, 8);
-            this.uC_RegistBloodDonation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uC_RegistBloodDonation.Margin = new System.Windows.Forms.Padding(1);
             this.uC_RegistBloodDonation.Name = "uC_RegistBloodDonation";
             this.uC_RegistBloodDonation.Size = new System.Drawing.Size(1016, 584);
             this.uC_RegistBloodDonation.TabIndex = 7;
@@ -845,8 +846,6 @@
             this.uC_HistoryDonations2.Size = new System.Drawing.Size(1058, 592);
             this.uC_HistoryDonations2.TabIndex = 6;
             // 
-         
-            
             // uC_PersonalInformation
             // 
             this.uC_PersonalInformation.BackColor = System.Drawing.Color.Transparent;
@@ -857,7 +856,6 @@
             this.uC_PersonalInformation.TabIndex = 2;
             this.uC_PersonalInformation.Visible = false;
             // 
-           
             // FrmDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
