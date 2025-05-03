@@ -45,7 +45,7 @@ namespace BloodBankManagement
                 // Mở form tương ứng theo vai trò user
                 Form formToOpen = null;
 
-                switch (user.Role)  // hoặc user.UserType, tùy thuộc vào tên thuộc tính
+                switch (user.Role)  
                 {
                     case "Admin":
                         formToOpen = new FrmAdmin();
@@ -82,6 +82,13 @@ namespace BloodBankManagement
                     txtUsername.Focus();
                 }
             }
+        }
+
+        private void btRegister_Click(object sender, EventArgs e)
+        {
+            RegisterDonor registerDonor = new RegisterDonor();
+            this.Hide();
+            registerDonor.Show();
         }
     }
 }

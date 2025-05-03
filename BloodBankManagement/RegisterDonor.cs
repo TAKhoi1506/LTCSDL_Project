@@ -19,18 +19,8 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
-        private void bunifuPanel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btRegisterRU_Click(object sender, EventArgs e)
-        {
+        //private void btRegisterRU_Click(object sender, EventArgs e)
+        //{
             //if (txtPassword.Text != txtConfirmPassword.Text)
             //{
             //    MessageBox.Show("Passwords do not match.");
@@ -58,6 +48,13 @@ namespace BloodBankManagement
             //{
             //    MessageBox.Show("Registration failed.");
             //}
+        //}
+
+        private void btLogIn_Click(object sender, EventArgs e)
+        {
+            Login frmLogin = new Login();
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }
