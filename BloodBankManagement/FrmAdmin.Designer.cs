@@ -62,6 +62,7 @@
             this.uC_Donors = new BloodBankManagement.UC_Donors();
             this.uC_ReceivingUnits1 = new BloodBankManagement.UC_ReceivingUnits();
             this.uC_Events1 = new BloodBankManagement.UC_Events();
+            this.uC_Dashboard1 = new BloodBankManagement.Admin.UC_Dashboard();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -550,6 +551,7 @@
             this.btDashboard.TextMarginLeft = 0;
             this.btDashboard.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btDashboard.UseDefaultRadiusAndThickness = true;
+            this.btDashboard.Click += new System.EventHandler(this.btDashboard_Click);
             // 
             // btBloodStock
             // 
@@ -946,6 +948,7 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 10;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.uC_Dashboard1);
             this.bunifuPanel3.Controls.Add(this.uC_Donations);
             this.bunifuPanel3.Controls.Add(this.uC_BloodStock);
             this.bunifuPanel3.Controls.Add(this.uC_Home1);
@@ -1101,6 +1104,13 @@
             this.uC_Events1.Size = new System.Drawing.Size(1270, 730);
             this.uC_Events1.TabIndex = 0;
             // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.Location = new System.Drawing.Point(30, 4);
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1043, 743);
+            this.uC_Dashboard1.TabIndex = 10;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1154,6 +1164,7 @@
         private UC_BloodStock uC_BloodStock;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private UC_Donations uC_Donations;
+        private Admin.UC_Dashboard uC_Dashboard1;
     }
 }
 

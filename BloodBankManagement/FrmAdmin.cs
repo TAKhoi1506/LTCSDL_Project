@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using BloodBankManagement.Admin;
 
 namespace BloodBankManagement
 {
@@ -22,6 +23,7 @@ namespace BloodBankManagement
         private UC_Events ucEvents;
         private UC_Donations ucDonations;
         private UC_ReceivingUnits ucReceivingUnits;
+        private UC_Dashboard ucDashboard;
         private void btBloodStock_Click(object sender, EventArgs e)
         {
             if (ucBloodStock == null)
@@ -84,6 +86,16 @@ namespace BloodBankManagement
         private void bunifuGradientPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btDashboard_Click(object sender, EventArgs e)
+        {
+            if(ucDashboard == null)
+            {
+                ucDashboard = new UC_Dashboard();
+                ucDashboard.Dock = DockStyle.Fill;
+                this.Controls.Add(ucDashboard);
+            }
         }
     }
 }
