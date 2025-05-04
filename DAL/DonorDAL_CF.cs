@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -138,6 +139,23 @@ namespace DAL
             }
         }
 
+        //Xóa donor thực hiện bới admin 
+        public bool DeleteDonorByAdmin(int donorID)
+        {
+            try
+            {
+                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorID);
+                if (donor == null) return false;
+
+                _myContext.Donors.Remove(donor);
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
 
 
         //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
@@ -169,25 +187,7 @@ namespace DAL
             }
         }
 
-
-
-        //Xóa donor thực hiện bới admin 
-        public bool DeleteDonorByAdmin(int donorID)
-        {
-            try
-            {
-                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorID);
-                if (donor == null) return false;
-
-                _myContext.Donors.Remove(donor);
-                return _myContext.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return false;
-            }
-        }
+        
 
     }
 }

@@ -8,7 +8,7 @@ namespace DAL.Domain
     public partial class MyContext : DbContext
     {
         public MyContext()
-            : base("name=MyContext")
+        : base(@"data source=LAPTOP-3RVB0QLD;initial catalog=BloodBank;integrated security=True")
         {
         }
 

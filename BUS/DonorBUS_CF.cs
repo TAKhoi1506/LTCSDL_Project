@@ -16,7 +16,7 @@ namespace BUS
        
 
         public bool AddDonor(Donor donor)
-        {
+        {   
             return donorDAL.AddDonor(donor);
         }
 
@@ -60,7 +60,6 @@ namespace BUS
             }
             return donorDAL.UpdateDonorByDonor(donor);
         }
-
 
 
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace BloodBankManagement
 {
@@ -17,33 +18,48 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
-        private void bunifuLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lbAvatar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Chọn ảnh đại diện";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Hiển thị ảnh lên PictureBox
+                    pbAvatar.Image = Image.FromFile(openFileDialog.FileName);
+
+                    // Thiết lập để ảnh vừa với khung
+                    pbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+            }
+
+            Console.WriteLine("Clicked");
         }
 
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void dpDateOfBirth_ValueChanged(object sender, EventArgs e)
+        //Đoạn này cần lấy dữ liệu để đưa lên giao diện
+        private void ShowDonorInfo(DTO.Donor donor)
         {
+            txtUsername.Text = donor.Username;
+            txtPassword.Text = donor.Password;
+            txtFullName.Text = donor.FullName;
+            dpDateOfBirth.Value = donor.DateOfBirth;
+            txtEmail.Text = donor.Email;
+            cbGender.SelectedItem = donor.Gender;
+            txtAddress.Text = donor.Address;
+            txtPhoneNumber.Text = donor.PhoneNumber;
+
+            if (donor.LastDonationDate.HasValue)
+            {
+                dpLastDonationDate.Value = donor.LastDonationDate.Value;
+            }
+            else
+            {
+                dpLastDonationDate.Value = DateTime.Now; // hoặc một ngày mặc định khác
+            }
 
         }
     }

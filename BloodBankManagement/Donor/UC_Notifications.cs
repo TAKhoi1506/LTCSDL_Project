@@ -51,11 +51,8 @@ namespace BloodBankManagement.Donor
 
 
             //Thiết lập RichTextBox cho nội dung tin nhắn
-          
+
             MessageContent.ReadOnly = true;
-            
-
-
             
         }
 
@@ -65,16 +62,9 @@ namespace BloodBankManagement.Donor
         //Tải danh sách thông báo từ database
         public void LoadNotifications()
         {
-            //try
-            //{
-                notificationsList = notificationsBUS.GetNotificationsList();
-                //Cập nhật danh sách
-                UpdateNotificationListView();
-            //}
-            //catch(Exception) 
-            //{
-            //    MessageBox.Show("Không thể tải danh sách thông báo","Lỗi tải dữ liệu",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            //}
+            notificationsList = notificationsBUS.GetNotificationsList();
+            //Cập nhật danh sách
+            UpdateNotificationListView();
         }
 
 

@@ -69,8 +69,10 @@
     <Compile Include="Domain\MyContext.cs" />
     <Compile Include="Domain\Notification.cs" />
     <Compile Include="Domain\ReceivingUnit.cs" />
+    <Compile Include="DonationDAL.cs" />
     <Compile Include="DonorDAL.cs" />
     <Compile Include="DonorDAL_CF.cs" />
+    <Compile Include="EventDAL.cs" />
     <Compile Include="HistoryDonationDAL.cs" />
     <Compile Include="NotitficationsDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +81,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReportDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

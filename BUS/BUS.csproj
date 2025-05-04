@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DonationBUS.cs" />
     <Compile Include="DonorBUS.cs" />
     <Compile Include="DonorBUS_CF.cs" />
+    <Compile Include="EventBUS.cs" />
     <Compile Include="HistoryDonationBUS.cs" />
     <Compile Include="NotificationsBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

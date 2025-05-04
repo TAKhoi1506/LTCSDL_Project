@@ -36,10 +36,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btHistoryDonations = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btHome = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -47,25 +49,11 @@
             this.btRegisterForDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btNotification = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btInfor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.uC_Benefits2 = new BloodBankManagement.UC_Benefits();
-            this.uC_Home2 = new BloodBankManagement.UC_Home();
-            this.uC_RegistBloodDonation = new BloodBankManagement.UC_RegisterforBloodDonation();
-            this.uC_HistoryDonations2 = new BloodBankManagement.UC_HistoryDonations();
-            this.uC_PersonalInfor = new BloodBankManagement.UC_PersonalInformation();
-            this.uC_Benefits1 = new BloodBankManagement.UC_Benefits();
-            this.uC_HistoryDonations1 = new BloodBankManagement.UC_HistoryDonations();
-            this.uC_PersonalInformation = new BloodBankManagement.UC_PersonalInformation();
-            this.uC_Home1 = new BloodBankManagement.UC_Home();
-            this.uC_RegisterforBloodDonation1 = new BloodBankManagement.UC_RegisterforBloodDonation();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.uC_Notifications1 = new BloodBankManagement.Donor.UC_Notifications();
+            this.pnShow = new System.Windows.Forms.Panel();
             this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
-            this.bunifuPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.bunifuPanel3.SuspendLayout();
+            this.pnBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnHome
@@ -83,7 +71,7 @@
             this.pnHome.Name = "pnHome";
             this.pnHome.ShowBorders = true;
             this.pnHome.Size = new System.Drawing.Size(1924, 103);
-            this.pnHome.TabIndex = 3;
+            this.pnHome.TabIndex = 14;
             // 
             // bunifuPictureBox2
             // 
@@ -93,7 +81,7 @@
             this.bunifuPictureBox2.BorderRadius = 35;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(-44, 14);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(21, 14);
             this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
             this.bunifuPictureBox2.Size = new System.Drawing.Size(70, 70);
@@ -120,27 +108,46 @@
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuPanel2
+            // bunifuGradientPanel1
             // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.btHistoryDonations);
-            this.bunifuPanel2.Controls.Add(this.btLogout);
-            this.bunifuPanel2.Controls.Add(this.btHome);
-            this.bunifuPanel2.Controls.Add(this.btBenefit);
-            this.bunifuPanel2.Controls.Add(this.btRegisterForDonation);
-            this.bunifuPanel2.Controls.Add(this.btNotification);
-            this.bunifuPanel2.Controls.Add(this.btInfor);
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 103);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(328, 1048);
-            this.bunifuPanel2.TabIndex = 9;
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.pnShow);
+            this.bunifuGradientPanel1.Controls.Add(this.pnBar);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(205)))), ((int)(((byte)(158)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(150)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1924, 1151);
+            this.bunifuGradientPanel1.TabIndex = 16;
+            // 
+            // pnBar
+            // 
+            this.pnBar.BackgroundColor = System.Drawing.Color.White;
+            this.pnBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnBar.BackgroundImage")));
+            this.pnBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnBar.BorderColor = System.Drawing.Color.Transparent;
+            this.pnBar.BorderRadius = 3;
+            this.pnBar.BorderThickness = 1;
+            this.pnBar.Controls.Add(this.btHistoryDonations);
+            this.pnBar.Controls.Add(this.btLogout);
+            this.pnBar.Controls.Add(this.btHome);
+            this.pnBar.Controls.Add(this.btBenefit);
+            this.pnBar.Controls.Add(this.btRegisterForDonation);
+            this.pnBar.Controls.Add(this.btNotification);
+            this.pnBar.Controls.Add(this.btInfor);
+            this.pnBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnBar.Location = new System.Drawing.Point(0, 0);
+            this.pnBar.Name = "pnBar";
+            this.pnBar.ShowBorders = true;
+            this.pnBar.Size = new System.Drawing.Size(328, 1151);
+            this.pnBar.TabIndex = 13;
             // 
             // btHistoryDonations
             // 
@@ -412,7 +419,7 @@
             this.btHome.TextMarginLeft = 0;
             this.btHome.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btHome.UseDefaultRadiusAndThickness = true;
-            this.btHome.Click += new System.EventHandler(this.FrmDonor_Load);
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btBenefit
             // 
@@ -778,192 +785,46 @@
             this.btInfor.UseDefaultRadiusAndThickness = true;
             this.btInfor.Click += new System.EventHandler(this.btInfor_Click);
             // 
-            // bunifuGradientPanel1
+            // pnShow
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel3);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(205)))), ((int)(((byte)(158)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(150)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(328, 103);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1596, 1048);
-            this.bunifuGradientPanel1.TabIndex = 10;
-            // 
-            // bunifuPanel3
-            // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BorderRadius = 10;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.uC_Notifications1);
-            this.bunifuPanel3.Controls.Add(this.uC_Benefits2);
-            this.bunifuPanel3.Controls.Add(this.uC_Home2);
-            this.bunifuPanel3.Controls.Add(this.uC_RegistBloodDonation);
-            this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations2);
-            this.bunifuPanel3.Controls.Add(this.uC_PersonalInfor);
-            this.bunifuPanel3.Controls.Add(this.uC_Benefits1);
-            this.bunifuPanel3.Controls.Add(this.uC_HistoryDonations1);
-            this.bunifuPanel3.Controls.Add(this.uC_PersonalInformation);
-            this.bunifuPanel3.Controls.Add(this.uC_Home1);
-            this.bunifuPanel3.Controls.Add(this.uC_RegisterforBloodDonation1);
-            this.bunifuPanel3.Location = new System.Drawing.Point(86, 75);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(1576, 878);
-            this.bunifuPanel3.TabIndex = 3;
-            // 
-            // uC_Benefits2
-            // 
-            this.uC_Benefits2.Location = new System.Drawing.Point(4, 5);
-            this.uC_Benefits2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_Benefits2.Name = "uC_Benefits2";
-            this.uC_Benefits2.Size = new System.Drawing.Size(1587, 911);
-            this.uC_Benefits2.TabIndex = 9;
-            // 
-            // uC_Home2
-            // 
-            this.uC_Home2.Location = new System.Drawing.Point(4, 0);
-            this.uC_Home2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_Home2.Name = "uC_Home2";
-            this.uC_Home2.Size = new System.Drawing.Size(1587, 911);
-            this.uC_Home2.TabIndex = 8;
-            // 
-            // uC_RegistBloodDonation
-            // 
-            this.uC_RegistBloodDonation.Location = new System.Drawing.Point(3, 12);
-            this.uC_RegistBloodDonation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_RegistBloodDonation.Name = "uC_RegistBloodDonation";
-            this.uC_RegistBloodDonation.Size = new System.Drawing.Size(1524, 898);
-            this.uC_RegistBloodDonation.TabIndex = 7;
-            // 
-            // uC_HistoryDonations2
-            // 
-            this.uC_HistoryDonations2.Location = new System.Drawing.Point(4, 5);
-            this.uC_HistoryDonations2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_HistoryDonations2.Name = "uC_HistoryDonations2";
-            this.uC_HistoryDonations2.Size = new System.Drawing.Size(1587, 911);
-            this.uC_HistoryDonations2.TabIndex = 6;
-            // 
-            // uC_PersonalInfor
-            // 
-            this.uC_PersonalInfor.BackColor = System.Drawing.Color.Transparent;
-            this.uC_PersonalInfor.Location = new System.Drawing.Point(0, 0);
-            this.uC_PersonalInfor.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_PersonalInfor.Name = "uC_PersonalInfor";
-            this.uC_PersonalInfor.Size = new System.Drawing.Size(1576, 878);
-            this.uC_PersonalInfor.TabIndex = 5;
-            // 
-            // uC_Benefits1
-            // 
-            this.uC_Benefits1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Benefits1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_Benefits1.Name = "uC_Benefits1";
-            this.uC_Benefits1.Size = new System.Drawing.Size(1587, 911);
-            this.uC_Benefits1.TabIndex = 4;
-            this.uC_Benefits1.Visible = false;
-            // 
-            // uC_HistoryDonations1
-            // 
-            this.uC_HistoryDonations1.Location = new System.Drawing.Point(0, 0);
-            this.uC_HistoryDonations1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_HistoryDonations1.Name = "uC_HistoryDonations1";
-            this.uC_HistoryDonations1.Size = new System.Drawing.Size(1587, 911);
-            this.uC_HistoryDonations1.TabIndex = 3;
-            this.uC_HistoryDonations1.Visible = false;
-            // 
-            // uC_PersonalInformation
-            // 
-            this.uC_PersonalInformation.BackColor = System.Drawing.Color.Transparent;
-            this.uC_PersonalInformation.Location = new System.Drawing.Point(0, 0);
-            this.uC_PersonalInformation.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_PersonalInformation.Name = "uC_PersonalInformation";
-            this.uC_PersonalInformation.Size = new System.Drawing.Size(1576, 878);
-            this.uC_PersonalInformation.TabIndex = 2;
-            this.uC_PersonalInformation.Visible = false;
-            // 
-            // uC_Home1
-            // 
-            this.uC_Home1.Location = new System.Drawing.Point(0, -17);
-            this.uC_Home1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(1587, 911);
-            this.uC_Home1.TabIndex = 1;
-            this.uC_Home1.Visible = false;
-            // 
-            // uC_RegisterforBloodDonation1
-            // 
-            this.uC_RegisterforBloodDonation1.Location = new System.Drawing.Point(0, 0);
-            this.uC_RegisterforBloodDonation1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uC_RegisterforBloodDonation1.Name = "uC_RegisterforBloodDonation1";
-            this.uC_RegisterforBloodDonation1.Size = new System.Drawing.Size(1524, 898);
-            this.uC_RegisterforBloodDonation1.TabIndex = 0;
-            this.uC_RegisterforBloodDonation1.Visible = false;
-            // 
-            // uC_Notifications1
-            // 
-            this.uC_Notifications1.Location = new System.Drawing.Point(4, 5);
-            this.uC_Notifications1.Name = "uC_Notifications1";
-            this.uC_Notifications1.Size = new System.Drawing.Size(1587, 911);
-            this.uC_Notifications1.TabIndex = 10;
+            this.pnShow.Location = new System.Drawing.Point(330, 104);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(1582, 1026);
+            this.pnShow.TabIndex = 14;
             // 
             // FrmDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1151);
-            this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.pnHome);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FrmDonor";
-            this.Text = "Donor";
+            this.Text = "FrmDonor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmDonor_Load);
             this.pnHome.ResumeLayout(false);
             this.pnHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
-            this.bunifuPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuPanel3.ResumeLayout(false);
+            this.pnBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private Bunifu.UI.WinForms.BunifuPanel pnHome;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel pnBar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btHistoryDonations;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btLogout;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btHome;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btBenefit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btRegisterForDonation;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btNotification;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btInfor;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btHistoryDonations;
-        private UC_RegisterforBloodDonation uC_RegisterforBloodDonation1;
-        private UC_Home uC_Home1;
-        private UC_PersonalInformation uC_PersonalInformation;
-        private UC_HistoryDonations uC_HistoryDonations1;
-        private UC_Benefits uC_Benefits1;
-        private UC_PersonalInformation uC_PersonalInfor;
-        private UC_RegisterforBloodDonation uC_RegistBloodDonation;
-        private UC_HistoryDonations uC_HistoryDonations2;
-        private UC_Home uC_Home2;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btBenefit;
-        private UC_Benefits uC_Benefits2;
-        private Donor.UC_Notifications uC_Notifications1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel pnShow;
     }
 }
