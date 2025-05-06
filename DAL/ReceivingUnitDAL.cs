@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -49,28 +50,80 @@ namespace DAL
 
         public bool AddReceivingUnit(ReceivingUnitDTO dto)
         {
-            try
-            {
-                var entity = new ReceivingUnit
-                {
-                    RU_ID = dto.RU_ID,
-                    //Username = dto.Username,
-                    //Password = dto.Password,
-                    UnitName = dto.UnitName,
-                    ContactName = dto.ContactName,
-                    Address = dto.Address,
-                    PhoneNumber = dto.PhoneNumber,
-                    Email = dto.Email,
-                    UnitType = dto.UnitType
-                };
+            // chưa có username, password 
+            //try
+            //{
+            //    var entity = new ReceivingUnit
+            //    {
+            //        RU_ID = dto.RU_ID,
+            //        //Username = dto.Username,
+            //        //Password = dto.Password,
+            //        UnitName = dto.UnitName,
+            //        ContactName = dto.ContactName,
+            //        Address = dto.Address,
+            //        PhoneNumber = dto.PhoneNumber,
+            //        Email = dto.Email,
+            //        UnitType = dto.UnitType
+            //    };
 
-                db.ReceivingUnits.Add(entity);
-                db.SaveChanges();
-                return true;
-            }
-            catch
+            //    db.ReceivingUnits.Add(entity);
+            //    db.SaveChanges();
+            //    return true;
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
+
+
+            // Kiểm tra trùng Username
+            var existingAccount = db.UserAccounts.FirstOrDefault(u => u.Username == dto.Username);
+            if (existingAccount != null)
             {
-                return false;
+                throw new Exception("Username already exists.");
+            }
+
+            // sử dụng transaction để rollback nếu có lỗi
+            using (var transaction = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    // 1. Tạo ReceivingUnit entity
+                    var entity = new ReceivingUnit
+                    {
+                        RU_ID = dto.RU_ID,
+                        UnitName = dto.UnitName,
+                        ContactName = dto.ContactName,
+                        Address = dto.Address,
+                        PhoneNumber = dto.PhoneNumber,
+                        Email = dto.Email,
+                        UnitType = dto.UnitType
+                    };
+
+                    db.ReceivingUnits.Add(entity);
+                    db.SaveChanges();
+
+                    // 2. Tạo UserAccount liên kết với ReceivingUnit
+                    var user = new UserAccount
+                    {
+                        Username = dto.Username,
+                        Password = dto.Password,
+                        Role = "ReceivingUnit",
+                        ObjectID = entity.RU_ID // Gán RU_ID làm ObjectID
+                    };
+
+                    db.UserAccounts.Add(user);
+                    db.SaveChanges();
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Add failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    transaction.Rollback();
+                    return false;
+                }
             }
         }
 
@@ -81,14 +134,27 @@ namespace DAL
                 var entity = db.ReceivingUnits.Find(dto.RU_ID);
                 if (entity == null) return false;
 
-                //entity.Username = dto.Username;
-                //entity.Password = dto.Password;
                 entity.UnitName = dto.UnitName;
                 entity.ContactName = dto.ContactName;
                 entity.Address = dto.Address;
                 entity.PhoneNumber = dto.PhoneNumber;
                 entity.Email = dto.Email;
                 entity.UnitType = dto.UnitType;
+
+                
+                var userAccount = db.UserAccounts.FirstOrDefault(u => u.ObjectID == dto.RU_ID && u.Role == "ReceivingUnit");
+
+                // kiểm tra xem username đã tồn tại chưa
+                var exists = db.UserAccounts.Any(u => u.Username == dto.Username && u.AccountID != userAccount.AccountID);
+                if (exists)
+                    throw new Exception("Username already exists.");
+
+
+                if (userAccount != null)
+                {
+                    userAccount.Username = dto.Username;
+                    userAccount.Password = dto.Password; 
+                }
 
                 db.SaveChanges();
                 return true;

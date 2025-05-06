@@ -60,6 +60,10 @@
     <Compile Include="UserAccountBUS.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{d4cec07f-5387-4d47-8df8-ce27fca2e8e0}</Project>
       <Name>DAL</Name>
@@ -68,10 +72,6 @@
       <Project>{28ae0657-b73a-46c3-a270-28c86f7c823e}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

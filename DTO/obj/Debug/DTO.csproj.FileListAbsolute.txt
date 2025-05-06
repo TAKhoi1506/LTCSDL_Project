@@ -1,18 +1,6 @@
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\bin\Debug\DTO.dll
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.dll
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DTO\bin\Debug\DTO.dll
-F:\OU COURSES\LTCSDL\Prj1104\DTO\bin\Debug\DTO.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-F:\OU COURSES\LTCSDL\Prj1104\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-F:\OU COURSES\LTCSDL\Prj1104\DTO\obj\Debug\DTO.dll
-F:\OU COURSES\LTCSDL\Prj1104\DTO\obj\Debug\DTO.pdb
-F:\OU COURSES\Prj1304\DTO\bin\Debug\DTO.dll
-F:\OU COURSES\Prj1304\DTO\bin\Debug\DTO.pdb
-F:\OU COURSES\Prj1304\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-F:\OU COURSES\Prj1304\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-F:\OU COURSES\Prj1304\DTO\obj\Debug\DTO.dll
-F:\OU COURSES\Prj1304\DTO\obj\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.pdb

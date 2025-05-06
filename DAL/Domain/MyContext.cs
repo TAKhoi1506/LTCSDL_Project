@@ -8,7 +8,7 @@
     public partial class MyContext : DbContext
     {
         public MyContext()
-        : base(@"data source=ZY-COM;initial catalog=BloodBank;integrated security=True")
+        : base(@"data source=ZY-COM\MYSERVER;initial catalog=BloodBank;integrated security=True")
         {
         }
 
@@ -24,7 +24,7 @@
 
         public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
-        public virtual DbSet<UserAccount> UserAccounts { get; set; } // mới thêm 28/04
+        public virtual DbSet<UserAccount> UserAccounts { get; set; } // mới thêm 
 
         // phương thức trong lớp DbContext
         // dùng để cấu hình chi tiết cách ánh xạ các entity vào database bằng Fluent API

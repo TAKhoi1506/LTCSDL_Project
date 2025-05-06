@@ -24,6 +24,6 @@ namespace DAL.Domain
         [StringLength(20)]
         public string Role { get; set; }
 
-        public int? ObjectID { get; set; }
+        public string ObjectID { get; set; }
     }
 }

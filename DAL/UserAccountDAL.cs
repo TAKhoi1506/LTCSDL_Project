@@ -28,5 +28,23 @@ namespace DAL
             }
             return null;
         }
+
+        //Hình như phải bổ sung gì đó dô chỗ này ròi
+        public UserAccountDTO GetUserById(int accountId)
+        {
+            var user = db.UserAccounts.FirstOrDefault(u => u.AccountID == accountId);
+            if (user != null)
+            {
+                return new UserAccountDTO
+                {
+                    AccountID = user.AccountID,
+                    Username = user.Username,
+                    Password = user.Password,
+                    Role = user.Role,
+                    ObjectID = user.ObjectID
+                };
+            }
+            return null;
+        }
     }
 }

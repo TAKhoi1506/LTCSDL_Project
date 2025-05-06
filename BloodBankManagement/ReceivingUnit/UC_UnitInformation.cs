@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using BloodBankManagement.Static;
+using System.CodeDom;
 
 namespace BloodBankManagement
 {
@@ -17,66 +19,93 @@ namespace BloodBankManagement
         public UC_UnitInformation()
         {
             InitializeComponent();
-            lbAvatar.Click += new EventHandler(lbAvatar_Click);
         }
 
-        // tao du lieu de test 
-        private void AddSampleData()
+        // Dùng để test hiển thị khi chưa có cơ sở dữ liệu
+        //private void AddSampleData()
+        //{
+        //    ReceivingUnitBUS bus = new ReceivingUnitBUS();
+
+        //    var sample = new ReceivingUnitDTO
+        //    {
+        //        RU_ID = "RU001",
+        //        //Username = "ruuser1",
+        //        //Password = "123456",
+        //        UnitName = "Bệnh viện Huyết học",
+        //        ContactName = "Nguyễn Văn A",
+        //        Address = "123 Lê Lợi, Quận 1, TP.HCM",
+        //        PhoneNumber = "0901234567",
+        //        Email = "benhvien@example.com",
+        //        UnitType = "Hospital"
+        //    };
+
+        //    var existing = bus.GetById(sample.RU_ID);
+        //    if (existing == null)
+        //    {
+        //        bus.Add(sample); // Chỉ thêm nếu chưa có
+        //    }
+        //}
+
+        private void LoadReceivingUnit()
         {
-            ReceivingUnitBUS bus = new ReceivingUnitBUS();
-
-            var sample = new ReceivingUnitDTO
+            if (UserSession.ObjectID == null)
             {
-                RU_ID = "RU001",
-                //Username = "ruuser1",
-                //Password = "123456",
-                UnitName = "Bệnh viện Huyết học",
-                ContactName = "Nguyễn Văn A",
-                Address = "123 Lê Lợi, Quận 1, TP.HCM",
-                PhoneNumber = "0901234567",
-                Email = "benhvien@example.com",
-                UnitType = "Hospital"
-            };
-
-            var existing = bus.GetById(sample.RU_ID);
-            if (existing == null)
-            {
-                bus.Add(sample); // Chỉ thêm nếu chưa có
+                MessageBox.Show("User ID not found in session.");
+                return;
             }
-        }
 
-        private void LoadReceivingUnit(string ruId)
-        {
-            ReceivingUnitBUS bus = new ReceivingUnitBUS();
-            var dto = bus.GetById(ruId);
+            string role = UserSession.Role;
+            string objectId = UserSession.ObjectID.ToString();
 
-            if (dto != null)
+            UserAccountBUS userBus = new UserAccountBUS();
+            var ruObj = userBus.GetUserInfo(role, objectId);
+
+            int accountID = UserSession.AccountID; // Lấy AccountID từ session
+
+            // Lấy thông tin tài khoản
+            
+            var account = userBus.GetAccountById(UserSession.AccountID);
+
+            if (ruObj is ReceivingUnitDTO ruDto && account != null)
             {
-                //txtUsername.Text = dto.Username;
-                //txtPassword.Text = dto.Password;
-                txtUnitId.Text = dto.RU_ID;
-                txtUnitId.ForeColor = Color.Silver;
-                txtUnitName.Text = dto.UnitName;
-                txtAddress.Text = dto.Address;
-                txtContactName.Text = dto.ContactName;
-                txtPhoneNumber.Text = dto.PhoneNumber;
-                txtEmail.Text = dto.Email;
+                txtUsername.Text = account.Username;
+                txtPassword.Text = account.Password;
 
-                // ComboBox dữ liệu mẫu
+                txtUnitId.Text = ruDto.RU_ID;
+                txtUnitId.ForeColor = Color.Silver;
+                txtUnitId.ReadOnly = true; // không cho sửa RU_ID
+                txtUnitName.Text = ruDto.UnitName;
+
+                // Đặt con trỏ về đầu textbox
+                txtUnitName.SelectionStart = 0;
+                txtUnitName.SelectionLength = 0;
+
+                txtAddress.Text = ruDto.Address;
+                txtAddress.SelectionStart = 0;
+                txtAddress.SelectionLength = 0;
+
+                txtContactName.Text = ruDto.ContactName;
+                txtContactName.SelectionStart = 0;
+                txtContactName.SelectionLength = 0;
+
+                txtPhoneNumber.Text = ruDto.PhoneNumber;
+                txtEmail.Text = ruDto.Email;
+
                 cbUnitType.Items.Clear();
                 cbUnitType.Items.AddRange(new string[] { "Hospital", "Clinic", "Nursing home" });
-                cbUnitType.SelectedItem = dto.UnitType;
+                cbUnitType.SelectedItem = ruDto.UnitType;
             }
             else
             {
-                MessageBox.Show("Không tìm thấy đơn vị có mã: " + ruId);
+                MessageBox.Show("Failed to load user info.");
             }
         }
 
+
         private void UC_UnitInformation_Load(object sender, EventArgs e)
         {
-            AddSampleData(); // Gọi chỉ 1 lần khi test
-            LoadReceivingUnit("RU001");
+            //AddSampleData(); // Gọi chỉ 1 lần khi test
+            LoadReceivingUnit();
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
@@ -84,8 +113,8 @@ namespace BloodBankManagement
             // Lấy dữ liệu từ các control trên form
             ReceivingUnitDTO updatedUnit = new ReceivingUnitDTO
             {
-                //Username = txtUsername.Text.Trim(),
-                //Password = txtPassword.Text.Trim(),
+                Username = txtUsername.Text.Trim(),
+                Password = txtPassword.Text.Trim(),
                 RU_ID = txtUnitId.Text.Trim(),
                 UnitName = txtUnitName.Text.Trim(),
                 Address = txtAddress.Text.Trim(),
@@ -96,8 +125,12 @@ namespace BloodBankManagement
             };
 
 
+            if (string.IsNullOrWhiteSpace(updatedUnit.Username) || string.IsNullOrWhiteSpace(updatedUnit.Password))
+            {
+                MessageBox.Show("Username and Password are required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // Kiểm tra dữ liệu đầu vào (ví dụ: bắt buộc nhập Email, SDT đúng định dạng,...)
 
             // Gọi lớp BUS để cập nhật
             ReceivingUnitBUS bus = new ReceivingUnitBUS();
@@ -105,45 +138,35 @@ namespace BloodBankManagement
 
             if (success)
             {
-                MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Updating is successful!!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại. Vui lòng kiểm tra lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Update failed. Please check again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Để xử lý việc form/ UC bị load lại 2 lần khiến việc chọn ảnh lặp lại 2 lần 
-        private bool _isProcessingClick = false;
-
         private void lbAvatar_Click(object sender, EventArgs e)
         {
-            if (_isProcessingClick) return;
-
-            _isProcessingClick = true;
-            try
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                openFileDialog.Title = "Choose avatar";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    openFileDialog.Title = "Chọn ảnh đại diện";
-                    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                    // Hiển thị ảnh lên PictureBox
+                    pbAvatar.Image = Image.FromFile(openFileDialog.FileName);
 
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        // Hiển thị ảnh lên PictureBox
-                        pbAvatar.Image = Image.FromFile(openFileDialog.FileName);
-
-                        // Thiết lập để ảnh vừa với khung
-                        pbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
-
-                    }
+                    // Thiết lập để ảnh vừa với khung
+                    pbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
                 }
             }
-            finally
-            {
-                _isProcessingClick = false;
-            }
-            Console.WriteLine("Clicked");
-        }      
+        }
+
+        private void toggleShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = toggleShowPassword.Checked ? '\0' : '*';
+        }
     }
 }

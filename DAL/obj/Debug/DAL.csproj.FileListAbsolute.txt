@@ -1,123 +1,99 @@
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.dll
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\bin\Debug\DTO.dll
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.dll
-D:\OU\HK8\LTCSDL\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.dll.config
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.dll
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DAL.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DTO.dll
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\DTO.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.csproj.Up2Date
-F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.dll
-F:\OU COURSES\LTCSDL\Prj1104\DAL\obj\Debug\DAL.pdb
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.dll
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.dll
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.xml
-F:\OU COURSES\LTCSDL\Prj1104\DAL\bin\Debug\EntityFramework.SqlServer.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\DAL.dll.config
-F:\OU COURSES\Prj1304\DAL\bin\Debug\DAL.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\DAL.pdb
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Azure.Core.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Azure.Identity.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\DTO.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\EntityFramework.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\EntityFramework.SqlServer.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Bcl.Cryptography.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Data.SqlClient.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Options.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Primitives.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Identity.Client.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Logging.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Buffers.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.ClientModel.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.IO.FileSystem.AccessControl.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Memory.Data.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Memory.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Numerics.Vectors.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.AccessControl.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Cryptography.Pkcs.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Cryptography.ProtectedData.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Principal.Windows.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Text.Encodings.Web.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Text.Json.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.ValueTuple.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\DTO.pdb
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Azure.Core.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Azure.Identity.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\EntityFramework.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\EntityFramework.SqlServer.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Bcl.Cryptography.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Data.SqlClient.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Options.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Extensions.Primitives.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Identity.Client.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Logging.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Buffers.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.ClientModel.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.IO.FileSystem.AccessControl.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Memory.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Memory.Data.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Numerics.Vectors.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.AccessControl.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Cryptography.Pkcs.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Cryptography.ProtectedData.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Security.Principal.Windows.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Text.Encodings.Web.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Text.Json.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\System.ValueTuple.xml
-F:\OU COURSES\Prj1304\DAL\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-F:\OU COURSES\Prj1304\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-F:\OU COURSES\Prj1304\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-F:\OU COURSES\Prj1304\DAL\obj\Debug\DAL.csproj.Up2Date
-F:\OU COURSES\Prj1304\DAL\obj\Debug\DAL.dll
-F:\OU COURSES\Prj1304\DAL\obj\Debug\DAL.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Azure.Core.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Azure.Identity.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Bcl.Cryptography.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Data.SqlClient.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Options.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Primitives.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Identity.Client.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Logging.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Buffers.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.ClientModel.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.IO.FileSystem.AccessControl.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Memory.Data.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Memory.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Numerics.Vectors.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.AccessControl.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Cryptography.Pkcs.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Principal.Windows.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Text.Encodings.Web.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Text.Json.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.ValueTuple.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Azure.Core.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Azure.Identity.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Bcl.Cryptography.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Data.SqlClient.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Options.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Extensions.Primitives.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Identity.Client.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Logging.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Buffers.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.ClientModel.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.IO.FileSystem.AccessControl.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Memory.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Memory.Data.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Numerics.Vectors.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.AccessControl.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Cryptography.Pkcs.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Security.Principal.Windows.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Text.Encodings.Web.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Text.Json.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\System.ValueTuple.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\cs\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\pl\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

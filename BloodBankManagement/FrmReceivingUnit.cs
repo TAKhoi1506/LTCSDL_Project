@@ -22,41 +22,54 @@ namespace BloodBankManagement
 
         private void FrmReceivingUnit_Load(object sender, EventArgs e)
         {
-            ShowUserControl(uC_Home);
+            ShowUserControl(new UC_Home());
         }
 
         private void ShowUserControl(UserControl newControl)
         {
+            // Cách 1: hide, bring to front user control 
+            //if (currentControl != null)
+            //{
+            //    currentControl.Hide(); // Ẩn UserControl hiện tại
+            //}
+
+            //currentControl = newControl;
+
+            //currentControl.BringToFront(); // Đưa UserControl lên trên
+            //currentControl.Show(); // Hiển thị UserControl mới
+
+
+            // Cách 2: remove, dispose user control => tối ưu bộ nhớ, hiệu năng 
             if (currentControl != null)
             {
-                currentControl.Hide(); // Ẩn UserControl hiện tại
+                pnlMain.Controls.Remove(currentControl);
+                currentControl.Dispose(); // Giải phóng bộ nhớ
             }
 
             currentControl = newControl;
-
-            currentControl.BringToFront(); // Đưa UserControl lên trên
-            currentControl.Show(); // Hiển thị UserControl mới
+            newControl.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(newControl);
         }
 
         private void btInfor_Click(object sender, EventArgs e)
         {
-            ShowUserControl(uC_UnitInformation1);
+            ShowUserControl(new UC_UnitInformation());
         }
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            ShowUserControl(uC_Home);
+            ShowUserControl(new UC_Home());
         }
 
         private void btViewRequire_Click(object sender, EventArgs e)
         {
-            ShowUserControl(uC_RegisterForBloodRequirement1);
+            ShowUserControl(new UC_RegisterForBloodRequirement());
         }
 
-        // chưa tạo uc notification 
         private void btNoti_Click(object sender, EventArgs e)
         {
-            //ShowUserControl(uC_Notifications1);
+            // ĐỂ TẠM - CHƯA XỬ LÝ NOTIFICATION 
+            ShowUserControl(new Donor.UC_Notifications());
         }
 
         private void btLogOut_Click(object sender, EventArgs e)

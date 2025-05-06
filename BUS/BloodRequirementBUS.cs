@@ -11,7 +11,7 @@ namespace BUS
 {
     public class BloodRequirementBUS
     {
-        private readonly MyContext db = new MyContext();
+        //private readonly MyContext db = new MyContext();
         private BloodRequirementDAL brDAL = new BloodRequirementDAL();
 
 

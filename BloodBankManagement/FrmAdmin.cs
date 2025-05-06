@@ -10,10 +10,13 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BloodBankManagement.Static;
 
+
 namespace BloodBankManagement
 {
     public partial class FrmAdmin : Form
     {
+        private UserControl currentControl;
+
         public FrmAdmin()
         {
             InitializeComponent();
@@ -21,19 +24,31 @@ namespace BloodBankManagement
 
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-           
-            
+            ShowUserControl(new UC_Home());
         }
 
+        private void ShowUserControl(UserControl newControl)
+        {
+            if (currentControl != null)
+            {
+                pnlUserControl.Controls.Remove(currentControl);
+                currentControl.Dispose(); // Giải phóng bộ nhớ
+            }
+
+            currentControl = newControl;
+            newControl.Dock = DockStyle.Fill;
+            pnlUserControl.Controls.Add(newControl);
+            newControl.Left = (pnlUserControl.Width - newControl.Width) / 2;
+            newControl.Top = (pnlUserControl.Height - newControl.Height) / 2;
+            pnlUserControl.Resize += (s, e) =>
+            {
+                newControl.Left = (pnlUserControl.Width - newControl.Width) / 2;
+                newControl.Top = (pnlUserControl.Height - newControl.Height) / 2;
+            };
+        }
         private void btRequirements_Click(object sender, EventArgs e)
         {
-            uC_RegisterForBloodRequirement1.Visible = true;
-            uC_Events1.Visible = false;
-            uC_Home1.Visible = false;
-            uC_ReceivingUnits1.Visible = false;
-            uC_Donations.Visible = false;
-            uC_BloodStock.Visible = false;
-            uC_Donors.Visible = false;
+            ShowUserControl(new Admin.UC_BloodRequirements());
         }
 
         private void btLogOut_Click(object sender, EventArgs e)

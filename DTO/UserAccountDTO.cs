@@ -12,6 +12,6 @@ namespace DTO
         public string Username { get; set; }
         public string Password { get; set; }
         public string Role { get; set; } // Admin, Donor, ReceivingUnit
-        public int? ObjectID { get; set; } // DonorID hoặc RU_ID
+        public string ObjectID { get; set; } // DonorID hoặc RU_ID
     }
 }
