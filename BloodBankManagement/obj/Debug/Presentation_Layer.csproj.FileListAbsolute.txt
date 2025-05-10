@@ -104,6 +104,7 @@ E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManag
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\Presentation_Layer.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_BloodRequirements.resources
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.FrmAdmin.resources
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.FrmDonor.resources
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.FrmReceivingUnit.resources
@@ -130,4 +131,3 @@ E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManag
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2Date
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
-E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_BloodRequirements.resources

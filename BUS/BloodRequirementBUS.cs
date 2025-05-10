@@ -34,12 +34,9 @@ namespace BUS
         }
 
         // Lấy yêu cầu theo Receiving Unit ID
-        public BloodRequirementDTO GetByUnitID(string unitID)
+        public List<BloodRequirementDTO> GetByUnitID(string ruId)
         {
-            if (string.IsNullOrWhiteSpace(unitID))
-                throw new ArgumentException("Unit ID is invalid!");
-
-            return brDAL.GetByUnitID(unitID);
+            return brDAL.GetByUnitID(ruId);
         }
 
         // Xoá yêu cầu theo ID
@@ -94,6 +91,15 @@ namespace BUS
                     Amount = x.Detail.Amount
                 }
             )).ToList();
+        }
+
+        // cập nhật trạng thái requirement 
+        public bool UpdateStatus(int requirementId, string newStatus)
+        {
+            if (string.IsNullOrEmpty(newStatus)) return false;
+
+            BloodRequirementDAL dal = new BloodRequirementDAL();
+            return dal.UpdateStatus(requirementId, newStatus);
         }
     }
 }

@@ -30,21 +30,19 @@ namespace DAL
         }
 
         // Lấy yêu cầu theo mã đơn vị nhận
-        public BloodRequirementDTO GetByUnitID(string unitID)
+        public List<BloodRequirementDTO> GetByUnitID(string ruId)
         {
-            var entity = db.BloodRequirements
-                           .FirstOrDefault(br => br.RU_ID == unitID);
-
-            if (entity == null) return null;
-
-            return new BloodRequirementDTO
-            {
-                ID = entity.ID,
-                RU_ID = entity.RU_ID,
-                RequestDate = entity.RequestDate,
-                SupplyDate = entity.SupplyDate,
-                Status = entity.Status
-            };
+            return db.BloodRequirements
+             .Where(r => r.RU_ID == ruId)
+             .Select(r => new BloodRequirementDTO
+             {
+                 ID = r.ID,
+                 RU_ID = r.RU_ID,
+                 RequestDate = r.RequestDate,
+                 SupplyDate = r.SupplyDate,
+                 Status = r.Status
+             })
+             .ToList();
         }
 
         // Thêm yêu cầu mới
@@ -146,6 +144,23 @@ namespace DAL
             return query.ToList()
                         .Select(x => (x.requirement, x.detail))
                         .ToList();
+        }
+
+        public bool UpdateStatus(int requirementId, string newStatus)
+        {
+            try
+            {
+                var requirement = db.BloodRequirements.FirstOrDefault(r => r.ID == requirementId);
+                if (requirement == null) return false;
+
+                requirement.Status = newStatus;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 
