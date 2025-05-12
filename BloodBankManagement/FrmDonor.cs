@@ -28,9 +28,9 @@ namespace BloodBankManagement
 
 
 
-        private void FrmDonor2_Load(object sender, EventArgs e)
+        private void FrmDonor_Load(object sender, EventArgs e)
         {
-
+            HomeLoad();
         }
 
         private void btInfor_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace BloodBankManagement
                 pnShow.Controls.Add(ucRegisterforBloodDonation);
             }
 
-            ucHistoryDonation.BringToFront();
+            ucRegisterforBloodDonation.BringToFront();
         }
 
 
@@ -100,7 +100,7 @@ namespace BloodBankManagement
         }
 
 
-        private void btHome_Click(object sender, EventArgs e)
+        private void HomeLoad()
         {
             if (ucHome == null)
             {
@@ -110,6 +110,11 @@ namespace BloodBankManagement
             }
 
             ucHome.BringToFront();
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            HomeLoad();
         }
 
 

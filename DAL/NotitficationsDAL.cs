@@ -47,7 +47,7 @@ namespace DAL
                     Title = notification.Title,
                     Message = notification.Message,
                     CreatedAt = notification.CreateAt,
-                    DonorID = notification.DonorID,
+                    DonorID = notification.ObjectID,
                     IsRead = notification.IsRead
                 };
             }

@@ -20,7 +20,7 @@ namespace DAL.Domain
 
         public DateTime DonationDate { get; set; }
 
-        public double weight { get; set; }
+        public double Weight { get; set; }
 
         [StringLength(20)]
         public string BloodPressure { get; set; }
@@ -33,5 +33,11 @@ namespace DAL.Domain
 
         [StringLength(255)]
         public string Notes { get; set; }
+
+        public virtual Donation Donation { get; set; }
+
+        public virtual Donor Donor { get; set; }
+
+        public virtual Event Event { get; set; }
     }
 }

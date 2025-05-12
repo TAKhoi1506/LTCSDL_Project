@@ -535,7 +535,7 @@
             this.btDashboard.TextMarginLeft = 0;
             this.btDashboard.TextPadding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btDashboard.UseDefaultRadiusAndThickness = true;
-            this.btDashboard.Click += new System.EventHandler(this.btDashboard_Click);
+            this.btDashboard.Click += new System.EventHandler(this.btDashboard2_Click);
             // 
             // btBloodStock
             // 

@@ -407,4 +407,12 @@ D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\Prese
 D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
 D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_DashBoard.resources
-D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.FrmDonor2.resources
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_DashBoard2.resources
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\EPPlus.dll
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\EPPlus.Interfaces.dll
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\System.ComponentModel.Annotations.dll
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\System.Security.Cryptography.Xml.dll
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\EPPlus.xml
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\OU\HK8\LTCSDL\Project_Khoi\LTCSDL_Project\BloodBankManagement\bin\Debug\System.Security.Cryptography.Xml.xml

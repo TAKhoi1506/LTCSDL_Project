@@ -41,6 +41,7 @@
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnShow = new System.Windows.Forms.Panel();
             this.pnBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btHistoryDonations = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -49,7 +50,6 @@
             this.btRegisterForDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btNotification = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btInfor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.pnShow = new System.Windows.Forms.Panel();
             this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -126,6 +126,13 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1924, 1151);
             this.bunifuGradientPanel1.TabIndex = 16;
+            // 
+            // pnShow
+            // 
+            this.pnShow.Location = new System.Drawing.Point(330, 104);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(1582, 1026);
+            this.pnShow.TabIndex = 14;
             // 
             // pnBar
             // 
@@ -785,13 +792,6 @@
             this.btInfor.UseDefaultRadiusAndThickness = true;
             this.btInfor.Click += new System.EventHandler(this.btInfor_Click);
             // 
-            // pnShow
-            // 
-            this.pnShow.Location = new System.Drawing.Point(330, 104);
-            this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(1582, 1026);
-            this.pnShow.TabIndex = 14;
-            // 
             // FrmDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -802,6 +802,7 @@
             this.Name = "FrmDonor";
             this.Text = "FrmDonor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmDonor_Load);
             this.pnHome.ResumeLayout(false);
             this.pnHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();

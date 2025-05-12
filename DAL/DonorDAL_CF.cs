@@ -28,8 +28,8 @@ namespace DAL
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    UserName = donorDTO.Username,
-                    Password = donorDTO.Password,
+                    //UserName = donorDTO.Username,
+                    //Password = donorDTO.Password,
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     BloodType = donorDTO.BloodType,
@@ -58,8 +58,8 @@ namespace DAL
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    UserName = donorDTO.Username,
-                    Password = donorDTO.Password,
+                    //UserName = donorDTO.Username,
+                    //Password = donorDTO.Password,
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     Gender = donorDTO.Gender,
@@ -87,8 +87,8 @@ namespace DAL
             return _myContext.Donors.Select(d => new DTO.Donor
             { 
                 DonorID = d.DonorID,
-                Username = d.UserName,
-                Password = d.Password,
+                //Username = d.UserName,
+                //Password = d.Password,
                 FullName = d.FullName,
                 DateOfBirth = d.BirthDate,
                 BloodType = d.BloodType,
@@ -102,10 +102,10 @@ namespace DAL
 
 
         //Kiểm tra tên đăng nhập có phải user hay không
-        public bool Login(string username, string password)
-        {
-            return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
-        }
+        //public bool Login(string username, string password)
+        //{
+        //    return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
+        //}
 
 
 
@@ -119,8 +119,8 @@ namespace DAL
                 if (donor == null)
                     return false;
 
-                donor.UserName = donorDTO.Username;
-                donor.Password = donorDTO.Password;
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.BloodType = donorDTO.BloodType;
@@ -168,8 +168,8 @@ namespace DAL
                 if (donor == null)
                     return false;
 
-                donor.UserName = donorDTO.Username;
-                donor.Password = donorDTO.Password;
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.Gender = donorDTO.Gender;

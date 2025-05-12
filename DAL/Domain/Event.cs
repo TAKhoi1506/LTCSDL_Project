@@ -13,6 +13,7 @@ namespace DAL.Domain
         public Event()
         {
             Donations = new HashSet<Donation>();
+            HistoryDonations = new HashSet<HistoryDonation>();
         }
 
         public int EventID { get; set; }
@@ -40,5 +41,8 @@ namespace DAL.Domain
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Donation> Donations { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistoryDonation> HistoryDonations { get; set; }
     }
 }

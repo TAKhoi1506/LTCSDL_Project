@@ -14,17 +14,10 @@ namespace DAL.Domain
         {
             BloodDetails = new HashSet<BloodDetail>();
             Donations = new HashSet<Donation>();
+            HistoryDonations = new HashSet<HistoryDonation>();
         }
 
         public int DonorID { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string UserName { get; set; }
-
-        [Required]
-        [StringLength(30)]
-        public string Password { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -59,5 +52,8 @@ namespace DAL.Domain
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Donation> Donations { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistoryDonation> HistoryDonations { get; set; }
     }
 }

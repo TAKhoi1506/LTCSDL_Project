@@ -28,7 +28,7 @@ namespace DAL
                 DonorID = d.DonorID,
                 EventID = d.EventID,
                 DonationDate = d.DonationDate,
-                Weight = d.weight,
+                Weight = d.Weight,
                 BloodPressure = d.BloodPressure,
                 Amount = d.Amount,
                 HealthStatus = d.HealthStatus,

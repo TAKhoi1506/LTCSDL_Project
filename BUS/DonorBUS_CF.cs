@@ -35,10 +35,10 @@ namespace BUS
             return donorDAL.InsertDonor(donor);
         }
 
-        public bool Login(string username, string password)
-        {
-            return donorDAL.Login(username, password);
-        }
+        //public bool Login(string username, string password)
+        //{
+        //    return donorDAL.Login(username, password);
+        //}
 
 
         //Update bởi admin

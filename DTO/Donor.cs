@@ -19,5 +19,10 @@ namespace DTO
         public DateTime? LastDonationDate { get; set; }
         public string Gender { get; set; }
         public string Email { get; set; }
+
+        
+        //Lấy tuổi donors
+        //public int Age { get; set; }
+
     }
 }
