@@ -48,7 +48,7 @@ namespace DAL
         }
 
 
-        //Lấy đầy đủ thông tin trừ BloodType
+        //Lấy đầy đủ thông tin
         public bool InsertDonor(DonorDTO donorDTO)
         {
             try
@@ -57,6 +57,7 @@ namespace DAL
                 {
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
+                    BloodType = donorDTO.BloodType,
                     Gender = donorDTO.Gender,
                     PhoneNumber = donorDTO.PhoneNumber,
                     Email = donorDTO.Email,
@@ -92,7 +93,7 @@ namespace DAL
                 Address = d.Address
             }).ToList();
         }
-
+      
 
         //Update do admin quản lý: Có thể sửa ID và nhóm máu BloodType
         public bool UpdateDonorByAdmin(DonorDTO donorDTO)
@@ -122,37 +123,6 @@ namespace DAL
             }
         }
 
-
-
-        //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
-        public bool UpdateDonorByDonor(DonorDTO donorDTO)
-        {
-            try
-            {
-                //Kiểm tra id có giống với id của donor muốn sửa hay không
-                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
-                if (donor == null)
-                    return false;
-
-                donor.FullName = donorDTO.FullName;
-                donor.BirthDate = donorDTO.DateOfBirth;
-                donor.Gender = donorDTO.Gender;
-                donor.PhoneNumber = donorDTO.PhoneNumber;
-                donor.Email = donorDTO.Email;
-                donor.LastDonationDate = donorDTO.LastDonationDate;
-                donor.Address = donorDTO.Address;
-
-                return _myContext.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return false;
-            }
-        }
-
-
-
         //Xóa donor thực hiện bới admin 
         public bool DeleteDonorByAdmin(int donorID)
         {
@@ -171,5 +141,33 @@ namespace DAL
             }
         }
 
+
+        //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
+        public bool UpdateDonorByDonor(DonorDTO donorDTO)
+        {
+            try
+            {
+                //Kiểm tra id có giống với id của donor muốn sửa hay không
+                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
+                if (donor == null)
+                    return false;
+
+                donor.FullName = donorDTO.FullName;
+                donor.BirthDate = donorDTO.DateOfBirth;
+                donor.BloodType = donorDTO.BloodType;
+                donor.Gender = donorDTO.Gender;
+                donor.PhoneNumber = donorDTO.PhoneNumber;
+                donor.Email = donorDTO.Email;
+                donor.LastDonationDate = donorDTO.LastDonationDate;
+                donor.Address = donorDTO.Address;
+
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
     }
 }

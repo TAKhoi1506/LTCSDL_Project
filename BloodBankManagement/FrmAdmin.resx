@@ -355,6 +355,9 @@
         1vU6l+VtT1nNzMzMzMzMzMzMzMzMzMzMzMzMzMyqLcs31a0QHkuW1AMAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Arial Rounded MT Bold'; font-size: 14.25pt; width: 100%; height: 100%; font-style: italic; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
   <data name="bunifuPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYanhsIARAAABtbnRyUkdCIFhZ
@@ -880,9 +883,6 @@
         GOCjHAE2QmyBRjgAoxwBNkAJsgUY4myBRjgAoxxNkAAAJsgAAAUY4AAAKMcAAAATZAAoxxNkCjHAAE2Q
         AAKMcTZAACbIFGOAAAAAAAAAJsgUTY4AAmyAABRjibIFGOJsgAAAAAUY7//Z
 </value>
-  </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial Rounded MT Bold'; font-size: 14.25pt; width: 100%; height: 100%; font-style: italic; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="pnlUserControl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

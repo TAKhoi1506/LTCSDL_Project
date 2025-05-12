@@ -15,6 +15,8 @@ namespace BUS
     {
         private DonorDAL donorDAL = new DonorDAL();
 
+        private MyContext db = new MyContext();
+
         public bool AddDonor(DonorDTO donor)
         {
             return donorDAL.AddDonor(donor);
@@ -25,14 +27,72 @@ namespace BUS
             return donorDAL.GetAllDonors();
         }
 
-        public bool RegisterDonor(DonorDTO donor)
+        public bool RegisterDonor(DonorDTO donorDto, string username, string password)
         {
-            //if (string.IsNullOrWhiteSpace(donor.Username) || string.IsNullOrWhiteSpace(donor.Password))
-            //    return false;
 
-            //return donorDAL.InsertDonor(donor);
-            return true;
+            try
+            {
+                if (db.UserAccounts.Any(u => u.Username == username))
+                    return false;
+
+                // Tạo Donor từ DTO
+                var donor = new Donor
+                {
+                    FullName = donorDto.FullName,
+                    BloodType = donorDto.BloodType,
+                    BirthDate = donorDto.DateOfBirth,
+                    PhoneNumber = donorDto.PhoneNumber,
+                    Address = donorDto.Address,
+                    LastDonationDate = donorDto.LastDonationDate,
+                    Gender = donorDto.Gender,
+                    Email = donorDto.Email
+                };
+
+                db.Donors.Add(donor);
+                db.SaveChanges();
+
+                var account = new UserAccount
+                {
+                    Username = username,
+                    Password = password,
+                    Role = "Donor",
+                    ObjectID = donor.DonorID.ToString()
+                };
+
+                db.UserAccounts.Add(account);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
-        
+
+        //public bool Login(string username, string password)
+        //{
+        //    return donorDAL.Login(username, password);
+        //}
+
+
+        ////Update bởi admin
+        //public bool UpdateByAdmin(Donor donor)
+        //{
+        //    if (donor == null || string.IsNullOrWhiteSpace(donor.Username) || donor.DonorID <= 0)
+        //    {
+        //        return false;
+        //    }
+        //    return donorDAL.UpdateDonorByAdmin(donor);
+        //}
+
+        ////Update bởi donors
+        //public bool UpdateByDonor(Donor donor)
+        //{
+        //    if (donor == null || string.IsNullOrWhiteSpace(donor.Username))
+        //    {
+        //        return false;
+        //    }
+        //    return donorDAL.UpdateDonorByDonor(donor);
+        //}
     }
 }
