@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BloodBankManagement.Static;
+using BloodBankManagement.Admin;
+
 
 
 namespace BloodBankManagement
@@ -24,11 +26,12 @@ namespace BloodBankManagement
 
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-            ShowUserControl(new UC_Home());
+            ShowUserControl(new UC_Home()); // CHƯA TỰ ĐỘNG LOAD HOME LÊN 
         }
 
         private void ShowUserControl(UserControl newControl)
         {
+            // Cách 2: remove, dispose user control => tối ưu bộ nhớ, hiệu năng 
             if (currentControl != null)
             {
                 pnlUserControl.Controls.Remove(currentControl);
@@ -38,17 +41,11 @@ namespace BloodBankManagement
             currentControl = newControl;
             newControl.Dock = DockStyle.Fill;
             pnlUserControl.Controls.Add(newControl);
-            newControl.Left = (pnlUserControl.Width - newControl.Width) / 2;
-            newControl.Top = (pnlUserControl.Height - newControl.Height) / 2;
-            pnlUserControl.Resize += (s, e) =>
-            {
-                newControl.Left = (pnlUserControl.Width - newControl.Width) / 2;
-                newControl.Top = (pnlUserControl.Height - newControl.Height) / 2;
-            };
         }
+
         private void btRequirements_Click(object sender, EventArgs e)
         {
-            ShowUserControl(new Admin.UC_BloodRequirements());
+            ShowUserControl(new UC_BloodRequirements());
         }
 
         private void btLogOut_Click(object sender, EventArgs e)
@@ -60,6 +57,16 @@ namespace BloodBankManagement
             // Mở lại form Login
             Login loginForm = new Login();
             loginForm.Show();
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UC_Home());
+        }
+
+        private void btReUnits_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UC_ReceivingUnits());
         }
     }
 }

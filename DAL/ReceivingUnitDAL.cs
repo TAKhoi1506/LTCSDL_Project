@@ -18,8 +18,6 @@ namespace DAL
             return db.ReceivingUnits.Select(u => new ReceivingUnitDTO
             {
                 RU_ID = u.RU_ID,
-                //Username = u.Username,
-                //Password = u.Password,
                 UnitName = u.UnitName,
                 ContactName = u.ContactName,
                 Address = u.Address,
@@ -37,8 +35,6 @@ namespace DAL
             return new ReceivingUnitDTO
             {
                 RU_ID = u.RU_ID,
-                //Username = u.Username,
-                //Password = u.Password,
                 UnitName = u.UnitName,
                 ContactName = u.ContactName,
                 Address = u.Address,
@@ -50,32 +46,6 @@ namespace DAL
 
         public bool AddReceivingUnit(ReceivingUnitDTO dto)
         {
-            // chưa có username, password 
-            //try
-            //{
-            //    var entity = new ReceivingUnit
-            //    {
-            //        RU_ID = dto.RU_ID,
-            //        //Username = dto.Username,
-            //        //Password = dto.Password,
-            //        UnitName = dto.UnitName,
-            //        ContactName = dto.ContactName,
-            //        Address = dto.Address,
-            //        PhoneNumber = dto.PhoneNumber,
-            //        Email = dto.Email,
-            //        UnitType = dto.UnitType
-            //    };
-
-            //    db.ReceivingUnits.Add(entity);
-            //    db.SaveChanges();
-            //    return true;
-            //}
-            //catch
-            //{
-            //    return false;
-            //}
-
-
             // Kiểm tra trùng Username
             var existingAccount = db.UserAccounts.FirstOrDefault(u => u.Username == dto.Username);
             if (existingAccount != null)
@@ -141,7 +111,7 @@ namespace DAL
                 entity.Email = dto.Email;
                 entity.UnitType = dto.UnitType;
 
-                
+
                 var userAccount = db.UserAccounts.FirstOrDefault(u => u.ObjectID == dto.RU_ID && u.Role == "ReceivingUnit");
 
                 // kiểm tra xem username đã tồn tại chưa
@@ -153,7 +123,7 @@ namespace DAL
                 if (userAccount != null)
                 {
                     userAccount.Username = dto.Username;
-                    userAccount.Password = dto.Password; 
+                    userAccount.Password = dto.Password;
                 }
 
                 db.SaveChanges();
@@ -181,6 +151,82 @@ namespace DAL
                 return false;
             }
         }
-    }
 
+        // Admin update inf 
+        public bool AdminUpdateReceivingUnit(ReceivingUnitDTO dto)
+        {
+            try
+            {
+                var entity = db.ReceivingUnits.Find(dto.RU_ID);
+                if (entity == null)
+                    return false;
+
+                // Cập nhật thông tin cơ bản
+                entity.UnitName = dto.UnitName;
+                entity.ContactName = dto.ContactName;
+                entity.Address = dto.Address;
+                entity.PhoneNumber = dto.PhoneNumber;
+                entity.Email = dto.Email;
+                entity.UnitType = dto.UnitType;
+
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // Search 
+        public List<ReceivingUnitDTO> SearchRuByID(string ruId)
+        {
+            return db.ReceivingUnits
+               .Where(u => u.RU_ID.Contains(ruId))
+               .Select(u => new ReceivingUnitDTO
+               {
+                   RU_ID = u.RU_ID,
+                   UnitName = u.UnitName,
+                   ContactName = u.ContactName,
+                   Address = u.Address,
+                   PhoneNumber = u.PhoneNumber,
+                   Email = u.Email,
+                   UnitType = u.UnitType
+               }).ToList();
+        }
+
+        // mặc định sắp xếp tăng 
+        public List<ReceivingUnitDTO> GetSortedReceivingUnits(string sortBy)
+        {
+            var query = db.ReceivingUnits.AsQueryable();
+
+            // Chọn thuộc tính để sắp xếp
+            switch (sortBy)
+            {
+                case "Unit ID":
+                    query = query.OrderBy(r => r.RU_ID);
+                    break;
+                case "Unit name":
+                    query = query.OrderBy(r => r.UnitName);
+                    break;
+                case "Unit type":
+                    query = query.OrderBy(r => r.UnitType);
+                    break;
+                default:
+                    query = query.OrderBy(r => r.RU_ID); // mặc định
+                    break;
+            }
+
+            return query.Select(r => new ReceivingUnitDTO
+            {
+                RU_ID = r.RU_ID,
+                UnitName = r.UnitName,
+                ContactName = r.ContactName,
+                Address = r.Address,
+                PhoneNumber = r.PhoneNumber,
+                Email = r.Email,
+                UnitType = r.UnitType,
+            }).ToList();
+        }
+    }
 }

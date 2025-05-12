@@ -29,7 +29,6 @@ namespace BUS
 
         public bool RegisterDonor(DonorDTO donorDto, string username, string password)
         {
-
             try
             {
                 if (db.UserAccounts.Any(u => u.Username == username))
@@ -54,7 +53,7 @@ namespace BUS
                 var account = new UserAccount
                 {
                     Username = username,
-                    Password = password,
+                    Password = password, // nhận password đã băm từ form
                     Role = "Donor",
                     ObjectID = donor.DonorID.ToString()
                 };

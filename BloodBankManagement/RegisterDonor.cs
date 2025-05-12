@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 using BUS;
 using DTO;
 
@@ -44,6 +45,9 @@ namespace BloodBankManagement
                 return;
             }
 
+            // băm trước khi đưa xuống BUS 
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+
             DonorDTO donorDto = new DonorDTO
             {
                 FullName = txtFullName.Text.Trim(),
@@ -57,7 +61,7 @@ namespace BloodBankManagement
             };
 
             DonorBUS donorBUS = new DonorBUS();
-            bool success = donorBUS.RegisterDonor(donorDto, username, password);
+            bool success = donorBUS.RegisterDonor(donorDto, username, hashedPassword);
 
             if (success)
             {

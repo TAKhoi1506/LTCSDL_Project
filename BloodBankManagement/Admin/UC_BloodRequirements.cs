@@ -24,7 +24,6 @@ namespace BloodBankManagement.Admin
             txtSearch.TextChanged += txtSearch_TextChanged;
             dgvBloodRequirement.CellValueChanged += dgvBloodRequirement_CellValueChanged;
             dgvBloodRequirement.CurrentCellDirtyStateChanged += dgvBloodRequirement_CurrentCellDirtyStateChanged;
-
         }
 
         private void UC_BloodRequirements_Load(object sender, EventArgs e)
@@ -167,12 +166,12 @@ namespace BloodBankManagement.Admin
                         BloodRequirementBUS bus = new BloodRequirementBUS();
                         bool success = bus.UpdateStatus(requirementId, newStatus);
                         if (!success)
-                            MessageBox.Show("Cập nhật trạng thái thất bại.");
+                            MessageBox.Show("Update status failed.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi cập nhật trạng thái: " + ex.Message);
+                    MessageBox.Show("Error updating status: " + ex.Message);
                 }
             }
         }

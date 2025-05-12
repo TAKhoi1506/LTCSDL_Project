@@ -25,10 +25,12 @@ namespace BloodBankManagement
         private void Login_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            // băm plain text trong db 
+            //userBus.MigratePlainPasswordsToHashed();
         }
 
         // Button Login 
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
@@ -45,7 +47,7 @@ namespace BloodBankManagement
                 // Mở form tương ứng theo vai trò user
                 Form formToOpen = null;
 
-                switch (user.Role)  
+                switch (user.Role)
                 {
                     case "Admin":
                         formToOpen = new FrmAdmin();
@@ -90,5 +92,13 @@ namespace BloodBankManagement
             this.Hide();
             registerDonor.Show();
         }
+
+
+        //// băm mật khẩu (plain text) trong db => SỬ DỤNG 1 LẦN 
+        //private void btnHashPasswords_Click(object sender, EventArgs e)
+        //{
+        //    UserAccountBUS bus = new UserAccountBUS();
+        //    bus.MigratePlainPasswordsToHashed();
+        //}
     }
 }
