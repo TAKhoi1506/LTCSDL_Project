@@ -4,3 +4,9 @@ E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.dll
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\HashPwBranch_testDB\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
