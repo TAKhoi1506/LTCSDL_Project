@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="BloodGroupDTO.cs" />
     <Compile Include="BloodOverTimeDTO.cs" />
+    <Compile Include="BloodRequirementDetailDTO.cs" />
     <Compile Include="BloodRequirementDTO.cs" />
     <Compile Include="BloodStock.cs" />
+    <Compile Include="BloodSupplyDetailDTO.cs" />
     <Compile Include="DistributedBloodDTO.cs" />
     <Compile Include="DonationDTO.cs" />
     <Compile Include="DonorAgeGroupDTO.cs" />
@@ -54,7 +56,7 @@
     <Compile Include="EventDTO.cs" />
     <Compile Include="ReceivingUnitBloodSupplyComparisionDTO.cs" />
     <Compile Include="HistoryDonation.cs" />
-    <Compile Include="Notifications.cs" />
+    <Compile Include="NotificationsDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceivedBloodDTO.cs" />
     <Compile Include="ReceivingUnitBloodReceivedDTO.cs" />

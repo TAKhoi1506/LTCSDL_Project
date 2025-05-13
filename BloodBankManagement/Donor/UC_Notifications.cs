@@ -16,7 +16,7 @@ namespace BloodBankManagement.Donor
     public partial class UC_Notifications : UserControl
     {
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
-        private List<Notifications> notificationsList = new List<Notifications>();
+        private List<NotificationsDTO> notificationsList = new List<NotificationsDTO>();
 
         public UC_Notifications()
         {

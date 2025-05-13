@@ -8,19 +8,14 @@ namespace DTO
 {
     public class BloodRequirementDTO
     {
-        public int RU_ID { get; set; }
-
-        public string RU_Name { get; set; }
-        public string BloodType { get; set; }
-
-        public double Amount { get; set; }
-
+        public int ID { get; set; }
+        public string RU_ID { get; set; }
+        //public string BloodType { get; set; }
+        //public double Amount { get; set; }
+        public DateTime RequestDate { get; set; } = DateTime.Now;
         public DateTime SupplyDate { get; set; }
+        public string Status { get; set; } = "Pending";
 
-        public string Status { get; set; }
-
-        public int Year { get; set; }
-
-        public int Month { get; set; }
+        public List<BloodRequirementDetailDTO> DetailList { get; set; }
     }
 }

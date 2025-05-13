@@ -58,6 +58,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BloodBankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BloodRequirementDAL.cs" />
+    <Compile Include="BloodRequirementDetailDAL.cs" />
     <Compile Include="BloodStockDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Domain\BloodDetail.cs" />

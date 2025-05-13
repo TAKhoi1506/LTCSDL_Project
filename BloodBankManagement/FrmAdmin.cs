@@ -27,6 +27,8 @@ namespace BloodBankManagement
         private UC_DashBoard2 ucDashboard;
         private UC_Donors ucDonors;
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
+        private UserControl currentControl;
+        private UC_BloodRequirements ucbloodRe;
         private void HomeLoad()
         {
             if (ucHome == null)
@@ -38,7 +40,25 @@ namespace BloodBankManagement
 
             ucHome.BringToFront();
         }
+        private void ShowUserControl(UserControl newControl)
+        {
+            if (currentControl != null)
+            {
+                panelShow.Controls.Remove(currentControl);
+                currentControl.Dispose(); // Giải phóng bộ nhớ
+            }
 
+            currentControl = newControl;
+            newControl.Dock = DockStyle.Fill;
+            panelShow.Controls.Add(newControl);
+            newControl.Left = (panelShow.Width - newControl.Width) / 2;
+            newControl.Top = (panelShow.Height - newControl.Height) / 2;
+            panelShow.Resize += (s, e) =>
+            {
+                newControl.Left = (panelShow.Width - newControl.Width) / 2;
+                newControl.Top = (panelShow.Height - newControl.Height) / 2;
+            };
+        }
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             Static.UserSession.ObjectID = "admin";
@@ -216,11 +236,6 @@ namespace BloodBankManagement
                 y += 60;
             }
         }
-
-
-
-
-
         private void btNotification_Click_1(object sender, EventArgs e)
         {
             // Toggle danh sách thông báo
@@ -231,6 +246,18 @@ namespace BloodBankManagement
                 pnNotification.BringToFront(); // Đưa panel ra trước các control khác
                 LoadNotificationPanel();        // Load danh sách thông báo
             }
+        }
+
+        private void btRequirements_Click(object sender, EventArgs e)
+        {
+            if (ucbloodRe == null)
+            {
+                ucbloodRe = new UC_BloodRequirements();
+                ucbloodRe.Dock = DockStyle.Fill;
+                panelShow.Controls.Add(ucbloodRe);
+            }
+
+            ucbloodRe.BringToFront();
         }
     }
 }

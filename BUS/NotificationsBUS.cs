@@ -16,7 +16,7 @@ namespace BUS
         private readonly BloodStockDAL _bloodStockDAL;
 
         //Hàm lấy danh sách thông báo hiển thị trên ListView
-        public List<Notifications> GetNotificationsList() 
+        public List<NotificationsDTO> GetNotificationsList() 
         {
             return notifiDAL.GetTileList();
         }
@@ -46,7 +46,7 @@ namespace BUS
 
 
         //Hàm lấy nội dung thông báo dựa trên id
-        public List<Notifications> GetMessageById(string id)
+        public List<NotificationsDTO> GetMessageById(string id)
         {
            return notifiDAL.GetMessageByID(id);
         }

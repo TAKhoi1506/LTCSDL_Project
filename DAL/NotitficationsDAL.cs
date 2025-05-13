@@ -18,9 +18,9 @@ namespace DAL
         }
 
         //Lấy danh sách các tin nhắn hiển thị trên listview
-        public List<DTO.Notifications> GetTileList() 
+        public List<DTO.NotificationsDTO> GetTileList() 
         {
-            return _myContext.Notifications.Select(d => new DTO.Notifications
+            return _myContext.Notifications.Select(d => new DTO.NotificationsDTO
             {
                 NotifiID = d.NotifiID,
                 Title = d.Title,
@@ -33,13 +33,13 @@ namespace DAL
 
 
         //Lấy nội dung tin nhắn theo ID
-       public List<DTO.Notifications>  GetMessageByID(string objectID)
+       public List<DTO.NotificationsDTO>  GetMessageByID(string objectID)
         {
             try
             {
                 return _myContext.Notifications
                     .Where(n => n.ObjectID == objectID)
-                    .Select(n => new DTO.Notifications
+                    .Select(n => new DTO.NotificationsDTO
                     {
                         NotifiID = n.NotifiID,
                         Title = n.Title,
