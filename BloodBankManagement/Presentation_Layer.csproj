@@ -139,12 +139,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\UC_Dashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\UC_Dashboard.Designer.cs">
-      <DependentUpon>UC_Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\UC_DashBoard2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -279,9 +273,6 @@
     <Compile Include="ReceivingUnit\UC_UnitInformation.Designer.cs">
       <DependentUpon>UC_UnitInformation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\UC_Dashboard.resx">
-      <DependentUpon>UC_Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_DashBoard2.resx">
       <DependentUpon>UC_DashBoard2.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +373,15 @@
     <None Include="Resources\loupe.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-Photoroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-Photoroom %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{8ef1c09f-5607-49f8-b08c-c1eb0f4aae74}</Project>
       <Name>BUS</Name>
@@ -390,15 +390,6 @@
       <Project>{28ae0657-b73a-46c3-a270-28c86f7c823e}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\view.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images-Photoroom.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images-Photoroom %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

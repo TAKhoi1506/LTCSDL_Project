@@ -19,10 +19,10 @@ namespace BUS
         }
 
 
-        public int GetSumofDonor()
-        {
-            return reportDAL.GetSumofDonor();
-        }
+        //public int GetSumofDonor()
+        //{
+        //    return reportDAL.GetSumofDonor();
+        //}
 
 
         public int GetSumofReceivingUnit()
@@ -42,58 +42,58 @@ namespace BUS
         //    return reportDAL.GetReceivedBloodByDate();
         //}
 
-        public List<DistributedBloodDTO> GetDistributedBlood()
-        {
-            return reportDAL.GetDistributedBlood();
-        }
+        //public List<DistributedBloodDTO> GetDistributedBlood()
+        //{
+        //    return reportDAL.GetDistributedBlood();
+        //}
 
-        public List<BloodGroupStatisticsDTO> GetBloodGroupStatistics()
-        {
-            return reportDAL.GetBloodGroupStatistics();
-        }
-
-
-        public List<BloodOverTimeDTO> bloodOverTimeStatistics() 
-        {
-            return reportDAL.GetBloodOverTimeStatistics();
-        }
+        //public List<BloodGroupStatisticsDTO> GetBloodGroupStatistics()
+        //{
+        //    return reportDAL.GetBloodGroupStatistics();
+        //}
 
 
-        public List<DistributedBloodDTO> GetDistributedBloodStatistics()
-        {
-            return reportDAL.GetDistributedBloodStatistics();
-        }
+        //public List<BloodOverTimeDTO> bloodOverTimeStatistics() 
+        //{
+        //    return reportDAL.GetBloodOverTimeStatistics();
+        //}
 
 
-
-        public List<DonorAgeGroupDTO> GetAgeofDonorStatistic()
-        {
-            return reportDAL.GetAgeofDonorStatistic();
-        }
-
-
-        public List<DonorGenderGroupDTO> GetGenderofDonorStatistic() 
-        {
-            return reportDAL.donorGenderGroupStatistic();
-        }
-
-
-        public List<DonorDonatedTimeDTO> GetDonorDonatedTimeStatistic()
-        {
-            return reportDAL.donorDonatedTimeStatistic();
-        }
-
-
-        public List<ReceivingUnitBloodReceivedDTO> GetBloodReceivedByRUStatistic()
-        {
-            return reportDAL.BloodReceivedByRU();
-        }
+        //public List<DistributedBloodDTO> GetDistributedBloodStatistics()
+        //{
+        //    return reportDAL.GetDistributedBloodStatistics();
+        //}
 
 
 
-        public List<ReceivingUnitBloodSupplyComparisionDTO> GetReceivingUnitBloodSupplyComparisionStatistic()
-        {
-            return reportDAL.BloodSupplyComparisionByRU();
-        }
+        //public List<DonorAgeGroupDTO> GetAgeofDonorStatistic()
+        //{
+        //    return reportDAL.GetAgeofDonorStatistic();
+        //}
+
+
+        //public List<DonorGenderGroupDTO> GetGenderofDonorStatistic() 
+        //{
+        //    return reportDAL.donorGenderGroupStatistic();
+        //}
+
+
+        //public List<DonorDonatedTimeDTO> GetDonorDonatedTimeStatistic()
+        //{
+        //    return reportDAL.donorDonatedTimeStatistic();
+        //}
+
+
+        //public List<ReceivingUnitBloodReceivedDTO> GetBloodReceivedByRUStatistic()
+        //{
+        //    return reportDAL.BloodReceivedByRU();
+        //}
+
+
+
+        //public List<ReceivingUnitBloodSupplyComparisionDTO> GetReceivingUnitBloodSupplyComparisionStatistic()
+        //{
+        //    return reportDAL.BloodSupplyComparisionByRU();
+        //}
     }
 }

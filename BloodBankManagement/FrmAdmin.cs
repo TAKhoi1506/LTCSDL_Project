@@ -129,15 +129,15 @@ namespace BloodBankManagement
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
-            //    if (ucDashboard == null)
-            //    {
-            //        ucDashboard = new UC_DashBoard2();
-            //        ucDashboard.Dock = DockStyle.Fill;
-            //        panelShow.Controls.Add(ucDashboard);
-            //    }
+            //if (ucDashboard == null)
+            //{
+            //    ucDashboard = new UC_DashBoard2();
+            //    ucDashboard.Dock = DockStyle.Fill;
+            //    panelShow.Controls.Add(ucDashboard);
+            //}
 
-            //    ucDashboard.BringToFront();
-         }
+            //ucDashboard.BringToFront();
+        }
 
             private void btDashboard2_Click(object sender, EventArgs e)
         {

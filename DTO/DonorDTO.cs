@@ -20,9 +20,6 @@ namespace DTO
         public string Gender { get; set; }
         public string Email { get; set; }
 
-        
-        //Lấy tuổi donors
-        //public int Age { get; set; }
 
     }
 }

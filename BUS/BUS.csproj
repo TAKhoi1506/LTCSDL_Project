@@ -54,13 +54,13 @@
     <Compile Include="BloodStockBUS.cs" />
     <Compile Include="DonationBUS.cs" />
     <Compile Include="DonorBUS.cs" />
-    <Compile Include="DonorBUS_CF.cs" />
     <Compile Include="EventBUS.cs" />
     <Compile Include="HistoryDonationBUS.cs" />
     <Compile Include="NotificationsBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceivingUnitBUS.cs" />
     <Compile Include="ReportBUS.cs" />
+    <Compile Include="UserAccountBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

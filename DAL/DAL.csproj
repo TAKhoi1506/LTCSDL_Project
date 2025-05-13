@@ -75,7 +75,6 @@
     <Compile Include="Domain\UserAccount.cs" />
     <Compile Include="DonationDAL.cs" />
     <Compile Include="DonorDAL.cs" />
-    <Compile Include="DonorDAL_CF.cs" />
     <Compile Include="EventDAL.cs" />
     <Compile Include="HistoryDonationDAL.cs" />
     <Compile Include="NotitficationsDAL.cs" />
@@ -88,12 +87,6 @@
     <Compile Include="ReceivingUnitDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="UserAccountDAL.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{28ae0657-b73a-46c3-a270-28c86f7c823e}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -113,6 +106,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{28ae0657-b73a-46c3-a270-28c86f7c823e}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -21,27 +21,27 @@ namespace BUS
             return notifiDAL.GetTileList();
         }
         //Kiểm tra số lượng máu tồn kho và gửi thông báo
-        public void CheckAndNotifyLowStock(float threshold = 5.0f)
-        {
-            var lowStockBloodTypes = _bloodStockDAL.GetLowStockBloodTypes(threshold);
+        //public void CheckAndNotifyLowStock(float threshold = 5.0f)
+        //{
+        //    var lowStockBloodTypes = _bloodStockDAL.GetLowStockBloodTypes(threshold);
 
-            foreach (var stock in lowStockBloodTypes)
-            {
-                string title = $"Cảnh báo: Nhóm máu {stock.BloodType} sắp hết!";
-                string message = $"Số lượng hiện tại: {stock.Amount}. Cần bổ sung gấp.";
+        //    foreach (var stock in lowStockBloodTypes)
+        //    {
+        //        string title = $"Cảnh báo: Nhóm máu {stock.BloodType} sắp hết!";
+        //        string message = $"Số lượng hiện tại: {stock.Amount}. Cần bổ sung gấp.";
 
-                var notification = new Notification
-                {
-                    ObjectID = "admin", // ID của người nhận thông báo
-                    Title = title,
-                    Message = message,
-                    CreateAt = DateTime.Now,
-                    IsRead = false
-                };
+        //        var notification = new Notification
+        //        {
+        //            ObjectID = "admin", // ID của người nhận thông báo
+        //            Title = title,
+        //            Message = message,
+        //            CreateAt = DateTime.Now,
+        //            IsRead = false
+        //        };
 
-                notifiDAL.AddNotification(notification);
-            }
-        }
+        //        notifiDAL.AddNotification(notification);
+        //    }
+        //}
 
 
 

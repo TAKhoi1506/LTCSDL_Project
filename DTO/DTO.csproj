@@ -47,9 +47,9 @@
     <Compile Include="BloodStock.cs" />
     <Compile Include="DistributedBloodDTO.cs" />
     <Compile Include="DonationDTO.cs" />
-    <Compile Include="Donor.cs" />
     <Compile Include="DonorAgeGroupDTO.cs" />
     <Compile Include="DonorDonatedTimeDTO.cs" />
+    <Compile Include="DonorDTO.cs" />
     <Compile Include="DonorGenderGroupDTO.cs" />
     <Compile Include="EventDTO.cs" />
     <Compile Include="ReceivingUnitBloodSupplyComparisionDTO.cs" />
@@ -59,6 +59,7 @@
     <Compile Include="ReceivedBloodDTO.cs" />
     <Compile Include="ReceivingUnitBloodReceivedDTO.cs" />
     <Compile Include="ReceivingUnitDTO.cs" />
+    <Compile Include="UserAccountDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

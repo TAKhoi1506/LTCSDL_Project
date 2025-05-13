@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DAL.Domain;
+using DAL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.Domain;
-using DAL;
-using DTO;
 
 namespace BUS
 {
@@ -65,5 +65,4 @@ namespace BUS
             return dal.GetUserById(accountId);
         }
     }
-
 }

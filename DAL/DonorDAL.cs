@@ -1,124 +1,74 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using DTO; 
+using DAL.Domain; //Entity models
+using DTO; //DTO classes
 
 namespace DAL
 {
     public class DonorDAL
     {
-        private string connectionString = "Data Source=MSI\\NHAN;Initial Catalog=bloodbank;Integrated Security=True";
+        //Thay thế SqlConnection bằng DbContext
 
+        private readonly MyContext _myContext;
 
-     
-        public bool AddDonor(DonorDTO donor)
+        public DonorDAL()
         {
-            
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "INSERT INTO Donor (Username, Password, FullName, DateOfBirth, BloodType, Gender, PhoneNumber, Email, LastDonationDate,Address) " +
-                               "VALUES (@Username, @Password, @FullName, @DateOfBirth, @BloodType, @Gender, @PhoneNumber, @Email, @LastDonationDate,@Address)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", donor.Username);
-                cmd.Parameters.AddWithValue("@Password", donor.Password);
-                cmd.Parameters.AddWithValue("@FullName", donor.FullName);
-                cmd.Parameters.AddWithValue("@DateOfBirth", donor.DateOfBirth);
-                cmd.Parameters.AddWithValue("@BloodType", donor.BloodType);
-                cmd.Parameters.AddWithValue("@Gender", donor.Gender);
-                cmd.Parameters.AddWithValue("@PhoneNumber", donor.PhoneNumber);
-                cmd.Parameters.AddWithValue("@Email", donor.Email);
-                cmd.Parameters.AddWithValue("@LastDonationDate", donor.LastDonationDate);
-                cmd.Parameters.AddWithValue("@Address", donor.Address);
-
-                conn.Open();
-                return cmd.ExecuteNonQuery() > 0;
-            }
-
-            
-        }
-
-        public bool InsertDonor(DonorDTO donor)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = @"INSERT INTO Donor (Username, Password, FullName, Gender, Address, DateOfBirth, LastDonationDate, PhoneNumber, Email) 
-                                 VALUES (@Username, @Password, @FullName, @Gender, @Address, @DateOfBirth, @LastDonationDate, @PhoneNumber, @Email)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", donor.Username);
-                cmd.Parameters.AddWithValue("@Password", donor.Password);
-                cmd.Parameters.AddWithValue("@FullName", donor.FullName);
-                cmd.Parameters.AddWithValue("@Gender", donor.Gender);
-                cmd.Parameters.AddWithValue("@Address", donor.Address);
-                cmd.Parameters.AddWithValue("@DateOfBirth", donor.DateOfBirth);
-                cmd.Parameters.AddWithValue("@LastDonationDate", donor.LastDonationDate);
-                cmd.Parameters.AddWithValue("@PhoneNumber", donor.PhoneNumber);
-                cmd.Parameters.AddWithValue("@Email", donor.Email);
-
-                conn.Open();
-                return cmd.ExecuteNonQuery() > 0;
-            }
-        }
-
-        public DataTable GetAllDonors()
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT * FROM Donor";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
-            }
-        }
-        public bool Login(string username, string password)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT COUNT(*) FROM Donor WHERE Username=@Username AND Password=@Password";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);
-
-                conn.Open();
-                int result = (int)cmd.ExecuteScalar();
-                return result > 0;
-            }
+            _myContext = new MyContext();
         }
 
 
-
-        //Update do admin quản lý: Có thể sửa ID và Nhóm máu
-        public bool UpdateDonorByAdmin(DonorDTO donor)
+        //Thêm đầy đủ thông tin
+        public bool AddDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                var donor = new DAL.Domain.Donor
                 {
-                    string query = "UPDATE DONOR " +
-                                   "SET Username = @Username,Password = @Password, Fullname = @Fullname, DateOfBirth = @DateOfBirth,BloodType = @BloodType,Gender = @Gender,PhoneNumber = @PhoneNumber, " +
-                                   "Email = @Email, LastDonationDate = @LastDonation, Address = @Address " +
-                                   "WHERE id = @id";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@Username", donor.Username);
-                    cmd.Parameters.AddWithValue("@Password", donor.Password);
-                    cmd.Parameters.AddWithValue("@FullName", donor.FullName);
-                    cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = donor.DateOfBirth; //Kiểm soát dữ liệu truyền vào chính xác
-                    cmd.Parameters.AddWithValue("@BloodType", donor.BloodType);
-                    cmd.Parameters.AddWithValue("@Gender", donor.Gender);
-                    cmd.Parameters.AddWithValue("@Address", donor.Address);
-                    cmd.Parameters.AddWithValue("@PhoneNumber", donor.PhoneNumber);
-                    cmd.Parameters.AddWithValue("@Email", donor.Email);
-                    cmd.Parameters.AddWithValue("@LastDonationDate", donor.LastDonationDate);
-                    cmd.Parameters.AddWithValue("@id", donor.DonorID);
+                    
+                    FullName = donorDTO.FullName,
+                    BirthDate = donorDTO.DateOfBirth,
+                    BloodType = donorDTO.BloodType,
+                    Gender = donorDTO.Gender,
+                    PhoneNumber = donorDTO.PhoneNumber,
+                    Email = donorDTO.Email,
+                    LastDonationDate = donorDTO.LastDonationDate,
+                    Address = donorDTO.Address
 
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                };
+                _myContext.Donors.Add(donor);
+                return _myContext.SaveChanges() > 0;
+            }
+            catch(Exception ex) 
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+
+
+        //Lấy đầy đủ thông tin trừ BloodType
+        public bool InsertDonor(DTO.DonorDTO donorDTO) 
+        {
+            try
+            {
+                var donor = new DAL.Domain.Donor
+                {
+                    
+                    FullName = donorDTO.FullName,
+                    BirthDate = donorDTO.DateOfBirth,
+                    Gender = donorDTO.Gender,
+                    PhoneNumber = donorDTO.PhoneNumber,
+                    Email = donorDTO.Email,
+                    LastDonationDate = donorDTO.LastDonationDate,
+                    Address = donorDTO.Address
+
+                };
+                _myContext.Donors.Add(donor);
+                return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -128,31 +78,73 @@ namespace DAL
         }
 
 
-        //Update do người dùng là Donor thực hiện: Cập nhật các thông tin có trên UC_PersonalInformation
-        public bool UpdateDonorProfile(DonorDTO donor)
+
+        //Lấy danh sách các donors
+        public List<DTO.DonorDTO> GetAllDonors() 
+        {
+            return _myContext.Donors.Select(d => new DTO.DonorDTO
+            { 
+                DonorID = d.DonorID,
+                FullName = d.FullName,
+                DateOfBirth = d.BirthDate,
+                BloodType = d.BloodType,
+                Gender = d.Gender,
+                PhoneNumber = d.PhoneNumber,
+                Email= d.Email,
+                LastDonationDate= d.LastDonationDate,
+                Address = d.Address
+            }).ToList();
+        }
+
+
+        //Kiểm tra tên đăng nhập có phải user hay không
+        //public bool Login(string username, string password)
+        //{
+        //    return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
+        //}
+
+
+
+        //Update do admin quản lý: Có thể sửa ID và nhóm máu BloodType
+        public bool UpdateDonorByAdmin(DTO.DonorDTO donorDTO)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    string query = "UPDATE DONOR " +
-                                   "SET Username = @Username,Password = @Password, Fullname = @Fullname, DateOfBirth = @DateOfBirth, Gender = @Gender,PhoneNumber = @PhoneNumber, " +
-                                   "Email = @Email, LastDonationDate = @LastDonation, Address = @Address " +
-                                   "WHERE id = @id";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@UserName", donor.Username);
-                    cmd.Parameters.AddWithValue("@Password", donor.Password);
-                    cmd.Parameters.AddWithValue("FullName", donor.FullName);
-                    cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date).Value = donor.DateOfBirth; //Kiểm soát dữ liệu truyền vào chính xác
-                    cmd.Parameters.AddWithValue("@Gender", donor.Gender);
-                    cmd.Parameters.AddWithValue("@Address", donor.Address);
-                    cmd.Parameters.AddWithValue("@PhoneNumber", donor.PhoneNumber);
-                    cmd.Parameters.AddWithValue("@Email", donor.Email);
-                    cmd.Parameters.AddWithValue("@LastDonationDate", donor.LastDonationDate);
+                //Kiểm tra id có giống với id của donor muốn sửa hay không
+                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
+                if (donor == null)
+                    return false;
 
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
+                donor.FullName = donorDTO.FullName;
+                donor.BirthDate = donorDTO.DateOfBirth;
+                donor.BloodType = donorDTO.BloodType;
+                donor.Gender = donorDTO.Gender;
+                donor.PhoneNumber = donorDTO.PhoneNumber;
+                donor.Email = donorDTO.Email;
+                donor.LastDonationDate = donorDTO.LastDonationDate;
+                donor.Address = donorDTO.Address;
+
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+
+        //Xóa donor thực hiện bới admin 
+        public bool DeleteDonorByAdmin(int donorID)
+        {
+            try
+            {
+                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorID);
+                if (donor == null) return false;
+
+                _myContext.Donors.Remove(donor);
+                return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
@@ -160,5 +152,38 @@ namespace DAL
                 return false;
             }
         }
+
+
+        //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
+        public bool UpdateDonorByDonor(DTO.DonorDTO donorDTO)
+        {
+            try
+            {
+                //Kiểm tra id có giống với id của donor muốn sửa hay không
+                var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
+                if (donor == null)
+                    return false;
+
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
+                donor.FullName = donorDTO.FullName;
+                donor.BirthDate = donorDTO.DateOfBirth;
+                donor.Gender = donorDTO.Gender;
+                donor.PhoneNumber = donorDTO.PhoneNumber;
+                donor.Email = donorDTO.Email;
+                donor.LastDonationDate = donorDTO.LastDonationDate;
+                donor.Address = donorDTO.Address;
+
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+
+        
+
     }
 }
