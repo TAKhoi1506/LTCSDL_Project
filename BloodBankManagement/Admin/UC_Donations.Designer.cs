@@ -46,9 +46,6 @@
             this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFullName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btAddDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonation)).BeginInit();
@@ -62,10 +59,11 @@
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(447, 16);
+            this.bunifuLabel2.Location = new System.Drawing.Point(596, 20);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(164, 28);
+            this.bunifuLabel2.Size = new System.Drawing.Size(208, 34);
             this.bunifuLabel2.TabIndex = 1;
             this.bunifuLabel2.Text = "Donations List";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -78,10 +76,11 @@
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(30, 69);
+            this.bunifuLabel3.Location = new System.Drawing.Point(40, 85);
+            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(92, 22);
+            this.bunifuLabel3.Size = new System.Drawing.Size(117, 27);
             this.bunifuLabel3.TabIndex = 17;
             this.bunifuLabel3.Text = "Username:";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -106,10 +105,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDonation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDonation.ColumnHeadersHeight = 40;
-            this.dgvDonation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.donorID,
-            this.eventID});
             this.dgvDonation.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvDonation.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDonation.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -139,13 +134,16 @@
             this.dgvDonation.EnableHeadersVisualStyles = false;
             this.dgvDonation.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDonation.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvDonation.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDonation.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDonation.Location = new System.Drawing.Point(30, 267);
+            this.dgvDonation.Location = new System.Drawing.Point(40, 329);
+            this.dgvDonation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDonation.Name = "dgvDonation";
             this.dgvDonation.RowHeadersVisible = false;
+            this.dgvDonation.RowHeadersWidth = 51;
             this.dgvDonation.RowTemplate.Height = 40;
             this.dgvDonation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDonation.Size = new System.Drawing.Size(991, 297);
+            this.dgvDonation.Size = new System.Drawing.Size(1321, 366);
             this.dgvDonation.TabIndex = 19;
             this.dgvDonation.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -156,10 +154,11 @@
             this.bunifuLabel14.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel14.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel14.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel14.Location = new System.Drawing.Point(559, 69);
+            this.bunifuLabel14.Location = new System.Drawing.Point(745, 85);
+            this.bunifuLabel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel14.Name = "bunifuLabel14";
             this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel14.Size = new System.Drawing.Size(183, 22);
+            this.bunifuLabel14.Size = new System.Drawing.Size(234, 27);
             this.bunifuLabel14.TabIndex = 44;
             this.bunifuLabel14.Text = "Blood donation event:";
             this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -168,9 +167,11 @@
             // listEvents
             // 
             this.listEvents.FormattingEnabled = true;
-            this.listEvents.Location = new System.Drawing.Point(772, 60);
+            this.listEvents.ItemHeight = 16;
+            this.listEvents.Location = new System.Drawing.Point(1029, 74);
+            this.listEvents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listEvents.Name = "listEvents";
-            this.listEvents.Size = new System.Drawing.Size(249, 121);
+            this.listEvents.Size = new System.Drawing.Size(331, 148);
             this.listEvents.TabIndex = 45;
             // 
             // bunifuLabel18
@@ -181,10 +182,11 @@
             this.bunifuLabel18.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel18.Font = new System.Drawing.Font("Arial", 9.75F);
             this.bunifuLabel18.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuLabel18.Location = new System.Drawing.Point(295, 112);
+            this.bunifuLabel18.Location = new System.Drawing.Point(393, 138);
+            this.bunifuLabel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel18.Name = "bunifuLabel18";
             this.bunifuLabel18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel18.Size = new System.Drawing.Size(157, 33);
+            this.bunifuLabel18.Size = new System.Drawing.Size(189, 36);
             this.bunifuLabel18.TabIndex = 62;
             this.bunifuLabel18.Text = "Condition: Female >= 42kg\r\n                    Male >= 45kg";
             this.bunifuLabel18.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,10 +199,11 @@
             this.bunifuLabel15.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel15.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel15.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel15.Location = new System.Drawing.Point(30, 109);
+            this.bunifuLabel15.Location = new System.Drawing.Point(40, 134);
+            this.bunifuLabel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel15.Name = "bunifuLabel15";
             this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel15.Size = new System.Drawing.Size(65, 22);
+            this.bunifuLabel15.Size = new System.Drawing.Size(83, 27);
             this.bunifuLabel15.TabIndex = 61;
             this.bunifuLabel15.Text = "Weight:";
             this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -210,15 +213,15 @@
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(178, 112);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Location = new System.Drawing.Point(237, 138);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(53, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(71, 26);
             this.numericUpDown1.TabIndex = 60;
             // 
             // bunifuLabel1
@@ -228,29 +231,15 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(236, 109);
+            this.bunifuLabel1.Location = new System.Drawing.Point(315, 134);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(20, 22);
+            this.bunifuLabel1.Size = new System.Drawing.Size(26, 27);
             this.bunifuLabel1.TabIndex = 64;
             this.bunifuLabel1.Text = "kg";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Donation ID";
-            this.id.Name = "id";
-            // 
-            // donorID
-            // 
-            this.donorID.HeaderText = "Donor ID";
-            this.donorID.Name = "donorID";
-            // 
-            // eventID
-            // 
-            this.eventID.HeaderText = "Event ID";
-            this.eventID.Name = "eventID";
             // 
             // txtFullName
             // 
@@ -281,8 +270,8 @@
             this.txtFullName.IconRight = null;
             this.txtFullName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.Lines = new string[0];
-            this.txtFullName.Location = new System.Drawing.Point(178, 63);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFullName.Location = new System.Drawing.Point(237, 78);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.MaxLength = 32767;
             this.txtFullName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFullName.Modified = false;
@@ -308,7 +297,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtFullName.OnIdleState = stateProperties4;
-            this.txtFullName.Padding = new System.Windows.Forms.Padding(2);
+            this.txtFullName.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtFullName.PlaceholderText = "Enter username";
@@ -318,7 +307,7 @@
             this.txtFullName.SelectionLength = 0;
             this.txtFullName.SelectionStart = 0;
             this.txtFullName.ShortcutsEnabled = true;
-            this.txtFullName.Size = new System.Drawing.Size(274, 32);
+            this.txtFullName.Size = new System.Drawing.Size(365, 39);
             this.txtFullName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFullName.TabIndex = 63;
             this.txtFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -376,7 +365,8 @@
             this.btAddDonation.IdleIconLeftImage = null;
             this.btAddDonation.IdleIconRightImage = null;
             this.btAddDonation.IndicateFocus = false;
-            this.btAddDonation.Location = new System.Drawing.Point(862, 200);
+            this.btAddDonation.Location = new System.Drawing.Point(1149, 246);
+            this.btAddDonation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAddDonation.Name = "btAddDonation";
             this.btAddDonation.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btAddDonation.OnDisabledState.BorderRadius = 20;
@@ -410,17 +400,18 @@
             this.btAddDonation.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btAddDonation.OnPressedState.IconLeftImage = null;
             this.btAddDonation.OnPressedState.IconRightImage = null;
-            this.btAddDonation.Size = new System.Drawing.Size(159, 39);
+            this.btAddDonation.Size = new System.Drawing.Size(212, 48);
             this.btAddDonation.TabIndex = 32;
             this.btAddDonation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btAddDonation.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btAddDonation.TextMarginLeft = 0;
             this.btAddDonation.TextPadding = new System.Windows.Forms.Padding(0);
             this.btAddDonation.UseDefaultRadiusAndThickness = true;
+            this.btAddDonation.Click += new System.EventHandler(this.btAddDonation_Click);
             // 
             // UC_Donations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.txtFullName);
@@ -433,8 +424,10 @@
             this.Controls.Add(this.dgvDonation);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_Donations";
-            this.Size = new System.Drawing.Size(1058, 592);
+            this.Size = new System.Drawing.Size(1411, 729);
+            this.Load += new System.EventHandler(this.UC_Donations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
@@ -455,8 +448,5 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private Bunifu.UI.WinForms.BunifuTextBox txtFullName;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donorID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eventID;
     }
 }

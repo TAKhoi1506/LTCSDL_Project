@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using System.Security.Principal;
+using BloodBankManagement.Static;
+using BUS;
+using System.Web.Security;
 
 namespace BloodBankManagement
 {
@@ -37,30 +41,57 @@ namespace BloodBankManagement
 
             Console.WriteLine("Clicked");
         }
-
-
-
+        
         //Đoạn này cần lấy dữ liệu để đưa lên giao diện
-        private void ShowDonorInfo(DTO.DonorDTO donor)
+        private void ShowDonorInfo()
         {
-            txtUsername.Text = donor.Username;
-            txtPassword.Text = donor.Password;
-            txtFullName.Text = donor.FullName;
-            dpDateOfBirth.Value = donor.DateOfBirth;
-            txtEmail.Text = donor.Email;
-            cbGender.SelectedItem = donor.Gender;
-            txtAddress.Text = donor.Address;
-            txtPhoneNumber.Text = donor.PhoneNumber;
-
-            if (donor.LastDonationDate.HasValue)
+            if (UserSession.ObjectID == null)
             {
-                dpLastDonationDate.Value = donor.LastDonationDate.Value;
+                MessageBox.Show("User ID not found in session.");
+                return;
+            }
+
+            string role = UserSession.Role;
+            string objectId = UserSession.ObjectID.ToString();
+
+            UserAccountBUS userBus = new UserAccountBUS();
+            var donorObj = userBus.GetUserInfo(role, objectId);
+
+            int accountID = UserSession.AccountID; // Lấy AccountID từ session
+
+            // Lấy thông tin tài khoản
+
+            var account = userBus.GetAccountById(UserSession.AccountID);
+
+            if (donorObj is DonorDTO donorDto && account != null)
+            {
+                txtUsername.Text = account.Username;
+                txtPassword.Text = account.Password;
+                txtFullName.Text = donorDto.FullName;
+                dpDateOfBirth.Value = donorDto.DateOfBirth;
+                txtEmail.Text = donorDto.Email;
+                cbGender.SelectedItem = donorDto.Gender;
+                txtAddress.Text = donorDto.Address;
+                txtPhoneNumber.Text = donorDto.PhoneNumber;
+
+                if (donorDto.LastDonationDate.HasValue)
+                {
+                    dpLastDonationDate.Value = donorDto.LastDonationDate.Value;
+                }
+                else
+                {
+                    dpLastDonationDate.Value = DateTime.Now; // hoặc một ngày mặc định khác
+                }
             }
             else
             {
-                dpLastDonationDate.Value = DateTime.Now; // hoặc một ngày mặc định khác
+                MessageBox.Show("Failed to load user info.");
             }
+        }
 
+        private void UC_PersonalInformation_Load(object sender, EventArgs e)
+        {
+            ShowDonorInfo();
         }
     }
 }

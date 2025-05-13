@@ -183,5 +183,13 @@ namespace DAL
                 return false;
             }
         }
+        public string GetDonorIdByUsername(string username)
+        {
+            using (var context = new MyContext())
+            {
+                var donor = context.UserAccounts.FirstOrDefault(d => d.Username == username);
+                return donor.ObjectID;
+            }
+        }
     }
 }

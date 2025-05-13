@@ -185,6 +185,11 @@ namespace BloodBankManagement
         {
             Application.Exit();
         }
+
+        private void panelShow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
