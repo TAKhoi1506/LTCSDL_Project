@@ -209,12 +209,6 @@
     <Compile Include="Donor\UC_Benefits.Designer.cs">
       <DependentUpon>UC_Benefits.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UC_BloodDonationRequirement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\UC_BloodDonationRequirement.Designer.cs">
-      <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\UC_BloodStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -316,9 +310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Donor\UC_Benefits.resx">
       <DependentUpon>UC_Benefits.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\UC_BloodDonationRequirement.resx">
-      <DependentUpon>UC_BloodDonationRequirement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_BloodStock.resx">
       <DependentUpon>UC_BloodStock.cs</DependentUpon>

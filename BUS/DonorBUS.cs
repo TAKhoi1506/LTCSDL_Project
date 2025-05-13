@@ -79,7 +79,7 @@ namespace BUS
         //Update bởi admin
         public bool UpdateByAdmin(DonorDTO donor)
         {
-            if (donor == null || string.IsNullOrWhiteSpace(donor.Username) || donor.DonorID <= 0)
+            if (donor == null ||  donor.DonorID <= 0)
             {
                 return false;
             }
@@ -89,13 +89,17 @@ namespace BUS
         //Update bởi donors
         public bool UpdateByDonor(DonorDTO donor)
         {
-            if (donor == null || string.IsNullOrWhiteSpace(donor.Username))
+            if (donor == null )
             {
                 return false;
             }
             return donorDAL.UpdateDonorByDonor(donor);
         }
 
+        public string GetDonorIdByUsername(string username)
+        {
+            return donorDAL.GetDonorIdByUsername(username);
+        }
 
 
     }

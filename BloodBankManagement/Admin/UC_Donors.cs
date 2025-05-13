@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 
-namespace BloodBankManagement
+namespace BloodBankManagement.Admin
 {
     public partial class UC_Donors: UserControl
     {
@@ -24,8 +24,7 @@ namespace BloodBankManagement
         {
             DTO.DonorDTO donor = new DTO.DonorDTO()
             {
-                Username = txtUsername.Text,
-                Password = txtPassword.Text,
+                
                 FullName = txtFullName.Text,
                 DateOfBirth = dpDateOfBirth.Value,
                 BloodType = cbBloodType.Text,
@@ -53,9 +52,10 @@ namespace BloodBankManagement
             dgvDonors.DataSource = donorBUS.GetAllDonors();
         }
 
+
         private void bunifuPanel3_Click(object sender, EventArgs e)
         {
-
+            LoadDonors();
         }
     }
 }
