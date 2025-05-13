@@ -15,31 +15,35 @@ namespace BloodBankManagement
 {
     public partial class FrmAdmin : Form
     {
+        private UserControl currentControl;
+
         public FrmAdmin()
         {
             InitializeComponent();
         }
-        private UC_BloodStock ucBloodStock;
-        private UC_Home ucHome;
-        private UC_Events ucEvents;
-        private UC_Donations ucDonations;
-        private UC_ReceivingUnits ucReceivingUnits;
-        private UC_DashBoard2 ucDashboard;
-        private UC_Donors ucDonors;
+        //private UC_BloodStock ucBloodStock;
+        //private UC_Home ucHome;
+        //private UC_Events ucEvents;
+        //private UC_Donations ucDonations;
+        //private UC_ReceivingUnits ucReceivingUnits;
+        //private UC_DashBoard2 ucDashboard;
+        //private UC_Donors ucDonors;
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
-        private UserControl currentControl;
-        private UC_BloodRequirements ucbloodRe;
-        private void HomeLoad()
-        {
-            if (ucHome == null)
-            {
-                ucHome = new UC_Home();
-                ucHome.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucHome);
-            }
+        //private UC_BloodRequirements ucbloodRe;
 
-            ucHome.BringToFront();
-        }
+
+        //private void HomeLoad()
+        //{
+        //    if (ucHome == null)
+        //    {
+        //        ucHome = new UC_Home();
+        //        ucHome.Dock = DockStyle.Fill;
+        //        panelShow.Controls.Add(ucHome);
+        //    }
+
+        //    ucHome.BringToFront();
+        //}
+
         private void ShowUserControl(UserControl newControl)
         {
             if (currentControl != null)
@@ -51,22 +55,10 @@ namespace BloodBankManagement
             currentControl = newControl;
             newControl.Dock = DockStyle.Fill;
             panelShow.Controls.Add(newControl);
-            newControl.Left = (panelShow.Width - newControl.Width) / 2;
-            newControl.Top = (panelShow.Height - newControl.Height) / 2;
-            panelShow.Resize += (s, e) =>
-            {
-                newControl.Left = (panelShow.Width - newControl.Width) / 2;
-                newControl.Top = (panelShow.Height - newControl.Height) / 2;
-            };
         }
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-            Static.UserSession.ObjectID = "admin";
-            HomeLoad();
-            //LoadNotificationBadge();
-            pnNotification.BringToFront();
-            LoadUnreadCount();
-
+            ShowUserControl(new UC_Home());
         }
         private void LoadUnreadCount()
         {
@@ -77,91 +69,38 @@ namespace BloodBankManagement
 
         private void btBloodStock_Click(object sender, EventArgs e)
         {
-            if (ucBloodStock == null)
-            {
-                ucBloodStock = new UC_BloodStock();
-                ucBloodStock.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucBloodStock);
-            }
-
-            ucBloodStock.BringToFront();
+            ShowUserControl(new UC_BloodStock());
         }
 
         private void btHome_Click(object sender, EventArgs e)
         {
-           HomeLoad();
-
+            ShowUserControl(new UC_Home());
         }
 
         private void btEvents_Click(object sender, EventArgs e)
         {
-            if (ucEvents == null)
-            {
-                ucEvents = new UC_Events();
-                ucEvents.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucEvents);
-            }
-
-            ucEvents.BringToFront();
+            ShowUserControl(new UC_Events());
         }
-
-
 
         private void btDonors_Click(object sender, EventArgs e)
         {
-            if (ucDonors == null)
-            {
-                ucDonors = new UC_Donors();
-                ucDonors.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucDonors);
-            }
-
-            ucDonors.BringToFront();
+            ShowUserControl(new UC_Donors());
         }
-
-
 
         private void btReUnits_Click(object sender, EventArgs e)
         {
-            if (ucReceivingUnits == null)
-            {
-                ucReceivingUnits = new UC_ReceivingUnits();
-                ucReceivingUnits.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucReceivingUnits);
-            }
-            ucReceivingUnits.BringToFront();
+            ShowUserControl(new UC_ReceivingUnits());
         }
-
 
         private void btDonations_Click(object sender, EventArgs e)
         {
-
-            if (ucDonations == null)
-            {
-                ucDonations = new UC_Donations();
-                ucDonations.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucDonations);
-            }
-
-            ucDonations.BringToFront();
+            ShowUserControl(new UC_Donations());
         }
 
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
-            if (ucDashboard == null)
-            {
-                ucDashboard = new UC_DashBoard2();
-                ucDashboard.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucDashboard);
-            }
-
-            ucDashboard.BringToFront();
-        }
-
-
-        private void panelShow_Paint(object sender, PaintEventArgs e)
-        {
+            ShowUserControl(new UC_DashBoard2());
         }
 
         private void LoadNotificationPanel()
@@ -239,14 +178,7 @@ namespace BloodBankManagement
 
         private void btRequirements_Click(object sender, EventArgs e)
         {
-            if (ucbloodRe == null)
-            {
-                ucbloodRe = new UC_BloodRequirements();
-                ucbloodRe.Dock = DockStyle.Fill;
-                panelShow.Controls.Add(ucbloodRe);
-            }
-
-            ucbloodRe.BringToFront();
+           ShowUserControl(new UC_BloodRequirements());
         }
 
         private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)

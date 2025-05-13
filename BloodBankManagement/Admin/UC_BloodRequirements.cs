@@ -14,6 +14,9 @@ namespace BloodBankManagement.Admin
 {
     public partial class UC_BloodRequirements: UserControl
     {
+        private BloodRequirementDetailBUS brDetailBUS = new BloodRequirementDetailBUS();
+        private BloodRequirementBUS brBUS = new BloodRequirementBUS();
+
         public UC_BloodRequirements()
         {
             InitializeComponent();
@@ -23,8 +26,7 @@ namespace BloodBankManagement.Admin
             dgvBloodRequirement.CurrentCellDirtyStateChanged += dgvBloodRequirement_CurrentCellDirtyStateChanged;
 
         }
-        private BloodRequirementDetailBUS brDetailBUS = new BloodRequirementDetailBUS();
-        private BloodRequirementBUS brBUS = new BloodRequirementBUS();
+     
         // Cách 1: load không tham số 
         private void LoadRequirementsToGrid()
         {
@@ -90,6 +92,7 @@ namespace BloodBankManagement.Admin
 
         }
 
+        // Search by unit ID 
         private void btSearch_Click(object sender, EventArgs e)
         {
             dgvBloodRequirement.Rows.Clear();

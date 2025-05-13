@@ -19,22 +19,18 @@ namespace BloodBankManagement
         public Login()
         {
             InitializeComponent();
-            this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
+            //this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            //băm plain text trong db
+            btnHashPasswords.Visible = true; // ẩn nút băm mật khẩu
+            userBus.MigratePlainPasswordsToHashed();
         }
-        private void lbLogin_Click(object sender, EventArgs e)
-        {
 
-        }
-        DonorBUS donorBUS = new DonorBUS();
-
-
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
@@ -90,16 +86,19 @@ namespace BloodBankManagement
             }
         }
 
-        private void Login_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btRegister_Click(object sender, EventArgs e)
         {
             RegisterDonor registerDonor = new RegisterDonor();
             this.Hide();
             registerDonor.Show();
+        }
+
+
+        // băm mật khẩu (plain text) trong db => SỬ DỤNG 1 LẦN 
+        private void btnHashPasswords_Click(object sender, EventArgs e)
+        {
+            UserAccountBUS bus = new UserAccountBUS();
+            bus.MigratePlainPasswordsToHashed();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DAL.Domain;
 using DTO;
 
 
@@ -13,7 +14,8 @@ namespace BUS
     public class DonorBUS
     {
         private DonorDAL donorDAL = new DonorDAL();
-       
+
+        private MyContext db = new MyContext();
 
         public bool AddDonor(DonorDTO donor)
         {   
@@ -26,14 +28,47 @@ namespace BUS
             return donorDAL.GetAllDonors();
         }
 
-
-        public bool RegisterDonor(DonorDTO donor)
+        public bool RegisterDonor(DonorDTO donorDto, string username, string password)
         {
-            if (string.IsNullOrWhiteSpace(donor.Username) || string.IsNullOrWhiteSpace(donor.Password))
-                return false;
+            try
+            {
+                if (db.UserAccounts.Any(u => u.Username == username))
+                    return false;
 
-            return donorDAL.InsertDonor(donor);
+                // Tạo Donor từ DTO
+                var donor = new Donor
+                {
+                    FullName = donorDto.FullName,
+                    BloodType = donorDto.BloodType,
+                    BirthDate = donorDto.DateOfBirth,
+                    PhoneNumber = donorDto.PhoneNumber,
+                    Address = donorDto.Address,
+                    LastDonationDate = donorDto.LastDonationDate,
+                    Gender = donorDto.Gender,
+                    Email = donorDto.Email
+                };
+
+                db.Donors.Add(donor);
+                db.SaveChanges();
+
+                var account = new UserAccount
+                {
+                    Username = username,
+                    Password = password, // nhận password đã băm từ form
+                    Role = "Donor",
+                    ObjectID = donor.DonorID.ToString()
+                };
+
+                db.UserAccounts.Add(account);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
+
 
         //public bool Login(string username, string password)
         //{

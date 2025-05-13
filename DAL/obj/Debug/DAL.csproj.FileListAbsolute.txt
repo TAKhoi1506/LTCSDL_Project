@@ -92,3 +92,17 @@ D:\Admin\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Admin\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Admin\LTCSDL_Project\DAL\obj\Debug\DAL.dll
 D:\Admin\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+E:\OuCourses\DatabaseProgramming\Temp_Project\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

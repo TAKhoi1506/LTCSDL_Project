@@ -19,44 +19,59 @@ namespace BloodBankManagement
             InitializeComponent();
         }
 
-        private void bunifuPanel3_Click(object sender, EventArgs e)
+        private void btLogIn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
+            Login frmLogin = new Login();
+            this.Hide();
+            frmLogin.Show();
         }
 
         private void btRegisterRU_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text != txtConfirmPassword.Text)
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text;
+            string confirmPassword = txtConfirmPassword.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Username and Password are required.");
+                return;
+            }
+
+            if (password != confirmPassword)
             {
                 MessageBox.Show("Passwords do not match.");
                 return;
             }
 
-            DTO.DonorDTO donor = new DTO.DonorDTO
+            // băm trước khi đưa xuống BUS 
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+
+            DonorDTO donorDto = new DonorDTO
             {
-                Username = txtUsername.Text,
-                Password = txtPassword.Text,
-                FullName = txtFullName.Text,
-                Gender = cbGender.Text,
-                Address = txtAddress.Text,
-                DateOfBirth = dpDateOfBirth.Value,
-                LastDonationDate = dpLastDonationDate.Value,
-                PhoneNumber = txtPhoneNumber.Text,
-                Email = txtEmail.Text
+                FullName = txtFullName.Text.Trim(),
+                BloodType = cbBloodType.SelectedItem?.ToString(),
+                DateOfBirth = dpDateOfBirth.Value.Date,
+                PhoneNumber = txtPhoneNumber.Text.Trim(),
+                Address = txtAddress.Text.Trim(),
+                LastDonationDate = dpLastDonationDate.Checked ? dpLastDonationDate.Value.Date : (DateTime?)null,
+                Gender = cbGender.SelectedItem?.ToString(),
+                Email = txtEmail.Text.Trim()
             };
-            DonorBUS bus = new DonorBUS();
-            if (bus.RegisterDonor(donor))
+
+            DonorBUS donorBUS = new DonorBUS();
+            bool success = donorBUS.RegisterDonor(donorDto, username, hashedPassword);
+
+            if (success)
             {
-                MessageBox.Show("Registration successful.");
+                MessageBox.Show("Registration successful!");
+                Login form = new Login();
+                this.Hide(); // Hoặc clear form
+                form.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Registration failed.");
+                MessageBox.Show("Registration failed. Username may already exist.");
             }
         }
     }

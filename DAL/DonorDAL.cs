@@ -28,7 +28,7 @@ namespace DAL
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    
+
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     BloodType = donorDTO.BloodType,
@@ -42,7 +42,7 @@ namespace DAL
                 _myContext.Donors.Add(donor);
                 return _myContext.SaveChanges() > 0;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 return false;
@@ -51,13 +51,13 @@ namespace DAL
 
 
         //Lấy đầy đủ thông tin trừ BloodType
-        public bool InsertDonor(DTO.DonorDTO donorDTO) 
+        public bool InsertDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    
+
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     Gender = donorDTO.Gender,
@@ -80,18 +80,18 @@ namespace DAL
 
 
         //Lấy danh sách các donors
-        public List<DTO.DonorDTO> GetAllDonors() 
+        public List<DTO.DonorDTO> GetAllDonors()
         {
             return _myContext.Donors.Select(d => new DTO.DonorDTO
-            { 
+            {
                 DonorID = d.DonorID,
                 FullName = d.FullName,
                 DateOfBirth = d.BirthDate,
                 BloodType = d.BloodType,
                 Gender = d.Gender,
                 PhoneNumber = d.PhoneNumber,
-                Email= d.Email,
-                LastDonationDate= d.LastDonationDate,
+                Email = d.Email,
+                LastDonationDate = d.LastDonationDate,
                 Address = d.Address
             }).ToList();
         }
@@ -128,7 +128,7 @@ namespace DAL
 
                 return _myContext.SaveChanges() > 0;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 return false;
@@ -168,6 +168,7 @@ namespace DAL
                 //donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
+                donor.BloodType = donorDTO.BloodType;
                 donor.Gender = donorDTO.Gender;
                 donor.PhoneNumber = donorDTO.PhoneNumber;
                 donor.Email = donorDTO.Email;
@@ -182,8 +183,5 @@ namespace DAL
                 return false;
             }
         }
-
-        
-
     }
 }

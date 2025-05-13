@@ -238,7 +238,6 @@
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBloodRequirement.Location = new System.Drawing.Point(70, 286);
             this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(4);

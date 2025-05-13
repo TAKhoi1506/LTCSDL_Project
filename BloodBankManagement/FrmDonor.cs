@@ -1,4 +1,5 @@
 ﻿using BloodBankManagement.Donor;
+using BloodBankManagement.Static;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,111 +14,89 @@ namespace BloodBankManagement
 {
     public partial class FrmDonor : Form
     {
+        private UserControl currentControl;
+
+        //private UC_Home ucHome;
+        //private UC_Benefits ucBenefits;
+        //private UC_HistoryDonations ucHistoryDonation;
+        //private UC_Notifications ucNotifications; 
+        //private UC_PersonalInformation ucPersonalInformation;
+        //private UC_RegisterforBloodDonation ucRegisterforBloodDonation;
+
         public FrmDonor()
         {
             InitializeComponent();
         }
 
+        private void ShowUserControl(UserControl newControl)
+        {
+            if (currentControl != null)
+            {
+                pnShow.Controls.Remove(currentControl);
+                currentControl.Dispose(); // Giải phóng bộ nhớ
+            }
 
-        private UC_Home ucHome;
-        private UC_Benefits ucBenefits;
-        private UC_HistoryDonations ucHistoryDonation;
-        private UC_Notifications ucNotifications; 
-        private UC_PersonalInformation ucPersonalInformation;
-        private UC_RegisterforBloodDonation ucRegisterforBloodDonation;
-
-
+            currentControl = newControl;
+            newControl.Dock = DockStyle.Fill;
+            pnShow.Controls.Add(newControl);
+        }
 
         private void FrmDonor_Load(object sender, EventArgs e)
         {
-            HomeLoad();
+            ShowUserControl(new UC_Home());
         }
 
         private void btInfor_Click(object sender, EventArgs e)
         {
-            if (ucPersonalInformation == null)
-            {
-                ucPersonalInformation = new UC_PersonalInformation();
-                ucPersonalInformation.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucPersonalInformation);
-            }
-
-            ucPersonalInformation.BringToFront();
+           ShowUserControl(new UC_PersonalInformation());
         }
-
-
 
         private void btHistoryDonations_Click(object sender, EventArgs e)
         {
-            if (ucHistoryDonation == null)
-            {
-                ucHistoryDonation = new UC_HistoryDonations();
-                ucHistoryDonation.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucHistoryDonation);
-            }
-
-            ucHistoryDonation.BringToFront();
-
+           ShowUserControl(new UC_HistoryDonations());
         }
-
 
         private void btRegisterForDonation_Click(object sender, EventArgs e)
         {
-            if (ucRegisterforBloodDonation == null)
-            {
-                ucRegisterforBloodDonation = new UC_RegisterforBloodDonation();
-                ucRegisterforBloodDonation.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucRegisterforBloodDonation);
-            }
-
-            ucRegisterforBloodDonation.BringToFront();
+           ShowUserControl(new UC_RegisterforBloodDonation());
         }
-
 
         private void btBenefit_Click(object sender, EventArgs e)
         {
-            if (ucBenefits == null)
-            {
-                ucBenefits = new UC_Benefits();
-                ucBenefits.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucBenefits);
-            }
-
-            ucBenefits.BringToFront();
+           ShowUserControl(new UC_Benefits());
         }
-
 
         private void btNotification_Click(object sender, EventArgs e)
         {
-            if (ucNotifications == null)
-            {
-                ucNotifications = new UC_Notifications();
-                ucNotifications.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucNotifications);
-            }
-
-            ucNotifications.BringToFront();
+            ShowUserControl(new UC_Notifications());
         }
 
+        //private void HomeLoad()
+        //{
+        //    if (ucHome == null)
+        //    {
+        //        ucHome = new UC_Home();
+        //        ucHome.Dock = DockStyle.Fill;
+        //        pnShow.Controls.Add(ucHome);
+        //    }
 
-        private void HomeLoad()
-        {
-            if (ucHome == null)
-            {
-                ucHome = new UC_Home();
-                ucHome.Dock = DockStyle.Fill;
-                pnShow.Controls.Add(ucHome);
-            }
-
-            ucHome.BringToFront();
-        }
+        //    ucHome.BringToFront();
+        //}
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            HomeLoad();
+            ShowUserControl(new UC_Home());
         }
 
+        private void btLogOut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
 
+            this.Close();
 
+            // Mở lại form Login
+            Login loginForm = new Login();
+            loginForm.Show();
+        }
     }
 }
