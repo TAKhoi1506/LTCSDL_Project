@@ -16,10 +16,12 @@ namespace BUS
         {
             return eventDAL.GetAllEvents();
         }
+
         public bool AddEvent(EventDTO e)
         {
             return eventDAL.AddEvent(e);
         }
+
         public void UpdateEventStatus(int eventID, string newStatus)
         {
             EventDAL dal = new EventDAL();

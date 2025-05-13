@@ -117,141 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAABigAAANuCAYAAACMooHCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAB0gSURBVHhe7duxaQNRFEVBhSpDoUOVohIUqgzVvPzPhmsM
-        QrDGofY4mQuTvQ4O73QyMzMzMzMzMzMzMzP7r63replzPgEAAAAAAI6wLMvXLk6MMa5zzg0AAAAAAOBg
-        t3egeJWL3wcAAAAAAACf9hQoAAAAAACAmkABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkU
-        AAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIA
-        AAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAA
-        AAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAA
-        ACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA
-        5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICc
-        QAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMo
-        AAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUA
-        AAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAA
-        AAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAA
-        AEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAA
-        yAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5
-        gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQ
-        AAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoA
-        AAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAA
-        AAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAA
-        AICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAA
-        kBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAABy
-        AgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6g
-        AAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQA
-        AAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAA
-        AAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAA
-        AAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAA
-        ICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADk
-        BAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxA
-        AQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygA
-        AAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAA
-        AAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAA
-        AAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAA
-        QE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADI
-        CRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmB
-        AgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AA
-        AAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAA
-        AAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAA
-        AADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAA
-        gJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQ
-        EygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHIC
-        BQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAA
-        AAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAA
-        AAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAA
-        AADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAA
-        ADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAg
-        J1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQE
-        CgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEAB
-        AAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAA
-        AAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAA
-        AACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAA
-        AHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABA
-        TqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJ
-        FAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYEC
-        AAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAA
-        AAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAA
-        AAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAA
-        AOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACA
-        nEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJAT
-        KAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIF
-        AAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAA
-        AAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAA
-        AABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAA
-        AMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAA
-        OYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAn
-        UAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQK
-        AAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEA
-        AAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAA
-        AACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAA
-        AJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAA
-        cgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBO
-        oAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkU
-        AAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIA
-        AAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAA
-        AAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAA
-        ACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA
-        5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICc
-        QAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMo
-        AAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUA
-        AAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAA
-        AAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAA
-        AEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAA
-        yAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5
-        gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQ
-        AAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoA
-        AAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAA
-        AAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAA
-        AICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAA
-        kBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAABy
-        AgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6g
-        AAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQA
-        AAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAA
-        AAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAA
-        AAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAA
-        ICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADk
-        BAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxA
-        AQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygA
-        AAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAA
-        AAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAA
-        AAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAA
-        QE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADI
-        CRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmB
-        AgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AA
-        AAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAA
-        AAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAA
-        AADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAA
-        gJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQ
-        EygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHIC
-        BQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAA
-        AAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAA
-        AAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAA
-        AADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAA
-        ADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAg
-        J1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQE
-        CgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEAB
-        AAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAA
-        AAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAA
-        AACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAA
-        AHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABA
-        TqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAAAAAgJ1AAAAAAAAA5gQIAAAAAAMgJ
-        FAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAAAOQECgAAAAAAICdQAAAAAAAAOYEC
-        AAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACAnEABAAAAAADkBAoAAAAAACAnUAAA
-        AAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByAgUAAAAAAJATKAAAAAAAgJxAAQAAAAAA5AQKAAAA
-        AAAgJ1AAAAAAAAA5gQIAAAAAAMgJFAAAAAAAQE6gAAAAAAAAcgIFAAAAAACQEygAAAAAAICcQAEAAAAA
-        AOQECgAAAAAAICdQAAAAAAAAOYECAAAAAADICRQAAAAAAEBOoAAAAAAAAHICBQAAAAAAkBMoAAAAAACA
-        nEABAAAAAADkBAoAAAAAACAnUAAAAAAAADmBAgAAAAAAyAkUAAAAAABATqAAAAAAAAByu0Bx++MAAAAA
-        AADg0x7vQPGzMcb99UkBAAAAAABwhMe2beddoDAzMzMzMzMzMzMzM6v2DfJCBgGN5QpLAAAAAElFTkSu
-        QmCC
-</value>
+  <metadata name="bunifuLabel8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lbName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bunifuLabel16.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 36px;font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
+  <data name="bunifuLabel16.Text" xml:space="preserve">
+    <value>- No tattoos, no piercings in the past 6 months
+
+- Do not have or do not have risky behaviors for HIV infection, are not infected with hepatitis B, hepatitis C, and blood-borne viruses.
+
+- Do not have chronic or acute diseases of cardiovascular, blood pressure, respiratory, stomach, etc.</value>
+  </data>
+  <metadata name="bunifuLabel12.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bunifuLabel12.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <metadata name="bunifuLabel17.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel17.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="txtGender.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtGender.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVoAAAAxCAYAAACbFWFbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -271,6 +192,9 @@
         GvaSYRiG+QfzC7c9A9WpnNrlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="checkboxConditions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="checkboxConditions.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -282,12 +206,21 @@
         k18s3kPesDMqH/pKUy15DwDbs2v/xQ/UlIntvJXrjQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="lbConditions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lbConditions.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="bunifuLabel18.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel18.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'Arial'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(160, 160, 160); text-align: right; }</value>
   </data>
+  <metadata name="btSent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btSent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUcAAABBCAYAAABCZ2bCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -303,37 +236,51 @@
         LBdj8/6cnxdgEcrhNAdVAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuLabel16.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 36px;font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel16.Text" xml:space="preserve">
-    <value>- No tattoos, no piercings in the past 6 months
-
-- Do not have or do not have risky behaviors for HIV infection, are not infected with hepatitis B, hepatitis C, and blood-borne viruses.
-
-- Do not have chronic or acute diseases of cardiovascular, blood pressure, respiratory, stomach, etc.</value>
-  </data>
+  <metadata name="bunifuLabel15.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel15.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="listEvents.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bunifuLabel14.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel14.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="bunifuLabel13.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel13.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
-  <data name="bunifuLabel12.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
+  <metadata name="bunifuLabel11.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="bunifuLabel10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="numericWeight.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lbTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lbTitle.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 8px;font-family: 'Arial Rounded MT Bold'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <metadata name="txtEmail.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtEmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVoAAAAxCAYAAACbFWFbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -353,6 +300,9 @@
         GvaSYRiG+QfzC7c9A9WpnNrlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="txtPhoneNo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtPhoneNo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVoAAAAxCAYAAACbFWFbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -372,6 +322,9 @@
         GvaSYRiG+QfzC7c9A9WpnNrlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="txtFullName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtFullName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVoAAAAxCAYAAACbFWFbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -391,4 +344,7 @@
         GvaSYRiG+QfzC7c9A9WpnNrlAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

@@ -12,5 +12,7 @@ namespace DTO
         public string BloodType { get; set; }
         public double Amount { get; set; }
         public DateTime SupplyDate { get; set; }
+
+        public double StockAmount { get; set; }
     }
 }

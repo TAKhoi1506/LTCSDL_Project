@@ -138,10 +138,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btAddDonor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAE0AAAAgCAYAAABXY/U0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABwSURBVGhD7dCrDYBAAERBBNfn9U0ZFMDHEkLI0yPG7Lq3
-        zHXd5hgHP129lteDT6IFogWiBaIFogWiBaIFogWiBaIFogWiBaIFogWiBaIFogWiBaIFogWiBaIFogWi
-        BaIFogWiBaIFogV3tP058mXsJ+UIkwBJ/Lx7AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAHQAAAAxCAYAAAALD434AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACbSURBVHhe7dExEYAwAMBAhuKzviujAuBYQQG5H37JmmOO
+        seZ5XgSMsY5P5NcMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0
+        xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE0xtAYQ2MMjTE05hm635Hf
+        2jfU+1DCb1gomQAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="bloodName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

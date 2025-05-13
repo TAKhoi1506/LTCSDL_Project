@@ -40,23 +40,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvStock = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.bloodType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBloodType = new System.Windows.Forms.ComboBox();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numAmount = new System.Windows.Forms.NumericUpDown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btAddDonor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvBloodDetails = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bloodType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bloodAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bloodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.collectionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodDetails)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +67,11 @@
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(460, 19);
+            this.bunifuLabel2.Location = new System.Drawing.Point(690, 29);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(139, 28);
+            this.bunifuLabel2.Size = new System.Drawing.Size(213, 42);
             this.bunifuLabel2.TabIndex = 1;
             this.bunifuLabel2.Text = "Blood Stock";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -127,20 +128,35 @@
             this.dgvStock.EnableHeadersVisualStyles = false;
             this.dgvStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvStock.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvStock.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvStock.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvStock.Location = new System.Drawing.Point(39, 242);
+            this.dgvStock.Location = new System.Drawing.Point(58, 372);
+            this.dgvStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.RowHeadersVisible = false;
+            this.dgvStock.RowHeadersWidth = 62;
             this.dgvStock.RowTemplate.Height = 40;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(273, 318);
+            this.dgvStock.Size = new System.Drawing.Size(410, 489);
             this.dgvStock.TabIndex = 8;
             this.dgvStock.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // cbGender
+            // bloodType
             // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
+            this.bloodType.HeaderText = "Blood type";
+            this.bloodType.MinimumWidth = 8;
+            this.bloodType.Name = "bloodType";
+            // 
+            // bloodAmount
+            // 
+            this.bloodAmount.HeaderText = "Amount";
+            this.bloodAmount.MinimumWidth = 8;
+            this.bloodAmount.Name = "bloodAmount";
+            // 
+            // cbBloodType
+            // 
+            this.cbBloodType.FormattingEnabled = true;
+            this.cbBloodType.Items.AddRange(new object[] {
             "A+",
             "A-",
             "B+",
@@ -149,10 +165,11 @@
             "AB-",
             "O+",
             "O-"});
-            this.cbGender.Location = new System.Drawing.Point(183, 68);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(91, 21);
-            this.cbGender.TabIndex = 26;
+            this.cbBloodType.Location = new System.Drawing.Point(274, 105);
+            this.cbBloodType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbBloodType.Name = "cbBloodType";
+            this.cbBloodType.Size = new System.Drawing.Size(134, 28);
+            this.cbBloodType.TabIndex = 26;
             // 
             // bunifuLabel7
             // 
@@ -161,10 +178,11 @@
             this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(39, 67);
+            this.bunifuLabel7.Location = new System.Drawing.Point(58, 103);
+            this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(96, 22);
+            this.bunifuLabel7.Size = new System.Drawing.Size(143, 33);
             this.bunifuLabel7.TabIndex = 25;
             this.bunifuLabel7.Text = "Blood type:";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -177,29 +195,29 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(39, 205);
+            this.bunifuLabel1.Location = new System.Drawing.Point(58, 315);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(48, 22);
+            this.bunifuLabel1.Size = new System.Drawing.Size(72, 33);
             this.bunifuLabel1.TabIndex = 30;
             this.bunifuLabel1.Text = "Stock";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // numericUpDown1
+            // numAmount
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(183, 107);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numAmount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numAmount.Location = new System.Drawing.Point(274, 165);
+            this.numAmount.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(91, 22);
-            this.numericUpDown1.TabIndex = 31;
+            this.numAmount.Name = "numAmount";
+            this.numAmount.Size = new System.Drawing.Size(136, 31);
+            this.numAmount.TabIndex = 31;
             // 
             // bunifuLabel3
             // 
@@ -208,10 +226,11 @@
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(39, 107);
+            this.bunifuLabel3.Location = new System.Drawing.Point(58, 165);
+            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(70, 22);
+            this.bunifuLabel3.Size = new System.Drawing.Size(108, 33);
             this.bunifuLabel3.TabIndex = 32;
             this.bunifuLabel3.Text = "Amount:";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -264,7 +283,8 @@
             this.btAddDonor.IdleIconLeftImage = null;
             this.btAddDonor.IdleIconRightImage = null;
             this.btAddDonor.IndicateFocus = false;
-            this.btAddDonor.Location = new System.Drawing.Point(197, 149);
+            this.btAddDonor.Location = new System.Drawing.Point(296, 229);
+            this.btAddDonor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btAddDonor.Name = "btAddDonor";
             this.btAddDonor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btAddDonor.OnDisabledState.BorderRadius = 1;
@@ -298,7 +318,7 @@
             this.btAddDonor.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btAddDonor.OnPressedState.IconLeftImage = null;
             this.btAddDonor.OnPressedState.IconRightImage = null;
-            this.btAddDonor.Size = new System.Drawing.Size(77, 32);
+            this.btAddDonor.Size = new System.Drawing.Size(116, 49);
             this.btAddDonor.TabIndex = 33;
             this.btAddDonor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btAddDonor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -360,46 +380,24 @@
             this.dgvBloodDetails.EnableHeadersVisualStyles = false;
             this.dgvBloodDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodDetails.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBloodDetails.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodDetails.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBloodDetails.Location = new System.Drawing.Point(347, 242);
+            this.dgvBloodDetails.Location = new System.Drawing.Point(520, 372);
+            this.dgvBloodDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvBloodDetails.Name = "dgvBloodDetails";
             this.dgvBloodDetails.RowHeadersVisible = false;
+            this.dgvBloodDetails.RowHeadersWidth = 62;
             this.dgvBloodDetails.RowTemplate.Height = 40;
             this.dgvBloodDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBloodDetails.Size = new System.Drawing.Size(634, 318);
+            this.dgvBloodDetails.Size = new System.Drawing.Size(951, 489);
             this.dgvBloodDetails.TabIndex = 34;
             this.dgvBloodDetails.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(347, 205);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(110, 22);
-            this.bunifuLabel4.TabIndex = 35;
-            this.bunifuLabel4.Text = "Blood details";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bloodType
-            // 
-            this.bloodType.HeaderText = "Blood type";
-            this.bloodType.Name = "bloodType";
-            // 
-            // bloodAmount
-            // 
-            this.bloodAmount.HeaderText = "Amount";
-            this.bloodAmount.Name = "bloodAmount";
             // 
             // bloodName
             // 
             this.bloodName.FillWeight = 61.54822F;
             this.bloodName.HeaderText = "Blood name";
+            this.bloodName.MinimumWidth = 8;
             this.bloodName.Name = "bloodName";
             // 
             // amount
@@ -407,8 +405,9 @@
             this.amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.amount.FillWeight = 253.8071F;
             this.amount.HeaderText = "Amount";
+            this.amount.MinimumWidth = 8;
             this.amount.Name = "amount";
-            this.amount.Width = 92;
+            this.amount.Width = 136;
             // 
             // collectionDate
             // 
@@ -418,8 +417,9 @@
             this.collectionDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.collectionDate.FillWeight = 61.54822F;
             this.collectionDate.HeaderText = "Collection date";
+            this.collectionDate.MinimumWidth = 8;
             this.collectionDate.Name = "collectionDate";
-            this.collectionDate.Width = 144;
+            this.collectionDate.Width = 212;
             // 
             // expiredDate
             // 
@@ -429,8 +429,9 @@
             this.expiredDate.DefaultCellStyle = dataGridViewCellStyle7;
             this.expiredDate.FillWeight = 61.54822F;
             this.expiredDate.HeaderText = "Expired date";
+            this.expiredDate.MinimumWidth = 8;
             this.expiredDate.Name = "expiredDate";
-            this.expiredDate.Width = 125;
+            this.expiredDate.Width = 184;
             // 
             // status
             // 
@@ -440,27 +441,46 @@
             this.status.Items.AddRange(new object[] {
             "Expired",
             "Unexpired"});
+            this.status.MinimumWidth = 8;
             this.status.Name = "status";
             this.status.Width = 70;
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(520, 315);
+            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(167, 33);
+            this.bunifuLabel4.TabIndex = 35;
+            this.bunifuLabel4.Text = "Blood details";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UC_BloodStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.dgvBloodDetails);
             this.Controls.Add(this.btAddDonor);
             this.Controls.Add(this.bunifuLabel3);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numAmount);
             this.Controls.Add(this.bunifuLabel1);
-            this.Controls.Add(this.cbGender);
+            this.Controls.Add(this.cbBloodType);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.dgvStock);
             this.Controls.Add(this.bunifuLabel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_BloodStock";
-            this.Size = new System.Drawing.Size(1058, 592);
+            this.Size = new System.Drawing.Size(1587, 911);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -471,10 +491,10 @@
 
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvStock;
-        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.ComboBox cbBloodType;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numAmount;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btAddDonor;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvBloodDetails;

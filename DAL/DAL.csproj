@@ -85,6 +85,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReceivingUnitDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="UserAccountDAL.cs" />
   </ItemGroup>

@@ -27,6 +27,8 @@ namespace DAL
                 }).ToList();
             }
         }
+
+
         public bool AddEvent(EventDTO e)
         {
             using (var context = new MyContext())
@@ -44,6 +46,8 @@ namespace DAL
                 return context.SaveChanges() > 0;
             }
         }
+
+
         public bool UpdateEventStatus(int eventId, string newStatus)
         {
             using (var context = new MyContext())

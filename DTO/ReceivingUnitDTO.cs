@@ -9,6 +9,8 @@ namespace DTO
     public class ReceivingUnitDTO
     {
         public string RU_ID { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string UnitName { get; set; }
         public string ContactName { get; set; }
         public string Address { get; set; }

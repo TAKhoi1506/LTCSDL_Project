@@ -43,25 +43,25 @@
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnSum = new System.Windows.Forms.Panel();
             this.pnSumRU = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lbSumofRU = new System.Windows.Forms.Label();
             this.lbSumRU = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnSumBlood = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lbSumofBlood = new System.Windows.Forms.Label();
             this.lbSumBlood = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnSumUser = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lbSumofUsers = new System.Windows.Forms.Label();
             this.lbSumUser = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnSumDonor = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lbSumofDonor = new System.Windows.Forms.Label();
             this.lbSumDonor = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnChart1 = new System.Windows.Forms.Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartReport1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnOption = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnDetail = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbSumofUsers = new System.Windows.Forms.Label();
-            this.lbSumofDonor = new System.Windows.Forms.Label();
-            this.lbSumofRU = new System.Windows.Forms.Label();
-            this.lbSumofBlood = new System.Windows.Forms.Label();
+            this.dgvReport = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnChart2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
@@ -72,10 +72,10 @@
             this.pnSumDonor.SuspendLayout();
             this.pnChart1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport1)).BeginInit();
             this.pnOption.SuspendLayout();
             this.pnDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -94,16 +94,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.88815F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.11185F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1587, 576);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1590, 673);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pnChart2
             // 
             this.pnChart2.Controls.Add(this.chart4);
             this.pnChart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnChart2.Location = new System.Drawing.Point(916, 192);
+            this.pnChart2.Location = new System.Drawing.Point(917, 224);
             this.pnChart2.Name = "pnChart2";
-            this.pnChart2.Size = new System.Drawing.Size(668, 381);
+            this.pnChart2.Size = new System.Drawing.Size(670, 446);
             this.pnChart2.TabIndex = 2;
             // 
             // chart4
@@ -118,7 +118,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart4.Series.Add(series1);
-            this.chart4.Size = new System.Drawing.Size(665, 374);
+            this.chart4.Size = new System.Drawing.Size(633, 425);
             this.chart4.TabIndex = 0;
             this.chart4.Text = "chart4";
             // 
@@ -131,7 +131,7 @@
             this.pnSum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSum.Location = new System.Drawing.Point(3, 3);
             this.pnSum.Name = "pnSum";
-            this.pnSum.Size = new System.Drawing.Size(907, 183);
+            this.pnSum.Size = new System.Drawing.Size(908, 215);
             this.pnSum.TabIndex = 0;
             // 
             // pnSumRU
@@ -149,6 +149,17 @@
             this.pnSumRU.ShowBorders = true;
             this.pnSumRU.Size = new System.Drawing.Size(180, 100);
             this.pnSumRU.TabIndex = 3;
+            // 
+            // lbSumofRU
+            // 
+            this.lbSumofRU.AutoSize = true;
+            this.lbSumofRU.BackColor = System.Drawing.Color.Transparent;
+            this.lbSumofRU.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumofRU.Location = new System.Drawing.Point(12, 60);
+            this.lbSumofRU.Name = "lbSumofRU";
+            this.lbSumofRU.Size = new System.Drawing.Size(165, 25);
+            this.lbSumofRU.TabIndex = 2;
+            this.lbSumofRU.Text = "RECEIVING UNITS";
             // 
             // lbSumRU
             // 
@@ -182,6 +193,17 @@
             this.pnSumBlood.Size = new System.Drawing.Size(180, 100);
             this.pnSumBlood.TabIndex = 4;
             // 
+            // lbSumofBlood
+            // 
+            this.lbSumofBlood.AutoSize = true;
+            this.lbSumofBlood.BackColor = System.Drawing.Color.Transparent;
+            this.lbSumofBlood.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumofBlood.Location = new System.Drawing.Point(58, 60);
+            this.lbSumofBlood.Name = "lbSumofBlood";
+            this.lbSumofBlood.Size = new System.Drawing.Size(74, 25);
+            this.lbSumofBlood.TabIndex = 2;
+            this.lbSumofBlood.Text = "BLOOD";
+            // 
             // lbSumBlood
             // 
             this.lbSumBlood.AllowParentOverrides = false;
@@ -213,6 +235,17 @@
             this.pnSumUser.ShowBorders = true;
             this.pnSumUser.Size = new System.Drawing.Size(180, 100);
             this.pnSumUser.TabIndex = 5;
+            // 
+            // lbSumofUsers
+            // 
+            this.lbSumofUsers.AutoSize = true;
+            this.lbSumofUsers.BackColor = System.Drawing.Color.Transparent;
+            this.lbSumofUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumofUsers.Location = new System.Drawing.Point(58, 60);
+            this.lbSumofUsers.Name = "lbSumofUsers";
+            this.lbSumofUsers.Size = new System.Drawing.Size(67, 25);
+            this.lbSumofUsers.TabIndex = 2;
+            this.lbSumofUsers.Text = "USERS";
             // 
             // lbSumUser
             // 
@@ -246,6 +279,17 @@
             this.pnSumDonor.Size = new System.Drawing.Size(180, 100);
             this.pnSumDonor.TabIndex = 6;
             // 
+            // lbSumofDonor
+            // 
+            this.lbSumofDonor.AutoSize = true;
+            this.lbSumofDonor.BackColor = System.Drawing.Color.Transparent;
+            this.lbSumofDonor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumofDonor.Location = new System.Drawing.Point(51, 60);
+            this.lbSumofDonor.Name = "lbSumofDonor";
+            this.lbSumofDonor.Size = new System.Drawing.Size(89, 25);
+            this.lbSumofDonor.TabIndex = 2;
+            this.lbSumofDonor.Text = "DONORS";
+            // 
             // lbSumDonor
             // 
             this.lbSumDonor.AllowParentOverrides = false;
@@ -264,12 +308,13 @@
             // 
             // pnChart1
             // 
+            this.pnChart1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnChart1.Controls.Add(this.chart2);
-            this.pnChart1.Controls.Add(this.chart1);
+            this.pnChart1.Controls.Add(this.chartReport1);
             this.pnChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnChart1.Location = new System.Drawing.Point(3, 192);
+            this.pnChart1.Location = new System.Drawing.Point(3, 224);
             this.pnChart1.Name = "pnChart1";
-            this.pnChart1.Size = new System.Drawing.Size(907, 381);
+            this.pnChart1.Size = new System.Drawing.Size(908, 446);
             this.pnChart1.TabIndex = 1;
             // 
             // chart2
@@ -278,39 +323,39 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(472, 0);
+            this.chart2.Location = new System.Drawing.Point(476, 3);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(432, 378);
+            this.chart2.Size = new System.Drawing.Size(429, 423);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart1";
             // 
-            // chart1
+            // chartReport1
             // 
             chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            this.chartReport1.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(13, 3);
-            this.chart1.Name = "chart1";
+            this.chartReport1.Legends.Add(legend3);
+            this.chartReport1.Location = new System.Drawing.Point(13, 3);
+            this.chartReport1.Name = "chartReport1";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(432, 374);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
+            this.chartReport1.Series.Add(series3);
+            this.chartReport1.Size = new System.Drawing.Size(456, 420);
+            this.chartReport1.TabIndex = 1;
+            this.chartReport1.Text = "chart1";
             // 
             // pnOption
             // 
             this.pnOption.Controls.Add(this.comboBox1);
             this.pnOption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnOption.Location = new System.Drawing.Point(916, 3);
+            this.pnOption.Location = new System.Drawing.Point(917, 3);
             this.pnOption.Name = "pnOption";
-            this.pnOption.Size = new System.Drawing.Size(668, 183);
+            this.pnOption.Size = new System.Drawing.Size(670, 215);
             this.pnOption.TabIndex = 3;
             // 
             // comboBox1
@@ -325,11 +370,11 @@
             // pnDetail
             // 
             this.pnDetail.Controls.Add(this.lbTitle);
-            this.pnDetail.Controls.Add(this.dataGridView1);
+            this.pnDetail.Controls.Add(this.dgvReport);
             this.pnDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnDetail.Location = new System.Drawing.Point(0, 582);
+            this.pnDetail.Location = new System.Drawing.Point(0, 679);
             this.pnDetail.Name = "pnDetail";
-            this.pnDetail.Size = new System.Drawing.Size(1587, 329);
+            this.pnDetail.Size = new System.Drawing.Size(1590, 329);
             this.pnDetail.TabIndex = 1;
             // 
             // lbTitle
@@ -342,59 +387,15 @@
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Title";
             // 
-            // dataGridView1
+            // dgvReport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1053, 238);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // lbSumofUsers
-            // 
-            this.lbSumofUsers.AutoSize = true;
-            this.lbSumofUsers.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumofUsers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSumofUsers.Location = new System.Drawing.Point(58, 60);
-            this.lbSumofUsers.Name = "lbSumofUsers";
-            this.lbSumofUsers.Size = new System.Drawing.Size(67, 25);
-            this.lbSumofUsers.TabIndex = 2;
-            this.lbSumofUsers.Text = "USERS";
-            // 
-            // lbSumofDonor
-            // 
-            this.lbSumofDonor.AutoSize = true;
-            this.lbSumofDonor.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumofDonor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSumofDonor.Location = new System.Drawing.Point(51, 60);
-            this.lbSumofDonor.Name = "lbSumofDonor";
-            this.lbSumofDonor.Size = new System.Drawing.Size(89, 25);
-            this.lbSumofDonor.TabIndex = 2;
-            this.lbSumofDonor.Text = "DONORS";
-            // 
-            // lbSumofRU
-            // 
-            this.lbSumofRU.AutoSize = true;
-            this.lbSumofRU.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumofRU.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSumofRU.Location = new System.Drawing.Point(12, 60);
-            this.lbSumofRU.Name = "lbSumofRU";
-            this.lbSumofRU.Size = new System.Drawing.Size(165, 25);
-            this.lbSumofRU.TabIndex = 2;
-            this.lbSumofRU.Text = "RECEIVING UNITS";
-            // 
-            // lbSumofBlood
-            // 
-            this.lbSumofBlood.AutoSize = true;
-            this.lbSumofBlood.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumofBlood.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSumofBlood.Location = new System.Drawing.Point(58, 60);
-            this.lbSumofBlood.Name = "lbSumofBlood";
-            this.lbSumofBlood.Size = new System.Drawing.Size(74, 25);
-            this.lbSumofBlood.TabIndex = 2;
-            this.lbSumofBlood.Text = "BLOOD";
+            this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReport.Location = new System.Drawing.Point(16, 52);
+            this.dgvReport.Name = "dgvReport";
+            this.dgvReport.RowHeadersWidth = 62;
+            this.dgvReport.RowTemplate.Height = 28;
+            this.dgvReport.Size = new System.Drawing.Size(1053, 238);
+            this.dgvReport.TabIndex = 0;
             // 
             // UC_Dashboard
             // 
@@ -403,7 +404,8 @@
             this.Controls.Add(this.pnDetail);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UC_Dashboard";
-            this.Size = new System.Drawing.Size(1587, 911);
+            this.Size = new System.Drawing.Size(1590, 1008);
+            this.Load += new System.EventHandler(this.UC_Dashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnChart2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
@@ -418,11 +420,11 @@
             this.pnSumDonor.PerformLayout();
             this.pnChart1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport1)).EndInit();
             this.pnOption.ResumeLayout(false);
             this.pnDetail.ResumeLayout(false);
             this.pnDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -443,12 +445,12 @@
         private System.Windows.Forms.FlowLayoutPanel pnChart2;
         private System.Windows.Forms.Panel pnChart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartReport1;
         private System.Windows.Forms.Panel pnOption;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReport;
         private System.Windows.Forms.Label lbSumofUsers;
         private System.Windows.Forms.Label lbSumofRU;
         private System.Windows.Forms.Label lbSumofBlood;

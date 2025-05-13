@@ -24,7 +24,7 @@ namespace BloodBankManagement
         private UC_Events ucEvents;
         private UC_Donations ucDonations;
         private UC_ReceivingUnits ucReceivingUnits;
-        private UC_Dashboard ucDashboard;
+        private UC_DashBoard2 ucDashboard;
         private UC_Donors ucDonors;
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
         private void HomeLoad()
@@ -129,9 +129,21 @@ namespace BloodBankManagement
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
+            //    if (ucDashboard == null)
+            //    {
+            //        ucDashboard = new UC_DashBoard2();
+            //        ucDashboard.Dock = DockStyle.Fill;
+            //        panelShow.Controls.Add(ucDashboard);
+            //    }
+
+            //    ucDashboard.BringToFront();
+         }
+
+            private void btDashboard2_Click(object sender, EventArgs e)
+        {
             if (ucDashboard == null)
             {
-                ucDashboard = new UC_Dashboard();
+                ucDashboard = new UC_DashBoard2();
                 ucDashboard.Dock = DockStyle.Fill;
                 panelShow.Controls.Add(ucDashboard);
             }

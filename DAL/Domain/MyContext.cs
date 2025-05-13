@@ -67,14 +67,14 @@ namespace DAL.Domain
                 .WithRequired(e => e.Donor)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Event>()
-                .HasMany(e => e.Donations)
-                .WithRequired(e => e.Event)
-                .WillCascadeOnDelete(false);
+        //    modelBuilder.Entity<Event>()
+        //        .HasMany(e => e.Donations)
+        //        .WithRequired(e => e.Event)
+        //        .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ReceivingUnit>()
-                .Property(e => e.RU_ID)
-                .IsFixedLength();
+        //    modelBuilder.Entity<ReceivingUnit>()
+        //        .Property(e => e.RU_ID)
+        //        .IsFixedLength();
 
             modelBuilder.Entity<ReceivingUnit>()
                 .HasMany(e => e.BloodRequirements)
