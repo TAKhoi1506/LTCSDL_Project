@@ -31,11 +31,11 @@ namespace BloodBankManagement.Admin
         //================ THÔNG TIN HIỂN THỊ TRÊN DATAGRIDVIEW =================
         private void LoadDistributedBlood()
         {
-            //var list = reportBUS.GetDistributedBlood();
-            //dgvReport.DataSource = list;
-            //dgvReport.Visible = true;
+            var list = reportBUS.GetDistributedBlood();
+            dgvReport.DataSource = list;
+            dgvReport.Visible = true;
 
-            //dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
@@ -49,30 +49,30 @@ namespace BloodBankManagement.Admin
         //================ THÔNG TIN HIỂN THỊ TRÊN CÁC BIỂU ĐỒ =================
         private void LoadBloodGroupStatistics()
         {
-            //lbTitle1.Text = "Thống kê nhóm máu";
-            //var list = reportBUS.GetBloodGroupStatistics();
-            //chartReport1.Series.Clear();
+            lbTitle1.Text = "Thống kê nhóm máu";
+            var list = reportBUS.GetBloodGroupStatistics();
+            chartReport1.Series.Clear();
 
-            //Series series = new Series("Blood Group Statistics")
-            //{
-            //    ChartType = SeriesChartType.Doughnut // Hoặc Column tùy
+            Series series = new Series("Blood Group Statistics")
+            {
+                ChartType = SeriesChartType.Doughnut // Hoặc Column tùy
 
-            //};
+            };
 
-            //foreach (var item in list)
-            //{
-            //    var point = new DataPoint();
-            //    point.AxisLabel = ""; // Không hiển thị tên nhóm máu trên chart
-            //    point.LegendText = item.BloodType; // Tên hiển thị trong legend
-            //    point.YValues = new double[] { item.TotalAmount };
+            foreach (var item in list)
+            {
+                var point = new DataPoint();
+                point.AxisLabel = ""; // Không hiển thị tên nhóm máu trên chart
+                point.LegendText = item.BloodType; // Tên hiển thị trong legend
+                point.YValues = new double[] { item.TotalAmount };
 
-            //    series.Points.Add(point);
-            //    //series.Points.AddXY(item.BloodType, item.TotalAmount);
+                series.Points.Add(point);
+                //series.Points.AddXY(item.BloodType, item.TotalAmount);
 
-            //}
+            }
 
-            //chartReport1.Series.Add(series);
-            //chartReport1.Visible = true;
+            chartReport1.Series.Add(series);
+            chartReport1.Visible = true;
         }
 
 
@@ -82,31 +82,31 @@ namespace BloodBankManagement.Admin
 
         private void LoadBloodRequirementStatistic2()
         {
-        //    lbTitle3.Text = "Thống kê số lượng máu nhận được qua từng tháng";
-        //    var list = reportBUS.bloodOverTimeStatistics();
-        //    chartReport3.Series.Clear();
-        //    chartReport3.ChartAreas[0].AxisX.Title = "Thời gian";
-        //    chartReport3.ChartAreas[0].AxisY.Title = "Lượng máu";
+            //lbTitle3.Text = "Thống kê số lượng máu nhận được qua từng tháng";
+            //var list = reportBUS.bloodOverTimeStatistics();
+            //chartReport3.Series.Clear();
+            //chartReport3.ChartAreas[0].AxisX.Title = "Thời gian";
+            //chartReport3.ChartAreas[0].AxisY.Title = "Lượng máu";
 
-        //    var bloodTypes = list.Select(x => x.BloodType).Distinct();
+            //var bloodTypes = list.Select(x => x.BloodType).Distinct();
 
-        //    foreach (var bloodType in bloodTypes)
-        //    {
-        //        Series series = new Series(bloodType)
-        //        {
-        //            ChartType = SeriesChartType.Column
-        //        };
+            //foreach (var bloodType in bloodTypes)
+            //{
+            //    Series series = new Series(bloodType)
+            //    {
+            //        ChartType = SeriesChartType.Column
+            //    };
 
-        //        var data = list.Where(x => x.BloodType == bloodType).OrderBy(x => x.PeriodTime);
+            //    var data = list.Where(x => x.BloodType == bloodType).OrderBy(x => x.PeriodTime);
 
-        //        foreach (var item in data)
-        //        {
-        //            series.Points.AddXY(item.PeriodTime, item.TotalAmount);
-        //        }
+            //    foreach (var item in data)
+            //    {
+            //        series.Points.AddXY(item.PeriodTime, item.TotalAmount);
+            //    }
 
-        //        chartReport3.Series.Add(series);
-        //        chartReport3.Visible = true;
-        //    }
+            //    chartReport3.Series.Add(series);
+            //    chartReport3.Visible = true;
+            //}
         }
 
 
@@ -464,7 +464,8 @@ namespace BloodBankManagement.Admin
         // Load thống kê tổng trên các label
         private void LoadSum()
         {
-           // lbSumDonor.Text = reportBUS.GetSumofDonor().ToString();
+            lbSumUser.Text = reportBUS.GetSumofUser().ToString();
+            lbSumDonor.Text = reportBUS.GetSumofDonor().ToString();
             lbSumBlood.Text = reportBUS.GetSumofBlood().ToString();
             lbSumRU.Text = reportBUS.GetSumofReceivingUnit().ToString();
         }

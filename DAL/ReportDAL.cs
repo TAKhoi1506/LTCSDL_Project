@@ -15,35 +15,35 @@ namespace DAL
     {
 
         // ============== HIỂN THỊ TỔNG SỐ LƯỢNG  =======================
-        //public int GetSumofDonor()
-        //{
-        //    using (var context = new MyContext()) 
-        //    {
-        //        return context.Donors.GroupBy(x => x.DonorID)
-        //                             .Select(g => new DTO.Donor
-        //                             {
-        //                                 DonorID = g.Key
-        //                             }).Count();
-        //    }
-        //}
+        public int GetSumofDonor()
+        {
+            using (var context = new MyContext())
+            {
+                return context.Donors.GroupBy(x => x.DonorID)
+                                     .Select(g => new DonorDTO
+                                     {
+                                         DonorID = g.Key
+                                     }).Count();
+            }
+        }
 
 
-        //public int GetSumofUser()
-        //{
-        //    using(var context = new MyContext())
-        //    {
-        //        return context.Donors.GroupBy(x => x.DonorID)
-        //                             .Select(g => new DTO.Donor
-        //                             {
-        //                                 DonorID = g.Key
-        //                             }).Count();
-        //    }
-        //}
+        public int GetSumofUser()
+        {
+            using (var context = new MyContext())
+            {
+                return context.UserAccounts.GroupBy(x => x.AccountID)
+                                     .Select(g => new UserAccountDTO
+                                     {
+                                         AccountID = g.Key
+                                     }).Count();
+            }
+        }
 
 
         public int GetSumofReceivingUnit()
         {
-            using (var context = new MyContext()) 
+            using (var context = new MyContext())
             {
                 return context.ReceivingUnits.GroupBy(x => x.RU_ID)
                                              .Select(g => new ReceivingUnitDTO
@@ -86,22 +86,22 @@ namespace DAL
         }
 
         //Lấy số lượng máu đã cấp phát
-        //public List<DistributedBloodDTO> GetDistributedBlood()
-        //{
-        //    using (var context = new MyContext())
-        //    {
-        //        return (from br in context.BloodRequirements
-        //                join bs in context.BloodStocks on br.BloodType equals bs.BloodType
-        //                where br.Status == "Completed" // chỉ lấy yêu cầu đã được cấp phát
-        //                select new DistributedBloodDTO
-        //                {
-        //                    RU_ID = br.RU_ID,
-        //                    BloodType = br.BloodType,
-        //                    Amount = br.Amount,
-        //                    SupplyDate = br.SupplyDate
-        //                }).ToList();
-        //    }
-        //}
+        public List<DistributedBloodDTO> GetDistributedBlood()
+        {
+            using (var context = new MyContext())
+            {
+                return (from br in context.BloodRequirements
+                        join brd in context.BloodRequirementDetails on br.ID equals brd.RequirementID
+                        where br.Status == "Completed" // chỉ lấy yêu cầu đã được cấp phát
+                        select new DistributedBloodDTO
+                        {
+                            RU_ID = br.RU_ID,
+                            BloodType = brd.BloodType,
+                            Amount = brd.Amount,
+                            SupplyDate = br.SupplyDate
+                        }).ToList();
+            }
+        }
 
 
         //Thống kê nhóm máu
@@ -154,19 +154,20 @@ namespace DAL
         //                     };
         //        return result.ToList();
         //    }
-        }
+        //}
 
 
 
         //Thống kê nhóm máu nhận được trong 1 đơn vị thời gian
-        //public List<BloodOverTimeDTO> GetBloodOverTimeStatistics() 
+        //public List<BloodOverTimeDTO> GetBloodOverTimeStatistics()
         //{
         //    using (var context = new MyContext())
         //    {
 
         //        var rawData = context.BloodRequirements
         //                             .Where(x => x.Status == "Completed")
-        //                             .GroupBy(x => new {
+        //                             .GroupBy(x => new
+        //                             {
         //                                 x.BloodType,
         //                                 x.RequestDate.Year,
         //                                 x.RequestDate.Month
@@ -177,12 +178,12 @@ namespace DAL
         //                                 g.Key.Year,
         //                                 g.Key.Month,
         //                                 TotalAmount = g.Sum(x => x.Amount)
-        //                             }).ToList(); 
+        //                             }).ToList();
 
         //        return rawData.Select(x => new BloodOverTimeDTO
         //        {
         //            BloodType = x.BloodType,
-        //            PeriodTime = $"{x.Year}-{x.Month:D2}", 
+        //            PeriodTime = $"{x.Year}-{x.Month:D2}",
         //            TotalAmount = x.TotalAmount
         //        }).ToList();
         //    }
@@ -195,7 +196,7 @@ namespace DAL
 
 
         // ================THỐNG KÊ THEO NGƯỜI HIẾN  ==============
-        
+
         // Thống kê các nhóm tuổi
         //public List<DonorAgeGroupDTO> GetAgeofDonorStatistic()
         //{
@@ -290,7 +291,7 @@ namespace DAL
         // ================THỐNG KÊ THEO ĐƠN VỊ CUNG CẤP  =========
 
         // Thống kê số lượng máu nhận được của mỗi đơn vị cung cấp
-        
+
         //public List<ReceivingUnitBloodReceivedDTO> BloodReceivedByRU()
         //{
         //    using ( var context = new MyContext()) 
@@ -311,20 +312,20 @@ namespace DAL
 
 
 
-       // Thống kê so sánh số lượng máu yêu cầu và lượng máu đã cấp phát
-       //public List<ReceivingUnitBloodSupplyComparisionDTO> BloodSupplyComparisionByRU()
-       // {
-       //     using (var context = new MyContext())
-       //     {
-       //         return context.BloodRequirements.GroupBy(x => x.RU_ID)
-       //                                         .Select(g => new ReceivingUnitBloodSupplyComparisionDTO 
-       //                                         {
-       //                                             RU_ID = g.Key,
-       //                                             RequestAmount = g.Sum(x => x.Amount),
-       //                                             SupplyAmount = g.Where(x=>x.Status == "Completed").Sum(x=>x.Amount)
-       //                                         }).ToList();
-       //     }    
-       // }
+        // Thống kê so sánh số lượng máu yêu cầu và lượng máu đã cấp phát
+        //public List<ReceivingUnitBloodSupplyComparisionDTO> BloodSupplyComparisionByRU()
+        // {
+        //     using (var context = new MyContext())
+        //     {
+        //         return context.BloodRequirements.GroupBy(x => x.RU_ID)
+        //                                         .Select(g => new ReceivingUnitBloodSupplyComparisionDTO 
+        //                                         {
+        //                                             RU_ID = g.Key,
+        //                                             RequestAmount = g.Sum(x => x.Amount),
+        //                                             SupplyAmount = g.Where(x=>x.Status == "Completed").Sum(x=>x.Amount)
+        //                                         }).ToList();
+        //     }    
+        // }
 
 
 
@@ -332,6 +333,6 @@ namespace DAL
 
 
         // ========================================================
-    //}
-
+        //}
+    }
 }

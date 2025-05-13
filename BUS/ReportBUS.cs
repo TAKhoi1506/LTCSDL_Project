@@ -18,11 +18,15 @@ namespace BUS
             reportDAL = new ReportDAL();
         }
 
+        public int GetSumofUser()
+        {
+            return reportDAL.GetSumofUser();
+        }
 
-        //public int GetSumofDonor()
-        //{
-        //    return reportDAL.GetSumofDonor();
-        //}
+        public int GetSumofDonor()
+        {
+            return reportDAL.GetSumofDonor();
+        }
 
 
         public int GetSumofReceivingUnit()
@@ -37,20 +41,20 @@ namespace BUS
         }
 
 
-        //public List<ReceivedBloodDTO> GetReceivedBloodByDate()
-        //{
-        //    return reportDAL.GetReceivedBloodByDate();
-        //}
+        public List<ReceivedBloodDTO> GetReceivedBloodByDate()
+        {
+            return reportDAL.GetReceivedBloodByDate();
+        }
 
-        //public List<DistributedBloodDTO> GetDistributedBlood()
-        //{
-        //    return reportDAL.GetDistributedBlood();
-        //}
+        public List<DistributedBloodDTO> GetDistributedBlood()
+        {
+            return reportDAL.GetDistributedBlood();
+        }
 
-        //public List<BloodGroupStatisticsDTO> GetBloodGroupStatistics()
-        //{
-        //    return reportDAL.GetBloodGroupStatistics();
-        //}
+        public List<BloodGroupStatisticsDTO> GetBloodGroupStatistics()
+        {
+            return reportDAL.GetBloodGroupStatistics();
+        }
 
 
         //public List<BloodOverTimeDTO> bloodOverTimeStatistics() 

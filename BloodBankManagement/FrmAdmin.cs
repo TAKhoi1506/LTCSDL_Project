@@ -149,18 +149,6 @@ namespace BloodBankManagement
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
-            //if (ucDashboard == null)
-            //{
-            //    ucDashboard = new UC_DashBoard2();
-            //    ucDashboard.Dock = DockStyle.Fill;
-            //    panelShow.Controls.Add(ucDashboard);
-            //}
-
-            //ucDashboard.BringToFront();
-        }
-
-            private void btDashboard2_Click(object sender, EventArgs e)
-        {
             if (ucDashboard == null)
             {
                 ucDashboard = new UC_DashBoard2();
@@ -170,6 +158,7 @@ namespace BloodBankManagement
 
             ucDashboard.BringToFront();
         }
+
 
         private void panelShow_Paint(object sender, PaintEventArgs e)
         {
@@ -258,6 +247,11 @@ namespace BloodBankManagement
             }
 
             ucbloodRe.BringToFront();
+        }
+
+        private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

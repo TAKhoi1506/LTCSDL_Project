@@ -575,3 +575,4 @@ D:\Admin\LTCSDL_Project\BloodBankManagement\obj\Debug\Presenta.B08D3F22.Up2Date
 D:\Admin\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.exe
 D:\Admin\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.pdb
 D:\Admin\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_BloodRequirements.resources
+D:\OU\HK8\LTCSDL\New_Pro\LTCSDL_Project\BloodBankManagement\obj\Debug\BloodBankManagement.Admin.UC_BloodRequirements.resources
