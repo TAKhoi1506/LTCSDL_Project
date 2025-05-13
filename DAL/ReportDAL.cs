@@ -27,22 +27,22 @@ namespace DAL
         }
 
         // 2. Lấy số lượng máu đã cấp phát
-        public List<DistributedBloodDTO> GetDistributedBlood()
-        {
-            using (var context = new MyContext())
-            {
-                return (from br in context.BloodRequirements
-                        join bs in context.BloodStocks on br.BloodType equals bs.BloodType
-                        where br.Status == "Completed" // chỉ lấy yêu cầu đã được cấp phát
-                        select new DistributedBloodDTO
-                        {
-                            RU_ID = br.RU_ID,
-                            BloodType = br.BloodType,
-                            Amount = br.Amount,
-                            SupplyDate = br.SupplyDate
-                        }).ToList();
-            }
-        }
+        //public List<DistributedBloodDTO> GetDistributedBlood()
+        //{
+        //    using (var context = new MyContext())
+        //    {
+        //        return (from br in context.BloodRequirements
+        //                join bs in context.BloodStocks on br.BloodType equals bs.BloodType
+        //                where br.Status == "Completed" // chỉ lấy yêu cầu đã được cấp phát
+        //                select new DistributedBloodDTO
+        //                {
+        //                    RU_ID = br.RU_ID,
+        //                    BloodType = br.BloodType,
+        //                    Amount = br.Amount,
+        //                    SupplyDate = br.SupplyDate
+        //                }).ToList();
+        //    }
+        //}
 
         // 3. Thống kê nhóm máu
         public List<BloodGroupStatisticsDTO> GetBloodGroupStatistics()

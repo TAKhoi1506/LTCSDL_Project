@@ -22,14 +22,13 @@ namespace DAL
 
 
         //Thêm đầy đủ thông tin
-        public bool AddDonor(DTO.Donor donorDTO)
+        public bool AddDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    UserName = donorDTO.Username,
-                    Password = donorDTO.Password,
+                    
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     BloodType = donorDTO.BloodType,
@@ -52,14 +51,13 @@ namespace DAL
 
 
         //Lấy đầy đủ thông tin trừ BloodType
-        public bool InsertDonor(DTO.Donor donorDTO) 
+        public bool InsertDonor(DTO.DonorDTO donorDTO) 
         {
             try
             {
                 var donor = new DAL.Domain.Donor
                 {
-                    UserName = donorDTO.Username,
-                    Password = donorDTO.Password,
+                    
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     Gender = donorDTO.Gender,
@@ -82,13 +80,11 @@ namespace DAL
 
 
         //Lấy danh sách các donors
-        public List<DTO.Donor> GetAllDonors() 
+        public List<DTO.DonorDTO> GetAllDonors() 
         {
-            return _myContext.Donors.Select(d => new DTO.Donor
+            return _myContext.Donors.Select(d => new DTO.DonorDTO
             { 
                 DonorID = d.DonorID,
-                Username = d.UserName,
-                Password = d.Password,
                 FullName = d.FullName,
                 DateOfBirth = d.BirthDate,
                 BloodType = d.BloodType,
@@ -102,15 +98,15 @@ namespace DAL
 
 
         //Kiểm tra tên đăng nhập có phải user hay không
-        public bool Login(string username, string password)
-        {
-            return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
-        }
+        //public bool Login(string username, string password)
+        //{
+        //    return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
+        //}
 
 
 
         //Update do admin quản lý: Có thể sửa ID và nhóm máu BloodType
-        public bool UpdateDonorByAdmin(DTO.Donor donorDTO)
+        public bool UpdateDonorByAdmin(DTO.DonorDTO donorDTO)
         {
             try
             {
@@ -119,8 +115,8 @@ namespace DAL
                 if (donor == null)
                     return false;
 
-                donor.UserName = donorDTO.Username;
-                donor.Password = donorDTO.Password;
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.BloodType = donorDTO.BloodType;
@@ -159,7 +155,7 @@ namespace DAL
 
 
         //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
-        public bool UpdateDonorByDonor(DTO.Donor donorDTO)
+        public bool UpdateDonorByDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
@@ -168,8 +164,8 @@ namespace DAL
                 if (donor == null)
                     return false;
 
-                donor.UserName = donorDTO.Username;
-                donor.Password = donorDTO.Password;
+                //donor.UserName = donorDTO.Username;
+                //donor.Password = donorDTO.Password;
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.Gender = donorDTO.Gender;

@@ -15,19 +15,19 @@ namespace BUS
         private DonorDAL_CF donorDAL = new DonorDAL_CF();
        
 
-        public bool AddDonor(Donor donor)
+        public bool AddDonor(DonorDTO donor)
         {   
             return donorDAL.AddDonor(donor);
         }
 
 
-        public List<Donor> GetAllDonors()
+        public List<DonorDTO> GetAllDonors()
         {
             return donorDAL.GetAllDonors();
         }
 
 
-        public bool RegisterDonor(Donor donor)
+        public bool RegisterDonor(DonorDTO donor)
         {
             if (string.IsNullOrWhiteSpace(donor.Username) || string.IsNullOrWhiteSpace(donor.Password))
                 return false;
@@ -35,14 +35,14 @@ namespace BUS
             return donorDAL.InsertDonor(donor);
         }
 
-        public bool Login(string username, string password)
-        {
-            return donorDAL.Login(username, password);
-        }
+        //public bool Login(string username, string password)
+        //{
+        //    return donorDAL.Login(username, password);
+        //}
 
 
         //Update bởi admin
-        public bool UpdateByAdmin(Donor donor)
+        public bool UpdateByAdmin(DonorDTO donor)
         {
             if (donor == null || string.IsNullOrWhiteSpace(donor.Username) || donor.DonorID <= 0)
             {
@@ -52,7 +52,7 @@ namespace BUS
         }
 
         //Update bởi donors
-        public bool UpdateByDonor(Donor donor)
+        public bool UpdateByDonor(DonorDTO donor)
         {
             if (donor == null || string.IsNullOrWhiteSpace(donor.Username))
             {

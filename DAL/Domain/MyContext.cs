@@ -8,27 +8,45 @@ namespace DAL.Domain
     public partial class MyContext : DbContext
     {
         public MyContext()
-        : base(@"data source=LAPTOP-3RVB0QLD;initial catalog=BloodBank;integrated security=True")
+            : base("Data Source=MSI\\NHAN;Initial Catalog=bloodbank;Integrated Security=True")
         {
         }
 
         public virtual DbSet<BloodDetail> BloodDetails { get; set; }
         public virtual DbSet<BloodRequirement> BloodRequirements { get; set; }
+        public virtual DbSet<BloodRequirementDetail> BloodRequirementDetails { get; set; }
         public virtual DbSet<BloodStock> BloodStocks { get; set; }
+        public virtual DbSet<BloodSupplyDetail> BloodSupplyDetails { get; set; }
         public virtual DbSet<Donation> Donations { get; set; }
         public virtual DbSet<Donor> Donors { get; set; }
         public virtual DbSet<Event> Events { get; set; }
-        public virtual DbSet<ReceivingUnit> ReceivingUnits { get; set; }
-
+        public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
-        public virtual DbSet<HistoryDonation> HistoryDonations { get; set; }    
-
+        public virtual DbSet<ReceivingUnit> ReceivingUnits { get; set; }
+        public virtual DbSet<UserAccount> UserAccounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BloodDetail>()
+                .HasMany(e => e.BloodSupplyDetails)
+                .WithRequired(e => e.BloodDetail)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<BloodRequirement>()
                 .Property(e => e.RU_ID)
                 .IsFixedLength();
+
+            modelBuilder.Entity<BloodRequirement>()
+                .HasMany(e => e.BloodRequirementDetails)
+                .WithRequired(e => e.BloodRequirement)
+                .HasForeignKey(e => e.RequirementID)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<BloodRequirementDetail>()
+                .HasMany(e => e.BloodSupplyDetails)
+                .WithRequired(e => e.BloodRequirementDetail)
+                .HasForeignKey(e => e.RequirementDetailID)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<BloodStock>()
                 .HasMany(e => e.BloodDetails)
@@ -36,19 +54,16 @@ namespace DAL.Domain
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Donor>()
-                .Property(e => e.UserName)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Donor>()
-                .Property(e => e.Password)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Donor>()
                 .Property(e => e.PhoneNumber)
                 .IsFixedLength();
 
             modelBuilder.Entity<Donor>()
                 .HasMany(e => e.Donations)
+                .WithRequired(e => e.Donor)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Donor>()
+                .HasMany(e => e.HistoryDonations)
                 .WithRequired(e => e.Donor)
                 .WillCascadeOnDelete(false);
 
@@ -62,16 +77,9 @@ namespace DAL.Domain
                 .IsFixedLength();
 
             modelBuilder.Entity<ReceivingUnit>()
-                .Property(e => e.Password)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ReceivingUnit>()
                 .HasMany(e => e.BloodRequirements)
                 .WithRequired(e => e.ReceivingUnit)
                 .WillCascadeOnDelete(false);
-
-
-           
         }
     }
 }

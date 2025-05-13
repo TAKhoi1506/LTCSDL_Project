@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BloodBankManagement.Admin;
+using BUS;
 
 namespace BloodBankManagement
 {
@@ -25,8 +26,7 @@ namespace BloodBankManagement
         private UC_ReceivingUnits ucReceivingUnits;
         private UC_Dashboard ucDashboard;
         private UC_Donors ucDonors;
-
-
+        private NotificationsBUS notificationsBUS = new NotificationsBUS();
         private void HomeLoad()
         {
             if (ucHome == null)
@@ -41,7 +41,18 @@ namespace BloodBankManagement
 
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
+            Static.UserSession.ObjectID = "admin";
             HomeLoad();
+            //LoadNotificationBadge();
+            pnNotification.BringToFront();
+            LoadUnreadCount();
+
+        }
+        private void LoadUnreadCount()
+        {
+            int unreadCount = notificationsBUS.GetUnreadCount(Static.UserSession.ObjectID);
+            lblUnreadCount.Text = unreadCount.ToString();
+            lblUnreadCount.Visible = unreadCount > 0;
         }
 
         private void btBloodStock_Click(object sender, EventArgs e)
@@ -59,6 +70,7 @@ namespace BloodBankManagement
         private void btHome_Click(object sender, EventArgs e)
         {
            HomeLoad();
+
         }
 
         private void btEvents_Click(object sender, EventArgs e)
@@ -127,8 +139,87 @@ namespace BloodBankManagement
             ucDashboard.BringToFront();
         }
 
+        private void panelShow_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void LoadNotificationPanel()
+        {
+            pnNotification.Controls.Clear();
+
+            var notifications = notificationsBUS
+    .GetMessageById(Static.UserSession.ObjectID)
+    .OrderByDescending(n => n.CreatedAt)
+    .ToList();
+
+            int y = 10;
+            foreach (var noti in notifications)
+            {
+                Panel itemPanel = new Panel
+                {
+                    Size = new Size(pnNotification.Width - 20, 50),
+                    Location = new Point(10, y),
+                    BackColor = noti.IsRead ? Color.LightGray : Color.White,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Cursor = Cursors.Hand
+                };
+
+                Label lblTitle = new Label
+                {
+                    Text = noti.Title,
+                    Font = new Font("Arial", 10, FontStyle.Bold),
+                    AutoSize = false,
+                    Size = new Size(itemPanel.Width - 10, 20),
+                    Location = new Point(5, 5)
+                };
+
+                Label lblDate = new Label
+                {
+                    Text = noti.CreatedAt.ToString("dd/MM/yyyy HH:mm"),
+                    Font = new Font("Arial", 8),
+                    AutoSize = false,
+                    Size = new Size(itemPanel.Width - 10, 15),
+                    Location = new Point(5, 25)
+                };
+
+                // Gán sự kiện cho cả panel và labels
+                void Notification_Click(object sender, EventArgs e)
+                {
+                    MessageBox.Show(noti.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!noti.IsRead)
+                    {
+                        notificationsBUS.MaskAsRead(noti.NotifiID);
+                        LoadUnreadCount();
+                        LoadNotificationPanel();
+                    }
+                }
+
+                itemPanel.Click += Notification_Click;
+                lblTitle.Click += Notification_Click;
+                lblDate.Click += Notification_Click;
+
+                itemPanel.Controls.Add(lblTitle);
+                itemPanel.Controls.Add(lblDate);
+                pnNotification.Controls.Add(itemPanel);
+                y += 60;
+            }
+        }
 
 
-       
+
+
+
+        private void btNotification_Click_1(object sender, EventArgs e)
+        {
+            // Toggle danh sách thông báo
+            pnNotification.Visible = !pnNotification.Visible;
+
+            if (pnNotification.Visible)
+            {
+                pnNotification.BringToFront(); // Đưa panel ra trước các control khác
+                LoadNotificationPanel();        // Load danh sách thông báo
+            }
+        }
     }
 }
+

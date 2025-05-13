@@ -33,25 +33,23 @@ namespace DAL
 
 
         //Lấy nội dung tin nhắn theo ID
-       public DTO.Notifications GetMessageByID(int notifiID)
+       public List<DTO.Notifications>  GetMessageByID(string objectID)
         {
             try
             {
-                var notification = _myContext.Notifications.FirstOrDefault(d => d.NotifiID == notifiID);
-                if (notification == null)
-                    return null; //Nếu trong tin nhắn không có nội dung thì trả về null 
-
-                return new DTO.Notifications
-                {
-                    NotifiID = notification.NotifiID,
-                    Title = notification.Title,
-                    Message = notification.Message,
-                    CreatedAt = notification.CreateAt,
-                    DonorID = notification.DonorID,
-                    IsRead = notification.IsRead
-                };
+                return _myContext.Notifications
+                    .Where(n => n.ObjectID == objectID)
+                    .Select(n => new DTO.Notifications
+                    {
+                        NotifiID = n.NotifiID,
+                        Title = n.Title,
+                        Message = n.Message,
+                        CreatedAt = n.CreateAt,
+                        IsRead = n.IsRead,
+                    })
+                    .ToList();
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return null;
@@ -78,8 +76,18 @@ namespace DAL
                 return false;
             }
         }
-
-
-
+        public bool AddNotification(Notification notification)
+        {
+            try
+            {
+                _myContext.Notifications.Add(notification);
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("AddNotification Error: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

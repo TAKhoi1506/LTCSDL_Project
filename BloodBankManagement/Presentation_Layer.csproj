@@ -221,6 +221,7 @@
     <Compile Include="Donor\UC_HistoryDonations.Designer.cs">
       <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Static\UserSession.cs" />
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -371,6 +372,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-Photoroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-Photoroom %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

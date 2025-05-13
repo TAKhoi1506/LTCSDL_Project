@@ -22,7 +22,7 @@ namespace BloodBankManagement
         private DonorBUS donorBUS = new DonorBUS();
         private void btAddDonor_Click(object sender, EventArgs e)
         {
-            DTO.Donor donor = new DTO.Donor()
+            DTO.DonorDTO donor = new DTO.DonorDTO()
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text,

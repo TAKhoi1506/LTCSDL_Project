@@ -16,7 +16,7 @@ namespace DAL
 
 
      
-        public bool AddDonor(Donor donor)
+        public bool AddDonor(DonorDTO donor)
         {
             
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -42,7 +42,7 @@ namespace DAL
             
         }
 
-        public bool InsertDonor(Donor donor)
+        public bool InsertDonor(DonorDTO donor)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -93,7 +93,7 @@ namespace DAL
 
 
         //Update do admin quản lý: Có thể sửa ID và Nhóm máu
-        public bool UpdateDonorByAdmin(Donor donor)
+        public bool UpdateDonorByAdmin(DonorDTO donor)
         {
             try
             {
@@ -129,7 +129,7 @@ namespace DAL
 
 
         //Update do người dùng là Donor thực hiện: Cập nhật các thông tin có trên UC_PersonalInformation
-        public bool UpdateDonorProfile(Donor donor)
+        public bool UpdateDonorProfile(DonorDTO donor)
         {
             try
             {

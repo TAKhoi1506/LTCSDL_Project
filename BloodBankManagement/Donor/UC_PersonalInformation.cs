@@ -41,7 +41,7 @@ namespace BloodBankManagement
 
 
         //Đoạn này cần lấy dữ liệu để đưa lên giao diện
-        private void ShowDonorInfo(DTO.Donor donor)
+        private void ShowDonorInfo(DTO.DonorDTO donor)
         {
             txtUsername.Text = donor.Username;
             txtPassword.Text = donor.Password;

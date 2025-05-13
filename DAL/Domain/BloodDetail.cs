@@ -9,13 +9,14 @@ namespace DAL.Domain
     [Table("BloodDetail")]
     public partial class BloodDetail
     {
-        [Key]
-        [Column(Order = 0)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public BloodDetail()
+        {
+            BloodSupplyDetails = new HashSet<BloodSupplyDetail>();
+        }
+
         public int BloodDetailID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BloodID { get; set; }
 
         public DateTime CollectionDate { get; set; }
@@ -31,5 +32,8 @@ namespace DAL.Domain
         public virtual BloodStock BloodStock { get; set; }
 
         public virtual Donor Donor { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BloodSupplyDetail> BloodSupplyDetails { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace DTO
     {
         public int NotifiID { get; set; }
 
-        public int DonorID { get; set; }
+        public string ObjectID { get; set; }
 
         public string Title { get; set; }
 

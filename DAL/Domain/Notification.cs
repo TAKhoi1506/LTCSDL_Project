@@ -11,7 +11,9 @@ namespace DAL.Domain
         [Key]
         public int NotifiID { get; set; }
 
-        public int DonorID { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string ObjectID { get; set; }
 
         [Required]
         [StringLength(100)]
