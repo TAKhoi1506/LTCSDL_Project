@@ -50,6 +50,8 @@ namespace BloodBankManagement.Admin
         private void LoadDonors()
         {
             dgvDonors.DataSource = donorBUS.GetAllDonors();
+            dgvDonors.Columns["Username"].Visible = false; // Ẩn cột 
+            dgvDonors.Columns["Password"].Visible = false; // Ẩn cột 
         }
 
         private void UC_Donors_Load(object sender, EventArgs e)
