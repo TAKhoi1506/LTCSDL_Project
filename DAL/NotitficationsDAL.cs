@@ -18,36 +18,40 @@ namespace DAL
         }
 
         //Lấy danh sách các tin nhắn hiển thị trên listview
-        public List<DTO.NotificationsDTO> GetTileList() 
+        public List<DTO.NotificationsDTO> GetTileList(string objectID)
         {
-            return _myContext.Notifications.Select(d => new DTO.NotificationsDTO
-            {
-                NotifiID = d.NotifiID,
-                Title = d.Title,
-                CreatedAt = d.CreateAt,
-                IsRead = d.IsRead
-               
-            }).ToList();
+            return _myContext.Notifications
+                .Where(d => d.ObjectID == objectID)
+                .Select(d => new DTO.NotificationsDTO
+                {
+                    ObjectID = d.ObjectID,
+                    Title = d.Title,
+                    CreatedAt = d.CreateAt,
+                    IsRead = d.IsRead
+                })
+                .ToList();
         }
 
 
 
-        //Lấy nội dung tin nhắn theo ID
-       public List<DTO.NotificationsDTO>  GetMessageByID(string objectID)
+        //Lấy nội dung tin nhắn theo notifiID
+        public NotificationsDTO GetMessageByID(string objectID)
         {
             try
             {
-                return _myContext.Notifications
-                    .Where(n => n.ObjectID == objectID)
-                    .Select(n => new DTO.NotificationsDTO
-                    {
-                        NotifiID = n.NotifiID,
-                        Title = n.Title,
-                        Message = n.Message,
-                        CreatedAt = n.CreateAt,
-                        IsRead = n.IsRead,
-                    })
-                    .ToList();
+                var notification = _myContext.Notifications.FirstOrDefault(d => d.ObjectID == objectID);
+                if (notification == null)
+                    return null; //Nếu trong tin nhắn không có nội dung thì trả về null 
+
+                return new NotificationsDTO
+                {
+                    NotifiID = notification.NotifiID,
+                    Title = notification.Title,
+                    Message = notification.Message,
+                    CreatedAt = notification.CreateAt,
+                    ObjectID = notification.ObjectID,
+                    IsRead = notification.IsRead
+                };
             }
             catch (Exception ex)
             {
@@ -57,25 +61,54 @@ namespace DAL
         }
 
 
+
+
+
+
+
         //Đánh dấu thông báo đã đọc
-        public bool MaskAsRead(int notifiID)
+        public bool MaskAsRead(string objectID)
         {
             try
             {
-                var notification = _myContext.Notifications.FirstOrDefault(d => d.NotifiID == notifiID);
-                if (notification == null) 
+                var notification = _myContext.Notifications.FirstOrDefault(d => d.ObjectID == objectID);
+                if (notification == null)
                     return false;
 
                 notification.IsRead = true;
                 return _myContext.SaveChanges() > 0;
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 return false;
             }
         }
+
+
+        public int GetUnreadCount(string objectID)
+        {
+            try
+            {
+                return _myContext.Notifications
+                                 .Where(n => n.ObjectID == objectID && !n.IsRead)
+                                 .Count();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return 0;
+            }
+        }
+
+
+        //Lấy nội dung tin nhắn theo ObjectID
+      
+
+
+
+
         public bool AddNotification(Notification notification)
         {
             try

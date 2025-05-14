@@ -58,3 +58,9 @@ D:\Newest\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\Newest\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Newest\LTCSDL_Project\DTO\obj\Debug\DTO.dll
 D:\Newest\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\Merge_LTCSDL\LTCSDL_Project\DTO\obj\Debug\DTO.pdb

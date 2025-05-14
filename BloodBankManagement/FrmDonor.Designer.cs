@@ -802,6 +802,7 @@
             this.Name = "FrmDonor";
             this.Text = "FrmDonor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDonor_FormClosing);
             this.Load += new System.EventHandler(this.FrmDonor_Load);
             this.pnHome.ResumeLayout(false);
             this.pnHome.PerformLayout();
