@@ -1,7 +1,5 @@
-﻿
-
---create database BloodBank
---go
+﻿create database BloodBank
+go
 
  
 use BloodBank
@@ -162,7 +160,25 @@ INSERT INTO Donor (FullName, BloodType, BirthDate, PhoneNumber, Address, LastDon
 (N'Ngô Hồng Hoa', 'O+', '1991-04-12', '0923456789', N'404 Nguyễn Xí, Quận Bình Thạnh, TP.HCM', '2024-03-01', 'Female', 'ngohonghoa@email.com'),
 (N'Bùi Tuấn Kiệt', 'A+', '1987-08-22', '0934567890', N'505 Phan Đăng Lưu, Quận Phú Nhuận, TP.HCM', '2023-09-18', 'Male', 'buituankiet@email.com'),
 (N'Đoàn Trang Linh', 'AB-', '1994-02-28', '0945678901', N'606 Hồ Văn Huê, Quận Phú Nhuận, TP.HCM', '2024-01-05', 'Female', 'doantranglinh@email.com'),
-(N'Mai Hân Mai', 'O+', '1989-06-15', '0956789012', N'707 Nguyễn Kiệm, Quận Gò Vấp, TP.HCM', '2023-12-12', 'Female', 'maihanmai@email.com');
+(N'Mai Hân Mai', 'O+', '1989-06-15', '0956789012', N'707 Nguyễn Kiệm, Quận Gò Vấp, TP.HCM', '2023-12-12', 'Female', 'maihanmai@email.com'),
+-- Nhóm 18-25 tuổi
+(N'Lê Thanh Tùng', 'A+', '2000-03-12', '0912345679', N'212 Lý Thường Kiệt, Quận 10, TP.HCM', '2024-03-05', 'Male', 'lethanhtung@email.com'),
+(N'Nguyễn Thị Hương', 'B-', '2001-07-25', '0987654322', N'157 Trần Hưng Đạo, Quận 1, TP.HCM', '2024-02-18', 'Female', 'nguyenthihuong@email.com'),
+(N'Phan Văn Quân', 'O+', '2003-09-08', '0909123457', N'89 Hai Bà Trưng, Quận 1, TP.HCM', '2024-04-01', 'Male', 'phanvanquan@email.com'),
+(N'Trần Thị Ngọc', 'AB+', '2004-11-30', '0919876544', N'321 Nguyễn Đình Chiểu, Quận 3, TP.HCM', NULL, 'Female', 'tranthingoc@email.com'),
+
+-- Nhóm 35-50 tuổi
+(N'Vũ Đức Minh', 'A-', '1981-05-17', '0978123457', N'56 Lê Văn Sỹ, Quận Phú Nhuận, TP.HCM', '2023-12-10', 'Male', 'vuducminh@email.com'),
+(N'Nguyễn Thị Lan Anh', 'B+', '1978-02-14', '0967891235', N'78 Nguyễn Trãi, Quận 5, TP.HCM', '2024-01-15', 'Female', 'nguyenthilananh@email.com'),
+(N'Hoàng Văn Đạt', 'O-', '1975-10-25', '0923456790', N'112 Tôn Đản, Quận 4, TP.HCM', '2023-11-20', 'Male', 'hoangvandat@email.com'),
+(N'Phạm Thị Hồng', 'AB-', '1980-08-05', '0934567891', N'245 Nguyễn Thái Học, Quận 1, TP.HCM', '2024-02-28', 'Female', 'phamthihong@email.com'),
+
+-- Nhóm 55-65 tuổi
+(N'Lê Văn Hùng', 'A+', '1965-12-01', '0945678902', N'67 Pasteur, Quận 1, TP.HCM', '2023-10-05', 'Male', 'levanhung@email.com'),
+(N'Trương Thị Xuân', 'O+', '1960-04-18', '0956789013', N'189 Điện Biên Phủ, Quận 3, TP.HCM', '2024-03-25', 'Female', 'truongthixuan@email.com');
+
+
+
 -- 2. Thêm dữ liệu vào bảng ReceivingUnit
 INSERT INTO ReceivingUnit (RU_ID, UnitName, ContactName, Address, PhoneNumber, Email, UnitType) VALUES
 ('BV001', N'Bệnh viện Chợ Rẫy', N'Nguyễn Văn Nam', N'201 Nguyễn Chí Thanh, Quận 5, TP.HCM', '02838554137', 'choray@hospital.com', 'Hospital'),
@@ -209,7 +225,15 @@ INSERT INTO Donation (DonorID, EventID) VALUES
 (9, 6),
 (10, 6),
 (2, 7),
-(3, 7);
+(3, 7),
+(11, 7),
+(12, 7),
+(13, 7),
+(15, 6),
+(16, 6),
+(17, 5),
+(19, 4),
+(20, 3);
 
 -- 6. Thêm dữ liệu vào bảng BloodDetail
 INSERT INTO BloodDetail (BloodID, CollectionDate, ExpiredDate, Status, DonorID) VALUES
@@ -229,7 +253,16 @@ INSERT INTO BloodDetail (BloodID, CollectionDate, ExpiredDate, Status, DonorID) 
 (8, '2023-10-12 10:00:00', '2023-11-12 10:00:00', 'Used', NULL), -- O-
 (8, '2023-10-12 11:00:00', '2023-11-12 11:00:00', 'Used', NULL), -- O-
 (4, '2023-11-08 09:00:00', '2023-12-08 09:00:00', 'Used', NULL),  -- B+
-(6, '2023-11-08 10:00:00', '2023-12-08 10:00:00', 'Used', NULL); -- AB-
+(6, '2023-11-08 10:00:00', '2023-12-08 10:00:00', 'Used', NULL), -- AB-
+(1, '2024-04-20 08:30:00', '2024-05-20 08:30:00', 'Quarantine', 11), -- A+ từ người trẻ
+(2, '2024-04-20 09:15:00', '2024-05-20 09:15:00', 'Quarantine', 12), -- B- từ người trẻ
+(7, '2024-04-20 10:00:00', '2024-05-20 10:00:00', 'Quarantine', 13), -- O+ từ người trẻ
+(5, '2024-03-10 11:30:00', '2024-04-10 11:30:00', 'Available', 15), -- A- từ người trung niên
+(3, '2024-03-10 13:00:00', '2024-04-10 13:00:00', 'Available', 16), -- B+ từ người trung niên
+(8, '2024-02-18 14:15:00', '2024-03-18 14:15:00', 'Used', 17), -- O- từ người trung niên
+(1, '2024-01-25 15:30:00', '2024-02-25 15:30:00', 'Used', 19), -- A+ từ người cao tuổi
+(7, '2023-12-15 16:00:00', '2024-01-15 16:00:00', 'Used', 20); -- O+ từ người cao tuổi
+
 
 -- 7. Thêm dữ liệu vào bảng BloodRequirement
 INSERT INTO BloodRequirement (RU_ID, RequestDate, SupplyDate, Status) VALUES
@@ -260,7 +293,15 @@ INSERT INTO HistoryDonation (DonorID, DonationID, EventID, DonationDate, Weight,
 (9, 10, 6, '2024-03-10 09:15:00', 59.5, '110/70', 300, 'Eligible', N'Sức khỏe tốt, cần uống nhiều nước sau khi hiến'),
 (10, 11, 6, '2024-03-10 10:45:00', 67.0, '120/78', 350, 'Eligible', N'Sức khỏe tốt, không có vấn đề'),
 (2, 12, 7, '2024-04-20 09:30:00', 66.5, '118/76', 350, 'Eligible', N'Sức khỏe tốt, lần hiến thứ 2'),
-(3, 13, 7, '2024-04-20 13:00:00', 59.0, '112/72', 300, 'Eligible', N'Sức khỏe tốt, không có vấn đề');
+(3, 13, 7, '2024-04-20 13:00:00', 59.0, '112/72', 300, 'Eligible', N'Sức khỏe tốt, không có vấn đề'),
+(11, NULL, 7, '2024-04-20 08:30:00', 68.5, '120/80', 350, 'Eligible', N'Lần hiến đầu tiên, sức khỏe tốt'),
+(12, NULL, 7, '2024-04-20 09:15:00', 55.0, '110/70', 300, 'Eligible', N'Cân nặng hơi thấp nhưng vẫn đủ điều kiện'),
+(13, NULL, 7, '2024-04-20 10:00:00', 75.0, '125/85', 400, 'Eligible', N'Sức khỏe tốt, hiến máu lần thứ 2'),
+(15, NULL, 6, '2024-03-10 11:30:00', 80.0, '135/90', 350, 'Eligible', N'Huyết áp hơi cao nhưng vẫn trong giới hạn cho phép'),
+(16, NULL, 6, '2024-03-10 13:00:00', 65.5, '120/80', 350, 'Eligible', N'Sức khỏe tốt, đã hiến máu thường xuyên'),
+(17, NULL, 5, '2024-02-18 14:15:00', 72.0, '118/78', 350, 'Eligible', N'Sức khỏe tốt, không có vấn đề'),
+(19, NULL, 4, '2024-01-25 15:30:00', 70.5, '120/75', 350, 'Eligible', N'Sức khỏe tốt, đã hiến máu nhiều lần'),
+(20, NULL, 3, '2023-12-15 16:00:00', 68.0, '115/75', 300, 'Eligible', N'Sức khỏe ổn định dù ở tuổi cao');
 
 -- 9. Thêm dữ liệu vào bảng BloodRequirementDetail
 INSERT INTO BloodRequirementDetail (RequirementID, BloodType, Amount) VALUES
@@ -293,7 +334,21 @@ VALUES ('donor1', '123456', 'Donor', '1'),
  ('donor3', '123456', 'Donor', '3'),
  ('donor4', '123456', 'Donor', '4'), 
  ('donor5', '123456', 'Donor', '5'), 
- ('donor6', '123456', 'Donor', '6'); 
+ ('donor6', '123456', 'Donor', '6'),
+ ('donor7', '123456', 'Donor', '7'), 
+ ('donor8', '123456', 'Donor', '8'), 
+ ('donor9', '123456', 'Donor', '9'), 
+ ('donor10', '123456', 'Donor', '10'),
+ ('donor11', '123456', 'Donor', '11'), 
+ ('donor12', '123456', 'Donor', '12'), 
+ ('donor13', '123456', 'Donor', '13'), 
+ ('donor14', '123456', 'Donor', '14'),
+ ('donor15', '123456', 'Donor', '15'),
+ ('donor16', '123456', 'Donor', '16'),
+ ('donor17', '123456', 'Donor', '17'),
+ ('donor18', '123456', 'Donor', '18'),
+ ('donor19', '123456', 'Donor', '19'),
+ ('donor20', '123456', 'Donor', '20');
 
 
 -- Thêm tài khoản cho một ReceivingUnit
@@ -321,97 +376,7 @@ INSERT INTO BloodSupplyDetail (RequirementDetailID, BloodDetailID, Amount) VALUE
 (5, 11, 3000); -- BloodDetailID 11: O+ từ DonorID 10
 
 
-SELECT bd.BloodDetailID, bs.BloodType 
-FROM BloodDetail bd
-JOIN BloodStock bs ON bd.BloodID = bs.BloodID
-WHERE bd.BloodDetailID IN (1, 2, 3, 6, 7, 11, 13);
-
-
-
-select * from UserAccount
-
-INSERT INTO UserAccount (Username, Password, Role, ObjectID)
-VALUES 
- ('donor7', '123456', 'Donor', '7'), 
- ('donor8', '123456', 'Donor', '8'), 
- ('donor9', '123456', 'Donor', '9'), 
- ('donor10', '123456', 'Donor', '10');
-
-
- INSERT INTO Donor (FullName, BloodType, BirthDate, PhoneNumber, Address, LastDonationDate, Gender, Email) VALUES
-(N'Nguyễn Văn An', 'A+', '1990-05-15', '0912345678', N'123 Nguyễn Huệ, Quận 1, TP.HCM', '2023-10-10', 'Male', 'nguyenvanan@email.com'),
-(N'Trần Ngọc Bình', 'B+', '1988-12-20', '0987654321', N'456 Lê Lợi, Quận 3, TP.HCM', '2023-11-12', 'Male', 'tranngocbinh@email.com'),
-(N'Phạm Thị Cẩm', 'O-', '1995-03-25', '0909123456', N'789 Võ Văn Tần, Quận 10, TP.HCM', '2023-12-05', 'Female', 'phamthicam@email.com'),
-(N'Lê Thúy Diệu', 'AB+', '1992-07-18', '0919876543', N'101 Cách Mạng Tháng 8, Quận 3, TP.HCM', '2024-01-20', 'Female', 'lethuydieu@email.com'),
-(N'Hoàng Minh Đức', 'A-', '1985-09-30', '0978123456', N'202 Điện Biên Phủ, Quận Bình Thạnh, TP.HCM', '2024-02-15', 'Male', 'hoangminhduc@email.com'),
-(N'Vũ Thảo Giang', 'B-', '1993-11-05', '0967891234', N'303 Xô Viết Nghệ Tĩnh, Quận Bình Thạnh, TP.HCM', NULL, 'Female', 'vuthaogiang@email.com'),
-(N'Ngô Hồng Hoa', 'O+', '1991-04-12', '0923456789', N'404 Nguyễn Xí, Quận Bình Thạnh, TP.HCM', '2024-03-01', 'Female', 'ngohonghoa@email.com'),
-(N'Bùi Tuấn Kiệt', 'A+', '1987-08-22', '0934567890', N'505 Phan Đăng Lưu, Quận Phú Nhuận, TP.HCM', '2023-09-18', 'Male', 'buituankiet@email.com'),
-(N'Đoàn Trang Linh', 'AB-', '1994-02-28', '0945678901', N'606 Hồ Văn Huê, Quận Phú Nhuận, TP.HCM', '2024-01-05', 'Female', 'doantranglinh@email.com'),
-(N'Mai Hân Mai', 'O+', '1989-06-15', '0956789012', N'707 Nguyễn Kiệm, Quận Gò Vấp, TP.HCM', '2023-12-12', 'Female', 'maihanmai@email.com');
-
-
-
-INSERT INTO UserAccount (Username, Password, Role, ObjectID)
-VALUES 
- ('donor11', '123456', 'Donor', '11'), 
- ('donor12', '123456', 'Donor', '12'), 
- ('donor13', '123456', 'Donor', '13'), 
- ('donor14', '123456', 'Donor', '14'),
- ('donor15', '123456', 'Donor', '15'),
- ('donor16', '123456', 'Donor', '16'),
- ('donor17', '123456', 'Donor', '17'),
- ('donor18', '123456', 'Donor', '18'),
- ('donor19', '123456', 'Donor', '19'),
- ('donor20', '123456', 'Donor', '20');
-
--- Thêm dữ liệu người hiến máu đa dạng độ tuổi
-INSERT INTO Donor (FullName, BloodType, BirthDate, PhoneNumber, Address, LastDonationDate, Gender, Email) VALUES
--- Nhóm 18-25 tuổi
-(N'Lê Thanh Tùng', 'A+', '2000-03-12', '0912345679', N'212 Lý Thường Kiệt, Quận 10, TP.HCM', '2024-03-05', 'Male', 'lethanhtung@email.com'),
-(N'Nguyễn Thị Hương', 'B-', '2001-07-25', '0987654322', N'157 Trần Hưng Đạo, Quận 1, TP.HCM', '2024-02-18', 'Female', 'nguyenthihuong@email.com'),
-(N'Phan Văn Quân', 'O+', '2003-09-08', '0909123457', N'89 Hai Bà Trưng, Quận 1, TP.HCM', '2024-04-01', 'Male', 'phanvanquan@email.com'),
-(N'Trần Thị Ngọc', 'AB+', '2004-11-30', '0919876544', N'321 Nguyễn Đình Chiểu, Quận 3, TP.HCM', NULL, 'Female', 'tranthingoc@email.com'),
-
--- Nhóm 35-50 tuổi
-(N'Vũ Đức Minh', 'A-', '1981-05-17', '0978123457', N'56 Lê Văn Sỹ, Quận Phú Nhuận, TP.HCM', '2023-12-10', 'Male', 'vuducminh@email.com'),
-(N'Nguyễn Thị Lan Anh', 'B+', '1978-02-14', '0967891235', N'78 Nguyễn Trãi, Quận 5, TP.HCM', '2024-01-15', 'Female', 'nguyenthilananh@email.com'),
-(N'Hoàng Văn Đạt', 'O-', '1975-10-25', '0923456790', N'112 Tôn Đản, Quận 4, TP.HCM', '2023-11-20', 'Male', 'hoangvandat@email.com'),
-(N'Phạm Thị Hồng', 'AB-', '1980-08-05', '0934567891', N'245 Nguyễn Thái Học, Quận 1, TP.HCM', '2024-02-28', 'Female', 'phamthihong@email.com'),
-
--- Nhóm 55-65 tuổi
-(N'Lê Văn Hùng', 'A+', '1965-12-01', '0945678902', N'67 Pasteur, Quận 1, TP.HCM', '2023-10-05', 'Male', 'levanhung@email.com'),
-(N'Trương Thị Xuân', 'O+', '1960-04-18', '0956789013', N'189 Điện Biên Phủ, Quận 3, TP.HCM', '2024-03-25', 'Female', 'truongthixuan@email.com');
-
--- Thêm dữ liệu lịch sử hiến máu cho người mới
-INSERT INTO HistoryDonation (DonorID, DonationID, EventID, DonationDate, Weight, BloodPressure, Amount, HealthStatus, Notes) VALUES
-(11, NULL, 7, '2024-04-20 08:30:00', 68.5, '120/80', 350, 'Eligible', N'Lần hiến đầu tiên, sức khỏe tốt'),
-(12, NULL, 7, '2024-04-20 09:15:00', 55.0, '110/70', 300, 'Eligible', N'Cân nặng hơi thấp nhưng vẫn đủ điều kiện'),
-(13, NULL, 7, '2024-04-20 10:00:00', 75.0, '125/85', 400, 'Eligible', N'Sức khỏe tốt, hiến máu lần thứ 2'),
-(15, NULL, 6, '2024-03-10 11:30:00', 80.0, '135/90', 350, 'Eligible', N'Huyết áp hơi cao nhưng vẫn trong giới hạn cho phép'),
-(16, NULL, 6, '2024-03-10 13:00:00', 65.5, '120/80', 350, 'Eligible', N'Sức khỏe tốt, đã hiến máu thường xuyên'),
-(17, NULL, 5, '2024-02-18 14:15:00', 72.0, '118/78', 350, 'Eligible', N'Sức khỏe tốt, không có vấn đề'),
-(19, NULL, 4, '2024-01-25 15:30:00', 70.5, '120/75', 350, 'Eligible', N'Sức khỏe tốt, đã hiến máu nhiều lần'),
-(20, NULL, 3, '2023-12-15 16:00:00', 68.0, '115/75', 300, 'Eligible', N'Sức khỏe ổn định dù ở tuổi cao');
-
--- Thêm dữ liệu chi tiết máu từ người hiến mới
-INSERT INTO BloodDetail (BloodID, CollectionDate, ExpiredDate, Status, DonorID) VALUES
-(1, '2024-04-20 08:30:00', '2024-05-20 08:30:00', 'Quarantine', 11), -- A+ từ người trẻ
-(2, '2024-04-20 09:15:00', '2024-05-20 09:15:00', 'Quarantine', 12), -- B- từ người trẻ
-(7, '2024-04-20 10:00:00', '2024-05-20 10:00:00', 'Quarantine', 13), -- O+ từ người trẻ
-(5, '2024-03-10 11:30:00', '2024-04-10 11:30:00', 'Available', 15), -- A- từ người trung niên
-(3, '2024-03-10 13:00:00', '2024-04-10 13:00:00', 'Available', 16), -- B+ từ người trung niên
-(8, '2024-02-18 14:15:00', '2024-03-18 14:15:00', 'Used', 17), -- O- từ người trung niên
-(1, '2024-01-25 15:30:00', '2024-02-25 15:30:00', 'Used', 19), -- A+ từ người cao tuổi
-(7, '2023-12-15 16:00:00', '2024-01-15 16:00:00', 'Used', 20); -- O+ từ người cao tuổi
-
--- Thêm dữ liệu đăng ký hiến máu cho người mới
-INSERT INTO Donation (DonorID, EventID) VALUES
-(11, 7),
-(12, 7),
-(13, 7),
-(15, 6),
-(16, 6),
-(17, 5),
-(19, 4),
-(20, 3);
+--SELECT bd.BloodDetailID, bs.BloodType 
+--FROM BloodDetail bd
+--JOIN BloodStock bs ON bd.BloodID = bs.BloodID
+--WHERE bd.BloodDetailID IN (1, 2, 3, 6, 7, 11, 13);

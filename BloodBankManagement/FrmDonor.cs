@@ -16,13 +16,6 @@ namespace BloodBankManagement
     {
         private UserControl currentControl;
 
-        //private UC_Home ucHome;
-        //private UC_Benefits ucBenefits;
-        //private UC_HistoryDonations ucHistoryDonation;
-        //private UC_Notifications ucNotifications; 
-        //private UC_PersonalInformation ucPersonalInformation;
-        //private UC_RegisterforBloodDonation ucRegisterforBloodDonation;
-
         public FrmDonor()
         {
             InitializeComponent();

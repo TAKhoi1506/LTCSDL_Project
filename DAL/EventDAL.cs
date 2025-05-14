@@ -25,7 +25,6 @@ namespace DAL
                     Status = e.Status,
                     AmountOfBlood = e.AmountOfBlood
                 }).ToList();
-            
         }
 
 
@@ -89,7 +88,7 @@ namespace DAL
                             Description = e.Description,
                             Location = e.Location,
                             EventDate = e.EventDate,
-                            Status = e.Status, 
+                            Status = e.Status,
                             AmountOfBlood = e.AmountOfBlood
                         };
 

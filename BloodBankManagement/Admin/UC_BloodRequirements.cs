@@ -87,11 +87,6 @@ namespace BloodBankManagement.Admin
             }
         }
 
-        private void UC_BloodRequirements_Load(object sender, EventArgs e)
-        {
-
-        }
-
         // Search by unit ID 
         private void btSearch_Click(object sender, EventArgs e)
         {

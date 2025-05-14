@@ -32,9 +32,7 @@ namespace DAL
                 BloodPressure = d.BloodPressure,
                 Amount = d.Amount,
                 HealthStatus = d.HealthStatus,
-
             }).ToList();
         }
-
     }
 }

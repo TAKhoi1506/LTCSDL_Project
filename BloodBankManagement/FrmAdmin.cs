@@ -10,6 +10,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BloodBankManagement.Admin;
 using BUS;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
@@ -17,33 +18,13 @@ namespace BloodBankManagement
     {
         private UserControl currentControl;
 
+        private NotificationsBUS notificationsBUS = new NotificationsBUS();
+
         public FrmAdmin()
         {
             InitializeComponent();
         }
-        //private UC_BloodStock ucBloodStock;
-        //private UC_Home ucHome;
-        //private UC_Events ucEvents;
-        //private UC_Donations ucDonations;
-        //private UC_ReceivingUnits ucReceivingUnits;
-        //private UC_DashBoard2 ucDashboard;
-        //private UC_Donors ucDonors;
-        private NotificationsBUS notificationsBUS = new NotificationsBUS();
-        //private UC_BloodRequirements ucbloodRe;
-
-
-        //private void HomeLoad()
-        //{
-        //    if (ucHome == null)
-        //    {
-        //        ucHome = new UC_Home();
-        //        ucHome.Dock = DockStyle.Fill;
-        //        panelShow.Controls.Add(ucHome);
-        //    }
-
-        //    ucHome.BringToFront();
-        //}
-
+     
         private void ShowUserControl(UserControl newControl)
         {
             if (currentControl != null)
@@ -108,9 +89,9 @@ namespace BloodBankManagement
             pnNotification.Controls.Clear();
 
             var notifications = notificationsBUS
-    .GetMessageById(Static.UserSession.ObjectID)
-    .OrderByDescending(n => n.CreatedAt)
-    .ToList();
+                .GetMessageById(Static.UserSession.ObjectID)
+                .OrderByDescending(n => n.CreatedAt)
+                .ToList();
 
             int y = 10;
             foreach (var noti in notifications)
@@ -164,6 +145,7 @@ namespace BloodBankManagement
                 y += 60;
             }
         }
+
         private void btNotification_Click_1(object sender, EventArgs e)
         {
             // Toggle danh sách thông báo
@@ -186,9 +168,15 @@ namespace BloodBankManagement
             Application.Exit();
         }
 
-        private void panelShow_Click(object sender, EventArgs e)
+        private void btLogout_Click(object sender, EventArgs e)
         {
+            UserSession.Clear();
 
+            this.Hide();
+
+            // Mở lại form Login
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
 }

@@ -139,7 +139,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvBloodRequirement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBloodRequirement.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.dgvBloodRequirement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvBloodRequirement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBloodRequirement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBloodRequirement.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -189,15 +189,16 @@
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBloodRequirement.Location = new System.Drawing.Point(83, 710);
+            this.dgvBloodRequirement.Location = new System.Drawing.Point(136, 794);
             this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(6);
             this.dgvBloodRequirement.Name = "dgvBloodRequirement";
             this.dgvBloodRequirement.RowHeadersVisible = false;
             this.dgvBloodRequirement.RowHeadersWidth = 82;
             this.dgvBloodRequirement.RowTemplate.Height = 40;
             this.dgvBloodRequirement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBloodRequirement.Size = new System.Drawing.Size(2165, 546);
+            this.dgvBloodRequirement.Size = new System.Drawing.Size(1845, 620);
             this.dgvBloodRequirement.TabIndex = 77;
             this.dgvBloodRequirement.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -255,7 +256,7 @@
             this.btSent.IdleIconLeftImage = null;
             this.btSent.IdleIconRightImage = null;
             this.btSent.IndicateFocus = false;
-            this.btSent.Location = new System.Drawing.Point(1711, 608);
+            this.btSent.Location = new System.Drawing.Point(1538, 608);
             this.btSent.Margin = new System.Windows.Forms.Padding(4);
             this.btSent.Name = "btSent";
             this.btSent.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -319,12 +320,13 @@
             this.dpSupplyDate.IconColor = System.Drawing.Color.Gray;
             this.dpSupplyDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dpSupplyDate.LeftTextMargin = 5;
-            this.dpSupplyDate.Location = new System.Drawing.Point(525, 348);
+            this.dpSupplyDate.Location = new System.Drawing.Point(499, 338);
             this.dpSupplyDate.Margin = new System.Windows.Forms.Padding(6);
             this.dpSupplyDate.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpSupplyDate.Name = "dpSupplyDate";
             this.dpSupplyDate.Size = new System.Drawing.Size(571, 44);
             this.dpSupplyDate.TabIndex = 75;
+            this.dpSupplyDate.Value = new System.DateTime(2025, 5, 14, 18, 1, 0, 0);
             // 
             // bunifuLabel11
             // 
@@ -334,7 +336,7 @@
             this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F);
-            this.bunifuLabel11.Location = new System.Drawing.Point(721, 55);
+            this.bunifuLabel11.Location = new System.Drawing.Point(613, 55);
             this.bunifuLabel11.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -359,7 +361,7 @@
             this.txtABMinus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtABMinus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtABMinus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtABMinus.BorderRadius = 1;
+            this.txtABMinus.BorderRadius = 20;
             this.txtABMinus.BorderThickness = 1;
             this.txtABMinus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtABMinus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -374,7 +376,7 @@
             this.txtABMinus.IconRight = null;
             this.txtABMinus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtABMinus.Lines = new string[0];
-            this.txtABMinus.Location = new System.Drawing.Point(1927, 506);
+            this.txtABMinus.Location = new System.Drawing.Point(1754, 506);
             this.txtABMinus.Margin = new System.Windows.Forms.Padding(6);
             this.txtABMinus.MaxLength = 32767;
             this.txtABMinus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -437,7 +439,7 @@
             this.txtABPlus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtABPlus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtABPlus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtABPlus.BorderRadius = 1;
+            this.txtABPlus.BorderRadius = 20;
             this.txtABPlus.BorderThickness = 1;
             this.txtABPlus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtABPlus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -452,7 +454,7 @@
             this.txtABPlus.IconRight = null;
             this.txtABPlus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtABPlus.Lines = new string[0];
-            this.txtABPlus.Location = new System.Drawing.Point(1927, 458);
+            this.txtABPlus.Location = new System.Drawing.Point(1754, 458);
             this.txtABPlus.Margin = new System.Windows.Forms.Padding(6);
             this.txtABPlus.MaxLength = 32767;
             this.txtABPlus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -515,7 +517,7 @@
             this.txtOMinus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtOMinus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtOMinus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtOMinus.BorderRadius = 1;
+            this.txtOMinus.BorderRadius = 20;
             this.txtOMinus.BorderThickness = 1;
             this.txtOMinus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtOMinus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -530,7 +532,7 @@
             this.txtOMinus.IconRight = null;
             this.txtOMinus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOMinus.Lines = new string[0];
-            this.txtOMinus.Location = new System.Drawing.Point(1927, 412);
+            this.txtOMinus.Location = new System.Drawing.Point(1754, 412);
             this.txtOMinus.Margin = new System.Windows.Forms.Padding(6);
             this.txtOMinus.MaxLength = 32767;
             this.txtOMinus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -593,7 +595,7 @@
             this.txtOPlus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtOPlus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtOPlus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtOPlus.BorderRadius = 1;
+            this.txtOPlus.BorderRadius = 20;
             this.txtOPlus.BorderThickness = 1;
             this.txtOPlus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtOPlus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -608,7 +610,7 @@
             this.txtOPlus.IconRight = null;
             this.txtOPlus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOPlus.Lines = new string[0];
-            this.txtOPlus.Location = new System.Drawing.Point(1927, 364);
+            this.txtOPlus.Location = new System.Drawing.Point(1754, 364);
             this.txtOPlus.Margin = new System.Windows.Forms.Padding(6);
             this.txtOPlus.MaxLength = 32767;
             this.txtOPlus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -671,7 +673,7 @@
             this.txtBMinus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtBMinus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtBMinus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtBMinus.BorderRadius = 1;
+            this.txtBMinus.BorderRadius = 20;
             this.txtBMinus.BorderThickness = 1;
             this.txtBMinus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBMinus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -686,7 +688,7 @@
             this.txtBMinus.IconRight = null;
             this.txtBMinus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBMinus.Lines = new string[0];
-            this.txtBMinus.Location = new System.Drawing.Point(1927, 316);
+            this.txtBMinus.Location = new System.Drawing.Point(1754, 316);
             this.txtBMinus.Margin = new System.Windows.Forms.Padding(6);
             this.txtBMinus.MaxLength = 32767;
             this.txtBMinus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -749,7 +751,7 @@
             this.txtBPlus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtBPlus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtBPlus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtBPlus.BorderRadius = 1;
+            this.txtBPlus.BorderRadius = 20;
             this.txtBPlus.BorderThickness = 1;
             this.txtBPlus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtBPlus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -764,7 +766,7 @@
             this.txtBPlus.IconRight = null;
             this.txtBPlus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBPlus.Lines = new string[0];
-            this.txtBPlus.Location = new System.Drawing.Point(1927, 267);
+            this.txtBPlus.Location = new System.Drawing.Point(1754, 267);
             this.txtBPlus.Margin = new System.Windows.Forms.Padding(6);
             this.txtBPlus.MaxLength = 32767;
             this.txtBPlus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -827,7 +829,7 @@
             this.txtAMinus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtAMinus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtAMinus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtAMinus.BorderRadius = 1;
+            this.txtAMinus.BorderRadius = 20;
             this.txtAMinus.BorderThickness = 1;
             this.txtAMinus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtAMinus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -842,7 +844,7 @@
             this.txtAMinus.IconRight = null;
             this.txtAMinus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAMinus.Lines = new string[0];
-            this.txtAMinus.Location = new System.Drawing.Point(1927, 221);
+            this.txtAMinus.Location = new System.Drawing.Point(1754, 221);
             this.txtAMinus.Margin = new System.Windows.Forms.Padding(6);
             this.txtAMinus.MaxLength = 32767;
             this.txtAMinus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -905,7 +907,7 @@
             this.txtAPlus.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtAPlus.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtAPlus.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtAPlus.BorderRadius = 1;
+            this.txtAPlus.BorderRadius = 20;
             this.txtAPlus.BorderThickness = 1;
             this.txtAPlus.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtAPlus.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -920,7 +922,7 @@
             this.txtAPlus.IconRight = null;
             this.txtAPlus.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAPlus.Lines = new string[0];
-            this.txtAPlus.Location = new System.Drawing.Point(1927, 171);
+            this.txtAPlus.Location = new System.Drawing.Point(1754, 171);
             this.txtAPlus.Margin = new System.Windows.Forms.Padding(6);
             this.txtAPlus.MaxLength = 32767;
             this.txtAPlus.MinimumSize = new System.Drawing.Size(2, 2);
@@ -982,7 +984,7 @@
             "O-",
             "AB+",
             "AB-"});
-            this.clbBloodType.Location = new System.Drawing.Point(1711, 177);
+            this.clbBloodType.Location = new System.Drawing.Point(1538, 177);
             this.clbBloodType.Margin = new System.Windows.Forms.Padding(6);
             this.clbBloodType.Name = "clbBloodType";
             this.clbBloodType.Size = new System.Drawing.Size(172, 388);
@@ -996,7 +998,7 @@
             this.bunifuLabel9.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel9.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel9.Location = new System.Drawing.Point(1421, 171);
+            this.bunifuLabel9.Location = new System.Drawing.Point(1248, 171);
             this.bunifuLabel9.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1021,7 +1023,7 @@
             this.txtUnitId.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUnitId.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUnitId.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUnitId.BorderRadius = 1;
+            this.txtUnitId.BorderRadius = 20;
             this.txtUnitId.BorderThickness = 1;
             this.txtUnitId.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUnitId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1036,7 +1038,7 @@
             this.txtUnitId.IconRight = null;
             this.txtUnitId.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUnitId.Lines = new string[0];
-            this.txtUnitId.Location = new System.Drawing.Point(525, 267);
+            this.txtUnitId.Location = new System.Drawing.Point(499, 257);
             this.txtUnitId.Margin = new System.Windows.Forms.Padding(6);
             this.txtUnitId.MaxLength = 32767;
             this.txtUnitId.MinimumSize = new System.Drawing.Size(2, 2);
@@ -1099,7 +1101,7 @@
             this.txtUnitName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUnitName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUnitName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUnitName.BorderRadius = 1;
+            this.txtUnitName.BorderRadius = 20;
             this.txtUnitName.BorderThickness = 1;
             this.txtUnitName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUnitName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -1114,7 +1116,7 @@
             this.txtUnitName.IconRight = null;
             this.txtUnitName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUnitName.Lines = new string[0];
-            this.txtUnitName.Location = new System.Drawing.Point(525, 187);
+            this.txtUnitName.Location = new System.Drawing.Point(499, 177);
             this.txtUnitName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUnitName.MaxLength = 32767;
             this.txtUnitName.MinimumSize = new System.Drawing.Size(2, 2);
@@ -1170,7 +1172,7 @@
             this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(181, 267);
+            this.bunifuLabel7.Location = new System.Drawing.Point(155, 257);
             this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1188,7 +1190,7 @@
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(181, 348);
+            this.bunifuLabel4.Location = new System.Drawing.Point(155, 338);
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1206,7 +1208,7 @@
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(181, 187);
+            this.bunifuLabel3.Location = new System.Drawing.Point(155, 177);
             this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1239,9 +1241,9 @@
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_RegisterForBloodRequirement";
-            this.Size = new System.Drawing.Size(2330, 1311);
+            this.Size = new System.Drawing.Size(2116, 1500);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

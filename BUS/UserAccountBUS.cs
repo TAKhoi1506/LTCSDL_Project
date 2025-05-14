@@ -15,33 +15,33 @@ namespace BUS
         private MyContext db = new MyContext();
 
         // trước khi băm 
-        public UserAccountDTO Login(string username, string password)
-        {
-            var user = dal.GetUserByUsername(username);
-            if (user != null && user.Password == password)
-            {
-                return user; // Đúng tài khoản và mật khẩu
-            }
-            return null; // Sai
-        }
-
-        // sử dụng băm 
         //public UserAccountDTO Login(string username, string password)
         //{
-        //    var account = dal.GetUserByUsername(username);
-
-        //    if (account != null && BCrypt.Net.BCrypt.Verify(password, account.Password))
+        //    var user = dal.GetUserByUsername(username);
+        //    if (user != null && user.Password == password)
         //    {
-        //        return new UserAccountDTO
-        //        {
-        //            AccountID = account.AccountID,
-        //            Username = account.Username,
-        //            Role = account.Role,
-        //            ObjectID = account.ObjectID
-        //        };
+        //        return user; // Đúng tài khoản và mật khẩu
         //    }
-        //    return null;
+        //    return null; // Sai
         //}
+
+        // sử dụng băm 
+        public UserAccountDTO Login(string username, string password)
+        {
+            var account = dal.GetUserByUsername(username);
+
+            if (account != null && BCrypt.Net.BCrypt.Verify(password, account.Password))
+            {
+                return new UserAccountDTO
+                {
+                    AccountID = account.AccountID,
+                    Username = account.Username,
+                    Role = account.Role,
+                    ObjectID = account.ObjectID
+                };
+            }
+            return null;
+        }
 
         public object GetUserInfo(string role, string objectId)
         {

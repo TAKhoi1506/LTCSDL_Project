@@ -22,25 +22,25 @@ namespace BloodBankManagement
         private BloodDetailBUS bloodDetailBUS = new BloodDetailBUS();
 
 
-        private void btAddDonor_Click(object sender, EventArgs e)
-        {
-            string selectedBloodType = cbBloodType.SelectedItem?.ToString();
-            double amountToAdd = Convert.ToDouble(numAmount.Value);
+        //private void btAddDonor_Click(object sender, EventArgs e)
+        //{
+        //    string selectedBloodType = cbBloodType.SelectedItem?.ToString();
+        //    double amountToAdd = Convert.ToDouble(numAmount.Value);
 
-            if (string.IsNullOrEmpty(selectedBloodType) || amountToAdd <= 0)
-            {
-                MessageBox.Show("Vui lòng chọn nhóm máu và nhập số lượng hợp lệ!");
-                return;
-            }
-            BloodStock existingStock = bus.GetStockByType(selectedBloodType);
-            if (existingStock != null)
-            {
-                // Nếu có rồi thì cộng dồn
-                existingStock.Amount += amountToAdd;
-                bus.UpdateStock(existingStock);
-            }
-            LoadStockGrid();
-        }
+        //    if (string.IsNullOrEmpty(selectedBloodType) || amountToAdd <= 0)
+        //    {
+        //        MessageBox.Show("Vui lòng chọn nhóm máu và nhập số lượng hợp lệ!");
+        //        return;
+        //    }
+        //    BloodStock existingStock = bus.GetStockByType(selectedBloodType);
+        //    if (existingStock != null)
+        //    {
+        //        // Nếu có rồi thì cộng dồn
+        //        existingStock.Amount += amountToAdd;
+        //        bus.UpdateStock(existingStock);
+        //    }
+        //    LoadStockGrid();
+        //}
 
         private void LoadStockGrid()
         {
@@ -50,17 +50,17 @@ namespace BloodBankManagement
 
         private void UC_BloodStock_Load(object sender, EventArgs e)
         {
-            cbBloodType.SelectedIndex = 1;
+            //cbBloodType.SelectedIndex = 1;
             LoadStockGrid();
             LoadBloodDetails();
         }
 
-        private void UC_BloodStock_Load_1(object sender, EventArgs e)
-        {
-            cbBloodType.SelectedIndex = 1;
-            LoadStockGrid();
+        //private void UC_BloodStock_Load_1(object sender, EventArgs e)
+        //{
+        //    cbBloodType.SelectedIndex = 1;
+        //    LoadStockGrid();
 
-        }
+        //}
 
         private void LoadBloodDetails()
         {

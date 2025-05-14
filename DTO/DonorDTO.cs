@@ -9,7 +9,10 @@ namespace DTO
     public class DonorDTO
     {
         public int DonorID { get; set; }
-        
+        public string Username { get; set; }
+
+        public string Password { get; set; }
+
         public string FullName { get; set; }
         public string BloodType { get; set; }
         public DateTime DateOfBirth { get; set; }

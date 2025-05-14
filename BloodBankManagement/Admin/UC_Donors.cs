@@ -52,8 +52,7 @@ namespace BloodBankManagement.Admin
             dgvDonors.DataSource = donorBUS.GetAllDonors();
         }
 
-
-        private void bunifuPanel3_Click(object sender, EventArgs e)
+        private void UC_Donors_Load(object sender, EventArgs e)
         {
             LoadDonors();
         }

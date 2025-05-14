@@ -24,7 +24,6 @@ namespace BloodBankManagement
         }
         private void UC_ReceivingUnits_Load(object sender, EventArgs e)
         {
-            dgvReceivingUnits.DataSource = unitBUS.GetAll();
             LoadDataGrid();
             // Hiển thị tooltip cho ô nhập số điện thoại
             toolTip.SetToolTip(txtPhoneNo, "Please enter a phone number consisting of 10 or 11 digits, starting with the number 0.");
@@ -46,6 +45,7 @@ namespace BloodBankManagement
         private void LoadDataGrid()
         {
             dgvReceivingUnits.AutoGenerateColumns = true;
+            dgvReceivingUnits.DataSource = unitBUS.GetAll();
             dgvReceivingUnits.Columns["RU_ID"].HeaderText = "Unit ID";
             dgvReceivingUnits.Columns["RU_ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvReceivingUnits.Columns["UnitName"].HeaderText = "Unit Name";

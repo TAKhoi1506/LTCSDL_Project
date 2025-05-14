@@ -38,10 +38,10 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.pnShow = new System.Windows.Forms.Panel();
             this.pnBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btHistoryDonations = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -50,7 +50,9 @@
             this.btRegisterForDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btNotification = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btInfor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pnShow = new System.Windows.Forms.Panel();
             this.pnHome.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.pnBar.SuspendLayout();
@@ -64,49 +66,61 @@
             this.pnHome.BorderColor = System.Drawing.Color.Transparent;
             this.pnHome.BorderRadius = 3;
             this.pnHome.BorderThickness = 1;
-            this.pnHome.Controls.Add(this.bunifuPictureBox2);
-            this.pnHome.Controls.Add(this.bunifuLabel1);
+            this.pnHome.Controls.Add(this.panel1);
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHome.Location = new System.Drawing.Point(0, 0);
+            this.pnHome.Margin = new System.Windows.Forms.Padding(4);
             this.pnHome.Name = "pnHome";
             this.pnHome.ShowBorders = true;
-            this.pnHome.Size = new System.Drawing.Size(1924, 103);
+            this.pnHome.Size = new System.Drawing.Size(2565, 129);
             this.pnHome.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.bunifuLabel4);
+            this.panel1.Controls.Add(this.bunifuPictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(499, 129);
+            this.panel1.TabIndex = 16;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Italic);
+            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuLabel4.Location = new System.Drawing.Point(141, 42);
+            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(352, 44);
+            this.bunifuLabel4.TabIndex = 3;
+            this.bunifuLabel4.Text = "KVN BLOOD BANK";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPictureBox2
             // 
             this.bunifuPictureBox2.AllowFocused = false;
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 35;
+            this.bunifuPictureBox2.BorderRadius = 47;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(21, 14);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(32, 17);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(94, 94);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox2.TabIndex = 5;
             this.bunifuPictureBox2.TabStop = false;
             this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Italic);
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuLabel1.Location = new System.Drawing.Point(99, 35);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(268, 33);
-            this.bunifuLabel1.TabIndex = 3;
-            this.bunifuLabel1.Text = "KVN BLOOD BANK";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuGradientPanel1
             // 
@@ -116,23 +130,18 @@
             this.bunifuGradientPanel1.BorderRadius = 1;
             this.bunifuGradientPanel1.Controls.Add(this.pnShow);
             this.bunifuGradientPanel1.Controls.Add(this.pnBar);
+            this.bunifuGradientPanel1.Controls.Add(this.pnHome);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(139)))), ((int)(((byte)(123)))));
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(205)))), ((int)(((byte)(158)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(206)))), ((int)(((byte)(158)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(150)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1924, 1151);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(2565, 1439);
             this.bunifuGradientPanel1.TabIndex = 16;
-            // 
-            // pnShow
-            // 
-            this.pnShow.Location = new System.Drawing.Point(330, 104);
-            this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(1582, 1026);
-            this.pnShow.TabIndex = 14;
             // 
             // pnBar
             // 
@@ -150,10 +159,11 @@
             this.pnBar.Controls.Add(this.btNotification);
             this.pnBar.Controls.Add(this.btInfor);
             this.pnBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnBar.Location = new System.Drawing.Point(0, 0);
+            this.pnBar.Location = new System.Drawing.Point(0, 129);
+            this.pnBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnBar.Name = "pnBar";
             this.pnBar.ShowBorders = true;
-            this.pnBar.Size = new System.Drawing.Size(328, 1151);
+            this.pnBar.Size = new System.Drawing.Size(445, 1310);
             this.pnBar.TabIndex = 13;
             // 
             // btHistoryDonations
@@ -203,7 +213,8 @@
             this.btHistoryDonations.IdleIconLeftImage = null;
             this.btHistoryDonations.IdleIconRightImage = null;
             this.btHistoryDonations.IndicateFocus = false;
-            this.btHistoryDonations.Location = new System.Drawing.Point(3, 255);
+            this.btHistoryDonations.Location = new System.Drawing.Point(1, 452);
+            this.btHistoryDonations.Margin = new System.Windows.Forms.Padding(4);
             this.btHistoryDonations.Name = "btHistoryDonations";
             this.btHistoryDonations.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHistoryDonations.OnDisabledState.BorderRadius = 1;
@@ -237,7 +248,7 @@
             this.btHistoryDonations.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btHistoryDonations.OnPressedState.IconLeftImage = null;
             this.btHistoryDonations.OnPressedState.IconRightImage = null;
-            this.btHistoryDonations.Size = new System.Drawing.Size(326, 62);
+            this.btHistoryDonations.Size = new System.Drawing.Size(435, 78);
             this.btHistoryDonations.TabIndex = 1;
             this.btHistoryDonations.TabStop = false;
             this.btHistoryDonations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,6 +263,7 @@
             this.btLogout.AllowAnimations = true;
             this.btLogout.AllowMouseEffects = true;
             this.btLogout.AllowToggling = false;
+            this.btLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btLogout.AnimationSpeed = 200;
             this.btLogout.AutoGenerateColors = false;
             this.btLogout.AutoRoundBorders = false;
@@ -294,7 +306,8 @@
             this.btLogout.IdleIconLeftImage = null;
             this.btLogout.IdleIconRightImage = null;
             this.btLogout.IndicateFocus = false;
-            this.btLogout.Location = new System.Drawing.Point(3, 935);
+            this.btLogout.Location = new System.Drawing.Point(4, 1150);
+            this.btLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btLogout.Name = "btLogout";
             this.btLogout.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btLogout.OnDisabledState.BorderRadius = 1;
@@ -328,7 +341,7 @@
             this.btLogout.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btLogout.OnPressedState.IconLeftImage = null;
             this.btLogout.OnPressedState.IconRightImage = null;
-            this.btLogout.Size = new System.Drawing.Size(326, 51);
+            this.btLogout.Size = new System.Drawing.Size(435, 78);
             this.btLogout.TabIndex = 0;
             this.btLogout.TabStop = false;
             this.btLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,6 +349,7 @@
             this.btLogout.TextMarginLeft = 0;
             this.btLogout.TextPadding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btLogout.UseDefaultRadiusAndThickness = true;
+            this.btLogout.Click += new System.EventHandler(this.btLogOut_Click);
             // 
             // btHome
             // 
@@ -384,7 +398,8 @@
             this.btHome.IdleIconLeftImage = null;
             this.btHome.IdleIconRightImage = null;
             this.btHome.IndicateFocus = false;
-            this.btHome.Location = new System.Drawing.Point(3, 120);
+            this.btHome.Location = new System.Drawing.Point(1, 238);
+            this.btHome.Margin = new System.Windows.Forms.Padding(4);
             this.btHome.Name = "btHome";
             this.btHome.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHome.OnDisabledState.BorderRadius = 1;
@@ -418,7 +433,7 @@
             this.btHome.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btHome.OnPressedState.IconLeftImage = null;
             this.btHome.OnPressedState.IconRightImage = null;
-            this.btHome.Size = new System.Drawing.Size(326, 62);
+            this.btHome.Size = new System.Drawing.Size(435, 78);
             this.btHome.TabIndex = 0;
             this.btHome.TabStop = false;
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -475,7 +490,8 @@
             this.btBenefit.IdleIconLeftImage = null;
             this.btBenefit.IdleIconRightImage = null;
             this.btBenefit.IndicateFocus = false;
-            this.btBenefit.Location = new System.Drawing.Point(3, 463);
+            this.btBenefit.Location = new System.Drawing.Point(1, 773);
+            this.btBenefit.Margin = new System.Windows.Forms.Padding(4);
             this.btBenefit.Name = "btBenefit";
             this.btBenefit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btBenefit.OnDisabledState.BorderRadius = 1;
@@ -509,8 +525,8 @@
             this.btBenefit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btBenefit.OnPressedState.IconLeftImage = null;
             this.btBenefit.OnPressedState.IconRightImage = null;
-            this.btBenefit.Size = new System.Drawing.Size(326, 65);
-            this.btBenefit.TabIndex = 0;
+            this.btBenefit.Size = new System.Drawing.Size(435, 78);
+            this.btBenefit.TabIndex = 1;
             this.btBenefit.TabStop = false;
             this.btBenefit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBenefit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -566,7 +582,8 @@
             this.btRegisterForDonation.IdleIconLeftImage = null;
             this.btRegisterForDonation.IdleIconRightImage = null;
             this.btRegisterForDonation.IndicateFocus = false;
-            this.btRegisterForDonation.Location = new System.Drawing.Point(2, 392);
+            this.btRegisterForDonation.Location = new System.Drawing.Point(1, 666);
+            this.btRegisterForDonation.Margin = new System.Windows.Forms.Padding(4);
             this.btRegisterForDonation.Name = "btRegisterForDonation";
             this.btRegisterForDonation.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRegisterForDonation.OnDisabledState.BorderRadius = 1;
@@ -600,7 +617,7 @@
             this.btRegisterForDonation.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btRegisterForDonation.OnPressedState.IconLeftImage = null;
             this.btRegisterForDonation.OnPressedState.IconRightImage = null;
-            this.btRegisterForDonation.Size = new System.Drawing.Size(326, 65);
+            this.btRegisterForDonation.Size = new System.Drawing.Size(435, 78);
             this.btRegisterForDonation.TabIndex = 0;
             this.btRegisterForDonation.TabStop = false;
             this.btRegisterForDonation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -657,7 +674,8 @@
             this.btNotification.IdleIconLeftImage = null;
             this.btNotification.IdleIconRightImage = null;
             this.btNotification.IndicateFocus = false;
-            this.btNotification.Location = new System.Drawing.Point(3, 325);
+            this.btNotification.Location = new System.Drawing.Point(1, 559);
+            this.btNotification.Margin = new System.Windows.Forms.Padding(4);
             this.btNotification.Name = "btNotification";
             this.btNotification.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btNotification.OnDisabledState.BorderRadius = 1;
@@ -691,7 +709,7 @@
             this.btNotification.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btNotification.OnPressedState.IconLeftImage = null;
             this.btNotification.OnPressedState.IconRightImage = null;
-            this.btNotification.Size = new System.Drawing.Size(326, 62);
+            this.btNotification.Size = new System.Drawing.Size(435, 78);
             this.btNotification.TabIndex = 0;
             this.btNotification.TabStop = false;
             this.btNotification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -748,7 +766,8 @@
             this.btInfor.IdleIconLeftImage = null;
             this.btInfor.IdleIconRightImage = null;
             this.btInfor.IndicateFocus = false;
-            this.btInfor.Location = new System.Drawing.Point(3, 188);
+            this.btInfor.Location = new System.Drawing.Point(1, 345);
+            this.btInfor.Margin = new System.Windows.Forms.Padding(4);
             this.btInfor.Name = "btInfor";
             this.btInfor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btInfor.OnDisabledState.BorderRadius = 1;
@@ -782,7 +801,7 @@
             this.btInfor.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btInfor.OnPressedState.IconLeftImage = null;
             this.btInfor.OnPressedState.IconRightImage = null;
-            this.btInfor.Size = new System.Drawing.Size(326, 62);
+            this.btInfor.Size = new System.Drawing.Size(435, 78);
             this.btInfor.TabIndex = 0;
             this.btInfor.TabStop = false;
             this.btInfor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -792,19 +811,30 @@
             this.btInfor.UseDefaultRadiusAndThickness = true;
             this.btInfor.Click += new System.EventHandler(this.btInfor_Click);
             // 
+            // pnShow
+            // 
+            this.pnShow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnShow.Location = new System.Drawing.Point(445, 129);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(2120, 1310);
+            this.pnShow.TabIndex = 15;
+            // 
             // FrmDonor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1151);
-            this.Controls.Add(this.pnHome);
+            this.ClientSize = new System.Drawing.Size(2565, 1439);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDonor";
             this.Text = "FrmDonor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDonor_Load);
             this.pnHome.ResumeLayout(false);
             this.pnHome.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.pnBar.ResumeLayout(false);
@@ -814,8 +844,6 @@
 
         #endregion
         private Bunifu.UI.WinForms.BunifuPanel pnHome;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.UI.WinForms.BunifuPanel pnBar;
@@ -826,6 +854,9 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btRegisterForDonation;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btNotification;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btInfor;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
         private System.Windows.Forms.Panel pnShow;
     }
 }

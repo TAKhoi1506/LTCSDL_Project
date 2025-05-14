@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BloodRequirements));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.lbSortBy = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.dgvBloodRequirement = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -50,26 +49,9 @@
             this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cbSort = new System.Windows.Forms.ComboBox();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbSortBy
-            // 
-            this.lbSortBy.AllowParentOverrides = false;
-            this.lbSortBy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbSortBy.AutoEllipsis = false;
-            this.lbSortBy.AutoSize = false;
-            this.lbSortBy.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbSortBy.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbSortBy.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.lbSortBy.Location = new System.Drawing.Point(962, 199);
-            this.lbSortBy.Name = "lbSortBy";
-            this.lbSortBy.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbSortBy.Size = new System.Drawing.Size(93, 31);
-            this.lbSortBy.TabIndex = 69;
-            this.lbSortBy.Text = "Sort by";
-            this.lbSortBy.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbSortBy.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel11
             // 
@@ -79,11 +61,11 @@
             this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel11.Location = new System.Drawing.Point(424, 21);
-            this.bunifuLabel11.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuLabel11.Location = new System.Drawing.Point(676, 33);
+            this.bunifuLabel11.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(515, 50);
+            this.bunifuLabel11.Size = new System.Drawing.Size(823, 80);
             this.bunifuLabel11.TabIndex = 72;
             this.bunifuLabel11.Text = "List Blood Requirements";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -94,7 +76,7 @@
             this.btSearch.AllowAnimations = true;
             this.btSearch.AllowMouseEffects = true;
             this.btSearch.AllowToggling = false;
-            this.btSearch.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btSearch.AnimationSpeed = 200;
             this.btSearch.AutoGenerateColors = false;
             this.btSearch.AutoRoundBorders = false;
@@ -109,11 +91,11 @@
             this.btSearch.ColorContrastOnClick = 45;
             this.btSearch.ColorContrastOnHover = 45;
             this.btSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btSearch.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btSearch.CustomizableEdges = borderEdges1;
             this.btSearch.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btSearch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -137,7 +119,8 @@
             this.btSearch.IdleIconLeftImage = null;
             this.btSearch.IdleIconRightImage = null;
             this.btSearch.IndicateFocus = false;
-            this.btSearch.Location = new System.Drawing.Point(605, 188);
+            this.btSearch.Location = new System.Drawing.Point(908, 294);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btSearch.Name = "btSearch";
             this.btSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btSearch.OnDisabledState.BorderRadius = 20;
@@ -171,7 +154,7 @@
             this.btSearch.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btSearch.OnPressedState.IconLeftImage = null;
             this.btSearch.OnPressedState.IconRightImage = null;
-            this.btSearch.Size = new System.Drawing.Size(124, 40);
+            this.btSearch.Size = new System.Drawing.Size(186, 62);
             this.btSearch.TabIndex = 71;
             this.btSearch.TabStop = false;
             this.btSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,22 +167,22 @@
             // dgvBloodRequirement
             // 
             this.dgvBloodRequirement.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvBloodRequirement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvBloodRequirement.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvBloodRequirement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBloodRequirement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvBloodRequirement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBloodRequirement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBloodRequirement.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBloodRequirement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBloodRequirement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBloodRequirement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBloodRequirement.ColumnHeadersHeight = 40;
             this.dgvBloodRequirement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -227,27 +210,26 @@
             this.dgvBloodRequirement.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvBloodRequirement.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBloodRequirement.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBloodRequirement.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBloodRequirement.Location = new System.Drawing.Point(70, 286);
-            this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBloodRequirement.Location = new System.Drawing.Point(104, 447);
+            this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(6);
             this.dgvBloodRequirement.Name = "dgvBloodRequirement";
             this.dgvBloodRequirement.RowHeadersVisible = false;
             this.dgvBloodRequirement.RowHeadersWidth = 82;
             this.dgvBloodRequirement.RowTemplate.Height = 40;
             this.dgvBloodRequirement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBloodRequirement.Size = new System.Drawing.Size(1311, 452);
+            this.dgvBloodRequirement.Size = new System.Drawing.Size(1966, 706);
             this.dgvBloodRequirement.TabIndex = 70;
             this.dgvBloodRequirement.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvBloodRequirement.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBloodRequirement_CellValueChanged);
@@ -311,7 +293,7 @@
             // 
             // cbSort
             // 
-            this.cbSort.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cbSort.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbSort.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cbSort.Font = new System.Drawing.Font("Arial", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSort.ForeColor = System.Drawing.SystemColors.MenuText;
@@ -323,9 +305,10 @@
             "Blood type",
             "Amount",
             "Status"});
-            this.cbSort.Location = new System.Drawing.Point(1075, 199);
+            this.cbSort.Location = new System.Drawing.Point(1612, 311);
+            this.cbSort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSort.Name = "cbSort";
-            this.cbSort.Size = new System.Drawing.Size(191, 33);
+            this.cbSort.Size = new System.Drawing.Size(284, 48);
             this.cbSort.TabIndex = 68;
             this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
             // 
@@ -333,7 +316,7 @@
             // 
             this.txtSearch.AcceptsReturn = false;
             this.txtSearch.AcceptsTab = false;
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.AnimationSpeed = 200;
             this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -360,33 +343,34 @@
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(131, 188);
+            this.txtSearch.Location = new System.Drawing.Point(196, 294);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.MaxLength = 32767;
-            this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
-            stateProperties5.BorderColor = System.Drawing.Color.White;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.White;
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnIdleState = stateProperties8;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
+            stateProperties1.BorderColor = System.Drawing.Color.White;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.White;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnIdleState = stateProperties4;
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSearch.PlaceholderText = "Search by unit ID";
@@ -396,7 +380,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(451, 40);
+            this.txtSearch.Size = new System.Drawing.Size(676, 62);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 67;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -408,19 +392,37 @@
             this.txtSearch.WordWrap = true;
             this.txtSearch.TextChange += new System.EventHandler(this.txtSearch_TextChange);
             // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(1433, 316);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(121, 43);
+            this.bunifuLabel1.TabIndex = 73;
+            this.bunifuLabel1.Text = "Sort by";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // UC_BloodRequirements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lbSortBy);
+            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuLabel11);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.dgvBloodRequirement);
             this.Controls.Add(this.cbSort);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_BloodRequirements";
-            this.Size = new System.Drawing.Size(1450, 759);
-            this.Load += new System.EventHandler(this.UC_BloodRequirements_Load);
+            this.Size = new System.Drawing.Size(2175, 1186);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -428,8 +430,6 @@
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel lbSortBy;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btSearch;
         protected Bunifu.UI.WinForms.BunifuDataGridView dgvBloodRequirement;
@@ -442,5 +442,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Status;
         private System.Windows.Forms.ComboBox cbSort;
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

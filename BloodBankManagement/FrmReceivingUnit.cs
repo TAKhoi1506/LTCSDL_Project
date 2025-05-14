@@ -11,7 +11,7 @@ using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
-    public partial class FrmReceivingUnit: Form
+    public partial class FrmReceivingUnit : Form
     {
         private UserControl currentControl;
 
@@ -27,19 +27,6 @@ namespace BloodBankManagement
 
         private void ShowUserControl(UserControl newControl)
         {
-            // Cách 1: hide, bring to front user control 
-            //if (currentControl != null)
-            //{
-            //    currentControl.Hide(); // Ẩn UserControl hiện tại
-            //}
-
-            //currentControl = newControl;
-
-            //currentControl.BringToFront(); // Đưa UserControl lên trên
-            //currentControl.Show(); // Hiển thị UserControl mới
-
-
-            // Cách 2: remove, dispose user control => tối ưu bộ nhớ, hiệu năng 
             if (currentControl != null)
             {
                 pnlMain.Controls.Remove(currentControl);

@@ -175,6 +175,19 @@ namespace DAL
                 donor.LastDonationDate = donorDTO.LastDonationDate;
                 donor.Address = donorDTO.Address;
 
+                var userAccount = _myContext.UserAccounts.FirstOrDefault(u => u.ObjectID == donorDTO.DonorID.ToString() && u.Role == "Donor");
+
+                var exists = _myContext.UserAccounts.Any(u => u.Username == donorDTO.Username && u.AccountID != userAccount.AccountID);
+                if (exists)
+                    throw new Exception("Username already exists.");
+
+
+                if (userAccount != null)
+                {
+                    userAccount.Username = donorDTO.Username;
+                    userAccount.Password = donorDTO.Password;
+                }
+
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)

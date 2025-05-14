@@ -19,15 +19,16 @@ namespace BloodBankManagement
         public Login()
         {
             InitializeComponent();
-            //this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
+            this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            btnHashPasswords.Visible = false;
             //băm plain text trong db
-            btnHashPasswords.Visible = true; // ẩn nút băm mật khẩu
-            userBus.MigratePlainPasswordsToHashed();
+            //btnHashPasswords.Visible = true; // ẩn nút băm mật khẩu
+            //userBus.MigratePlainPasswordsToHashed();
         }
 
         private void btLogin_Click(object sender, EventArgs e)
