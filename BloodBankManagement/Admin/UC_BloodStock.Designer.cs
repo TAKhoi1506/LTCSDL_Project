@@ -115,6 +115,7 @@
             this.dgvStock.Location = new System.Drawing.Point(117, 402);
             this.dgvStock.Margin = new System.Windows.Forms.Padding(6);
             this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
             this.dgvStock.RowHeadersVisible = false;
             this.dgvStock.RowHeadersWidth = 62;
             this.dgvStock.RowTemplate.Height = 40;
@@ -122,6 +123,7 @@
             this.dgvStock.Size = new System.Drawing.Size(546, 611);
             this.dgvStock.TabIndex = 8;
             this.dgvStock.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvStock.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellValueChanged);
             // 
             // bunifuLabel1
             // 
@@ -194,6 +196,7 @@
             this.dgvBloodDetails.Location = new System.Drawing.Point(732, 402);
             this.dgvBloodDetails.Margin = new System.Windows.Forms.Padding(6);
             this.dgvBloodDetails.Name = "dgvBloodDetails";
+            this.dgvBloodDetails.ReadOnly = true;
             this.dgvBloodDetails.RowHeadersVisible = false;
             this.dgvBloodDetails.RowHeadersWidth = 62;
             this.dgvBloodDetails.RowTemplate.Height = 40;

@@ -91,5 +91,10 @@ namespace BloodBankManagement
             Login loginForm = new Login();
             loginForm.Show();
         }
+
+        private void FrmDonor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -31,5 +31,9 @@ namespace BUS
         {
             dal.UpdateStock(stock);
         }
+        public void DeleteStock(string bloodType)
+        {
+            dal.DeleteStock(bloodType);
+        }
     }
 }

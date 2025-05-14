@@ -62,7 +62,6 @@ namespace BloodBankManagement.Donor
         //Tải danh sách thông báo từ database
         public void LoadNotifications()
         {
-            notificationsList = notificationsBUS.GetNotificationsList();
             //Cập nhật danh sách
             UpdateNotificationListView();
         }
@@ -72,8 +71,9 @@ namespace BloodBankManagement.Donor
         private void UpdateNotificationListView()
         {
             listViewMessage.Items.Clear();
+            var notifications = notificationsBUS.GetNotificationsList(Static.UserSession.ObjectID);
 
-            foreach(var notification in notificationsList) 
+            foreach (var notification in notifications) 
             {
                 ListViewItem item = new ListViewItem(notification.Title);
                 item.SubItems.Add(notification.CreatedAt.ToString("dd/MM/yyyy HH:mm"));
@@ -101,15 +101,15 @@ namespace BloodBankManagement.Donor
             if(listViewMessage.SelectedItems.Count > 0) 
             {
                 ListViewItem selectedItem = listViewMessage.SelectedItems[0];
-                int notificationId = (int)selectedItem.Tag;
-
+                
+                string objectID = selectedItem.Tag.ToString();
 
                 //Lấy nội dung đầy đủ của thông báo
-                //DisplayNotificationContent(notificationId);
+                DisplayNotificationContent();
 
 
                 //Đánh dấu thông báo đã đọc
-                notificationsBUS.MaskAsRead(notificationId);
+                notificationsBUS.MaskAsRead(objectID);
 
 
                 //Cập nhật trạng thái hiển thị (bỏ in đậm cho thông báo)
@@ -117,7 +117,7 @@ namespace BloodBankManagement.Donor
 
 
                 //Cập nhật trạng thái trong danh sách cục bộ
-                var notification = notificationsList.Find(n => n.NotifiID == notificationId);
+                var notification = notificationsList.Find(n => n.ObjectID == objectID);
                 if (notification != null)
                 {
                     notification.IsRead = true;
@@ -129,35 +129,42 @@ namespace BloodBankManagement.Donor
 
 
         //Hiển thị nội dung thông báo
-        //private void DisplayNotificationContent(string no) 
-        //{
-        //    //Lấy thông tin đầy đủ của thông báo từ database
+        private void DisplayNotificationContent()
+        {
+            //Lấy thông tin đầy đủ của thông báo từ database
 
-        //    Notifications notifications = notificationsBUS.GetMessageById(notificationId);
+            NotificationsDTO notifications = notificationsBUS.GetMessageById(Static.UserSession.ObjectID);
 
-        //    if (notifications != null) 
-        //    {
-        //        MessageContent.Clear();
-
-
-        //        //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
-        //        MessageContent.AppendText(notifications.Title + "\n");
+            if (notifications != null)
+            {
+                MessageContent.Clear();
 
 
-        //        //Thêm ngày tạo thông báo
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+                //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
+                MessageContent.AppendText(notifications.Title + "\n");
 
 
-        //        //Thêm nội dung thông báo
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
-        //        MessageContent.AppendText(notifications.Message);
+                //Thêm ngày tạo thông báo
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+
+            //    //Thêm ngày tạo thông báo
+            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+
+                //Thêm nội dung thông báo
+                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
+                MessageContent.AppendText(notifications.Message);
+
+            //    //Thêm nội dung thông báo
+            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
+            //    MessageContent.AppendText(notifications.Message);
 
 
+            }
 
-        //    }
-            
-        //}
+        }
+
+        
 
         public void RefreshNotifications()
         {

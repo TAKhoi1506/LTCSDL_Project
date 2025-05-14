@@ -16,9 +16,9 @@ namespace BUS
         private readonly BloodStockDAL _bloodStockDAL;
 
         //Hàm lấy danh sách thông báo hiển thị trên ListView
-        public List<NotificationsDTO> GetNotificationsList() 
+        public List<NotificationsDTO> GetNotificationsList(string objectID) 
         {
-            return notifiDAL.GetTileList();
+            return notifiDAL.GetTileList(objectID);
         }
         //Kiểm tra số lượng máu tồn kho và gửi thông báo
         //public void CheckAndNotifyLowStock(float threshold = 5.0f)
@@ -46,26 +46,27 @@ namespace BUS
 
 
         //Hàm lấy nội dung thông báo dựa trên id
-        public List<NotificationsDTO> GetMessageById(string id)
+        public NotificationsDTO GetMessageById(string objectID)
         {
-           return notifiDAL.GetMessageByID(id);
+            return notifiDAL.GetMessageByID(objectID);
         }
 
 
         //Hàm đánh dấu tin nhắn là đã đọc
-        public bool MaskAsRead(int id)
+        public bool MaskAsRead(string objectID)
         {
-            return notifiDAL.MaskAsRead(id);
+            return notifiDAL.MaskAsRead(objectID);
         }
+
         //Đếm số thông báo chưa đọc 
-        public int GetUnreadCount()
-        {
-            return notifiDAL.GetTileList().Count(n => !n.IsRead);
-        }
-        public int GetUnreadCount(string objectID)
-        {
-            var notis = notifiDAL.GetMessageByID(objectID);
-            return notis.Count(n => !n.IsRead);
-        }
+        //public int GetUnreadCount()
+        //{
+        //    return notifiDAL.GetTileList().Count(n => !n.IsRead);
+        //}
+
+        //public int GetUnreadCount(int notifiID)
+        //{
+        //    return notifiDAL.GetUnreadCount(notifiID);
+        //}
     }
 }

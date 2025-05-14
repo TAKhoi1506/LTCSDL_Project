@@ -8,7 +8,7 @@ namespace DTO
 {
     public class BloodStock
     {
-        
+        public int BloodID { get; set; }
         public string BloodType { get; set; }
         public double Amount { get; set; }
     }

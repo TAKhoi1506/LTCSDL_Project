@@ -16,6 +16,7 @@ namespace BloodBankManagement
 {
     public partial class FrmAdmin : Form
     {
+        private System.Windows.Forms.Timer refreshTimer;
         private UserControl currentControl;
 
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
@@ -40,12 +41,15 @@ namespace BloodBankManagement
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             ShowUserControl(new UC_Home());
+            //var notis = notificationsBUS.GetUnreadCount();
+            //StartTimer();
+            LoadUnreadCount();
         }
         private void LoadUnreadCount()
         {
-            int unreadCount = notificationsBUS.GetUnreadCount(Static.UserSession.ObjectID);
-            lblUnreadCount.Text = unreadCount.ToString();
-            lblUnreadCount.Visible = unreadCount > 0;
+            //int unreadCount = notificationsBUS.GetUnreadCount(Static.UserSession.ObjectID);
+            //lblUnreadCount.Text = unreadCount.ToString();
+            //lblUnreadCount.Visible = unreadCount > 0;
         }
 
         private void btBloodStock_Click(object sender, EventArgs e)
@@ -86,64 +90,64 @@ namespace BloodBankManagement
 
         private void LoadNotificationPanel()
         {
-            pnNotification.Controls.Clear();
+            //pnNotification.Controls.Clear();
 
-            var notifications = notificationsBUS
-                .GetMessageById(Static.UserSession.ObjectID)
-                .OrderByDescending(n => n.CreatedAt)
-                .ToList();
+            //var notifications = notificationsBUS
+            //    .GetMessageById(Static.UserSession.ObjectID)
+            //    .OrderByDescending(n => n.CreatedAt)
+            //    .ToList();
 
-            int y = 10;
-            foreach (var noti in notifications)
-            {
-                Panel itemPanel = new Panel
-                {
-                    Size = new Size(pnNotification.Width - 20, 50),
-                    Location = new Point(10, y),
-                    BackColor = noti.IsRead ? Color.LightGray : Color.White,
-                    BorderStyle = BorderStyle.FixedSingle,
-                    Cursor = Cursors.Hand
-                };
+            //int y = 10;
+            //foreach (var noti in notifications)
+            //{
+            //    Panel itemPanel = new Panel
+            //    {
+            //        Size = new Size(pnNotification.Width - 20, 50),
+            //        Location = new Point(10, y),
+            //        BackColor = noti.IsRead ? Color.LightGray : Color.White,
+            //        BorderStyle = BorderStyle.FixedSingle,
+            //        Cursor = Cursors.Hand
+            //    };
 
-                Label lblTitle = new Label
-                {
-                    Text = noti.Title,
-                    Font = new Font("Arial", 10, FontStyle.Bold),
-                    AutoSize = false,
-                    Size = new Size(itemPanel.Width - 10, 20),
-                    Location = new Point(5, 5)
-                };
+            //    Label lblTitle = new Label
+            //    {
+            //        Text = noti.Title,
+            //        Font = new Font("Arial", 10, FontStyle.Bold),
+            //        AutoSize = false,
+            //        Size = new Size(itemPanel.Width - 10, 20),
+            //        Location = new Point(5, 5)
+            //    };
 
-                Label lblDate = new Label
-                {
-                    Text = noti.CreatedAt.ToString("dd/MM/yyyy HH:mm"),
-                    Font = new Font("Arial", 8),
-                    AutoSize = false,
-                    Size = new Size(itemPanel.Width - 10, 15),
-                    Location = new Point(5, 25)
-                };
+            //    Label lblDate = new Label
+            //    {
+            //        Text = noti.CreatedAt.ToString("dd/MM/yyyy HH:mm"),
+            //        Font = new Font("Arial", 8),
+            //        AutoSize = false,
+            //        Size = new Size(itemPanel.Width - 10, 15),
+            //        Location = new Point(5, 25)
+            //    };
 
                 // Gán sự kiện cho cả panel và labels
-                void Notification_Click(object sender, EventArgs e)
-                {
-                    MessageBox.Show(noti.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (!noti.IsRead)
-                    {
-                        notificationsBUS.MaskAsRead(noti.NotifiID);
-                        LoadUnreadCount();
-                        LoadNotificationPanel();
-                    }
-                }
+                //void Notification_Click(object sender, EventArgs e)
+                //{
+                //    MessageBox.Show(noti.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    if (!noti.IsRead)
+                //    {
+                //        notificationsBUS.MaskAsRead(noti.NotifiID);
+                //        LoadUnreadCount();
+                //        LoadNotificationPanel();
+                //    }
+                //}
 
-                itemPanel.Click += Notification_Click;
-                lblTitle.Click += Notification_Click;
-                lblDate.Click += Notification_Click;
+                //itemPanel.Click += Notification_Click;
+                //lblTitle.Click += Notification_Click;
+                //lblDate.Click += Notification_Click;
 
-                itemPanel.Controls.Add(lblTitle);
-                itemPanel.Controls.Add(lblDate);
-                pnNotification.Controls.Add(itemPanel);
-                y += 60;
-            }
+                //itemPanel.Controls.Add(lblTitle);
+                //itemPanel.Controls.Add(lblDate);
+                //pnNotification.Controls.Add(itemPanel);
+                //y += 60;
+            //}
         }
 
         private void btNotification_Click_1(object sender, EventArgs e)
