@@ -367,30 +367,58 @@ namespace DAL
         //    }
         //}
 
+
+
+
         //Thống kê so sánh số lượng máu yêu cầu và lượng máu đã cấp phát
         public List<ReceivingUnitBloodSupplyComparisionDTO> BloodSupplyComparisionByRU()
         {
             using (var context = new MyContext())
             {
-               
-
-                return context.BloodRequirements.Join(context.BloodRequirementDetails,
-                                                      br => br.ID,
-                                                      brd => brd.RequirementID,
-                                                      (br, brd) => new { br, brd })
-                                                 .GroupBy(x => new
-                                                 {
-                                                     x.br.RU_ID
-                                                 })
-                                                 .Select(g => new ReceivingUnitBloodSupplyComparisionDTO
-                                                 {
-                                                     RU_ID= g.Key.RU_ID,
-                                                     RequestAmount = g.Sum(x => x.brd.Amount),
-                                                     SupplyAmount = g.Where(x=> x.br.Status == "Completed" || x.br.Status == "Approved").Sum(x=>x.brd.Amount)
-                                                 }).ToList();
-               
+                
+                    return context.BloodRequirements.Join(context.BloodRequirementDetails,
+                                                          br => br.ID,
+                                                          brd => brd.RequirementID,
+                                                          (br, brd) => new { br, brd })
+                                                     .GroupBy(x => new
+                                                     {
+                                                         x.br.RU_ID
+                                                     })
+                                                     .Select(g => new ReceivingUnitBloodSupplyComparisionDTO
+                                                     {
+                                                         RU_ID = g.Key.RU_ID,
+                                                         RequestAmount = g.Sum(x => (double?)x.brd.Amount ?? 0),
+                                                         SupplyAmount = g.Where(x => x.br.Status == "Completed" || x.br.Status == "Approved").Sum(x => (double?)x.brd.Amount ?? 0)
+                                                     }).ToList();
+                
+              
             }
         }
+
+
+
+
+        public List<StatusStatisticsDTO> RequestStatusStatistics()
+        {
+            using (var context = new MyContext())
+            {
+                return context.BloodRequirements.Join(context.BloodRequirementDetails,
+                                                          br => br.ID,
+                                                          brd => brd.RequirementID,
+                                                          (br, brd) => new { br, brd })
+                                                     .GroupBy(x => new
+                                                     {
+                                                         x.br.Status
+                                                     })
+                                                     .Select(g => new StatusStatisticsDTO
+                                                     {
+                                                         Status = g.Key.Status,
+                                                         Count = g.Count()
+                                                     }).ToList();
+            }    
+        }
+
+
 
 
 

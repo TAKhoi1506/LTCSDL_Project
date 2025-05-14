@@ -61,6 +61,7 @@
     <Compile Include="ReceivedBloodDTO.cs" />
     <Compile Include="ReceivingUnitBloodReceivedDTO.cs" />
     <Compile Include="ReceivingUnitDTO.cs" />
+    <Compile Include="StatusStatisticsDTO.cs" />
     <Compile Include="UserAccountDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

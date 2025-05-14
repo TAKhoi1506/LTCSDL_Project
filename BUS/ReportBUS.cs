@@ -99,5 +99,12 @@ namespace BUS
         {
             return reportDAL.BloodSupplyComparisionByRU();
         }
+
+
+
+        public List<StatusStatisticsDTO> GetStatusStatistics()
+        {
+            return reportDAL.RequestStatusStatistics();
+        }
     }
 }

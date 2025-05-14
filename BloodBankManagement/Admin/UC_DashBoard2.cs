@@ -27,6 +27,7 @@ namespace BloodBankManagement.Admin
 
         private ReportBUS reportBUS = new ReportBUS();
         private DonorBUS donorBUS = new DonorBUS();
+        private ReceivingUnitBUS receivingUnitBUS = new ReceivingUnitBUS();
 
 
         //================ THÔNG TIN HIỂN THỊ TRÊN DATAGRIDVIEW =================
@@ -54,6 +55,17 @@ namespace BloodBankManagement.Admin
        
         }
 
+
+        private void LoadAllReceivingUnit()
+        {
+            var list = receivingUnitBUS.GetAll();
+            dgvReport.DataSource = list;
+            dgvReport.Columns["Username"].Visible = false;
+            dgvReport.Columns["Password"].Visible = false;
+            dgvReport.Visible = true;
+
+            dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
 
         //======================================================================
 
@@ -137,13 +149,13 @@ namespace BloodBankManagement.Admin
             chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu";
 
             //Biểu đồ máu trong kho
-            Series stockSeries = new Series("Còn trong kho")
+            Series stockSeries = new Series("Còn\n" +"trong kho")
             {
                 ChartType = SeriesChartType.Column
             };
 
             //Biểu đồ máu đã phân phối
-            Series distributedSeries = new Series("Đã phân phối")
+            Series distributedSeries = new Series("Đã\n"+"phân phối")
             {
                 ChartType = SeriesChartType.Column
             };
@@ -230,6 +242,8 @@ namespace BloodBankManagement.Admin
         }
         
 
+
+
         private void LoadDonorGenderGroupStatistic() 
         {
             lbTitle1.Text = "Thống kê theo giới tính";
@@ -262,7 +276,7 @@ namespace BloodBankManagement.Admin
             chartReport2.ChartAreas[0].AxisY.Title = "Số lượng người hiến máu";
 
 
-            Series Series = new Series("Số lần hiến máu")
+            Series Series = new Series("Số lần\n"+"hiến máu")
             {
                
 
@@ -290,7 +304,7 @@ namespace BloodBankManagement.Admin
             chartReport1.ChartAreas[0].AxisX.Title = "Đơn vị\n" + "cung cấp";
             chartReport1.ChartAreas[0].AxisY.Title = "Số lượng";
 
-            Series series = new Series("Lượng máu nhận")
+            Series series = new Series("Lượng máu\n"+ "nhận")
             {
                 ChartType = SeriesChartType.Column,
             };
@@ -311,23 +325,25 @@ namespace BloodBankManagement.Admin
 
         private void LoadBloodSupplyComparisionByRUStatistics()
         {
-           
+            try
+            {
+
                 lbTitle2.Text = "Thống kê so sánh lượng máu yêu cầu\n" + "và lượng mấu đã cung cấp";
                 var list = reportBUS.GetReceivingUnitBloodSupplyComparisionStatistic();
                 chartReport2.Series.Clear();
                 chartReport2.ChartAreas[0].AxisX.Title = "RU_ID";
                 chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu(ml)";
 
-                Series series1 = new Series("RequestAmount")
+                Series series1 = new Series("Lượng máu \n" + "yêu cầu")
                 {
-                    ChartType = SeriesChartType.StackedColumn
+                    ChartType = SeriesChartType.Column
 
                 };
 
 
-                Series series2 = new Series("SupplyAmount")
+                Series series2 = new Series("Lượng máu\n" + "đã cung cấp")
                 {
-                    ChartType = SeriesChartType.StackedColumn
+                    ChartType = SeriesChartType.Column
                 };
 
 
@@ -341,7 +357,54 @@ namespace BloodBankManagement.Admin
                 chartReport2.Series.Add(series1);
                 chartReport2.Series.Add(series2);
                 chartReport2.Visible = true;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
           
+        }
+
+
+
+        private void LoadRequestStatusStatistics()
+        {
+            try
+            {
+
+                lbTitle3.Text = "Thống kê yêu cầu từ\n"+ "đơn vị cung cấp";
+                var list = reportBUS.GetStatusStatistics();
+                chartReport3.Series.Clear();
+                chartReport3.ChartAreas[0].AxisX.Title = "Trạng thái";
+                chartReport3.ChartAreas[0].AxisY.Title = "Số lượng";
+
+                Series series = new Series("Trạng thái cung cấp")
+                {
+                    ChartType = SeriesChartType.Pie
+
+                };
+               
+                int total = list.Sum(x => x.Count);
+
+                foreach (var item in list)
+                {
+                    double percent = (double)item.Count/total;
+                    DataPoint point = new DataPoint();
+                    point.AxisLabel = item.Status;
+                    point.YValues = new double[] { item.Count };
+                    point.Label = string.Format("{0:P1}", percent);
+                    point.LegendText = item.Status;
+                    series.Points.Add(point);
+                  
+                }
+
+                chartReport3.Series.Add(series);
+                chartReport3.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //======================================================================
@@ -401,6 +464,9 @@ namespace BloodBankManagement.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
 
 
         // Thiết lập nút ExportExcel
@@ -537,8 +603,10 @@ namespace BloodBankManagement.Admin
             }
             else
             {
+                LoadAllReceivingUnit();
                 LoadBloodReceivedByRUStatistic();
                 LoadBloodSupplyComparisionByRUStatistics();
+                LoadRequestStatusStatistics();
             }
 
         }
