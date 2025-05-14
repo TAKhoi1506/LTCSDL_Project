@@ -74,5 +74,18 @@ namespace DAL
                 }
             }
         }
+        public void DeleteStock(string bloodType)
+        {
+            using (var context = new MyContext())
+            {
+                var stock = context.BloodStocks.FirstOrDefault(s => s.BloodType == bloodType);
+                if (stock != null)
+                {
+                    context.BloodStocks.Remove(stock);
+                    context.SaveChanges();
+                }
+            }
+        }
+        
     }
 }

@@ -19,7 +19,7 @@ namespace BloodBankManagement
         ToolTip toolTip = new ToolTip();
 
         public UC_ReceivingUnits()
-        {
+        { 
             InitializeComponent();
         }
         private void UC_ReceivingUnits_Load(object sender, EventArgs e)

@@ -165,7 +165,12 @@ namespace BloodBankManagement.Admin
                         bool success = bus.UpdateStatus(requirementId, newStatus);
                         if (!success)
                             MessageBox.Show("Cập nhật trạng thái thất bại.");
+                        else
+                            MessageBox.Show("Cập nhật trạng thái thành công.");
                     }
+
+                    
+
                 }
                 catch (Exception ex)
                 {

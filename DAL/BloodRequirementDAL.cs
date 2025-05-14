@@ -94,6 +94,7 @@ namespace DAL
                 entity.SupplyDate = brDTO.SupplyDate;
                 entity.Status = brDTO.Status;
 
+
                 db.Entry(entity).State = EntityState.Modified;
                 db.SaveChanges();
             }

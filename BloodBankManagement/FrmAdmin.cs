@@ -15,34 +15,25 @@ namespace BloodBankManagement
 {
     public partial class FrmAdmin : Form
     {
+        private System.Windows.Forms.Timer refreshTimer;
         private UserControl currentControl;
 
         public FrmAdmin()
         {
             InitializeComponent();
         }
-        //private UC_BloodStock ucBloodStock;
-        //private UC_Home ucHome;
-        //private UC_Events ucEvents;
-        //private UC_Donations ucDonations;
-        //private UC_ReceivingUnits ucReceivingUnits;
-        //private UC_DashBoard2 ucDashboard;
-        //private UC_Donors ucDonors;
+        
         private NotificationsBUS notificationsBUS = new NotificationsBUS();
-        //private UC_BloodRequirements ucbloodRe;
+        
 
 
-        //private void HomeLoad()
-        //{
-        //    if (ucHome == null)
-        //    {
-        //        ucHome = new UC_Home();
-        //        ucHome.Dock = DockStyle.Fill;
-        //        panelShow.Controls.Add(ucHome);
-        //    }
-
-        //    ucHome.BringToFront();
-        //}
+        private void StartTimer()
+        {
+            refreshTimer = new Timer();
+            refreshTimer.Interval = 3000; // 5 giây
+            refreshTimer.Tick += (s, e) => LoadUnreadCount();
+            refreshTimer.Start();
+        }
 
         private void ShowUserControl(UserControl newControl)
         {
@@ -59,6 +50,9 @@ namespace BloodBankManagement
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             ShowUserControl(new UC_Home());
+            var notis = notificationsBUS.GetUnreadCount();
+            StartTimer();
+            LoadUnreadCount();
         }
         private void LoadUnreadCount()
         {

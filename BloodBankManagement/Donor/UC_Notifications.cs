@@ -105,7 +105,7 @@ namespace BloodBankManagement.Donor
 
 
                 //Lấy nội dung đầy đủ của thông báo
-                //DisplayNotificationContent(notificationId);
+                DisplayNotificationContent(notificationId);
 
 
                 //Đánh dấu thông báo đã đọc
@@ -129,35 +129,35 @@ namespace BloodBankManagement.Donor
 
 
         //Hiển thị nội dung thông báo
-        //private void DisplayNotificationContent(string no) 
-        //{
-        //    //Lấy thông tin đầy đủ của thông báo từ database
+        private void DisplayNotificationContent(int notifiID)
+        {
+            ////Lấy thông tin đầy đủ của thông báo từ database
 
-        //    Notifications notifications = notificationsBUS.GetMessageById(notificationId);
+            //NotificationsDTO  notifications = notificationsBUS.GetMessageById(notifiID);
 
-        //    if (notifications != null) 
-        //    {
-        //        MessageContent.Clear();
-
-
-        //        //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
-        //        MessageContent.AppendText(notifications.Title + "\n");
+            //if (notifications != null)
+            //{
+            //    MessageContent.Clear();
 
 
-        //        //Thêm ngày tạo thông báo
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+            //    //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
+            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
+            //    MessageContent.AppendText(notifications.Title + "\n");
 
 
-        //        //Thêm nội dung thông báo
-        //        MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
-        //        MessageContent.AppendText(notifications.Message);
+            //    //Thêm ngày tạo thông báo
+            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+
+
+            //    //Thêm nội dung thông báo
+            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
+            //    MessageContent.AppendText(notifications.Message);
 
 
 
-        //    }
-            
-        //}
+            //}
+
+        }
 
         public void RefreshNotifications()
         {

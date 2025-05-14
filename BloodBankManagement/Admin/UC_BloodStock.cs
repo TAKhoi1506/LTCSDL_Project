@@ -55,13 +55,6 @@ namespace BloodBankManagement
             LoadBloodDetails();
         }
 
-        private void UC_BloodStock_Load_1(object sender, EventArgs e)
-        {
-            cbBloodType.SelectedIndex = 1;
-            LoadStockGrid();
-
-        }
-
         private void LoadBloodDetails()
         {
             var list = bloodDetailBUS.GetAllBloodDetails();
@@ -73,6 +66,37 @@ namespace BloodBankManagement
             dgvBloodDetails.Columns["CollectionDate"].HeaderText = "Collected";
             dgvBloodDetails.Columns["ExpiredDate"].HeaderText = "Expired";
             dgvBloodDetails.Columns["DonorID"].HeaderText = "Donor";
+        }
+
+        private void dgvStock_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                try
+
+                {
+                    var row = dgvStock.Rows[e.RowIndex];
+                    var updatedValue = new DTO.BloodStock
+                    {
+                        BloodType = row.Cells["BloodType"].Value.ToString(),
+                        Amount = Convert.ToInt16(row.Cells["Amount"].Value)
+                    };
+                    // Lấy giá trị của ô đã thay đổi
+                    string bloodType = dgvStock.Rows[e.RowIndex].Cells["BloodType"].Value.ToString();
+                    double amount = Convert.ToDouble(dgvStock.Rows[e.RowIndex].Cells["Amount"].Value);
+                    // Cập nhật giá trị vào cơ sở dữ liệu
+                    BloodStock stock = new BloodStock
+                    {
+                        BloodType = bloodType,
+                        Amount = amount
+                    };
+                    bus.UpdateStock(stock);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }
