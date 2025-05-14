@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DashBoard2));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnChart2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnPrint3 = new System.Windows.Forms.Button();
             this.lbTitle3 = new System.Windows.Forms.Label();
             this.chartReport3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnChart1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnPrint2 = new System.Windows.Forms.Button();
+            this.btnPrintChart1 = new System.Windows.Forms.Button();
             this.lbTitle2 = new System.Windows.Forms.Label();
             this.lbTitle1 = new System.Windows.Forms.Label();
             this.chartReport2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -67,9 +70,6 @@
             this.btnPrintPic = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
             this.dgvReport = new System.Windows.Forms.DataGridView();
-            this.btnPrintChart1 = new System.Windows.Forms.Button();
-            this.btnPrint2 = new System.Windows.Forms.Button();
-            this.btnPrint3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnChart2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport3)).BeginInit();
@@ -130,6 +130,16 @@
             this.pnChart2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnChart2.TabIndex = 3;
             // 
+            // btnPrint3
+            // 
+            this.btnPrint3.Location = new System.Drawing.Point(480, 21);
+            this.btnPrint3.Name = "btnPrint3";
+            this.btnPrint3.Size = new System.Drawing.Size(94, 33);
+            this.btnPrint3.TabIndex = 5;
+            this.btnPrint3.Text = "Print\r\n";
+            this.btnPrint3.UseVisualStyleBackColor = true;
+            this.btnPrint3.Click += new System.EventHandler(this.btnPrint3_Click);
+            // 
             // lbTitle3
             // 
             this.lbTitle3.AutoSize = true;
@@ -143,18 +153,18 @@
             // chartReport3
             // 
             this.chartReport3.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea7.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea7.Name = "ChartArea1";
-            this.chartReport3.ChartAreas.Add(chartArea7);
-            legend7.BackColor = System.Drawing.Color.WhiteSmoke;
-            legend7.Name = "Legend1";
-            this.chartReport3.Legends.Add(legend7);
+            chartArea4.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea4.Name = "ChartArea1";
+            this.chartReport3.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.WhiteSmoke;
+            legend4.Name = "Legend1";
+            this.chartReport3.Legends.Add(legend4);
             this.chartReport3.Location = new System.Drawing.Point(16, 45);
             this.chartReport3.Name = "chartReport3";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartReport3.Series.Add(series7);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartReport3.Series.Add(series4);
             this.chartReport3.Size = new System.Drawing.Size(580, 393);
             this.chartReport3.TabIndex = 1;
             this.chartReport3.Text = "chart4";
@@ -187,6 +197,26 @@
             this.pnChart1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnChart1.TabIndex = 2;
             // 
+            // btnPrint2
+            // 
+            this.btnPrint2.Location = new System.Drawing.Point(827, 19);
+            this.btnPrint2.Name = "btnPrint2";
+            this.btnPrint2.Size = new System.Drawing.Size(94, 33);
+            this.btnPrint2.TabIndex = 5;
+            this.btnPrint2.Text = "Print\r\n";
+            this.btnPrint2.UseVisualStyleBackColor = true;
+            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
+            // 
+            // btnPrintChart1
+            // 
+            this.btnPrintChart1.Location = new System.Drawing.Point(295, 16);
+            this.btnPrintChart1.Name = "btnPrintChart1";
+            this.btnPrintChart1.Size = new System.Drawing.Size(94, 33);
+            this.btnPrintChart1.TabIndex = 5;
+            this.btnPrintChart1.Text = "Print\r\n";
+            this.btnPrintChart1.UseVisualStyleBackColor = true;
+            this.btnPrintChart1.Click += new System.EventHandler(this.btnPrintChart1_Click);
+            // 
             // lbTitle2
             // 
             this.lbTitle2.AutoSize = true;
@@ -211,19 +241,19 @@
             // 
             this.chartReport2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.chartReport2.BorderlineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea8.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea8.BackSecondaryColor = System.Drawing.Color.WhiteSmoke;
-            chartArea8.Name = "ChartArea1";
-            this.chartReport2.ChartAreas.Add(chartArea8);
-            legend8.BackColor = System.Drawing.Color.WhiteSmoke;
-            legend8.Name = "Legend1";
-            this.chartReport2.Legends.Add(legend8);
+            chartArea5.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea5.BackSecondaryColor = System.Drawing.Color.WhiteSmoke;
+            chartArea5.Name = "ChartArea1";
+            this.chartReport2.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.WhiteSmoke;
+            legend5.Name = "Legend1";
+            this.chartReport2.Legends.Add(legend5);
             this.chartReport2.Location = new System.Drawing.Point(465, 58);
             this.chartReport2.Name = "chartReport2";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartReport2.Series.Add(series8);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartReport2.Series.Add(series5);
             this.chartReport2.Size = new System.Drawing.Size(456, 403);
             this.chartReport2.TabIndex = 3;
             this.chartReport2.Text = "chart1";
@@ -232,21 +262,21 @@
             // 
             this.chartReport1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.chartReport1.BorderlineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea9.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea9.Name = "ChartArea1";
-            this.chartReport1.ChartAreas.Add(chartArea9);
-            legend9.BackColor = System.Drawing.Color.WhiteSmoke;
-            legend9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.IsTextAutoFit = false;
-            legend9.Name = "Legend1";
-            this.chartReport1.Legends.Add(legend9);
+            chartArea6.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea6.Name = "ChartArea1";
+            this.chartReport1.ChartAreas.Add(chartArea6);
+            legend6.BackColor = System.Drawing.Color.WhiteSmoke;
+            legend6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            this.chartReport1.Legends.Add(legend6);
             this.chartReport1.Location = new System.Drawing.Point(3, 58);
             this.chartReport1.Name = "chartReport1";
-            series9.ChartArea = "ChartArea1";
-            series9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chartReport1.Series.Add(series9);
+            series6.ChartArea = "ChartArea1";
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartReport1.Series.Add(series6);
             this.chartReport1.Size = new System.Drawing.Size(441, 403);
             this.chartReport1.TabIndex = 2;
             this.chartReport1.Text = "chart1";
@@ -435,7 +465,7 @@
             this.lbSumUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbSumUser.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbSumUser.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lbSumUser.Location = new System.Drawing.Point(56, 3);
+            this.lbSumUser.Location = new System.Drawing.Point(63, 15);
             this.lbSumUser.Name = "lbSumUser";
             this.lbSumUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbSumUser.Size = new System.Drawing.Size(69, 55);
@@ -554,36 +584,6 @@
             this.dgvReport.Size = new System.Drawing.Size(1123, 238);
             this.dgvReport.TabIndex = 2;
             // 
-            // btnPrintChart1
-            // 
-            this.btnPrintChart1.Location = new System.Drawing.Point(295, 16);
-            this.btnPrintChart1.Name = "btnPrintChart1";
-            this.btnPrintChart1.Size = new System.Drawing.Size(94, 33);
-            this.btnPrintChart1.TabIndex = 5;
-            this.btnPrintChart1.Text = "Print\r\n";
-            this.btnPrintChart1.UseVisualStyleBackColor = true;
-            this.btnPrintChart1.Click += new System.EventHandler(this.btnPrintChart1_Click);
-            // 
-            // btnPrint2
-            // 
-            this.btnPrint2.Location = new System.Drawing.Point(827, 19);
-            this.btnPrint2.Name = "btnPrint2";
-            this.btnPrint2.Size = new System.Drawing.Size(94, 33);
-            this.btnPrint2.TabIndex = 5;
-            this.btnPrint2.Text = "Print\r\n";
-            this.btnPrint2.UseVisualStyleBackColor = true;
-            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
-            // 
-            // btnPrint3
-            // 
-            this.btnPrint3.Location = new System.Drawing.Point(480, 21);
-            this.btnPrint3.Name = "btnPrint3";
-            this.btnPrint3.Size = new System.Drawing.Size(94, 33);
-            this.btnPrint3.TabIndex = 5;
-            this.btnPrint3.Text = "Print\r\n";
-            this.btnPrint3.UseVisualStyleBackColor = true;
-            this.btnPrint3.Click += new System.EventHandler(this.btnPrint3_Click);
-            // 
             // UC_DashBoard2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -593,6 +593,7 @@
             this.Name = "UC_DashBoard2";
             this.Size = new System.Drawing.Size(1590, 1008);
             this.Load += new System.EventHandler(this.UC_Dashboard2_Load);
+            this.VisibleChanged += new System.EventHandler(this.UC_DashBoard2_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnChart2.ResumeLayout(false);
             this.pnChart2.PerformLayout();

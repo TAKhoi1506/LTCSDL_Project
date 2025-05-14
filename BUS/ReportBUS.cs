@@ -57,47 +57,47 @@ namespace BUS
         }
 
 
-        //public List<BloodOverTimeDTO> bloodOverTimeStatistics() 
-        //{
-        //    return reportDAL.GetBloodOverTimeStatistics();
-        //}
+        public List<BloodOverTimeDTO> BloodOverTimeStatistics()
+        {
+            return reportDAL.GetBloodOverTimeStatistics();
+        }
 
 
-        //public List<DistributedBloodDTO> GetDistributedBloodStatistics()
-        //{
-        //    return reportDAL.GetDistributedBloodStatistics();
-        //}
-
-
-
-        //public List<DonorAgeGroupDTO> GetAgeofDonorStatistic()
-        //{
-        //    return reportDAL.GetAgeofDonorStatistic();
-        //}
-
-
-        //public List<DonorGenderGroupDTO> GetGenderofDonorStatistic() 
-        //{
-        //    return reportDAL.donorGenderGroupStatistic();
-        //}
-
-
-        //public List<DonorDonatedTimeDTO> GetDonorDonatedTimeStatistic()
-        //{
-        //    return reportDAL.donorDonatedTimeStatistic();
-        //}
-
-
-        //public List<ReceivingUnitBloodReceivedDTO> GetBloodReceivedByRUStatistic()
-        //{
-        //    return reportDAL.BloodReceivedByRU();
-        //}
+        public List<DistributedBloodDTO> GetDistributedBloodStatistics()
+        {
+            return reportDAL.GetBloodInventoryStatistics();
+        }
 
 
 
-        //public List<ReceivingUnitBloodSupplyComparisionDTO> GetReceivingUnitBloodSupplyComparisionStatistic()
-        //{
-        //    return reportDAL.BloodSupplyComparisionByRU();
-        //}
+        public List<DonorAgeGroupDTO> GetAgeofDonorStatistic()
+        {
+            return reportDAL.GetAgeofDonorStatistic();
+        }
+
+
+        public List<DonorGenderGroupDTO> GetGenderofDonorStatistic()
+        {
+            return reportDAL.donorGenderGroupStatistic();
+        }
+
+
+        public List<DonorDonatedTimeDTO> GetDonorDonatedTimeStatistic()
+        {
+            return reportDAL.donorDonatedTimeStatistic();
+        }
+
+
+        public List<ReceivingUnitBloodReceivedDTO> GetBloodReceivedByRUStatistic()
+        {
+            return reportDAL.BloodReceivedByRU();
+        }
+
+
+
+        public List<ReceivingUnitBloodSupplyComparisionDTO> GetReceivingUnitBloodSupplyComparisionStatistic()
+        {
+            return reportDAL.BloodSupplyComparisionByRU();
+        }
     }
 }
