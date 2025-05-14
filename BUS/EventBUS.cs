@@ -27,6 +27,27 @@ namespace BUS
             EventDAL dal = new EventDAL();
             dal.UpdateEventStatus(eventID, newStatus);
         }
+        public List<(EventDTO Event, string Status)> SortEvents(string sortBy)
+        {
+            var results = eventDAL.Sort(sortBy);
+            return results.Select(x => (
+                new EventDTO
+                {
+                    EventID = x.EventID,
+                    EventName = x.EventName,
+                    Description = x.Description,
+                    Location = x.Location,
+                    EventDate = x.EventDate,
+                    Status = x.Status,
+                    AmountOfBlood = x.AmountOfBlood
+                },
+                x.Status
+            )).ToList();
+        }
+        public List<EventDTO> SearchEvent(string search)
+        {
+            return eventDAL.SearchEvent(search);
+        }
     }
 
 }

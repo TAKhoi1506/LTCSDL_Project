@@ -18,7 +18,10 @@ namespace BloodBankManagement
         public UC_Events()
         {
             InitializeComponent();
+            LoadEvents();
             bunifuDataGridView1.CellValueChanged += bunifuDataGridView1_CellValueChanged;
+            txtSearch.TextChanged += txtSearch_TextChange;
+            bunifuDataGridView1.CurrentCellDirtyStateChanged += bunifuDataGridView1_CurrentCellDirtyStateChanged;
         }
         private EventBUS eventBUS = new EventBUS();
         private void bunifuDataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -34,86 +37,109 @@ namespace BloodBankManagement
         }
         private void LoadEvents()
         {
-            // Reload data
-            List<EventDTO> events = eventBUS.GetAllEvents();
-            bunifuDataGridView1.DataSource = events;
-
-            // Convert Status column to ComboBox
-            DataGridViewComboBoxColumn statusColumn = new DataGridViewComboBoxColumn();
-            statusColumn.HeaderText = "Status";
-            statusColumn.Name = "Status"; // phải trùng với tên property nếu muốn binding
-            statusColumn.DataPropertyName = "Status"; // tên field trong EventDTO
-            statusColumn.Items.AddRange("Ongoing", "Completed", "Cancelled");
-
-            // Thêm vào đúng vị trí (ví dụ là cột đầu tiên)
-            bunifuDataGridView1.Columns.Insert(0, statusColumn);
-
-            // Ẩn cột cũ nếu bị trùng
-            for (int i = 1; i < bunifuDataGridView1.Columns.Count; i++)
+            try
             {
-                if (bunifuDataGridView1.Columns[i].HeaderText == "Status")
+                bunifuDataGridView1.Rows.Clear();
+                var events = eventBUS.GetAllEvents();
+                foreach (var e in events)
                 {
-                    bunifuDataGridView1.Columns[i].Visible = false;
-                    break;
+                    bunifuDataGridView1.Rows.Add(
+                        e.EventID,
+                        e.EventName,
+                        e.Description,
+                        e.Location,
+                        e.EventDate.ToString("dd/MM/yyyy"),
+                        e.Status
+                    );
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading events: " + ex.Message);
 
+            }
+        }
+        private void LoadEvents(List<(EventDTO Event, string Status)> sortedList)
+        {
+            try
+            {
+                bunifuDataGridView1.Rows.Clear(); // Xóa tất cả dòng cũ trước khi load mới
+                foreach (var e in sortedList)
+                {
+                    bunifuDataGridView1.Rows.Add(
+                        e.Event.EventID,
+                        e.Event.EventName,
+                        e.Event.Description,
+                        e.Event.Location,
+                        e.Event.EventDate.ToString("dd/MM/yyyy"),
+                        e.Status
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading events: " + ex.Message);
+            }
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)
         {
-            string keyword = txtSearch.Text.ToLower();
-
-            // Lấy lại danh sách đầy đủ
-            List<EventDTO> allEvents = eventBUS.GetAllEvents();
-
-            // Lọc theo tên sự kiện, mô tả, hoặc địa điểm
-            var filtered = allEvents.Where(ev =>
-                ev.EventName.ToLower().Contains(keyword) ||
-                ev.Description.ToLower().Contains(keyword) ||
-                ev.Location.ToLower().Contains(keyword) ||
-                ev.Status.ToLower().Contains(keyword)
-            ).ToList();
-
-            // Gán lại dữ liệu
-            bunifuDataGridView1.DataSource = filtered;
-
-            // (Optional) Gán lại ComboBox status nếu cần
-            foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
+            string search = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(search))
             {
-                DataGridViewComboBoxCell comboBoxCell = new DataGridViewComboBoxCell();
-                comboBoxCell.Items.AddRange("Ongoing", "Completed", "Cancelled");
-                comboBoxCell.Value = row.Cells["Status"].Value?.ToString();
-                row.Cells["Status"] = comboBoxCell;
+                LoadEvents(); // Nếu không có gì để tìm kiếm, load lại tất cả sự kiện
             }
+            
         }
 
         private void cbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string sortBy = cbSort.SelectedItem.ToString();
-            List<EventDTO> events = eventBUS.GetAllEvents();
-
-            switch (sortBy)
-            {
-                case "Event name":
-                    events = events.OrderBy(x => x.EventName).ToList();
-                    break;
-                case "Event date":
-                    events = events.OrderBy(x => x.EventDate).ToList();
-                    break;
-                case "Status":
-                    events = events.OrderBy(x => x.Status).ToList();
-                    break;
-                default:
-                    break;
-            }
-
-            bunifuDataGridView1.DataSource = events;
+            string selectedColumn = cbSort.SelectedItem.ToString();
+            var sortedList = eventBUS.SortEvents(selectedColumn);
+            LoadEvents(sortedList);
         }
 
         private void UC_Events_Load(object sender, EventArgs e)
         {
-            LoadEvents();
+            
+        }
+
+        private void bunifuDataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if(bunifuDataGridView1.IsCurrentCellDirty)
+            {
+                bunifuDataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+            bunifuDataGridView1.Rows.Clear();
+            string search = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(search))
+            {
+                MessageBox.Show("Please enter Event Name to search!");
+                return;
+            }
+            var events = eventBUS.SearchEvent(search);
+            if (events != null && events.Count > 0)
+            {
+                foreach (var eve in events)
+                {
+                    bunifuDataGridView1.Rows.Add(
+                        eve.EventID,
+                        eve.EventName,
+                        eve.Description,
+                        eve.Location,
+                        eve.EventDate.ToString("dd/MM/yyyy"),
+                        eve.Status
+                    );
+                }
+            }
+            else
+            {
+                MessageBox.Show("Not found!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

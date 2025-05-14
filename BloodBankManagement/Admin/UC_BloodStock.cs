@@ -18,8 +18,9 @@ namespace BloodBankManagement
         {
             InitializeComponent();
         }
-
         private BloodStockBUS bus = new BloodStockBUS();
+        private BloodDetailBUS bloodDetailBUS = new BloodDetailBUS();
+
 
         private void btAddDonor_Click(object sender, EventArgs e)
         {
@@ -49,7 +50,9 @@ namespace BloodBankManagement
 
         private void UC_BloodStock_Load(object sender, EventArgs e)
         {
-
+            cbBloodType.SelectedIndex = 1;
+            LoadStockGrid();
+            LoadBloodDetails();
         }
 
         private void UC_BloodStock_Load_1(object sender, EventArgs e)
@@ -57,6 +60,19 @@ namespace BloodBankManagement
             cbBloodType.SelectedIndex = 1;
             LoadStockGrid();
 
+        }
+
+        private void LoadBloodDetails()
+        {
+            var list = bloodDetailBUS.GetAllBloodDetails();
+            dgvBloodDetails.DataSource = list;
+
+            dgvBloodDetails.Columns["BloodDetailID"].HeaderText = "ID";
+            dgvBloodDetails.Columns["BloodID"].HeaderText = "Blood ID";
+            dgvBloodDetails.Columns["Status"].HeaderText = "Status";
+            dgvBloodDetails.Columns["CollectionDate"].HeaderText = "Collected";
+            dgvBloodDetails.Columns["ExpiredDate"].HeaderText = "Expired";
+            dgvBloodDetails.Columns["DonorID"].HeaderText = "Donor";
         }
     }
 }

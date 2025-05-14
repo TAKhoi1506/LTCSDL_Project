@@ -11,11 +11,11 @@ namespace DAL
 {
     public class EventDAL
     {
+        private MyContext db = new MyContext();
         public List<EventDTO> GetAllEvents()
         {
-            using (var context = new MyContext())
-            {
-                return context.Events.Select(e => new EventDTO
+            return db.Events
+                .Select(e => new EventDTO
                 {
                     EventID = e.EventID,
                     EventName = e.EventName,
@@ -25,7 +25,7 @@ namespace DAL
                     Status = e.Status,
                     AmountOfBlood = e.AmountOfBlood
                 }).ToList();
-            }
+            
         }
 
 
@@ -59,6 +59,50 @@ namespace DAL
                     return context.SaveChanges() > 0;
                 }
                 return false;
+            }
+        }
+        public List<EventDTO> SearchEvent(string search)
+        {
+            var events = db.Events
+                                 .Where(e => e.EventName == search)
+                                 .Select(e => new EventDTO
+                                 {
+                                     EventID = e.EventID,
+                                     EventName = e.EventName,
+                                     Description = e.Description,
+                                     Location = e.Location,
+                                     EventDate = e.EventDate,
+                                     AmountOfBlood = e.AmountOfBlood,
+                                     Status = e.Status
+                                 })
+                                 .ToList();
+
+            return events;
+        }
+        public List<EventDTO> Sort(string sortBy)
+        {
+            var query = from e in db.Events
+                        select new EventDTO
+                        {
+                            EventID = e.EventID,
+                            EventName = e.EventName,
+                            Description = e.Description,
+                            Location = e.Location,
+                            EventDate = e.EventDate,
+                            Status = e.Status, 
+                            AmountOfBlood = e.AmountOfBlood
+                        };
+
+            switch (sortBy)
+            {
+                case "Event name":
+                    return query.OrderBy(x => x.EventName).ToList();
+                case "Event date":
+                    return query.OrderBy(x => x.EventDate).ToList();
+                case "Status":
+                    return query.OrderBy(x => x.Status).ToList();
+                default:
+                    return query.ToList();
             }
         }
     }

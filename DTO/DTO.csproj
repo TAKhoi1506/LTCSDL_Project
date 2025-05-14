@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodDetailDTOcs.cs" />
     <Compile Include="BloodGroupDTO.cs" />
     <Compile Include="BloodOverTimeDTO.cs" />
     <Compile Include="BloodRequirementDetailDTO.cs" />

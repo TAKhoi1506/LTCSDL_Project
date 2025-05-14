@@ -120,3 +120,17 @@ D:\ZY\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\ZY\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\ZY\LTCSDL_Project\DAL\obj\Debug\DAL.dll
 D:\ZY\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+D:\Newest\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+D:\Newest\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodDetailBUS.cs" />
     <Compile Include="BloodRequirementBUS.cs" />
     <Compile Include="BloodRequirementDetailBUS.cs" />
     <Compile Include="BloodStockBUS.cs" />
