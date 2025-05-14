@@ -9,7 +9,7 @@ namespace DTO
     public class ReceivingUnitBloodSupplyComparisionDTO
     {
         public string RU_ID;
-        public double RequestAmount;
-        public double SupplyAmount;
+        public double? RequestAmount;
+        public double? SupplyAmount;
     }
 }

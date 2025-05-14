@@ -26,6 +26,8 @@ namespace BloodBankManagement.Admin
         }
 
         private ReportBUS reportBUS = new ReportBUS();
+        private DonorBUS donorBUS = new DonorBUS();
+        private ReceivingUnitBUS receivingUnitBUS = new ReceivingUnitBUS();
 
 
         //================ THÔNG TIN HIỂN THỊ TRÊN DATAGRIDVIEW =================
@@ -33,12 +35,37 @@ namespace BloodBankManagement.Admin
         {
             var list = reportBUS.GetDistributedBlood();
             dgvReport.DataSource = list;
+            dgvReport.Columns["StockAmount"].Visible = false;
             dgvReport.Visible = true;
 
             dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+       
         }
 
 
+        private void LoadAllDonorsInformation()
+        {
+            var list = donorBUS.GetAllDonors();
+            dgvReport.DataSource = list;
+            //dgvReport.Columns["Username"].Visible = false;
+            //dgvReport.Columns["Password"].Visible = false;
+            dgvReport.Visible = true;
+
+            dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+       
+        }
+
+
+        private void LoadAllReceivingUnit()
+        {
+            var list = receivingUnitBUS.GetAll();
+            dgvReport.DataSource = list;
+            dgvReport.Columns["Username"].Visible = false;
+            dgvReport.Columns["Password"].Visible = false;
+            dgvReport.Visible = true;
+
+            dgvReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
 
         //======================================================================
 
@@ -82,67 +109,67 @@ namespace BloodBankManagement.Admin
 
         private void LoadBloodRequirementStatistic2()
         {
-            //lbTitle3.Text = "Thống kê số lượng máu nhận được qua từng tháng";
-            //var list = reportBUS.bloodOverTimeStatistics();
-            //chartReport3.Series.Clear();
-            //chartReport3.ChartAreas[0].AxisX.Title = "Thời gian";
-            //chartReport3.ChartAreas[0].AxisY.Title = "Lượng máu";
+            lbTitle3.Text = "Thống kê số lượng máu cung cấp qua từng tháng";
+            var list = reportBUS.BloodOverTimeStatistics();
+            chartReport3.Series.Clear();
+            chartReport3.ChartAreas[0].AxisX.Title = "Thời gian";
+            chartReport3.ChartAreas[0].AxisY.Title = "Lượng máu";
 
-            //var bloodTypes = list.Select(x => x.BloodType).Distinct();
+            var bloodTypes = list.Select(x => x.BloodType).Distinct();
 
-            //foreach (var bloodType in bloodTypes)
-            //{
-            //    Series series = new Series(bloodType)
-            //    {
-            //        ChartType = SeriesChartType.Column
-            //    };
+            foreach (var bloodType in bloodTypes)
+            {
+                Series series = new Series(bloodType)
+                {
+                    ChartType = SeriesChartType.Column
+                };
 
-            //    var data = list.Where(x => x.BloodType == bloodType).OrderBy(x => x.PeriodTime);
+                var data = list.Where(x => x.BloodType == bloodType).OrderBy(x => x.PeriodTime);
 
-            //    foreach (var item in data)
-            //    {
-            //        series.Points.AddXY(item.PeriodTime, item.TotalAmount);
-            //    }
+                foreach (var item in data)
+                {
+                    series.Points.AddXY(item.PeriodTime, item.TotalAmount);
+                }
 
-            //    chartReport3.Series.Add(series);
-            //    chartReport3.Visible = true;
-            //}
+                chartReport3.Series.Add(series);
+                chartReport3.Visible = true;
+            }
         }
 
 
         private void LoadDistributedBloodStatistic()
         {
-            //lbTitle2.Text = "Phân phối lượng máu trong kho";
-            //var list = reportBUS.GetDistributedBloodStatistics();
-            //chartReport2.Series.Clear();
-            //chartReport2.ChartAreas.Clear();
-            //chartReport2.ChartAreas.Add(new ChartArea());
+            lbTitle2.Text = "Phân phối lượng máu trong kho";
+            var list = reportBUS.GetDistributedBloodStatistics();
+            chartReport2.Series.Clear();
+            chartReport2.ChartAreas.Clear();
+            chartReport2.ChartAreas.Add(new ChartArea());
 
-            //chartReport2.ChartAreas[0].AxisX.Title = "Loại máu";
-            //chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu";
+            chartReport2.ChartAreas[0].AxisX.Title = "Loại máu";
+            chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu";
 
-            ////Biểu đồ máu trong kho
-            //Series stockSeries = new Series("Còn trong kho")
-            //{
-            //    ChartType = SeriesChartType.Column
-            //};
+            //Biểu đồ máu trong kho
+            Series stockSeries = new Series("Còn\n" +"trong kho")
+            {
+                ChartType = SeriesChartType.Column
+            };
 
-            ////Biểu đồ máu đã phân phối
-            //Series distributedSeries = new Series("Đã phân phối")
-            //{
-            //    ChartType = SeriesChartType.Column
-            //};
+            //Biểu đồ máu đã phân phối
+            Series distributedSeries = new Series("Đã\n"+"phân phối")
+            {
+                ChartType = SeriesChartType.Column
+            };
 
 
-            //foreach (var item in list)
-            //{
-            //    stockSeries.Points.AddXY(item.BloodType, item.StockAmount);
-            //    distributedSeries.Points.AddXY(item.BloodType, item.Amount);
-            //}
+            foreach (var item in list)
+            {
+                stockSeries.Points.AddXY(item.BloodType, item.StockAmount);
+                distributedSeries.Points.AddXY(item.BloodType, item.Amount);
+            }
 
-            //chartReport2.Series.Add(stockSeries);
-            //chartReport2.Series.Add(distributedSeries);
-            //chartReport2.Visible = true;
+            chartReport2.Series.Add(stockSeries);
+            chartReport2.Series.Add(distributedSeries);
+            chartReport2.Visible = true;
         }
 
 
@@ -151,7 +178,7 @@ namespace BloodBankManagement.Admin
         private void LoadBloodRequirementStatistic()
         {
             //lbTitle2.Text = "Thống kê số lượng máu nhận được qua từng tháng";
-            //var list = reportBUS.bloodOverTimeStatistics();
+            //var list = reportBUS.BloodOverTimeStatistics();
             //chartReport2.Series.Clear();
             //chartReport2.ChartAreas[0].AxisX.Title = "Thời gian";
             //chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu";
@@ -180,107 +207,117 @@ namespace BloodBankManagement.Admin
 
         private void LoadDonorAgeGroupStatistic()
         {
-            //lbTitle2.Text = "Thống kê nhóm tuổi người dùng";
-            //var list = reportBUS.GetAgeofDonorStatistic();
-            //chartReport2.Series.Clear();
-            //chartReport2.ChartAreas[0].AxisX.Title = "Nhóm tuổi";
-            //chartReport2.ChartAreas[0].AxisY.Title = "Số lượng";
+            lbTitle3.Text = "Thống kê nhóm tuổi người dùng";
+            var list = reportBUS.GetAgeofDonorStatistic();
 
-            //Series series = new Series("Nhóm tuổi")
-            //{
-            //    ChartType = SeriesChartType.Column
-            //};
+            int total = list.Sum(x => x.Count);
 
-            //foreach(var item in list) 
-            //{
-            //    series.Points.AddXY(item.AgeGroup, item.Count);
-            //}
+            chartReport3.Series.Clear();
+            chartReport3.ChartAreas[0].AxisX.Title = "Nhóm tuổi";
+            chartReport3.ChartAreas[0].AxisY.Title = "Số lượng";
+       
 
-            //chartReport2.Series.Add(series);
-            //chartReport2.Visible = true;
+
+            Series series = new Series("Nhóm tuổi")
+            {
+                ChartType = SeriesChartType.Pie,
+               
+                
+            };
+
+            foreach (var item in list)
+            {
+                double percent = (double)item.Count/ total;
+                DataPoint point = new DataPoint();
+                point.AxisLabel = item.AgeGroup;
+                point.YValues = new double[] { item.Count };
+                point.Label = string.Format("{0:P1}",percent);
+                point.LegendText = item.AgeGroup;
+                series.Points.Add(point);
+            }
+
+            chartReport3.Series.Add(series);
+            chartReport2.Visible = true;
 
         }
         
 
+
+
         private void LoadDonorGenderGroupStatistic() 
         {
-            //lbTitle1.Text = "Thống kê theo giới tính";
-            //var list = reportBUS.GetGenderofDonorStatistic();
-            //chartReport1.Series.Clear();
-            //chartReport1.ChartAreas[0].AxisX.Title = "Giới tính";
-            //chartReport1.ChartAreas[0].AxisX.Title = "Số lượng";
+            lbTitle1.Text = "Thống kê theo giới tính";
+            var list = reportBUS.GetGenderofDonorStatistic();
+            chartReport1.Series.Clear();
+            chartReport1.ChartAreas[0].AxisX.Title = "Giới tính";
+            chartReport1.ChartAreas[0].AxisX.Title = "Số lượng";
 
-            //Series series = new Series("Giới tính")
-            //{
-            //    ChartType = SeriesChartType.Pie
-            //};
+            Series series = new Series("Giới tính")
+            {
+                ChartType = SeriesChartType.Pie
+            };
 
-            //foreach(var item in list) 
-            //{
-            //    series.Points.AddXY(item.Gender,item.Count);
-            //}
-            //chartReport1.Series.Add(series);
-            //chartReport1.Visible = true;
+            foreach (var item in list)
+            {
+                series.Points.AddXY(item.Gender, item.Count);
+            }
+            chartReport1.Series.Add(series);
+            chartReport1.Visible = true;
         }
            
 
 
         private void LoadDonorDonatedTimeStatistic()
         {
-            //lbTitle3.Text = "Thống kê số lần hiến máu của người hiến";
-            //var list = reportBUS.GetDonorDonatedTimeStatistic();
-            //chartReport3.Series.Clear();
-            //chartReport3.ChartAreas[0].AxisX.Title = "Số lần hiến máu";
-            //chartReport3.ChartAreas[0].AxisY.Title = "Số lượng người hiến máu";
+            lbTitle2.Text = "Thống kê số lần hiến máu của người hiến";
+            var list = reportBUS.GetDonorDonatedTimeStatistic();
+            chartReport2.Series.Clear();
+            chartReport2.ChartAreas[0].AxisX.Title = "Số lần hiến máu";
+            chartReport2.ChartAreas[0].AxisY.Title = "Số lượng người hiến máu";
 
 
-            //Series Series = new Series("Số lần hiến máu")
-            //{
-            //    //ChartType = SeriesChartType.Line,
-            //    //BorderWidth = 2,
-            //    //MarkerStyle = MarkerStyle.Circle,
-            //    //MarkerSize = 8,
-            //    //Color = Color.Red,
-            //    //IsValueShownAsLabel = true,
+            Series Series = new Series("Số lần\n"+"hiến máu")
+            {
+               
 
-            //    ChartType = SeriesChartType.Column
-                
-            //};
+                ChartType = SeriesChartType.Column
+
+            };
 
 
-            //foreach(var item in list) 
-            //{
-            //    Series.Points.AddXY(item.DonatedTime, item.DonorCount);
-            //}
+            foreach (var item in list)
+            {
+                Series.Points.AddXY(item.DonatedTime, item.DonorCount);
+            }
 
-            //chartReport3.Series.Add(Series);
-            //chartReport3.Visible = true;
+            chartReport2.Series.Add(Series);
+            chartReport2.Visible = true;
         }
 
 
 
         private void LoadBloodReceivedByRUStatistic()
         {
-            //lbTitle1.Text = "Thống kê theo lượng máu nhận được";
-            //var list = reportBUS.GetBloodReceivedByRUStatistic();
-            //chartReport1.Series.Clear();
-            //chartReport1.ChartAreas[0].AxisX.Title = "Đơn vị\n"+ "cung cấp";
-            //chartReport1.ChartAreas[0].AxisY.Title = "Số lượng";
+            lbTitle1.Text = "Thống kê theo lượng máu\n"+"nhận được";
+            var list = reportBUS.GetBloodReceivedByRUStatistic();
+            chartReport1.Series.Clear();
+            chartReport1.ChartAreas[0].AxisX.Title = "Đơn vị\n" + "cung cấp";
+            chartReport1.ChartAreas[0].AxisY.Title = "Số lượng";
 
-            //Series series = new Series("Lượng máu nhận")
-            //{
-            //    ChartType = SeriesChartType.Column,
-            //};
+            Series series = new Series("Lượng máu\n"+ "nhận")
+            {
+                ChartType = SeriesChartType.Column,
+            };
 
-            //foreach (var item in list)
-            //{
-            //    // Hiển thị tên đơn vị hoặc RU_ID
-            //    string label = string.IsNullOrEmpty(item.RU_Name) ? item.RU_ID : item.RU_Name;
-            //    series.Points.AddXY(label, item.Amount);
-            //}
+            foreach (var item in list)
+            {
+                // Hiển thị tên đơn vị hoặc RU_ID
+                string label = string.IsNullOrEmpty(item.RU_Name) ? item.RU_ID : item.RU_Name;
+                series.Points.AddXY(label, item.Amount);
+            }
 
-            //chartReport1.Series.Add(series);
-            //chartReport1.Visible = true;
+            chartReport1.Series.Add(series);
+            chartReport1.Visible = true;
         }
 
 
@@ -288,35 +325,86 @@ namespace BloodBankManagement.Admin
 
         private void LoadBloodSupplyComparisionByRUStatistics()
         {
-            //lbTitle2.Text = "Thống kê so sánh lượng máu yêu cầu\n" +"và lượng mấu đã cung cấp";
-            //var list = reportBUS.GetReceivingUnitBloodSupplyComparisionStatistic();
-            //chartReport2.Series.Clear();
-            //chartReport2.ChartAreas[0].AxisX.Title = "RU_ID";
-            //chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu(ml)";
+            try
+            {
 
-            //Series series1 = new Series("RequestAmount")
-            //{
-            //    ChartType = SeriesChartType.Column
-                
-            //};
+                lbTitle2.Text = "Thống kê so sánh lượng máu yêu cầu\n" + "và lượng mấu đã cung cấp";
+                var list = reportBUS.GetReceivingUnitBloodSupplyComparisionStatistic();
+                chartReport2.Series.Clear();
+                chartReport2.ChartAreas[0].AxisX.Title = "RU_ID";
+                chartReport2.ChartAreas[0].AxisY.Title = "Lượng máu(ml)";
 
+                Series series1 = new Series("Lượng máu \n" + "yêu cầu")
+                {
+                    ChartType = SeriesChartType.Column
 
-            //Series series2 = new Series("SupplyAmount")
-            //{
-            //    ChartType = SeriesChartType.Column
-            //};
+                };
 
 
+                Series series2 = new Series("Lượng máu\n" + "đã cung cấp")
+                {
+                    ChartType = SeriesChartType.Column
+                };
 
-            //foreach (var item in list)
-            //{
-            //    series1.Points.AddXY(item.RU_ID, item.RequestAmount);
-            //    series2.Points.AddXY(item.RU_ID, item.SupplyAmount);
-            //}
 
-            //chartReport2.Series.Add(series1);
-            //chartReport2.Series.Add(series2);
-            //chartReport2.Visible = true;
+
+                foreach (var item in list)
+                {
+                    series1.Points.AddXY(item.RU_ID, item.RequestAmount);
+                    series2.Points.AddXY(item.RU_ID, item.SupplyAmount);
+                }
+
+                chartReport2.Series.Add(series1);
+                chartReport2.Series.Add(series2);
+                chartReport2.Visible = true;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+        }
+
+
+
+        private void LoadRequestStatusStatistics()
+        {
+            try
+            {
+
+                lbTitle3.Text = "Thống kê yêu cầu từ\n"+ "đơn vị cung cấp";
+                var list = reportBUS.GetStatusStatistics();
+                chartReport3.Series.Clear();
+                chartReport3.ChartAreas[0].AxisX.Title = "Trạng thái";
+                chartReport3.ChartAreas[0].AxisY.Title = "Số lượng";
+
+                Series series = new Series("Trạng thái cung cấp")
+                {
+                    ChartType = SeriesChartType.Pie
+
+                };
+               
+                int total = list.Sum(x => x.Count);
+
+                foreach (var item in list)
+                {
+                    double percent = (double)item.Count/total;
+                    DataPoint point = new DataPoint();
+                    point.AxisLabel = item.Status;
+                    point.YValues = new double[] { item.Count };
+                    point.Label = string.Format("{0:P1}", percent);
+                    point.LegendText = item.Status;
+                    series.Points.Add(point);
+                  
+                }
+
+                chartReport3.Series.Add(series);
+                chartReport3.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //======================================================================
@@ -376,6 +464,9 @@ namespace BloodBankManagement.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
 
 
         // Thiết lập nút ExportExcel
@@ -479,7 +570,7 @@ namespace BloodBankManagement.Admin
             LoadDistributedBlood();
             LoadBloodGroupStatistics();
 
-            //LoadBloodRequirementStatistic();
+           // LoadBloodRequirementStatistic();
             LoadBloodRequirementStatistic2();
             LoadDistributedBloodStatistic();
         }
@@ -505,18 +596,24 @@ namespace BloodBankManagement.Admin
             }
             else if (cbControl.SelectedIndex == 1)
             {
+                LoadAllDonorsInformation();
                 LoadDonorAgeGroupStatistic();
                 LoadDonorGenderGroupStatistic();
                 LoadDonorDonatedTimeStatistic();
             }
             else
             {
+                LoadAllReceivingUnit();
                 LoadBloodReceivedByRUStatistic();
                 LoadBloodSupplyComparisionByRUStatistics();
+                LoadRequestStatusStatistics();
             }
 
         }
 
-        
+        private void UC_DashBoard2_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

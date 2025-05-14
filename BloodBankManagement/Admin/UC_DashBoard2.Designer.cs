@@ -40,9 +40,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DashBoard2));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnChart2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnPrint3 = new System.Windows.Forms.Button();
             this.lbTitle3 = new System.Windows.Forms.Label();
             this.chartReport3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnChart1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnPrint2 = new System.Windows.Forms.Button();
+            this.btnPrintChart1 = new System.Windows.Forms.Button();
             this.lbTitle2 = new System.Windows.Forms.Label();
             this.lbTitle1 = new System.Windows.Forms.Label();
             this.chartReport2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -67,9 +70,6 @@
             this.btnPrintPic = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
             this.dgvReport = new System.Windows.Forms.DataGridView();
-            this.btnPrintChart1 = new System.Windows.Forms.Button();
-            this.btnPrint2 = new System.Windows.Forms.Button();
-            this.btnPrint3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnChart2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport3)).BeginInit();
@@ -130,6 +130,16 @@
             this.pnChart2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnChart2.TabIndex = 3;
             // 
+            // btnPrint3
+            // 
+            this.btnPrint3.Location = new System.Drawing.Point(480, 21);
+            this.btnPrint3.Name = "btnPrint3";
+            this.btnPrint3.Size = new System.Drawing.Size(94, 33);
+            this.btnPrint3.TabIndex = 5;
+            this.btnPrint3.Text = "Print\r\n";
+            this.btnPrint3.UseVisualStyleBackColor = true;
+            this.btnPrint3.Click += new System.EventHandler(this.btnPrint3_Click);
+            // 
             // lbTitle3
             // 
             this.lbTitle3.AutoSize = true;
@@ -186,6 +196,26 @@
             this.pnChart1.Size = new System.Drawing.Size(963, 479);
             this.pnChart1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.pnChart1.TabIndex = 2;
+            // 
+            // btnPrint2
+            // 
+            this.btnPrint2.Location = new System.Drawing.Point(827, 19);
+            this.btnPrint2.Name = "btnPrint2";
+            this.btnPrint2.Size = new System.Drawing.Size(94, 33);
+            this.btnPrint2.TabIndex = 5;
+            this.btnPrint2.Text = "Print\r\n";
+            this.btnPrint2.UseVisualStyleBackColor = true;
+            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
+            // 
+            // btnPrintChart1
+            // 
+            this.btnPrintChart1.Location = new System.Drawing.Point(295, 16);
+            this.btnPrintChart1.Name = "btnPrintChart1";
+            this.btnPrintChart1.Size = new System.Drawing.Size(94, 33);
+            this.btnPrintChart1.TabIndex = 5;
+            this.btnPrintChart1.Text = "Print\r\n";
+            this.btnPrintChart1.UseVisualStyleBackColor = true;
+            this.btnPrintChart1.Click += new System.EventHandler(this.btnPrintChart1_Click);
             // 
             // lbTitle2
             // 
@@ -435,7 +465,7 @@
             this.lbSumUser.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbSumUser.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbSumUser.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lbSumUser.Location = new System.Drawing.Point(56, 3);
+            this.lbSumUser.Location = new System.Drawing.Point(63, 15);
             this.lbSumUser.Name = "lbSumUser";
             this.lbSumUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbSumUser.Size = new System.Drawing.Size(69, 55);
@@ -549,40 +579,11 @@
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReport.Location = new System.Drawing.Point(42, 74);
             this.dgvReport.Name = "dgvReport";
+            this.dgvReport.ReadOnly = true;
             this.dgvReport.RowHeadersWidth = 62;
             this.dgvReport.RowTemplate.Height = 28;
             this.dgvReport.Size = new System.Drawing.Size(1123, 238);
             this.dgvReport.TabIndex = 2;
-            // 
-            // btnPrintChart1
-            // 
-            this.btnPrintChart1.Location = new System.Drawing.Point(295, 16);
-            this.btnPrintChart1.Name = "btnPrintChart1";
-            this.btnPrintChart1.Size = new System.Drawing.Size(94, 33);
-            this.btnPrintChart1.TabIndex = 5;
-            this.btnPrintChart1.Text = "Print\r\n";
-            this.btnPrintChart1.UseVisualStyleBackColor = true;
-            this.btnPrintChart1.Click += new System.EventHandler(this.btnPrintChart1_Click);
-            // 
-            // btnPrint2
-            // 
-            this.btnPrint2.Location = new System.Drawing.Point(827, 19);
-            this.btnPrint2.Name = "btnPrint2";
-            this.btnPrint2.Size = new System.Drawing.Size(94, 33);
-            this.btnPrint2.TabIndex = 5;
-            this.btnPrint2.Text = "Print\r\n";
-            this.btnPrint2.UseVisualStyleBackColor = true;
-            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
-            // 
-            // btnPrint3
-            // 
-            this.btnPrint3.Location = new System.Drawing.Point(480, 21);
-            this.btnPrint3.Name = "btnPrint3";
-            this.btnPrint3.Size = new System.Drawing.Size(94, 33);
-            this.btnPrint3.TabIndex = 5;
-            this.btnPrint3.Text = "Print\r\n";
-            this.btnPrint3.UseVisualStyleBackColor = true;
-            this.btnPrint3.Click += new System.EventHandler(this.btnPrint3_Click);
             // 
             // UC_DashBoard2
             // 
@@ -593,6 +594,7 @@
             this.Name = "UC_DashBoard2";
             this.Size = new System.Drawing.Size(1590, 1008);
             this.Load += new System.EventHandler(this.UC_Dashboard2_Load);
+            this.VisibleChanged += new System.EventHandler(this.UC_DashBoard2_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnChart2.ResumeLayout(false);
             this.pnChart2.PerformLayout();
