@@ -4,3 +4,9 @@ D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.dll
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DTO\obj\Debug\DTO.pdb

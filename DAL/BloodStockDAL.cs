@@ -22,6 +22,7 @@ namespace DAL
             return _context.BloodStocks
                 .Select(b => new DTO.BloodStock
                 {
+                    BloodID = b.BloodID,
                     BloodType = b.BloodType,
                     Amount = b.Amount,
                 })

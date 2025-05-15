@@ -8,7 +8,7 @@ namespace DAL.Domain
     public partial class MyContext : DbContext
     {
         public MyContext()
-        : base(@"Data Source=MSI\NHAN;Initial Catalog=bloodbank;Integrated Security=True")
+        : base(@"data source=LAPTOP-3RVB0QLD;initial catalog=BloodBank;integrated security=True")
         {
         }
 
@@ -60,12 +60,12 @@ namespace DAL.Domain
             modelBuilder.Entity<Donor>()
                 .HasMany(e => e.Donations)
                 .WithRequired(e => e.Donor)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Donor>()
                 .HasMany(e => e.HistoryDonations)
                 .WithRequired(e => e.Donor)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
         //    modelBuilder.Entity<Event>()
         //        .HasMany(e => e.Donations)

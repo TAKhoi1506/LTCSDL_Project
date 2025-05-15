@@ -12,3 +12,17 @@ D:\New_Vy\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\New_Vy\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\New_Vy\LTCSDL_Project\DAL\obj\Debug\DAL.dll
 D:\New_Vy\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\FinalProject\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

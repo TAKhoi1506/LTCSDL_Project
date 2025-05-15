@@ -102,5 +102,11 @@ namespace BUS
         }
 
 
+        public bool DeleteDonorByAdmin(int donorID)
+        {
+            return donorDAL.DeleteDonorByAdmin(donorID);
+        }
+
+
     }
 }
