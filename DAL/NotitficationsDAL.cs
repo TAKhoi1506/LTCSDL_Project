@@ -25,6 +25,7 @@ namespace DAL
                 .Where(d => d.ObjectID == objectID)
                 .Select(d => new DTO.NotificationsDTO
                 {
+                    NotifiID = d.NotifiID,
                     ObjectID = d.ObjectID,
                     Title = d.Title,
                     CreatedAt = d.CreateAt,

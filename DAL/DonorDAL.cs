@@ -94,14 +94,6 @@ namespace DAL
             }).ToList();
         }
 
-        /*
-        // Phương thức kiểm tra đăng nhập (đang bị comment)
-        public bool Login(string username, string password)
-        {
-            return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
-        }
-        */
-
         // Cập nhật thông tin donor do admin quản lý (có thể sửa BloodType và ID)
         public bool UpdateDonorByAdmin(DTO.DonorDTO donorDTO)
         {

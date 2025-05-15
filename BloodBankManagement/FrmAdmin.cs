@@ -51,6 +51,7 @@ namespace BloodBankManagement
             var notis = notificationsBUS.GetUnreadCount(Static.UserSession.ObjectID);
             StartTimer();
             LoadUnreadCount();
+
         }
         private void LoadUnreadCount()
         {

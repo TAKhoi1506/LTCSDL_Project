@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using DAL.Domain;
 using DTO;
 
@@ -34,15 +35,21 @@ namespace DAL
         }
 
         // Lấy danh sách tất cả Donation dưới dạng DTO
-        public List<DonationDTO> GetAllDonations()
+        public List<DonationInfoDTO> GetAllDonations()
         {
-            return _context.Donations
-                .Select(d => new DonationDTO
-                {
-                    DonationID = d.DonationID,
-                    DonorID = d.DonorID,
-                    EventID = d.EventID
-                }).ToList();
+            var list = (from d in _context.Donations
+                        join dr in _context.Donors on d.DonorID equals dr.DonorID
+                        join ev in _context.Events on d.EventID equals ev.EventID
+                        join ua in _context.UserAccounts on dr.DonorID.ToString() equals ua.ObjectID
+                        select new DonationInfoDTO
+                        {
+                            DonationID = d.DonationID,
+                            UserName = ua.Username,
+                            FullName = dr.FullName,
+                            EventName = ev.EventName
+                        }).ToList();
+
+            return list;
         }
     }
 }

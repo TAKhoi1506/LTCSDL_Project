@@ -50,6 +50,7 @@
     <Compile Include="BloodSupplyDetailDTO.cs" />
     <Compile Include="DistributedBloodDTO.cs" />
     <Compile Include="DonationDTO.cs" />
+    <Compile Include="DonationInfoDTO.cs" />
     <Compile Include="DonorAgeGroupDTO.cs" />
     <Compile Include="DonorDonatedTimeDTO.cs" />
     <Compile Include="DonorDTO.cs" />
