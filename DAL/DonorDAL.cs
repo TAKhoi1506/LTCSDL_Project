@@ -4,31 +4,30 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.Domain; //Entity models
-using DTO; //DTO classes
+using DAL.Domain; // Entity models - các lớp đại diện cho bảng trong CSDL
+using DTO; // Các lớp Data Transfer Object dùng để trao đổi dữ liệu
 
 namespace DAL
 {
     public class DonorDAL
     {
-        //Thay thế SqlConnection bằng DbContext
-
+        // Thay thế SqlConnection bằng DbContext của Entity Framework để thao tác với DB
         private readonly MyContext _myContext;
 
+        // Constructor khởi tạo DbContext để sử dụng trong các phương thức
         public DonorDAL()
         {
             _myContext = new MyContext();
         }
 
-
-        //Thêm đầy đủ thông tin
+        // Thêm mới một donor với đầy đủ thông tin từ DTO truyền vào
         public bool AddDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
+                // Tạo một đối tượng Donor entity từ dữ liệu DTO
                 var donor = new DAL.Domain.Donor
                 {
-
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     BloodType = donorDTO.BloodType,
@@ -37,27 +36,27 @@ namespace DAL
                     Email = donorDTO.Email,
                     LastDonationDate = donorDTO.LastDonationDate,
                     Address = donorDTO.Address
-
                 };
+                // Thêm đối tượng mới vào DbSet Donors của DbContext
                 _myContext.Donors.Add(donor);
+                // Lưu thay đổi vào database, trả về true nếu thành công (số bản ghi thay đổi > 0)
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
+                // Nếu có lỗi xảy ra, in lỗi ra console và trả về false
                 Console.WriteLine(ex);
                 return false;
             }
         }
 
-
-        //Lấy đầy đủ thông tin trừ BloodType
+        // Thêm donor mới nhưng không bao gồm trường BloodType (ví dụ trường hợp nhóm máu chưa rõ)
         public bool InsertDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
                 var donor = new DAL.Domain.Donor
                 {
-
                     FullName = donorDTO.FullName,
                     BirthDate = donorDTO.DateOfBirth,
                     Gender = donorDTO.Gender,
@@ -65,7 +64,7 @@ namespace DAL
                     Email = donorDTO.Email,
                     LastDonationDate = donorDTO.LastDonationDate,
                     Address = donorDTO.Address
-
+                    // BloodType không được gán
                 };
                 _myContext.Donors.Add(donor);
                 return _myContext.SaveChanges() > 0;
@@ -77,11 +76,10 @@ namespace DAL
             }
         }
 
-
-
-        //Lấy danh sách các donors
+        // Lấy danh sách tất cả donors dưới dạng List<DonorDTO>
         public List<DTO.DonorDTO> GetAllDonors()
         {
+            // Truy vấn tất cả donor từ DbContext rồi chuyển đổi từ entity sang DTO để trả về
             return _myContext.Donors.Select(d => new DTO.DonorDTO
             {
                 DonorID = d.DonorID,
@@ -96,27 +94,25 @@ namespace DAL
             }).ToList();
         }
 
+        /*
+        // Phương thức kiểm tra đăng nhập (đang bị comment)
+        public bool Login(string username, string password)
+        {
+            return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
+        }
+        */
 
-        //Kiểm tra tên đăng nhập có phải user hay không
-        //public bool Login(string username, string password)
-        //{
-        //    return _myContext.Donors.Any(d => d.UserName == username && d.Password == password);
-        //}
-
-
-
-        //Update do admin quản lý: Có thể sửa ID và nhóm máu BloodType
+        // Cập nhật thông tin donor do admin quản lý (có thể sửa BloodType và ID)
         public bool UpdateDonorByAdmin(DTO.DonorDTO donorDTO)
         {
             try
             {
-                //Kiểm tra id có giống với id của donor muốn sửa hay không
+                // Tìm donor theo ID
                 var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
                 if (donor == null)
-                    return false;
+                    return false; // Không tìm thấy donor thì trả về false
 
-                //donor.UserName = donorDTO.Username;
-                //donor.Password = donorDTO.Password;
+                // Cập nhật các thuộc tính từ DTO
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.BloodType = donorDTO.BloodType;
@@ -126,6 +122,7 @@ namespace DAL
                 donor.LastDonationDate = donorDTO.LastDonationDate;
                 donor.Address = donorDTO.Address;
 
+                // Lưu thay đổi vào DB
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -135,15 +132,18 @@ namespace DAL
             }
         }
 
-        //Xóa donor thực hiện bới admin 
+        // Xóa donor bởi admin theo donorID
         public bool DeleteDonorByAdmin(int donorID)
         {
             try
             {
+                // Tìm donor theo ID
                 var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorID);
                 if (donor == null) return false;
 
+                // Xóa donor khỏi DbSet
                 _myContext.Donors.Remove(donor);
+                // Lưu thay đổi vào DB
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -153,19 +153,17 @@ namespace DAL
             }
         }
 
-
-        //Update do donor thực hiện: Chỉ cập nhật được những thông tin có sẵn trên form
+        // Cập nhật thông tin do chính donor thực hiện, chỉ cập nhật các trường có trên form
         public bool UpdateDonorByDonor(DTO.DonorDTO donorDTO)
         {
             try
             {
-                //Kiểm tra id có giống với id của donor muốn sửa hay không
+                // Tìm donor theo ID
                 var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID == donorDTO.DonorID);
                 if (donor == null)
                     return false;
 
-                //donor.UserName = donorDTO.Username;
-                //donor.Password = donorDTO.Password;
+                // Cập nhật các thuộc tính donor
                 donor.FullName = donorDTO.FullName;
                 donor.BirthDate = donorDTO.DateOfBirth;
                 donor.BloodType = donorDTO.BloodType;
@@ -175,19 +173,22 @@ namespace DAL
                 donor.LastDonationDate = donorDTO.LastDonationDate;
                 donor.Address = donorDTO.Address;
 
+                // Tìm tài khoản người dùng liên quan trong bảng UserAccounts (theo ObjectID là donorID)
                 var userAccount = _myContext.UserAccounts.FirstOrDefault(u => u.ObjectID == donorDTO.DonorID.ToString() && u.Role == "Donor");
 
+                // Kiểm tra xem username mới có trùng với username khác không (ngoại trừ tài khoản hiện tại)
                 var exists = _myContext.UserAccounts.Any(u => u.Username == donorDTO.Username && u.AccountID != userAccount.AccountID);
                 if (exists)
-                    throw new Exception("Username already exists.");
+                    throw new Exception("Username already exists."); // Ném ngoại lệ nếu trùng username
 
-
+                // Nếu tìm thấy tài khoản, cập nhật username và password
                 if (userAccount != null)
                 {
                     userAccount.Username = donorDTO.Username;
                     userAccount.Password = donorDTO.Password;
                 }
 
+                // Lưu thay đổi
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -196,11 +197,15 @@ namespace DAL
                 return false;
             }
         }
+
+        // Lấy donorID dựa trên username trong bảng UserAccounts
         public string GetDonorIdByUsername(string username)
         {
+            // Sử dụng DbContext mới để truy vấn (khác với _myContext)
             using (var context = new MyContext())
             {
                 var donor = context.UserAccounts.FirstOrDefault(d => d.Username == username);
+                // Trả về ObjectID (được dùng làm donorID)
                 return donor.ObjectID;
             }
         }

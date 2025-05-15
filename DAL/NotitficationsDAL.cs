@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL.Domain;
 using DTO;
 
@@ -35,23 +36,45 @@ namespace DAL
 
 
         //Lấy nội dung tin nhắn theo notifiID
-        public NotificationsDTO GetMessageByID(string objectID)
+        //public List<NotificationsDTO> GetMessageByID(string objectID)
+        //{
+        //    try
+        //    {
+        //        var notification = _myContext.Notifications.FirstOrDefault(d => d.ObjectID == objectID);
+        //        if (notification == null)
+        //            return null; //Nếu trong tin nhắn không có nội dung thì trả về null 
+
+        //        return new NotificationsDTO
+        //        {
+        //            NotifiID = notification.NotifiID,
+        //            Title = notification.Title,
+        //            Message = notification.Message,
+        //            CreatedAt = notification.CreateAt,
+        //            ObjectID = notification.ObjectID,
+        //            IsRead = notification.IsRead
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.ToString());
+        //        return null;
+        //    }
+        //}
+        public List<DTO.NotificationsDTO> GetMessageByID(string objectID)
         {
             try
             {
-                var notification = _myContext.Notifications.FirstOrDefault(d => d.ObjectID == objectID);
-                if (notification == null)
-                    return null; //Nếu trong tin nhắn không có nội dung thì trả về null 
-
-                return new NotificationsDTO
-                {
-                    NotifiID = notification.NotifiID,
-                    Title = notification.Title,
-                    Message = notification.Message,
-                    CreatedAt = notification.CreateAt,
-                    ObjectID = notification.ObjectID,
-                    IsRead = notification.IsRead
-                };
+                return _myContext.Notifications
+                    .Where(n => n.ObjectID == objectID)
+                    .Select(n => new DTO.NotificationsDTO
+                    {
+                        NotifiID = n.NotifiID,
+                        Title = n.Title,
+                        Message = n.Message,
+                        CreatedAt = n.CreateAt,
+                        IsRead = n.IsRead,
+                    })
+                    .ToList();
             }
             catch (Exception ex)
             {
@@ -67,11 +90,11 @@ namespace DAL
 
 
         //Đánh dấu thông báo đã đọc
-        public bool MaskAsRead(string objectID)
+        public bool MaskAsRead(int ID)
         {
             try
             {
-                var notification = _myContext.Notifications.FirstOrDefault(d => d.ObjectID == objectID);
+                var notification = _myContext.Notifications.FirstOrDefault(d => d.NotifiID == ID);
                 if (notification == null)
                     return false;
 
@@ -118,7 +141,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("AddNotification Error: " + ex.Message);
+                MessageBox.Show("AddNotification Error: " + ex.Message);
                 return false;
             }
         }

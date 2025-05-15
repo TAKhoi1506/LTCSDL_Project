@@ -61,11 +61,11 @@
             this.bunifuLabel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 25.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel11.Location = new System.Drawing.Point(676, 33);
-            this.bunifuLabel11.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuLabel11.Location = new System.Drawing.Point(451, 21);
+            this.bunifuLabel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(823, 80);
+            this.bunifuLabel11.Size = new System.Drawing.Size(515, 50);
             this.bunifuLabel11.TabIndex = 72;
             this.bunifuLabel11.Text = "List Blood Requirements";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -119,8 +119,7 @@
             this.btSearch.IdleIconLeftImage = null;
             this.btSearch.IdleIconRightImage = null;
             this.btSearch.IndicateFocus = false;
-            this.btSearch.Location = new System.Drawing.Point(908, 294);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btSearch.Location = new System.Drawing.Point(605, 188);
             this.btSearch.Name = "btSearch";
             this.btSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btSearch.OnDisabledState.BorderRadius = 20;
@@ -154,7 +153,7 @@
             this.btSearch.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btSearch.OnPressedState.IconLeftImage = null;
             this.btSearch.OnPressedState.IconRightImage = null;
-            this.btSearch.Size = new System.Drawing.Size(186, 62);
+            this.btSearch.Size = new System.Drawing.Size(124, 40);
             this.btSearch.TabIndex = 71;
             this.btSearch.TabStop = false;
             this.btSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,15 +220,16 @@
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBloodRequirement.Location = new System.Drawing.Point(104, 447);
-            this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvBloodRequirement.Location = new System.Drawing.Point(69, 286);
+            this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvBloodRequirement.Name = "dgvBloodRequirement";
             this.dgvBloodRequirement.RowHeadersVisible = false;
             this.dgvBloodRequirement.RowHeadersWidth = 82;
             this.dgvBloodRequirement.RowTemplate.Height = 40;
             this.dgvBloodRequirement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBloodRequirement.Size = new System.Drawing.Size(1966, 706);
+            this.dgvBloodRequirement.Size = new System.Drawing.Size(1311, 452);
             this.dgvBloodRequirement.TabIndex = 70;
             this.dgvBloodRequirement.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvBloodRequirement.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBloodRequirement_CellValueChanged);
@@ -305,10 +305,9 @@
             "Blood type",
             "Amount",
             "Status"});
-            this.cbSort.Location = new System.Drawing.Point(1612, 311);
-            this.cbSort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbSort.Location = new System.Drawing.Point(1075, 199);
             this.cbSort.Name = "cbSort";
-            this.cbSort.Size = new System.Drawing.Size(284, 48);
+            this.cbSort.Size = new System.Drawing.Size(191, 33);
             this.cbSort.TabIndex = 68;
             this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
             // 
@@ -343,10 +342,9 @@
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(196, 294);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Location = new System.Drawing.Point(131, 188);
             this.txtSearch.MaxLength = 32767;
-            this.txtSearch.MinimumSize = new System.Drawing.Size(2, 2);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -370,7 +368,7 @@
             stateProperties4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSearch.OnIdleState = stateProperties4;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSearch.PlaceholderText = "Search by unit ID";
@@ -380,7 +378,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(676, 62);
+            this.txtSearch.Size = new System.Drawing.Size(451, 40);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 67;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -400,11 +398,11 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(1433, 316);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuLabel1.Location = new System.Drawing.Point(955, 202);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(121, 43);
+            this.bunifuLabel1.Size = new System.Drawing.Size(77, 27);
             this.bunifuLabel1.TabIndex = 73;
             this.bunifuLabel1.Text = "Sort by";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -412,7 +410,7 @@
             // 
             // UC_BloodRequirements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuLabel11);
@@ -420,9 +418,9 @@
             this.Controls.Add(this.dgvBloodRequirement);
             this.Controls.Add(this.cbSort);
             this.Controls.Add(this.txtSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Name = "UC_BloodRequirements";
-            this.Size = new System.Drawing.Size(2175, 1186);
+            this.Size = new System.Drawing.Size(1450, 759);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -101,15 +101,15 @@ namespace BloodBankManagement.Donor
             if(listViewMessage.SelectedItems.Count > 0) 
             {
                 ListViewItem selectedItem = listViewMessage.SelectedItems[0];
-                
-                string objectID = selectedItem.Tag.ToString();
+
+                string notifiID = selectedItem.Tag.ToString();
 
                 //Lấy nội dung đầy đủ của thông báo
                 DisplayNotificationContent();
 
 
                 //Đánh dấu thông báo đã đọc
-                notificationsBUS.MaskAsRead(objectID);
+                notificationsBUS.MaskAsRead(int.Parse(notifiID));
 
 
                 //Cập nhật trạng thái hiển thị (bỏ in đậm cho thông báo)
@@ -117,7 +117,7 @@ namespace BloodBankManagement.Donor
 
 
                 //Cập nhật trạng thái trong danh sách cục bộ
-                var notification = notificationsList.Find(n => n.ObjectID == objectID);
+                var notification = notificationsList.Find(n => n.NotifiID == int.Parse(notifiID));
                 if (notification != null)
                 {
                     notification.IsRead = true;
@@ -131,40 +131,37 @@ namespace BloodBankManagement.Donor
         //Hiển thị nội dung thông báo
         private void DisplayNotificationContent()
         {
-            //Lấy thông tin đầy đủ của thông báo từ database
+            // Lấy danh sách thông báo từ database
+            List<NotificationsDTO> notifications = notificationsBUS.GetMessageById(Static.UserSession.ObjectID);
 
-            NotificationsDTO notifications = notificationsBUS.GetMessageById(Static.UserSession.ObjectID);
-
-            if (notifications != null)
+            if (notifications != null && notifications.Count > 0)
             {
+                // Lấy thông báo đầu tiên (hoặc bạn có thể lấy thông báo khác theo ý muốn)
+                var notification = notifications[0];
+
                 MessageContent.Clear();
 
-
-                //Định dạng tiêu đề thông báo (có thể tùy chỉnh)
+                // Định dạng tiêu đề thông báo (có thể tùy chỉnh)
                 MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
-                MessageContent.AppendText(notifications.Title + "\n");
+                MessageContent.AppendText(notification.Title + "\n");
 
-
-                //Thêm ngày tạo thông báo
+                // Thêm ngày tạo thông báo (nếu cần)
                 MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+                MessageContent.AppendText(notification.CreatedAt.ToString("dd/MM/yyyy HH:mm") + "\n\n");
 
-            //    //Thêm ngày tạo thông báo
-            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
-
-                //Thêm nội dung thông báo
+                // Thêm nội dung thông báo
                 MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
-                MessageContent.AppendText(notifications.Message);
-
-            //    //Thêm nội dung thông báo
-            //    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
-            //    MessageContent.AppendText(notifications.Message);
-
-
+                MessageContent.AppendText(notification.Message);
             }
-
+            else
+            {
+                MessageContent.Clear();
+                MessageContent.AppendText("Không có thông báo nào để hiển thị.");
+            }
         }
 
-        
+
+
 
         public void RefreshNotifications()
         {
