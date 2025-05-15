@@ -20,6 +20,27 @@ namespace DAL
             _myContext = new MyContext();
         }
 
+        public DonorDTO GetDonorByID(string donorID)
+        {
+            var donor = _myContext.Donors.FirstOrDefault(d => d.DonorID.ToString() == donorID);
+
+            if (donor == null)
+                return null;
+
+            return new DonorDTO
+            {
+                DonorID = donor.DonorID,
+                FullName = donor.FullName,
+                Gender = donor.Gender,
+                BloodType = donor.BloodType,
+                DateOfBirth = donor.BirthDate,
+                PhoneNumber = donor.PhoneNumber,
+                Email = donor.Email,
+                LastDonationDate = donor.LastDonationDate,
+                Address = donor.Address
+            };
+        }
+
         // Thêm mới một donor với đầy đủ thông tin từ DTO truyền vào
         public bool AddDonor(DTO.DonorDTO donorDTO)
         {

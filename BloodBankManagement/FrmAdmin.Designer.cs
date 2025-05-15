@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnHome = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,10 +75,9 @@
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1202, 0);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1923, 0);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // pnHome
@@ -94,10 +93,9 @@
             this.pnHome.Controls.Add(this.btNotification);
             this.pnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHome.Location = new System.Drawing.Point(0, 0);
-            this.pnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnHome.Name = "pnHome";
             this.pnHome.ShowBorders = true;
-            this.pnHome.Size = new System.Drawing.Size(1202, 83);
+            this.pnHome.Size = new System.Drawing.Size(1923, 133);
             this.pnHome.TabIndex = 2;
             // 
             // panel1
@@ -108,9 +106,8 @@
             this.panel1.Controls.Add(this.bunifuPictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 83);
+            this.panel1.Size = new System.Drawing.Size(499, 133);
             this.panel1.TabIndex = 15;
             // 
             // bunifuLabel4
@@ -121,11 +118,11 @@
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Italic);
             this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuLabel4.Location = new System.Drawing.Point(88, 26);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel4.Location = new System.Drawing.Point(141, 42);
+            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(222, 28);
+            this.bunifuLabel4.Size = new System.Drawing.Size(352, 44);
             this.bunifuLabel4.TabIndex = 3;
             this.bunifuLabel4.Text = "KVN BLOOD BANK";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -136,13 +133,13 @@
             this.bunifuPictureBox2.AllowFocused = false;
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 29;
+            this.bunifuPictureBox2.BorderRadius = 47;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(21, 12);
-            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(32, 19);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(59, 59);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(94, 94);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox2.TabIndex = 5;
             this.bunifuPictureBox2.TabStop = false;
@@ -159,10 +156,11 @@
             this.lblUnreadCount.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblUnreadCount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblUnreadCount.ForeColor = System.Drawing.Color.White;
-            this.lblUnreadCount.Location = new System.Drawing.Point(1172, 12);
+            this.lblUnreadCount.Location = new System.Drawing.Point(1875, 19);
+            this.lblUnreadCount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.lblUnreadCount.Name = "lblUnreadCount";
             this.lblUnreadCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUnreadCount.Size = new System.Drawing.Size(18, 21);
+            this.lblUnreadCount.Size = new System.Drawing.Size(29, 34);
             this.lblUnreadCount.TabIndex = 12;
             this.lblUnreadCount.Text = "3";
             this.lblUnreadCount.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,9 +172,10 @@
             this.btNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btNotification.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNotification.BackgroundImage")));
             this.btNotification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btNotification.Location = new System.Drawing.Point(1131, 11);
+            this.btNotification.Location = new System.Drawing.Point(1810, 18);
+            this.btNotification.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btNotification.Name = "btNotification";
-            this.btNotification.Size = new System.Drawing.Size(59, 55);
+            this.btNotification.Size = new System.Drawing.Size(94, 88);
             this.btNotification.TabIndex = 13;
             this.btNotification.UseVisualStyleBackColor = true;
             this.btNotification.Click += new System.EventHandler(this.btNotification_Click_1);
@@ -200,11 +199,11 @@
             this.btEvents.ColorContrastOnClick = 45;
             this.btEvents.ColorContrastOnHover = 45;
             this.btEvents.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btEvents.CustomizableEdges = borderEdges1;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btEvents.CustomizableEdges = borderEdges10;
             this.btEvents.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btEvents.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btEvents.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -228,8 +227,7 @@
             this.btEvents.IdleIconLeftImage = null;
             this.btEvents.IdleIconRightImage = null;
             this.btEvents.IndicateFocus = false;
-            this.btEvents.Location = new System.Drawing.Point(0, 158);
-            this.btEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEvents.Location = new System.Drawing.Point(0, 253);
             this.btEvents.Name = "btEvents";
             this.btEvents.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btEvents.OnDisabledState.BorderRadius = 1;
@@ -263,7 +261,7 @@
             this.btEvents.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btEvents.OnPressedState.IconLeftImage = null;
             this.btEvents.OnPressedState.IconRightImage = null;
-            this.btEvents.Size = new System.Drawing.Size(268, 50);
+            this.btEvents.Size = new System.Drawing.Size(429, 80);
             this.btEvents.TabIndex = 0;
             this.btEvents.TabStop = false;
             this.btEvents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -292,11 +290,11 @@
             this.btDonors.ColorContrastOnClick = 45;
             this.btDonors.ColorContrastOnHover = 45;
             this.btDonors.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btDonors.CustomizableEdges = borderEdges2;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btDonors.CustomizableEdges = borderEdges11;
             this.btDonors.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btDonors.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDonors.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -320,8 +318,7 @@
             this.btDonors.IdleIconLeftImage = null;
             this.btDonors.IdleIconRightImage = null;
             this.btDonors.IndicateFocus = false;
-            this.btDonors.Location = new System.Drawing.Point(0, 220);
-            this.btDonors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btDonors.Location = new System.Drawing.Point(0, 352);
             this.btDonors.Name = "btDonors";
             this.btDonors.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDonors.OnDisabledState.BorderRadius = 1;
@@ -355,7 +352,7 @@
             this.btDonors.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btDonors.OnPressedState.IconLeftImage = null;
             this.btDonors.OnPressedState.IconRightImage = null;
-            this.btDonors.Size = new System.Drawing.Size(268, 50);
+            this.btDonors.Size = new System.Drawing.Size(429, 80);
             this.btDonors.TabIndex = 0;
             this.btDonors.TabStop = false;
             this.btDonors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,11 +381,11 @@
             this.btReUnits.ColorContrastOnClick = 45;
             this.btReUnits.ColorContrastOnHover = 45;
             this.btReUnits.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btReUnits.CustomizableEdges = borderEdges3;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btReUnits.CustomizableEdges = borderEdges12;
             this.btReUnits.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btReUnits.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btReUnits.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -412,8 +409,7 @@
             this.btReUnits.IdleIconLeftImage = null;
             this.btReUnits.IdleIconRightImage = null;
             this.btReUnits.IndicateFocus = false;
-            this.btReUnits.Location = new System.Drawing.Point(0, 342);
-            this.btReUnits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btReUnits.Location = new System.Drawing.Point(0, 547);
             this.btReUnits.Name = "btReUnits";
             this.btReUnits.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btReUnits.OnDisabledState.BorderRadius = 1;
@@ -447,7 +443,7 @@
             this.btReUnits.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btReUnits.OnPressedState.IconLeftImage = null;
             this.btReUnits.OnPressedState.IconRightImage = null;
-            this.btReUnits.Size = new System.Drawing.Size(268, 50);
+            this.btReUnits.Size = new System.Drawing.Size(429, 80);
             this.btReUnits.TabIndex = 0;
             this.btReUnits.TabStop = false;
             this.btReUnits.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,11 +472,11 @@
             this.btBloodStock.ColorContrastOnClick = 45;
             this.btBloodStock.ColorContrastOnHover = 45;
             this.btBloodStock.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btBloodStock.CustomizableEdges = borderEdges4;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.btBloodStock.CustomizableEdges = borderEdges13;
             this.btBloodStock.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btBloodStock.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btBloodStock.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -504,8 +500,7 @@
             this.btBloodStock.IdleIconLeftImage = null;
             this.btBloodStock.IdleIconRightImage = null;
             this.btBloodStock.IndicateFocus = false;
-            this.btBloodStock.Location = new System.Drawing.Point(0, 465);
-            this.btBloodStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBloodStock.Location = new System.Drawing.Point(0, 744);
             this.btBloodStock.Name = "btBloodStock";
             this.btBloodStock.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btBloodStock.OnDisabledState.BorderRadius = 1;
@@ -539,7 +534,7 @@
             this.btBloodStock.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btBloodStock.OnPressedState.IconLeftImage = null;
             this.btBloodStock.OnPressedState.IconRightImage = null;
-            this.btBloodStock.Size = new System.Drawing.Size(268, 50);
+            this.btBloodStock.Size = new System.Drawing.Size(429, 80);
             this.btBloodStock.TabIndex = 0;
             this.btBloodStock.TabStop = false;
             this.btBloodStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -568,11 +563,11 @@
             this.btDashboard.ColorContrastOnClick = 45;
             this.btDashboard.ColorContrastOnHover = 45;
             this.btDashboard.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btDashboard.CustomizableEdges = borderEdges5;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.btDashboard.CustomizableEdges = borderEdges14;
             this.btDashboard.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btDashboard.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDashboard.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -596,8 +591,7 @@
             this.btDashboard.IdleIconLeftImage = null;
             this.btDashboard.IdleIconRightImage = null;
             this.btDashboard.IndicateFocus = false;
-            this.btDashboard.Location = new System.Drawing.Point(0, 527);
-            this.btDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btDashboard.Location = new System.Drawing.Point(0, 843);
             this.btDashboard.Name = "btDashboard";
             this.btDashboard.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDashboard.OnDisabledState.BorderRadius = 1;
@@ -631,7 +625,7 @@
             this.btDashboard.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btDashboard.OnPressedState.IconLeftImage = null;
             this.btDashboard.OnPressedState.IconRightImage = null;
-            this.btDashboard.Size = new System.Drawing.Size(268, 50);
+            this.btDashboard.Size = new System.Drawing.Size(429, 80);
             this.btDashboard.TabIndex = 0;
             this.btDashboard.TabStop = false;
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -660,11 +654,11 @@
             this.btRequirements.ColorContrastOnClick = 45;
             this.btRequirements.ColorContrastOnHover = 45;
             this.btRequirements.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btRequirements.CustomizableEdges = borderEdges6;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.btRequirements.CustomizableEdges = borderEdges15;
             this.btRequirements.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btRequirements.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRequirements.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -688,8 +682,7 @@
             this.btRequirements.IdleIconLeftImage = null;
             this.btRequirements.IdleIconRightImage = null;
             this.btRequirements.IndicateFocus = false;
-            this.btRequirements.Location = new System.Drawing.Point(0, 403);
-            this.btRequirements.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btRequirements.Location = new System.Drawing.Point(0, 645);
             this.btRequirements.Name = "btRequirements";
             this.btRequirements.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRequirements.OnDisabledState.BorderRadius = 1;
@@ -723,7 +716,7 @@
             this.btRequirements.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btRequirements.OnPressedState.IconLeftImage = null;
             this.btRequirements.OnPressedState.IconRightImage = null;
-            this.btRequirements.Size = new System.Drawing.Size(268, 50);
+            this.btRequirements.Size = new System.Drawing.Size(429, 80);
             this.btRequirements.TabIndex = 0;
             this.btRequirements.TabStop = false;
             this.btRequirements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -752,11 +745,11 @@
             this.btHome.ColorContrastOnClick = 45;
             this.btHome.ColorContrastOnHover = 45;
             this.btHome.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btHome.CustomizableEdges = borderEdges7;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.btHome.CustomizableEdges = borderEdges16;
             this.btHome.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btHome.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHome.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -780,8 +773,7 @@
             this.btHome.IdleIconLeftImage = null;
             this.btHome.IdleIconRightImage = null;
             this.btHome.IndicateFocus = false;
-            this.btHome.Location = new System.Drawing.Point(0, 98);
-            this.btHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btHome.Location = new System.Drawing.Point(0, 157);
             this.btHome.Name = "btHome";
             this.btHome.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btHome.OnDisabledState.BorderRadius = 1;
@@ -815,7 +807,7 @@
             this.btHome.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btHome.OnPressedState.IconLeftImage = null;
             this.btHome.OnPressedState.IconRightImage = null;
-            this.btHome.Size = new System.Drawing.Size(268, 50);
+            this.btHome.Size = new System.Drawing.Size(429, 80);
             this.btHome.TabIndex = 0;
             this.btHome.TabStop = false;
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -845,11 +837,11 @@
             this.btLogout.ColorContrastOnClick = 45;
             this.btLogout.ColorContrastOnHover = 45;
             this.btLogout.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btLogout.CustomizableEdges = borderEdges8;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.btLogout.CustomizableEdges = borderEdges17;
             this.btLogout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btLogout.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -873,8 +865,7 @@
             this.btLogout.IdleIconLeftImage = null;
             this.btLogout.IdleIconRightImage = null;
             this.btLogout.IndicateFocus = false;
-            this.btLogout.Location = new System.Drawing.Point(0, 498);
-            this.btLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btLogout.Location = new System.Drawing.Point(0, 1188);
             this.btLogout.Name = "btLogout";
             this.btLogout.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btLogout.OnDisabledState.BorderRadius = 1;
@@ -908,7 +899,7 @@
             this.btLogout.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btLogout.OnPressedState.IconLeftImage = null;
             this.btLogout.OnPressedState.IconRightImage = null;
-            this.btLogout.Size = new System.Drawing.Size(268, 42);
+            this.btLogout.Size = new System.Drawing.Size(429, 67);
             this.btLogout.TabIndex = 0;
             this.btLogout.TabStop = false;
             this.btLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -937,11 +928,11 @@
             this.btDonations.ColorContrastOnClick = 45;
             this.btDonations.ColorContrastOnHover = 45;
             this.btDonations.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btDonations.CustomizableEdges = borderEdges9;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.btDonations.CustomizableEdges = borderEdges18;
             this.btDonations.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btDonations.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDonations.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -965,8 +956,7 @@
             this.btDonations.IdleIconLeftImage = null;
             this.btDonations.IdleIconRightImage = null;
             this.btDonations.IndicateFocus = false;
-            this.btDonations.Location = new System.Drawing.Point(0, 282);
-            this.btDonations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btDonations.Location = new System.Drawing.Point(0, 451);
             this.btDonations.Name = "btDonations";
             this.btDonations.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btDonations.OnDisabledState.BorderRadius = 1;
@@ -1000,7 +990,7 @@
             this.btDonations.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btDonations.OnPressedState.IconLeftImage = null;
             this.btDonations.OnPressedState.IconRightImage = null;
-            this.btDonations.Size = new System.Drawing.Size(268, 50);
+            this.btDonations.Size = new System.Drawing.Size(429, 80);
             this.btDonations.TabIndex = 1;
             this.btDonations.TabStop = false;
             this.btDonations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1028,11 +1018,10 @@
             this.bunifuPanel2.Controls.Add(this.btDonors);
             this.bunifuPanel2.Controls.Add(this.btEvents);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 83);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel2.Location = new System.Drawing.Point(0, 133);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(270, 576);
+            this.bunifuPanel2.Size = new System.Drawing.Size(432, 1313);
             this.bunifuPanel2.TabIndex = 4;
             // 
             // panelShow
@@ -1045,43 +1034,46 @@
             this.panelShow.BorderThickness = 1;
             this.panelShow.Controls.Add(this.pnNotification);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(270, 83);
+            this.panelShow.Location = new System.Drawing.Point(432, 133);
+            this.panelShow.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panelShow.Name = "panelShow";
             this.panelShow.ShowBorders = true;
-            this.panelShow.Size = new System.Drawing.Size(932, 576);
+            this.panelShow.Size = new System.Drawing.Size(1491, 1313);
             this.panelShow.TabIndex = 5;
             // 
             // pnNotification
             // 
             this.pnNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNotification.AutoScroll = true;
-            this.pnNotification.BackgroundColor = System.Drawing.Color.Silver;
+            this.pnNotification.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(251)))));
             this.pnNotification.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnNotification.BackgroundImage")));
             this.pnNotification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnNotification.BorderColor = System.Drawing.Color.Silver;
-            this.pnNotification.BorderRadius = 3;
+            this.pnNotification.BorderColor = System.Drawing.Color.Black;
+            this.pnNotification.BorderRadius = 30;
             this.pnNotification.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnNotification.BorderThickness = 1;
-            this.pnNotification.Location = new System.Drawing.Point(366, 5);
+            this.pnNotification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnNotification.Location = new System.Drawing.Point(586, 6);
+            this.pnNotification.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pnNotification.Name = "pnNotification";
             this.pnNotification.ShowBorders = true;
-            this.pnNotification.Size = new System.Drawing.Size(563, 362);
+            this.pnNotification.Size = new System.Drawing.Size(900, 578);
             this.pnNotification.TabIndex = 0;
             this.pnNotification.Visible = false;
             // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1202, 659);
+            this.ClientSize = new System.Drawing.Size(1923, 1446);
             this.Controls.Add(this.panelShow);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.pnHome);
             this.Controls.Add(this.bunifuPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAdmin";
             this.Text = "KVN BLOOD BANK";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

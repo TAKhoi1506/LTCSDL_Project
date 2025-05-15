@@ -16,6 +16,6 @@ namespace DTO
         public DateTime SupplyDate { get; set; }
         public string Status { get; set; } = "Pending";
 
-        public List<BloodRequirementDetailDTO> DetailList { get; set; }
+        public List<BloodRequirementDetailDTO> DetailList { get; set; } = new List<BloodRequirementDetailDTO>();
     }
 }

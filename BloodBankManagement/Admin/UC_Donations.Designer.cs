@@ -435,6 +435,7 @@
             this.Controls.Add(this.dgvDonation);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UC_Donations";
             this.Size = new System.Drawing.Size(2116, 1300);

@@ -977,6 +977,7 @@
             this.Controls.Add(this.bunifuLabel19);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.bunifuPanel1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UC_PersonalInformation";
             this.Size = new System.Drawing.Size(2116, 1500);

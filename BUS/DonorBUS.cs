@@ -22,6 +22,10 @@ namespace BUS
             return donorDAL.AddDonor(donor);
         }
 
+        public DonorDTO GetDonorByID(string donorID)
+        {
+            return donorDAL.GetDonorByID(donorID);
+        }
 
         public List<DonorDTO> GetAllDonors()
         {

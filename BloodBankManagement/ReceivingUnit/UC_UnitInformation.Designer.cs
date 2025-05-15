@@ -74,6 +74,7 @@
             this.txtPhoneNumber = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pbAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel16 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel17 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -85,7 +86,6 @@
             this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pbAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
@@ -817,6 +817,23 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(1133, 838);
             this.bunifuPanel1.TabIndex = 95;
             // 
+            // pbAvatar
+            // 
+            this.pbAvatar.AllowFocused = false;
+            this.pbAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbAvatar.AutoSizeHeight = true;
+            this.pbAvatar.BorderRadius = 80;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.IsCircle = false;
+            this.pbAvatar.Location = new System.Drawing.Point(56, 49);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(6);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(160, 160);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 97;
+            this.pbAvatar.TabStop = false;
+            this.pbAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // bunifuLabel15
             // 
             this.bunifuLabel15.AllowParentOverrides = false;
@@ -1079,23 +1096,6 @@
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel11.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // pbAvatar
-            // 
-            this.pbAvatar.AllowFocused = false;
-            this.pbAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbAvatar.AutoSizeHeight = true;
-            this.pbAvatar.BorderRadius = 80;
-            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
-            this.pbAvatar.IsCircle = false;
-            this.pbAvatar.Location = new System.Drawing.Point(56, 49);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(6);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(160, 160);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvatar.TabIndex = 97;
-            this.pbAvatar.TabStop = false;
-            this.pbAvatar.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // UC_UnitInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1103,6 +1103,7 @@
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuLabel11);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UC_UnitInformation";
             this.Size = new System.Drawing.Size(2116, 1500);

@@ -52,7 +52,7 @@ namespace BloodBankManagement
                     txtUnitId.Text = ru.RU_ID;
                     txtUnitName.Text = ru.UnitName;
                     txtUnitName.SelectionStart = 0;
-                    txtUnitName.SelectionLength = 0;
+                    //txtUnitName.SelectionLength = 0;
                 }
                 else
                 {
@@ -161,6 +161,72 @@ namespace BloodBankManagement
             txtABMinus.Clear();
             txtOPlus.Clear();
             txtOMinus.Clear();
+        }
+
+        private void btSent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtUnitId.Text.Trim()))
+                {
+                    MessageBox.Show("Please enter Receiving Unit ID");
+                    return;
+                }
+
+                if (clbBloodType.CheckedItems.Count == 0)
+                {
+                    MessageBox.Show("Please select at least one blood type!");
+                    return;
+                }
+
+                // Tạo chi tiết yêu cầu máu
+                var detailList = new List<BloodRequirementDetailDTO>();
+
+                foreach (var item in clbBloodType.CheckedItems)
+                {
+                    string bloodType = item.ToString();
+
+                    if (bloodTypeTextBoxMap.TryGetValue(bloodType, out BunifuTextBox amountTextBox))
+                    {
+                        if (int.TryParse(amountTextBox.Text.Trim(), out int amount) && amount > 0)
+                        {
+                            detailList.Add(new BloodRequirementDetailDTO
+                            {
+                                BloodType = bloodType,
+                                Amount = amount
+                            });
+                        }
+                    }
+                }
+
+                if (detailList.Count == 0)
+                {
+                    MessageBox.Show("Please enter amount for at least one selected blood type.");
+                    return;
+                }
+
+
+                // Tạo yêu cầu máu chính
+                var brDTO = new BloodRequirementDTO
+                {
+                    RU_ID = txtUnitId.Text,
+                    RequestDate = DateTime.Now,
+                    SupplyDate = dpSupplyDate.Value,
+                    Status = "Pending",
+                    DetailList = detailList
+                };
+                
+       
+                int newRequirementID = brBUS.AddRequirement(brDTO); // Trả về ID vừa tạo
+              
+                MessageBox.Show("Blood requirement submitted successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadRequirementsToGrid(); // Refresh lại DataGridView
+                ClearForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error registering a blood request: " + ex.Message);
+            }
         }
     }
 }

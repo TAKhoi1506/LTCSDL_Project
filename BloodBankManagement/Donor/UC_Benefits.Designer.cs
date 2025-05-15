@@ -45,7 +45,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.bunifuLabel2.Location = new System.Drawing.Point(97, 254);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(732, 44);
@@ -60,7 +60,7 @@
             this.richTextBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.richTextBox1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.richTextBox1.Location = new System.Drawing.Point(97, 355);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(908, 1045);
             this.richTextBox1.TabIndex = 45;
@@ -72,7 +72,7 @@
             this.richTextBox2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.richTextBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.richTextBox2.Location = new System.Drawing.Point(1123, 355);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(896, 1045);
             this.richTextBox2.TabIndex = 46;
@@ -87,7 +87,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.bunifuLabel1.Location = new System.Drawing.Point(1123, 254);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(714, 44);
@@ -123,7 +123,8 @@
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.bunifuLabel2);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UC_Benefits";
             this.Size = new System.Drawing.Size(2116, 1500);
             this.ResumeLayout(false);

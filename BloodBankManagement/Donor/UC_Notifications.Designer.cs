@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Notifications));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listViewMessage = new System.Windows.Forms.ListView();
             this.MessageContent = new System.Windows.Forms.RichTextBox();
@@ -46,7 +46,7 @@
             // 
             this.splitContainer1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.splitContainer1.Location = new System.Drawing.Point(163, 271);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -66,7 +66,7 @@
             this.listViewMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewMessage.HideSelection = false;
             this.listViewMessage.Location = new System.Drawing.Point(0, 0);
-            this.listViewMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewMessage.Margin = new System.Windows.Forms.Padding(4);
             this.listViewMessage.Name = "listViewMessage";
             this.listViewMessage.Size = new System.Drawing.Size(595, 1154);
             this.listViewMessage.TabIndex = 0;
@@ -77,7 +77,7 @@
             // 
             this.MessageContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageContent.Location = new System.Drawing.Point(0, 0);
-            this.MessageContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MessageContent.Margin = new System.Windows.Forms.Padding(4);
             this.MessageContent.Name = "MessageContent";
             this.MessageContent.Size = new System.Drawing.Size(1187, 1154);
             this.MessageContent.TabIndex = 0;
@@ -121,11 +121,11 @@
             this.btRefresh.ColorContrastOnClick = 45;
             this.btRefresh.ColorContrastOnHover = 45;
             this.btRefresh.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btRefresh.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btRefresh.CustomizableEdges = borderEdges1;
             this.btRefresh.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btRefresh.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRefresh.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -150,7 +150,7 @@
             this.btRefresh.IdleIconRightImage = null;
             this.btRefresh.IndicateFocus = false;
             this.btRefresh.Location = new System.Drawing.Point(1751, 199);
-            this.btRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btRefresh.Name = "btRefresh";
             this.btRefresh.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btRefresh.OnDisabledState.BorderRadius = 1;
@@ -219,7 +219,8 @@
             this.Controls.Add(this.btRefresh);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Notifications";
             this.Size = new System.Drawing.Size(2116, 1500);
             this.Load += new System.EventHandler(this.UC_Notifications_Load);

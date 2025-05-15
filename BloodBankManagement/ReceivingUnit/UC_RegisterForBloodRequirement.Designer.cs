@@ -189,7 +189,6 @@
             this.dgvBloodRequirement.EnableHeadersVisualStyles = false;
             this.dgvBloodRequirement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodRequirement.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvBloodRequirement.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodRequirement.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBloodRequirement.Location = new System.Drawing.Point(136, 794);
             this.dgvBloodRequirement.Margin = new System.Windows.Forms.Padding(6);
@@ -299,6 +298,7 @@
             this.btSent.TextMarginLeft = 0;
             this.btSent.TextPadding = new System.Windows.Forms.Padding(0);
             this.btSent.UseDefaultRadiusAndThickness = true;
+            this.btSent.Click += new System.EventHandler(this.btSent_Click);
             // 
             // dpSupplyDate
             // 
@@ -1030,7 +1030,7 @@
             this.txtUnitId.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUnitId.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUnitId.DefaultText = "";
-            this.txtUnitId.FillColor = System.Drawing.Color.White;
+            this.txtUnitId.FillColor = System.Drawing.Color.Gainsboro;
             this.txtUnitId.HideSelection = true;
             this.txtUnitId.IconLeft = null;
             this.txtUnitId.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1061,7 +1061,7 @@
             stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUnitId.OnHoverState = stateProperties35;
             stateProperties36.BorderColor = System.Drawing.Color.Silver;
-            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.FillColor = System.Drawing.Color.Gainsboro;
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUnitId.OnIdleState = stateProperties36;
@@ -1108,7 +1108,7 @@
             this.txtUnitName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUnitName.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUnitName.DefaultText = "";
-            this.txtUnitName.FillColor = System.Drawing.Color.White;
+            this.txtUnitName.FillColor = System.Drawing.Color.Gainsboro;
             this.txtUnitName.HideSelection = true;
             this.txtUnitName.IconLeft = null;
             this.txtUnitName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1139,7 +1139,7 @@
             stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUnitName.OnHoverState = stateProperties39;
             stateProperties40.BorderColor = System.Drawing.Color.Silver;
-            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.FillColor = System.Drawing.Color.Gainsboro;
             stateProperties40.ForeColor = System.Drawing.Color.Empty;
             stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUnitName.OnIdleState = stateProperties40;
@@ -1241,9 +1241,11 @@
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_RegisterForBloodRequirement";
             this.Size = new System.Drawing.Size(2116, 1500);
+            this.Load += new System.EventHandler(this.UC_RegisterForBloodRequirement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBloodRequirement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

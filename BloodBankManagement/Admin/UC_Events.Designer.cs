@@ -850,6 +850,7 @@
             this.Controls.Add(this.cbSort);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.bunifuDataGridView1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "UC_Events";
             this.Size = new System.Drawing.Size(2116, 1300);

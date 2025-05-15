@@ -56,7 +56,8 @@ namespace DAL
                 RU_ID = brDTO.RU_ID,
                 RequestDate = DateTime.Now, // Ngày yêu cầu lấy hiện tại
                 SupplyDate = brDTO.SupplyDate,
-                Status = string.IsNullOrEmpty(brDTO.Status) ? "Pending" : brDTO.Status
+                Status = string.IsNullOrEmpty(brDTO.Status) ? "Pending" : brDTO.Status,
+                BloodRequirementDetails = new List<BloodRequirementDetail>()
             };
 
             // Thêm entity vào DbSet BloodRequirements

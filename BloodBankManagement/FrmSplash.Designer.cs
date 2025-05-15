@@ -54,9 +54,10 @@
             this.bunifuPictureBox1.BorderRadius = 66;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(231, 124);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(462, 238);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(132, 132);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(264, 254);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuPictureBox1.TabIndex = 7;
             this.bunifuPictureBox1.TabStop = false;
@@ -74,7 +75,8 @@
             this.bunifuCircleProgress1.IsPercentage = true;
             this.bunifuCircleProgress1.LineProgressThickness = 15;
             this.bunifuCircleProgress1.LineThickness = 15;
-            this.bunifuCircleProgress1.Location = new System.Drawing.Point(214, 107);
+            this.bunifuCircleProgress1.Location = new System.Drawing.Point(428, 206);
+            this.bunifuCircleProgress1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
             this.bunifuCircleProgress1.ProgressAnimationSpeed = 300;
             this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.White;
@@ -84,7 +86,7 @@
             this.bunifuCircleProgress1.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Gradient;
             this.bunifuCircleProgress1.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Triangle;
             this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.bunifuCircleProgress1.Size = new System.Drawing.Size(165, 165);
+            this.bunifuCircleProgress1.Size = new System.Drawing.Size(330, 330);
             this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.Black;
             this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
             this.bunifuCircleProgress1.SubScriptText = ".00";
@@ -128,9 +130,10 @@
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(44, 33);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(88, 63);
+            this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(2, 2);
             this.bunifuTextBox1.Modified = false;
             this.bunifuTextBox1.Multiline = false;
             this.bunifuTextBox1.Name = "bunifuTextBox1";
@@ -154,7 +157,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.White;
             this.bunifuTextBox1.PlaceholderText = "KVN BLOOD BANK MANAGEMENT SYSTEM";
@@ -164,7 +167,7 @@
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(504, 47);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(1008, 90);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 17;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -205,9 +208,10 @@
             this.txtPercent.IconRight = null;
             this.txtPercent.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPercent.Lines = new string[0];
-            this.txtPercent.Location = new System.Drawing.Point(166, 269);
+            this.txtPercent.Location = new System.Drawing.Point(332, 517);
+            this.txtPercent.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPercent.MaxLength = 32767;
-            this.txtPercent.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtPercent.MinimumSize = new System.Drawing.Size(2, 2);
             this.txtPercent.Modified = false;
             this.txtPercent.Multiline = false;
             this.txtPercent.Name = "txtPercent";
@@ -231,7 +235,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPercent.OnIdleState = stateProperties8;
-            this.txtPercent.Padding = new System.Windows.Forms.Padding(3);
+            this.txtPercent.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPercent.PasswordChar = '\0';
             this.txtPercent.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtPercent.PlaceholderText = "";
@@ -241,7 +245,7 @@
             this.txtPercent.SelectionLength = 0;
             this.txtPercent.SelectionStart = 0;
             this.txtPercent.ShortcutsEnabled = true;
-            this.txtPercent.Size = new System.Drawing.Size(260, 45);
+            this.txtPercent.Size = new System.Drawing.Size(520, 87);
             this.txtPercent.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPercent.TabIndex = 18;
             this.txtPercent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -258,15 +262,16 @@
             // 
             // FrmSplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.ClientSize = new System.Drawing.Size(593, 320);
+            this.ClientSize = new System.Drawing.Size(1186, 615);
             this.Controls.Add(this.txtPercent);
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.bunifuCircleProgress1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "FrmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSplash";

@@ -94,7 +94,7 @@ namespace BloodBankManagement
 
         private void FrmDonor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
     }
 }

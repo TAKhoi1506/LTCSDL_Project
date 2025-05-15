@@ -192,6 +192,7 @@
             this.dgvBloodDetails.EnableHeadersVisualStyles = false;
             this.dgvBloodDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvBloodDetails.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBloodDetails.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBloodDetails.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBloodDetails.Location = new System.Drawing.Point(732, 402);
             this.dgvBloodDetails.Margin = new System.Windows.Forms.Padding(6);
@@ -232,6 +233,7 @@
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.dgvStock);
             this.Controls.Add(this.bunifuLabel2);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UC_BloodStock";
             this.Size = new System.Drawing.Size(2116, 1300);

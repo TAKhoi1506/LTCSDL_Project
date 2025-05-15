@@ -42,6 +42,7 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnShow = new System.Windows.Forms.Panel();
             this.pnBar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btHistoryDonations = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -50,7 +51,6 @@
             this.btRegisterForDonation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btNotification = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btInfor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.pnShow = new System.Windows.Forms.Panel();
             this.pnHome.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
@@ -142,6 +142,15 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(2565, 1439);
             this.bunifuGradientPanel1.TabIndex = 16;
+            // 
+            // pnShow
+            // 
+            this.pnShow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnShow.Location = new System.Drawing.Point(445, 129);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(2120, 1310);
+            this.pnShow.TabIndex = 15;
             // 
             // pnBar
             // 
@@ -811,21 +820,14 @@
             this.btInfor.UseDefaultRadiusAndThickness = true;
             this.btInfor.Click += new System.EventHandler(this.btInfor_Click);
             // 
-            // pnShow
-            // 
-            this.pnShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnShow.Location = new System.Drawing.Point(445, 129);
-            this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(2120, 1310);
-            this.pnShow.TabIndex = 15;
-            // 
             // FrmDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2565, 1439);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDonor";
             this.Text = "FrmDonor";
