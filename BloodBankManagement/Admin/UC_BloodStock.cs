@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using System.Net.Mail;
+using System.Net;
 
 namespace BloodBankManagement
 {
@@ -20,7 +22,7 @@ namespace BloodBankManagement
         }
         private BloodStockBUS bus = new BloodStockBUS();
         private BloodDetailBUS bloodDetailBUS = new BloodDetailBUS();
-
+        private NotificationsBUS notificationsBUS = new NotificationsBUS();
 
         //private void btAddDonor_Click(object sender, EventArgs e)
         //{
@@ -96,6 +98,54 @@ namespace BloodBankManagement
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+            }
+        }
+
+
+        public void SendEmail(string toEmail, string title, string message)
+        {
+            var fromEmail = "takhoi150604@gmail.com";
+            var appPassword = "zder mvsk jdkh ogks";
+
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(fromEmail, appPassword),
+                EnableSsl = true,
+            };
+
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(fromEmail),
+                Subject = title,
+                Body = message,
+                IsBodyHtml = false
+            };
+
+
+            mailMessage.To.Add(toEmail);
+            smtpClient.Send(mailMessage);
+        }
+
+
+        private void btSendEmail_Click(object sender, EventArgs e)
+        {
+            string objectId = "13";
+            string title = "Thư từ ngân hàng máu KVN";
+            string message = "Đây là thư từ ngân hàng máu KVN! Vui lòng không phản hồi sau khi nhận tin nhắn. Xin cám ơn quý khách";
+
+            bool isSuccess = notificationsBUS.AddNotification(objectId, title, message);    
+
+            if (isSuccess) 
+            {
+                SendEmail("2251012080khoi@ou.edu.vn", title, message);
+                MessageBox.Show("Đã gửi thông báo và email thành công!");
+
+            }
+            else
+            {
+                MessageBox.Show("Gửi thông báo thất bại!");
             }
         }
     }

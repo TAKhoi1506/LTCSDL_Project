@@ -133,11 +133,20 @@ namespace DAL
 
 
 
-        public bool AddNotification(Notification notification)
+        public bool AddNotification(string ObjectID, string title, string message)
         {
             try
             {
-                _myContext.Notifications.Add(notification);
+                var noti = new Notification
+                {
+                    ObjectID = ObjectID,
+                    Title = title,
+                    Message = message,
+                    CreateAt = DateTime.Now,
+                    IsRead = false
+                };
+
+                _myContext.Notifications.Add(noti);
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)

@@ -138,21 +138,22 @@ namespace BloodBankManagement.Donor
             if (notifications != null && notifications.Count > 0)
             {
                 // Lấy thông báo đầu tiên (hoặc bạn có thể lấy thông báo khác theo ý muốn)
-                var notification = notifications[0];
+                foreach (var notification in notifications)
+                {
+                    MessageContent.Clear();
 
-                MessageContent.Clear();
+                    // Định dạng tiêu đề thông báo (có thể tùy chỉnh)
+                    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
+                    MessageContent.AppendText(notification.Title + "\n");
 
-                // Định dạng tiêu đề thông báo (có thể tùy chỉnh)
-                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 12, FontStyle.Bold);
-                MessageContent.AppendText(notification.Title + "\n");
+                    // Thêm ngày tạo thông báo (nếu cần)
+                    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
+                    MessageContent.AppendText(notification.CreatedAt.ToString("dd/MM/yyyy HH:mm") + "\n\n");
 
-                // Thêm ngày tạo thông báo (nếu cần)
-                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 9, FontStyle.Italic);
-                MessageContent.AppendText(notification.CreatedAt.ToString("dd/MM/yyyy HH:mm") + "\n\n");
-
-                // Thêm nội dung thông báo
-                MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
-                MessageContent.AppendText(notification.Message);
+                    // Thêm nội dung thông báo
+                    MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
+                    MessageContent.AppendText(notification.Message);
+                }
             }
             else
             {

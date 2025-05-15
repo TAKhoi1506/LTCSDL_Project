@@ -126,4 +126,21 @@
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btSendEmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOkAAAA8CAYAAACDxJ1/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIwSURBVHhe7dixSlxBGIbhgfP9Zy0tU1p6CSlTpkxplX+a
+        3EWKXEAgkNsIpBNSCaksLdIHLGwUWReDAS0SZtWAc6LVuvsV7w9Pc2b2dC9ndkp5ZLKUrYzYS2m/SkdV
+        OqsRfwCsQOvptquDjKhZynbf4JOTw/A6pfMqLSYvB7Ba0mWV5hnxrm9xMq3mKn2tEfPJiwA8q5QuasRh
+        lvKib3M5d4EeZ8R1/2MAa9Q6nM12+kZL+4ISKGBCOnoQaPsPyhEXsPIrh+HDbaDtFrddEk03Adig1mWO
+        425p17/L26X/bAKwORlxUyM+tf+iB/0iABPSz5LSyWQBgIX2NS014qpfAOCjRTp5CMAHkQLmiBQwR6SA
+        OSIFzBEpYI5IAXNECpgjUsAckQLmiBQwR6SAOSIFzBEpYI5IAXNECpgjUsAckQLmiBQwR6SAOSIFzBEp
+        YI5IAXNECpgjUsAckQLmiBQwR6SAOSIFzBEpYI5IAXNECpgjUsAckQLmiBQwR6SAOSIFzBEpYK5kxE3/
+        EICPUqWz/iEAH+24e9g/BOAhpZP2JX1fI373iwAMSF9KzmY7VZpPFgFsVEoXOY5vSpu3ER8z4rLfBGAz
+        MuI6pW/LQNtkKVt1HH/0GwFsRkqnWcr2v0iXoY7jbo3gphfYsIw4z2F49SDQ+0npZZWOuUgC1u/uiHv6
+        aKD3szz6RnyuEVwmAesiLeowfJ8ccZ+aVnO7/q0Ri8kLAazKVUr7GbHXN3g/fwH2RoIBxHBClwAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
 </root>
