@@ -4,3 +4,9 @@ D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.dll
 D:\New_Vy\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\source1505\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
