@@ -80,6 +80,7 @@ namespace BloodBankManagement
 
         private void UC_HistoryDonations_Load(object sender, EventArgs e)
         {
+            Icons.SetUpDgv(dgvDonors);
             LoadHistoryDonation();
         }
     }

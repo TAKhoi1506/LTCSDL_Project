@@ -134,7 +134,6 @@
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(72, 731);
             this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -297,7 +296,7 @@
             this.btAddEvent.AutoSizeLeftIcon = true;
             this.btAddEvent.AutoSizeRightIcon = true;
             this.btAddEvent.BackColor = System.Drawing.Color.Transparent;
-            this.btAddEvent.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddEvent.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAddEvent.BackgroundImage")));
             this.btAddEvent.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddEvent.ButtonText = "Add new event";
@@ -316,7 +315,7 @@
             this.btAddEvent.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btAddEvent.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btAddEvent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddEvent.ForeColor = System.Drawing.Color.White;
+            this.btAddEvent.ForeColor = System.Drawing.Color.Black;
             this.btAddEvent.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddEvent.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btAddEvent.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -326,10 +325,10 @@
             this.btAddEvent.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btAddEvent.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btAddEvent.IconSize = 25;
-            this.btAddEvent.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddEvent.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddEvent.IdleBorderRadius = 20;
             this.btAddEvent.IdleBorderThickness = 1;
-            this.btAddEvent.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddEvent.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddEvent.IdleIconLeftImage = null;
             this.btAddEvent.IdleIconRightImage = null;
             this.btAddEvent.IndicateFocus = false;
@@ -352,12 +351,12 @@
             this.btAddEvent.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btAddEvent.onHoverState.IconLeftImage = null;
             this.btAddEvent.onHoverState.IconRightImage = null;
-            this.btAddEvent.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddEvent.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddEvent.OnIdleState.BorderRadius = 20;
             this.btAddEvent.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddEvent.OnIdleState.BorderThickness = 1;
-            this.btAddEvent.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddEvent.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btAddEvent.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.btAddEvent.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btAddEvent.OnIdleState.IconLeftImage = null;
             this.btAddEvent.OnIdleState.IconRightImage = null;
             this.btAddEvent.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -368,9 +367,9 @@
             this.btAddEvent.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btAddEvent.OnPressedState.IconLeftImage = null;
             this.btAddEvent.OnPressedState.IconRightImage = null;
-            this.btAddEvent.Size = new System.Drawing.Size(562, 78);
+            this.btAddEvent.Size = new System.Drawing.Size(562, 84);
             this.btAddEvent.TabIndex = 31;
-            this.btAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddEvent.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btAddEvent.TextMarginLeft = 0;
             this.btAddEvent.TextPadding = new System.Windows.Forms.Padding(0);

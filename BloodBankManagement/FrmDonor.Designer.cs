@@ -147,9 +147,9 @@
             // 
             this.pnShow.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnShow.Location = new System.Drawing.Point(445, 129);
+            this.pnShow.Location = new System.Drawing.Point(525, 129);
             this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(2120, 1310);
+            this.pnShow.Size = new System.Drawing.Size(2040, 1310);
             this.pnShow.TabIndex = 15;
             // 
             // pnBar
@@ -172,7 +172,7 @@
             this.pnBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnBar.Name = "pnBar";
             this.pnBar.ShowBorders = true;
-            this.pnBar.Size = new System.Drawing.Size(445, 1310);
+            this.pnBar.Size = new System.Drawing.Size(525, 1310);
             this.pnBar.TabIndex = 13;
             // 
             // btHistoryDonations
@@ -257,7 +257,7 @@
             this.btHistoryDonations.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btHistoryDonations.OnPressedState.IconLeftImage = null;
             this.btHistoryDonations.OnPressedState.IconRightImage = null;
-            this.btHistoryDonations.Size = new System.Drawing.Size(435, 78);
+            this.btHistoryDonations.Size = new System.Drawing.Size(520, 78);
             this.btHistoryDonations.TabIndex = 1;
             this.btHistoryDonations.TabStop = false;
             this.btHistoryDonations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,7 +282,7 @@
             this.btLogout.BackColor1 = System.Drawing.Color.White;
             this.btLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btLogout.BackgroundImage")));
             this.btLogout.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btLogout.ButtonText = "Log Out";
+            this.btLogout.ButtonText = "Log out";
             this.btLogout.ButtonTextMarginLeft = 0;
             this.btLogout.ColorContrastOnClick = 45;
             this.btLogout.ColorContrastOnHover = 45;
@@ -350,7 +350,7 @@
             this.btLogout.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btLogout.OnPressedState.IconLeftImage = null;
             this.btLogout.OnPressedState.IconRightImage = null;
-            this.btLogout.Size = new System.Drawing.Size(435, 78);
+            this.btLogout.Size = new System.Drawing.Size(517, 78);
             this.btLogout.TabIndex = 0;
             this.btLogout.TabStop = false;
             this.btLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,7 +442,7 @@
             this.btHome.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btHome.OnPressedState.IconLeftImage = null;
             this.btHome.OnPressedState.IconRightImage = null;
-            this.btHome.Size = new System.Drawing.Size(435, 78);
+            this.btHome.Size = new System.Drawing.Size(520, 78);
             this.btHome.TabIndex = 0;
             this.btHome.TabStop = false;
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -534,7 +534,7 @@
             this.btBenefit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btBenefit.OnPressedState.IconLeftImage = null;
             this.btBenefit.OnPressedState.IconRightImage = null;
-            this.btBenefit.Size = new System.Drawing.Size(435, 78);
+            this.btBenefit.Size = new System.Drawing.Size(520, 78);
             this.btBenefit.TabIndex = 1;
             this.btBenefit.TabStop = false;
             this.btBenefit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -626,7 +626,7 @@
             this.btRegisterForDonation.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btRegisterForDonation.OnPressedState.IconLeftImage = null;
             this.btRegisterForDonation.OnPressedState.IconRightImage = null;
-            this.btRegisterForDonation.Size = new System.Drawing.Size(435, 78);
+            this.btRegisterForDonation.Size = new System.Drawing.Size(520, 78);
             this.btRegisterForDonation.TabIndex = 0;
             this.btRegisterForDonation.TabStop = false;
             this.btRegisterForDonation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -718,7 +718,7 @@
             this.btNotification.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btNotification.OnPressedState.IconLeftImage = null;
             this.btNotification.OnPressedState.IconRightImage = null;
-            this.btNotification.Size = new System.Drawing.Size(435, 78);
+            this.btNotification.Size = new System.Drawing.Size(520, 78);
             this.btNotification.TabIndex = 0;
             this.btNotification.TabStop = false;
             this.btNotification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -810,7 +810,7 @@
             this.btInfor.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btInfor.OnPressedState.IconLeftImage = null;
             this.btInfor.OnPressedState.IconRightImage = null;
-            this.btInfor.Size = new System.Drawing.Size(435, 78);
+            this.btInfor.Size = new System.Drawing.Size(520, 78);
             this.btInfor.TabIndex = 0;
             this.btInfor.TabStop = false;
             this.btInfor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

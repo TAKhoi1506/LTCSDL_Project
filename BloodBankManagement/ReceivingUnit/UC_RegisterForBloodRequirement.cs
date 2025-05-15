@@ -29,6 +29,10 @@ namespace BloodBankManagement
 
         private void UC_RegisterForBloodRequirement_Load(object sender, EventArgs e)
         {
+            Icons.SetupLeftIcon(btSent, "/Resources/req.jpg"); 
+            Icons.SetupButtonIcon(btSent);
+            Icons.SetUpDgv(dgvBloodRequirement);
+
             // Map từng loại máu đến textbox tương ứng
             bloodTypeTextBoxMap = new Dictionary<string, BunifuTextBox>
             {

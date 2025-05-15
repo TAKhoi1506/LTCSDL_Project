@@ -141,7 +141,7 @@
             this.dgvDonors.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDonors.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDonors.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDonors.Location = new System.Drawing.Point(107, 714);
+            this.dgvDonors.Location = new System.Drawing.Point(106, 735);
             this.dgvDonors.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgvDonors.Name = "dgvDonors";
             this.dgvDonors.RowHeadersVisible = false;
@@ -275,7 +275,7 @@
             this.txtFullName.IconRight = null;
             this.txtFullName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.Lines = new string[0];
-            this.txtFullName.Location = new System.Drawing.Point(388, 330);
+            this.txtFullName.Location = new System.Drawing.Point(388, 326);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtFullName.MaxLength = 32767;
             this.txtFullName.MinimumSize = new System.Drawing.Size(3, 2);
@@ -353,7 +353,7 @@
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(388, 245);
+            this.txtPassword.Location = new System.Drawing.Point(388, 243);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(3, 2);
@@ -569,7 +569,7 @@
             this.btAddDonor.AutoSizeLeftIcon = true;
             this.btAddDonor.AutoSizeRightIcon = true;
             this.btAddDonor.BackColor = System.Drawing.Color.Transparent;
-            this.btAddDonor.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddDonor.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddDonor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAddDonor.BackgroundImage")));
             this.btAddDonor.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.ButtonText = "Add new donor";
@@ -588,7 +588,7 @@
             this.btAddDonor.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btAddDonor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btAddDonor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddDonor.ForeColor = System.Drawing.Color.White;
+            this.btAddDonor.ForeColor = System.Drawing.Color.Black;
             this.btAddDonor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddDonor.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btAddDonor.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -598,14 +598,14 @@
             this.btAddDonor.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btAddDonor.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btAddDonor.IconSize = 25;
-            this.btAddDonor.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddDonor.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddDonor.IdleBorderRadius = 20;
             this.btAddDonor.IdleBorderThickness = 1;
-            this.btAddDonor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddDonor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddDonor.IdleIconLeftImage = null;
             this.btAddDonor.IdleIconRightImage = null;
             this.btAddDonor.IndicateFocus = false;
-            this.btAddDonor.Location = new System.Drawing.Point(1571, 502);
+            this.btAddDonor.Location = new System.Drawing.Point(1571, 516);
             this.btAddDonor.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btAddDonor.Name = "btAddDonor";
             this.btAddDonor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -624,12 +624,12 @@
             this.btAddDonor.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btAddDonor.onHoverState.IconLeftImage = null;
             this.btAddDonor.onHoverState.IconRightImage = null;
-            this.btAddDonor.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btAddDonor.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btAddDonor.OnIdleState.BorderRadius = 20;
             this.btAddDonor.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btAddDonor.OnIdleState.BorderThickness = 1;
-            this.btAddDonor.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btAddDonor.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btAddDonor.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.btAddDonor.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btAddDonor.OnIdleState.IconLeftImage = null;
             this.btAddDonor.OnIdleState.IconRightImage = null;
             this.btAddDonor.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -640,12 +640,12 @@
             this.btAddDonor.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btAddDonor.OnPressedState.IconLeftImage = null;
             this.btAddDonor.OnPressedState.IconRightImage = null;
-            this.btAddDonor.Size = new System.Drawing.Size(436, 75);
+            this.btAddDonor.Size = new System.Drawing.Size(436, 92);
             this.btAddDonor.TabIndex = 31;
-            this.btAddDonor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btAddDonor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddDonor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btAddDonor.TextMarginLeft = 0;
-            this.btAddDonor.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btAddDonor.TextPadding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btAddDonor.UseDefaultRadiusAndThickness = true;
             this.btAddDonor.Click += new System.EventHandler(this.btAddDonor_Click);
             // 
@@ -669,7 +669,7 @@
             this.dpDateOfBirth.IconColor = System.Drawing.Color.Gray;
             this.dpDateOfBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dpDateOfBirth.LeftTextMargin = 5;
-            this.dpDateOfBirth.Location = new System.Drawing.Point(388, 415);
+            this.dpDateOfBirth.Location = new System.Drawing.Point(388, 409);
             this.dpDateOfBirth.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dpDateOfBirth.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpDateOfBirth.Name = "dpDateOfBirth";
@@ -719,7 +719,7 @@
             "AB-",
             "O+",
             "O-"});
-            this.cbBloodType.Location = new System.Drawing.Point(388, 482);
+            this.cbBloodType.Location = new System.Drawing.Point(388, 475);
             this.cbBloodType.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.cbBloodType.Name = "cbBloodType";
             this.cbBloodType.Size = new System.Drawing.Size(436, 50);
@@ -775,7 +775,7 @@
             this.lbAdress.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbAdress.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbAdress.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.lbAdress.Location = new System.Drawing.Point(116, 572);
+            this.lbAdress.Location = new System.Drawing.Point(116, 568);
             this.lbAdress.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.lbAdress.Name = "lbAdress";
             this.lbAdress.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -793,7 +793,7 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(116, 486);
+            this.bunifuLabel1.Location = new System.Drawing.Point(116, 490);
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -833,7 +833,7 @@
             this.btnDelete.AutoSizeLeftIcon = true;
             this.btnDelete.AutoSizeRightIcon = true;
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackColor1 = System.Drawing.Color.OrangeRed;
+            this.btnDelete.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(55)))), ((int)(((byte)(28)))));
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDelete.ButtonText = "Delete";
@@ -862,14 +862,14 @@
             this.btnDelete.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnDelete.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnDelete.IconSize = 25;
-            this.btnDelete.IdleBorderColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(55)))), ((int)(((byte)(28)))));
             this.btnDelete.IdleBorderRadius = 20;
             this.btnDelete.IdleBorderThickness = 1;
-            this.btnDelete.IdleFillColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(55)))), ((int)(((byte)(28)))));
             this.btnDelete.IdleIconLeftImage = null;
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(1181, 626);
+            this.btnDelete.Location = new System.Drawing.Point(1181, 641);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -888,11 +888,11 @@
             this.btnDelete.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnDelete.onHoverState.IconLeftImage = null;
             this.btnDelete.onHoverState.IconRightImage = null;
-            this.btnDelete.OnIdleState.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(55)))), ((int)(((byte)(28)))));
             this.btnDelete.OnIdleState.BorderRadius = 20;
             this.btnDelete.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnDelete.OnIdleState.BorderThickness = 1;
-            this.btnDelete.OnIdleState.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(55)))), ((int)(((byte)(28)))));
             this.btnDelete.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnDelete.OnIdleState.IconLeftImage = null;
             this.btnDelete.OnIdleState.IconRightImage = null;
@@ -906,10 +906,10 @@
             this.btnDelete.OnPressedState.IconRightImage = null;
             this.btnDelete.Size = new System.Drawing.Size(311, 75);
             this.btnDelete.TabIndex = 31;
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDelete.TextMarginLeft = 0;
-            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnDelete.UseDefaultRadiusAndThickness = true;
             this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -926,7 +926,7 @@
             this.btSave.AutoSizeLeftIcon = true;
             this.btSave.AutoSizeRightIcon = true;
             this.btSave.BackColor = System.Drawing.Color.Transparent;
-            this.btSave.BackColor1 = System.Drawing.SystemColors.MenuHighlight;
+            this.btSave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.btSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSave.BackgroundImage")));
             this.btSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btSave.ButtonText = "Save";
@@ -945,7 +945,7 @@
             this.btSave.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btSave.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSave.ForeColor = System.Drawing.Color.White;
+            this.btSave.ForeColor = System.Drawing.Color.Black;
             this.btSave.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSave.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btSave.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -958,11 +958,11 @@
             this.btSave.IdleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btSave.IdleBorderRadius = 20;
             this.btSave.IdleBorderThickness = 1;
-            this.btSave.IdleFillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.btSave.IdleIconLeftImage = null;
             this.btSave.IdleIconRightImage = null;
             this.btSave.IndicateFocus = false;
-            this.btSave.Location = new System.Drawing.Point(1571, 626);
+            this.btSave.Location = new System.Drawing.Point(1571, 641);
             this.btSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btSave.Name = "btSave";
             this.btSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -985,8 +985,8 @@
             this.btSave.OnIdleState.BorderRadius = 20;
             this.btSave.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btSave.OnIdleState.BorderThickness = 1;
-            this.btSave.OnIdleState.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btSave.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btSave.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.btSave.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btSave.OnIdleState.IconLeftImage = null;
             this.btSave.OnIdleState.IconRightImage = null;
             this.btSave.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -997,12 +997,12 @@
             this.btSave.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btSave.OnPressedState.IconLeftImage = null;
             this.btSave.OnPressedState.IconRightImage = null;
-            this.btSave.Size = new System.Drawing.Size(311, 75);
+            this.btSave.Size = new System.Drawing.Size(436, 75);
             this.btSave.TabIndex = 31;
-            this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btSave.TextMarginLeft = 0;
-            this.btSave.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btSave.TextPadding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btSave.UseDefaultRadiusAndThickness = true;
             this.btSave.Visible = false;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
@@ -1019,7 +1019,7 @@
             this.btEdit.AutoSizeLeftIcon = true;
             this.btEdit.AutoSizeRightIcon = true;
             this.btEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btEdit.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btEdit.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btEdit.BackgroundImage")));
             this.btEdit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btEdit.ButtonText = "Edit";
@@ -1038,7 +1038,7 @@
             this.btEdit.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btEdit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEdit.ForeColor = System.Drawing.Color.White;
+            this.btEdit.ForeColor = System.Drawing.Color.Black;
             this.btEdit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEdit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btEdit.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -1048,14 +1048,14 @@
             this.btEdit.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btEdit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btEdit.IconSize = 25;
-            this.btEdit.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btEdit.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btEdit.IdleBorderRadius = 20;
             this.btEdit.IdleBorderThickness = 1;
-            this.btEdit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btEdit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btEdit.IdleIconLeftImage = null;
             this.btEdit.IdleIconRightImage = null;
             this.btEdit.IndicateFocus = false;
-            this.btEdit.Location = new System.Drawing.Point(1181, 502);
+            this.btEdit.Location = new System.Drawing.Point(1181, 516);
             this.btEdit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btEdit.Name = "btEdit";
             this.btEdit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -1074,12 +1074,12 @@
             this.btEdit.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btEdit.onHoverState.IconLeftImage = null;
             this.btEdit.onHoverState.IconRightImage = null;
-            this.btEdit.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btEdit.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btEdit.OnIdleState.BorderRadius = 20;
             this.btEdit.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btEdit.OnIdleState.BorderThickness = 1;
-            this.btEdit.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btEdit.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btEdit.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.btEdit.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btEdit.OnIdleState.IconLeftImage = null;
             this.btEdit.OnIdleState.IconRightImage = null;
             this.btEdit.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -1090,12 +1090,12 @@
             this.btEdit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btEdit.OnPressedState.IconLeftImage = null;
             this.btEdit.OnPressedState.IconRightImage = null;
-            this.btEdit.Size = new System.Drawing.Size(311, 75);
+            this.btEdit.Size = new System.Drawing.Size(311, 92);
             this.btEdit.TabIndex = 31;
-            this.btEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEdit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btEdit.TextMarginLeft = 0;
-            this.btEdit.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btEdit.TextPadding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btEdit.UseDefaultRadiusAndThickness = true;
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
@@ -1165,7 +1165,7 @@
             this.txtAddress.IconRight = null;
             this.txtAddress.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.Lines = new string[0];
-            this.txtAddress.Location = new System.Drawing.Point(384, 572);
+            this.txtAddress.Location = new System.Drawing.Point(384, 547);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtAddress.MaxLength = 32767;
             this.txtAddress.MinimumSize = new System.Drawing.Size(3, 2);
@@ -1239,7 +1239,7 @@
             this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(116, 409);
+            this.bunifuLabel6.Location = new System.Drawing.Point(116, 412);
             this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1257,7 +1257,7 @@
             this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(116, 332);
+            this.bunifuLabel5.Location = new System.Drawing.Point(116, 334);
             this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1275,7 +1275,7 @@
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(116, 255);
+            this.bunifuLabel4.Location = new System.Drawing.Point(116, 256);
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;

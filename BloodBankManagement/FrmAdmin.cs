@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BloodBankManagement.Admin;
 using BUS;
 using BloodBankManagement.Static;
+using System.IO;
 
 namespace BloodBankManagement
 {
@@ -25,7 +26,7 @@ namespace BloodBankManagement
         {
             InitializeComponent();
         }
-     
+
         private void ShowUserControl(UserControl newControl)
         {
             if (currentControl != null)
@@ -45,13 +46,16 @@ namespace BloodBankManagement
             refreshTimer.Tick += (s, e) => LoadUnreadCount();
             refreshTimer.Start();
         }
+
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
+            //icon 
+            LoadIcons();
+
             ShowUserControl(new UC_Home());
             var notis = notificationsBUS.GetUnreadCount(Static.UserSession.ObjectID);
             StartTimer();
             LoadUnreadCount();
-
         }
         private void LoadUnreadCount()
         {
@@ -172,7 +176,7 @@ namespace BloodBankManagement
 
         private void btRequirements_Click(object sender, EventArgs e)
         {
-           ShowUserControl(new UC_BloodRequirements());
+            ShowUserControl(new UC_BloodRequirements());
         }
 
         private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -189,6 +193,21 @@ namespace BloodBankManagement
             // Mở lại form Login
             Login loginForm = new Login();
             loginForm.Show();
+        }
+
+
+        // CÁC ICONS 
+        private void LoadIcons()
+        {
+            Icons.SetupButtonIcon(btHome, "home.jpg");
+            Icons.SetupButtonIcon(btEvents, "event.jpg");
+            Icons.SetupButtonIcon(btBloodStock, "stock.jpg");
+            Icons.SetupButtonIcon(btDonors, "donor.jpg");
+            Icons.SetupButtonIcon(btReUnits, "ru.jpg");
+            Icons.SetupButtonIcon(btDonations, "donation.jpg");
+            Icons.SetupButtonIcon(btDashboard, "dashboard.jpg");
+            Icons.SetupButtonIcon(btRequirements, "req.jpg");
+            Icons.SetupButtonIcon(btLogout, "logout.jpg");
         }
     }
 }

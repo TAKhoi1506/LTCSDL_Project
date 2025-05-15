@@ -78,7 +78,8 @@ namespace BloodBankManagement
 
         private void UC_UnitInformation_Load(object sender, EventArgs e)
         {
-            //AddSampleData(); // Gọi chỉ 1 lần khi test
+            Icons.SetupLeftIcon(btUpdate, "/Resources/update.jpg");
+            Icons.SetupButtonIcon(btUpdate);
             LoadReceivingUnit();
         }
 

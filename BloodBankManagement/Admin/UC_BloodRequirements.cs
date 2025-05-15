@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement.Admin
 {
@@ -180,6 +181,12 @@ namespace BloodBankManagement.Admin
             {
                 dgvBloodRequirement.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
+        }
+
+        private void UC_BloodRequirements_Load(object sender, EventArgs e)
+        {
+            Icons.SetUpDgv(dgvBloodRequirement);
+            Icons.SetupButtonIcon(btSearch);
         }
     }
 }

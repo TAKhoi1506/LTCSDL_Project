@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
-    public partial class UC_BloodStock: UserControl
+    public partial class UC_BloodStock : UserControl
     {
         public UC_BloodStock()
         {
@@ -50,6 +51,8 @@ namespace BloodBankManagement
 
         private void UC_BloodStock_Load(object sender, EventArgs e)
         {
+            Icons.SetUpDgv(dgvBloodDetails);
+            Icons.SetUpDgv(dgvStock);
             //cbBloodType.SelectedIndex = 1;
             LoadStockGrid();
             LoadBloodDetails();

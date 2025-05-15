@@ -172,6 +172,12 @@
     <Compile Include="FrmDonor.Designer.cs">
       <DependentUpon>FrmDonor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForgotPassword.Designer.cs">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReceivingUnit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,7 @@
     <Compile Include="Donor\UC_HistoryDonations.Designer.cs">
       <DependentUpon>UC_HistoryDonations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Static\Icons.cs" />
     <Compile Include="Static\UserSession.cs" />
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDonor.resx">
       <DependentUpon>FrmDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForgotPassword.resx">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReceivingUnit.resx">
       <DependentUpon>FrmReceivingUnit.cs</DependentUpon>
@@ -393,6 +403,81 @@
       <Project>{28ae0657-b73a-46c3-a270-28c86f7c823e}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\benefit.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\dashboard.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\delete.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\donation.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\donor.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\event.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\history.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\home.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\info.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\login.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\logout.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\noti.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\refresh.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\register.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\req.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\send.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\signup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sort.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\update.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\sort1.jpg" />
+    <None Include="Resources\send2.jpg" />
+    <None Include="Resources\send1.jpg" />
+    <Content Include="Resources\user.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ring.jpg" />
+    <Content Include="Resources\ru.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\stock.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

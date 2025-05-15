@@ -36,6 +36,7 @@ namespace BloodBankManagement
 
         private void FrmDonor_Load(object sender, EventArgs e)
         {
+            LoadIcons();
             ShowUserControl(new UC_Home());
         }
 
@@ -64,18 +65,6 @@ namespace BloodBankManagement
             ShowUserControl(new UC_Notifications());
         }
 
-        //private void HomeLoad()
-        //{
-        //    if (ucHome == null)
-        //    {
-        //        ucHome = new UC_Home();
-        //        ucHome.Dock = DockStyle.Fill;
-        //        pnShow.Controls.Add(ucHome);
-        //    }
-
-        //    ucHome.BringToFront();
-        //}
-
         private void btHome_Click(object sender, EventArgs e)
         {
             ShowUserControl(new UC_Home());
@@ -85,7 +74,7 @@ namespace BloodBankManagement
         {
             UserSession.Clear();
 
-            this.Close();
+            this.Hide();
 
             // Mở lại form Login
             Login loginForm = new Login();
@@ -95,6 +84,17 @@ namespace BloodBankManagement
         private void FrmDonor_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Application.Exit();
+        }
+
+        private void LoadIcons()
+        {
+            Icons.SetupButtonIcon(btHome, "home.jpg");
+            Icons.SetupButtonIcon(btInfor, "info.jpg");
+            Icons.SetupButtonIcon(btHistoryDonations, "history.jpg");
+            Icons.SetupButtonIcon(btNotification, "noti.jpg");
+            Icons.SetupButtonIcon(btRegisterForDonation, "register.jpg");
+            Icons.SetupButtonIcon(btBenefit, "benefit.jpg");
+            Icons.SetupButtonIcon(btLogout, "logout.jpg");
         }
     }
 }

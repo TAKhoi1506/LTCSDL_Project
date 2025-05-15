@@ -41,5 +41,11 @@ namespace BUS
         {
             return notifiDAL.GetTileList(objectID).Count(n => !n.IsRead);
         }
+
+        // Forgot password
+        public bool AddNotification(string objectID, string title, string message)
+        {
+            return notifiDAL.AddNotification(objectID, title, message);
+        }
     }
 }

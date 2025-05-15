@@ -219,7 +219,7 @@
             this.btSent.AutoSizeLeftIcon = true;
             this.btSent.AutoSizeRightIcon = true;
             this.btSent.BackColor = System.Drawing.Color.Transparent;
-            this.btSent.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btSent.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btSent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSent.BackgroundImage")));
             this.btSent.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btSent.ButtonText = "Sent a requirement";
@@ -238,7 +238,7 @@
             this.btSent.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btSent.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btSent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSent.ForeColor = System.Drawing.Color.White;
+            this.btSent.ForeColor = System.Drawing.Color.Black;
             this.btSent.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSent.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btSent.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -248,14 +248,14 @@
             this.btSent.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btSent.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btSent.IconSize = 25;
-            this.btSent.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
+            this.btSent.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btSent.IdleBorderRadius = 20;
             this.btSent.IdleBorderThickness = 1;
-            this.btSent.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btSent.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btSent.IdleIconLeftImage = null;
             this.btSent.IdleIconRightImage = null;
             this.btSent.IndicateFocus = false;
-            this.btSent.Location = new System.Drawing.Point(1538, 608);
+            this.btSent.Location = new System.Drawing.Point(1497, 608);
             this.btSent.Margin = new System.Windows.Forms.Padding(4);
             this.btSent.Name = "btSent";
             this.btSent.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -274,12 +274,12 @@
             this.btSent.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btSent.onHoverState.IconLeftImage = null;
             this.btSent.onHoverState.IconRightImage = null;
-            this.btSent.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(185)))));
+            this.btSent.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.btSent.OnIdleState.BorderRadius = 20;
             this.btSent.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btSent.OnIdleState.BorderThickness = 1;
-            this.btSent.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.btSent.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btSent.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.btSent.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btSent.OnIdleState.IconLeftImage = null;
             this.btSent.OnIdleState.IconRightImage = null;
             this.btSent.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -290,10 +290,10 @@
             this.btSent.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btSent.OnPressedState.IconLeftImage = null;
             this.btSent.OnPressedState.IconRightImage = null;
-            this.btSent.Size = new System.Drawing.Size(436, 81);
+            this.btSent.Size = new System.Drawing.Size(477, 81);
             this.btSent.TabIndex = 76;
             this.btSent.TabStop = false;
-            this.btSent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btSent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSent.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btSent.TextMarginLeft = 0;
             this.btSent.TextPadding = new System.Windows.Forms.Padding(0);
@@ -314,7 +314,7 @@
             this.dpSupplyDate.DPHeight = 0;
             this.dpSupplyDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dpSupplyDate.FillDatePicker = false;
-            this.dpSupplyDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpSupplyDate.Font = new System.Drawing.Font("Arial", 13.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpSupplyDate.ForeColor = System.Drawing.Color.Black;
             this.dpSupplyDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpSupplyDate.Icon")));
             this.dpSupplyDate.IconColor = System.Drawing.Color.Gray;
@@ -324,7 +324,7 @@
             this.dpSupplyDate.Margin = new System.Windows.Forms.Padding(6);
             this.dpSupplyDate.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpSupplyDate.Name = "dpSupplyDate";
-            this.dpSupplyDate.Size = new System.Drawing.Size(571, 44);
+            this.dpSupplyDate.Size = new System.Drawing.Size(571, 48);
             this.dpSupplyDate.TabIndex = 75;
             this.dpSupplyDate.Value = new System.DateTime(2025, 5, 14, 18, 1, 0, 0);
             // 
@@ -984,7 +984,7 @@
             "O-",
             "AB+",
             "AB-"});
-            this.clbBloodType.Location = new System.Drawing.Point(1538, 177);
+            this.clbBloodType.Location = new System.Drawing.Point(1497, 171);
             this.clbBloodType.Margin = new System.Windows.Forms.Padding(6);
             this.clbBloodType.Name = "clbBloodType";
             this.clbBloodType.Size = new System.Drawing.Size(172, 388);

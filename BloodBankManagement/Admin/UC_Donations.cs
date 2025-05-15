@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
@@ -24,6 +25,10 @@ namespace BloodBankManagement
 
         private void UC_Donations_Load(object sender, EventArgs e)
         {
+            btAddDonation.IdleIconLeftImage = Image.FromFile(Application.StartupPath + "\\Resources\\add.jpg");
+            btAddDonation.IconSize = 50;
+            Icons.SetupButtonIcon(btAddDonation);
+            Icons.SetUpDgv(dgvDonation);
             LoadDonationList();
             LoadEventList();
         }

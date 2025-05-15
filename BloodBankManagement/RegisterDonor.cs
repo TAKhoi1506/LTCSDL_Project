@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using BloodBankManagement.Static;
+using System.IO;
 
 namespace BloodBankManagement
 {
@@ -73,6 +75,15 @@ namespace BloodBankManagement
             {
                 MessageBox.Show("Registration failed. Username may already exist.");
             }
+        }
+
+        private void RegisterDonor_Load(object sender, EventArgs e)
+        {
+            Icons.SetupButtonIcon(btRegisterDonor, "signup.jpg");
+            btLogIn.IdleIconRightImage =  Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "login.jpg"));
+            Icons.SetupButtonIcon(btLogIn);
+            btLogIn.IconSize = 60;
+            btLogIn.AutoSizeLeftIcon = false;
         }
     }
 }

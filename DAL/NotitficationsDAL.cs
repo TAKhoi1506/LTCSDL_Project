@@ -128,16 +128,15 @@ namespace DAL
 
 
         //Lấy nội dung tin nhắn theo ObjectID
-      
 
 
 
 
-        public bool AddNotification(Notification notification)
+
+        public bool AddNotification(Notification noti)
         {
             try
             {
-                _myContext.Notifications.Add(notification);
                 return _myContext.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -146,5 +145,32 @@ namespace DAL
                 return false;
             }
         }
+
+
+        public bool AddNotification(string ObjectID, string title, string message)
+        {
+            try
+            {
+                // forgot pw 
+                var noti = new Notification
+                {
+                    ObjectID = ObjectID,
+                    Title = title,
+                    Message = message,
+                    CreateAt = DateTime.Now,
+                    IsRead = false
+                };
+                _myContext.Notifications.Add(noti);
+                //
+
+                return _myContext.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("AddNotification Error: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

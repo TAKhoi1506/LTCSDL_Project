@@ -120,21 +120,6 @@
   <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial Rounded MT Bold'; font-size: 25.875pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALoAAAA+CAYAAACcLwE/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAHmSURBVHhe7dmtUsNAFIbhndkkRSKRyMrKSi6hsi6RyMrK
-        3gWSy0AikchKZCWyEs62p8M0Xf5cst97Zh4Bm1a9s2yW8Nu0TTNtY7xr67ozG2BAOm9z5rn+f9qqWnUx
-        bru6/gAGL8a3Q/whXHnCP0/awe2DLxdfBIyBbc62Sc895/ykPwX28P7iw8DIWOxrz/p8fCcnchQjnd89
-        76+xBY4rKM3OzuzXnri/eOYfBMYtxkfP3HZze2PNPgSM3/6wq6c7yMwiUAx7/1yk0Je5RaAUhxsYzuco
-        XfpHUtrRN7lFoBSEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmE
-        DgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmEDgmE
-        DgmEDgmEDgnH0KtqnVsESnHa0bvcIlCK044+zy0CpbDQl6EN4cp+eO8vAqVoJ5PbkMZ+eOgvAkWI8fUQ
-        eRrb1W/sl7uLh4Bx29uxZeaZH6dtmkXmQWC00o2i530+tsgRBqV48qzz49eNvJxirPbf7uT98TP7c+8L
-        gGGLcZuuyz3jv0+6lrEP3qcLd2Cwqmpl75hTzzYzIXwC/f4PvJgG9i4AAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -156,6 +141,26 @@
   <metadata name="Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lbSort.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALoAAAA+CAYAAACcLwE/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAJSSURBVHhe7d2hbtxAEIBhw8DAwMA8QmFhYGFgSd+ioA8Q
+        qVJfo1JZpKJIRYEF5ZUOhDQ6XU6J4t3ZeKezzlZV2r2q8Lzzj/SR2HHIb2tskmHXqOpBjvEsS7zIKX3N
+        SW40iQL7ojQ5t/kolxrja2v2sOb7f5PTeGoXWZutSvuPAHvDGs0p3lmvG3s4v6kZ755yR9jd8SmLbDTF
+        9kWBvRZv7Sl/pXp/VLN+PnPkSVZTDNK+ALAUsaw1Kx3H45r37ylPciJHT8r+XvN+mnknn9eV9i8ASzTF
+        eG9P93dz5PPXFXvxZCdHj+wlda0hnAzls0x5Y22dBCydrePJVpj3ZTe/5BMiemYby/chS7xuHQR6YY2n
+        EvpD6yDQk6H1Q6A3hA4XCB0uEDpcIHS4QOhwgdDhAqHDBUKHC4QOFwgdLhA6XCB0uEDocIHQ4QKhwwVC
+        hwuEDhcIHS4QOlwgdLhA6HCB0OECocMFQocLhA4XCB0uEDpcIHS4QOhwgdDhAqHDBUKHC4QOFwgdLhA6
+        XCB0uEDocIHQ4QKhw4XyD3VT6wDQkyEnuWkdAHpioacrTbF5EOiBbS3XtrqEt1lkbJ0A9CA/ysdBx/HY
+        it+0TgA6cKshvBrK5DSeW+x3jZOAxZpCEOv68xx5GVU9sF39W+tkYJmi5hR/WNuHNfOnscf7CV9g0AeL
+        XGStKb2seT8fO/jCYl9NceTlFIs0hVHmJ/muyH9NXWM+WPT1BZVPj1gAEVtVZGuRf/lrXfnXlDuifJax
+        4LfNCwN7wl44H8xFjvGs5vvHDMNPoli18OK5i4AAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="txtSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqQAAAA+CAYAAAD9JAmlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -172,8 +177,5 @@
         gKc1h2jXddPl5eWuaZpXOUMfS1F6mqL0Q1VV9/NLpmZmZmZmT7X5Q/rUmuepOV/k/AQAgGhF8QsMAgip
         K0oAeAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
 </root>

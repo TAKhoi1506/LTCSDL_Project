@@ -22,8 +22,25 @@ namespace BloodBankManagement
             this.AcceptButton = btLogin; // khi nhấn enter sẽ thực hiện login 
         }
 
+        private void SetupButton(Bunifu.UI.WinForms.BunifuButton.BunifuButton2 button)
+        {
+            button.onHoverState.BorderColor = Color.FromArgb(165, 110, 110);
+            button.onHoverState.FillColor = Color.FromArgb(165, 110, 110);
+            button.OnPressedState.BorderColor = Color.FromArgb(139, 58, 58);
+            button.OnPressedState.FillColor = Color.FromArgb(139, 58, 58);
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
+            // setup button
+            btRegister.OnIdleState.BorderColor = Color.FromArgb(96,5,5);
+            btRegister.OnIdleState.FillColor = Color.FromArgb(96, 5, 5);
+            SetupButton(btLogin);
+            btRegister.OnIdleState.BorderColor = Color.DimGray;
+            btRegister.OnIdleState.FillColor = Color.FromArgb(166,110,110);
+            SetupButton(btRegister);
+
+
             this.StartPosition = FormStartPosition.CenterScreen;
             btnHashPasswords.Visible = false;
             //băm plain text trong db
@@ -100,6 +117,18 @@ namespace BloodBankManagement
         {
             UserAccountBUS bus = new UserAccountBUS();
             bus.MigratePlainPasswordsToHashed();
+        }
+
+        private void lbForgotPassword_Click(object sender, EventArgs e)
+        {
+            FrmForgotPassword frm = new FrmForgotPassword();
+            this.Hide();
+            frm.Show(); 
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

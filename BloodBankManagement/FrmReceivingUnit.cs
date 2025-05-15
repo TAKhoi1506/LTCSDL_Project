@@ -22,6 +22,7 @@ namespace BloodBankManagement
 
         private void FrmReceivingUnit_Load(object sender, EventArgs e)
         {
+            LoadIcon();
             ShowUserControl(new UC_Home());
         }
 
@@ -63,11 +64,20 @@ namespace BloodBankManagement
         {
             UserSession.Clear();
 
-            this.Close();
+            this.Hide();
 
             // Mở lại form Login
             Login loginForm = new Login();
             loginForm.Show();
+        }
+
+        private void LoadIcon()
+        {
+            Icons.SetupButtonIcon(btHome, "home.jpg");
+            Icons.SetupButtonIcon(btInfor, "ru.jpg");
+            Icons.SetupButtonIcon(btViewRequire, "req.jpg");
+            Icons.SetupButtonIcon(btNoti, "noti.jpg");
+            Icons.SetupButtonIcon(btLogout, "logout.jpg");
         }
     }
 }

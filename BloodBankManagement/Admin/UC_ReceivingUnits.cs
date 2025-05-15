@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 using System.Text.RegularExpressions;
+using BloodBankManagement.Static;
 
 namespace BloodBankManagement
 {
@@ -24,6 +25,9 @@ namespace BloodBankManagement
         }
         private void UC_ReceivingUnits_Load(object sender, EventArgs e)
         {
+            Icons.SetupLeftIcon(btAddUnit, "\\Resources\\ru.jpg");
+            Icons.SetupButtonIcon(btAddUnit);
+            Icons.SetUpDgv(dgvReceivingUnits);
             LoadDataGrid();
             // Hiển thị tooltip cho ô nhập số điện thoại
             toolTip.SetToolTip(txtPhoneNo, "Please enter a phone number consisting of 10 or 11 digits, starting with the number 0.");

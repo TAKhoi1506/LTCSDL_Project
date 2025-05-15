@@ -97,6 +97,8 @@ namespace BloodBankManagement
 
         private void UC_PersonalInformation_Load(object sender, EventArgs e)
         {
+            Icons.SetupLeftIcon(btUpdate, "/Resources/update.jpg");
+            Icons.SetupButtonIcon(btUpdate);
             ShowDonorInfo();
         }
 

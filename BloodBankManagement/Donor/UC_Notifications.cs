@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BloodBankManagement.Static;
 using BUS;
 using DTO;
 
@@ -21,14 +22,15 @@ namespace BloodBankManagement.Donor
         public UC_Notifications()
         {
             InitializeComponent();
-           
+
         }
 
         private void UC_Notifications_Load(object sender, EventArgs e)
         {
+            Icons.SetupLeftIcon(btRefresh, "/Resources/refresh.jpg");   
+            Icons.SetupButtonIcon(btRefresh);
             SetUpControl();
             LoadNotifications();
-
         }
 
 
@@ -36,7 +38,7 @@ namespace BloodBankManagement.Donor
         private void SetUpControl()
         {
             //Thiết lập splitContainer 
-           
+
             splitContainer1.SplitterDistance = this.Width / 3;
 
 
@@ -53,7 +55,7 @@ namespace BloodBankManagement.Donor
             //Thiết lập RichTextBox cho nội dung tin nhắn
 
             MessageContent.ReadOnly = true;
-            
+
         }
 
 
@@ -73,7 +75,7 @@ namespace BloodBankManagement.Donor
             listViewMessage.Items.Clear();
             var notifications = notificationsBUS.GetNotificationsList(Static.UserSession.ObjectID);
 
-            foreach (var notification in notifications) 
+            foreach (var notification in notifications)
             {
                 ListViewItem item = new ListViewItem(notification.Title);
                 item.SubItems.Add(notification.CreatedAt.ToString("dd/MM/yyyy HH:mm"));
@@ -81,7 +83,7 @@ namespace BloodBankManagement.Donor
 
                 // Lưu ID của thông báo vào Tag dễ dàng truy xuất sau này
                 item.Tag = notification.NotifiID;
-                
+
 
 
                 //Hiển thị thông báo chưa đọc với font in đậm
@@ -99,7 +101,7 @@ namespace BloodBankManagement.Donor
         // Xử lý sự kiện khi người dùng chọn một thông báo
         private void ListViewMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listViewMessage.SelectedItems.Count > 0) 
+            if (listViewMessage.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = listViewMessage.SelectedItems[0];
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BloodBankManagement.Static;
 using Bunifu.UI.WinForms;
 using BUS;
 using DTO;
@@ -101,7 +102,9 @@ namespace BloodBankManagement
 
         private void UC_Events_Load(object sender, EventArgs e)
         {
-            
+            Icons.SetupLeftIcon(btAddEvent, "/Resources/event.jpg");
+            Icons.SetupButtonIcon(btAddEvent);
+            Icons.SetUpDgv(bunifuDataGridView1);
         }
 
         private void bunifuDataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)

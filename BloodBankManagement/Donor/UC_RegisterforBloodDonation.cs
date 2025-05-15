@@ -36,6 +36,9 @@ namespace BloodBankManagement
 
         private void UC_RegisterforBloodDonation_Load(object sender, EventArgs e)
         {
+            Icons.SetupLeftIcon(btSent, "/Resources/send.jpg");
+            Icons.SetupButtonIcon(btSent);
+
             if (UserSession.Role == "Donor" && !string.IsNullOrEmpty(UserSession.ObjectID))
             {
                 var donor = bus.GetDonorByID(UserSession.ObjectID);
