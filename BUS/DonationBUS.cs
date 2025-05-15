@@ -17,7 +17,7 @@ namespace BUS
             return dal.AddDonation(donation);
         }
 
-        public List<DonationDTO> GetAllDonations()
+        public List<DonationInfoDTO> GetAllDonations()
         {
             return dal.GetAllDonations();
         }

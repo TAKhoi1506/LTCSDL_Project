@@ -8,7 +8,7 @@ namespace DTO
 {
     public class DonationDTO
     {
-        public int DonationID { get; set; }
+        public int ID;
         public int DonorID { get; set; }
         public int EventID { get; set; }
     }

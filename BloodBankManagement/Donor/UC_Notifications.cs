@@ -81,10 +81,11 @@ namespace BloodBankManagement.Donor
 
                 // Lưu ID của thông báo vào Tag dễ dàng truy xuất sau này
                 item.Tag = notification.NotifiID;
+                
 
 
                 //Hiển thị thông báo chưa đọc với font in đậm
-                if(!notification.IsRead)
+                if (!notification.IsRead)
                 {
                     item.Font = new Font(listViewMessage.Font, FontStyle.Bold);
                 }
