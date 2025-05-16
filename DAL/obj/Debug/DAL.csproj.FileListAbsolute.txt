@@ -40,3 +40,17 @@ E:\OuCourses\DatabaseProgramming\BloodBank_Project\final\LTCSDL_Project\DAL\obj\
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\final\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\final\LTCSDL_Project\DAL\obj\Debug\DAL.dll
 E:\OuCourses\DatabaseProgramming\BloodBank_Project\final\LTCSDL_Project\DAL\obj\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\DAL.dll.config
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\DAL.pdb
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\DTO.dll
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.dll
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\DTO.pdb
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.xml
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\obj\Debug\DAL.dll
+D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DAL\obj\Debug\DAL.pdb

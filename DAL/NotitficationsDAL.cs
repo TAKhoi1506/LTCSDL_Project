@@ -61,7 +61,11 @@ namespace DAL
         //        return null;
         //    }
         //}
-        public List<DTO.NotificationsDTO> GetMessageByID(string objectID)
+
+
+
+        //Thông báo hiển thị bên trang admin
+        public List<NotificationsDTO> GetMessageByID(string objectID)
         {
             try
             {
@@ -83,6 +87,33 @@ namespace DAL
                 return null;
             }
         }
+
+
+
+        //Thông báo hiển thị bên trang donor/receiving unit
+        public NotificationsDTO GetAMessageByID(int notifiID)
+        {
+            try
+            {
+                return _myContext.Notifications
+                    .Where(n => n.NotifiID == notifiID)
+                    .Select(n => new NotificationsDTO
+                    {
+                        NotifiID = n.NotifiID,
+                        Title = n.Title,
+                        Message = n.Message,
+                        CreatedAt = n.CreateAt,
+                        IsRead = n.IsRead,
+                    }).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+
 
 
 

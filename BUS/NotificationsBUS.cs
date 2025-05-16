@@ -23,11 +23,21 @@ namespace BUS
 
 
 
-        //Hàm lấy nội dung thông báo dựa trên id
+        //Hàm lấy nội dung thông báo dựa trên objectID
         public List<NotificationsDTO> GetMessageById(string objectID)
         {
             return notifiDAL.GetMessageByID(objectID);
         }
+
+
+        //Hàm lấy nội dụng thông báo dựa trên notifiID
+        public NotificationsDTO GetNotifications(int notifiID)
+        {
+            return notifiDAL.GetAMessageByID(notifiID);
+        }
+
+
+
 
 
         //Hàm đánh dấu tin nhắn là đã đọc

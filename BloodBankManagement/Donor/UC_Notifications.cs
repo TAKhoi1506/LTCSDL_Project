@@ -108,7 +108,7 @@ namespace BloodBankManagement.Donor
                 string notifiID = selectedItem.Tag.ToString();
 
                 //Lấy nội dung đầy đủ của thông báo
-                DisplayNotificationContent();
+                DisplayNotificationContent(int.Parse(notifiID));
 
 
                 //Đánh dấu thông báo đã đọc
@@ -132,15 +132,14 @@ namespace BloodBankManagement.Donor
 
 
         //Hiển thị nội dung thông báo
-        private void DisplayNotificationContent()
+        private void DisplayNotificationContent(int notifiID)
         {
             // Lấy danh sách thông báo từ database
-            List<NotificationsDTO> notifications = notificationsBUS.GetMessageById(Static.UserSession.ObjectID);
+            var notification = notificationsBUS.GetNotifications(notifiID);
 
-            if (notifications != null && notifications.Count > 0)
+            if (notification != null)
             {
                 // Lấy thông báo đầu tiên (hoặc bạn có thể lấy thông báo khác theo ý muốn)
-                var notification = notifications[0];
 
                 MessageContent.Clear();
 
@@ -155,6 +154,7 @@ namespace BloodBankManagement.Donor
                 // Thêm nội dung thông báo
                 MessageContent.SelectionFont = new Font(MessageContent.Font.FontFamily, 10, FontStyle.Regular);
                 MessageContent.AppendText(notification.Message);
+
             }
             else
             {
@@ -174,6 +174,7 @@ namespace BloodBankManagement.Donor
         private void btRefresh_Click(object sender, EventArgs e)
         {
             RefreshNotifications();
+            MessageContent.Clear();
         }
     }
 }

@@ -154,6 +154,12 @@
     <Compile Include="Admin\UC_DashBoard2.Designer.cs">
       <DependentUpon>UC_DashBoard2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UC_SendEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_SendEmail.Designer.cs">
+      <DependentUpon>UC_SendEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Donor\UC_Notifications.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_DashBoard2.resx">
       <DependentUpon>UC_DashBoard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_SendEmail.resx">
+      <DependentUpon>UC_SendEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Donor\UC_Notifications.resx">
       <DependentUpon>UC_Notifications.cs</DependentUpon>

@@ -179,6 +179,14 @@ namespace BloodBankManagement
             ShowUserControl(new UC_BloodRequirements());
         }
 
+
+        private void btSendMessage_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UC_SendEmail());
+        }
+
+
+
         private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -208,7 +216,10 @@ namespace BloodBankManagement
             Icons.SetupButtonIcon(btDashboard, "dashboard.jpg");
             Icons.SetupButtonIcon(btRequirements, "req.jpg");
             Icons.SetupButtonIcon(btLogout, "logout.jpg");
+            Icons.SetupButtonIcon(btSendMessage, "send.jpg");
         }
+
+       
     }
 }
 
