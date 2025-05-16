@@ -18,7 +18,7 @@ namespace BUS
         private MyContext db = new MyContext();
 
         public bool AddDonor(DonorDTO donor)
-        {   
+        {
             return donorDAL.AddDonor(donor);
         }
 
@@ -83,7 +83,7 @@ namespace BUS
         //Update bởi admin
         public bool UpdateByAdmin(DonorDTO donor)
         {
-            if (donor == null ||  donor.DonorID <= 0)
+            if (donor == null || donor.DonorID <= 0)
             {
                 return false;
             }
@@ -91,12 +91,25 @@ namespace BUS
         }
 
         //Update bởi donors
-        public bool UpdateByDonor(DonorDTO donor)
+        public bool UpdateByDonor(DonorDTO donor, string newPassword)
         {
-            if (donor == null )
-            {
+            UserAccountDAL accountDAL = new UserAccountDAL();
+            var existingAccount = accountDAL.GetUserByUsername(donor.Username);
+
+            bool isCurrentPasswordValid = BCrypt.Net.BCrypt.Verify(donor.Password, existingAccount.Password);
+            if (!isCurrentPasswordValid)
                 return false;
+
+            if (!string.IsNullOrWhiteSpace(newPassword))
+            {
+                donor.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
             }
+            else
+            {
+                // Không thay đổi mật khẩu => dùng lại mật khẩu đã hash trong DB
+                donor.Password = existingAccount.Password;
+            }
+
             return donorDAL.UpdateDonorByDonor(donor);
         }
 

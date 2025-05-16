@@ -28,14 +28,25 @@ namespace BUS
         }
 
         // RU đăng nhập 
-        public bool Update(ReceivingUnitDTO dto)
+        public bool Update(ReceivingUnitDTO dto, string newPassword)
         {
             UserAccountDAL accountDAL = new UserAccountDAL();
             var existingAccount = accountDAL.GetUserByUsername(dto.Username);
-            if (existingAccount != null && !BCrypt.Net.BCrypt.Verify(dto.Password, existingAccount.Password))
+
+            bool isCurrentPasswordValid = BCrypt.Net.BCrypt.Verify(dto.Password, existingAccount.Password);
+            if (!isCurrentPasswordValid)
+                return false;
+
+            if (!string.IsNullOrWhiteSpace(newPassword))
             {
-                dto.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+                dto.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
             }
+            else
+            {
+                // Không thay đổi mật khẩu => dùng lại mật khẩu đã hash trong DB
+                dto.Password = existingAccount.Password;
+            }
+
             return dal.UpdateReceivingUnit(dto);
         }
 

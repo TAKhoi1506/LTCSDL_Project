@@ -106,3 +106,30 @@ D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.CoreCompi
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.Up2Date
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\BUS\obj\Debug\BUS.dll
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\BUS\obj\Debug\BUS.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\BUS.dll.config
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\BUS.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\BUS.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\BCrypt.Net-Next.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\DAL.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\EntityFramework.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\EntityFramework.SqlServer.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Buffers.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Memory.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Numerics.Vectors.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\DAL.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\DAL.dll.config
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\BCrypt.Net-Next.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\EntityFramework.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\EntityFramework.SqlServer.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Buffers.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Memory.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Numerics.Vectors.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\obj\Debug\BUS.csproj.Up2Date
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\obj\Debug\BUS.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\BUS\obj\Debug\BUS.pdb

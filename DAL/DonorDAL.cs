@@ -186,6 +186,8 @@ namespace DAL
                 donor.LastDonationDate = donorDTO.LastDonationDate;
                 donor.Address = donorDTO.Address;
 
+
+
                 // Tìm tài khoản người dùng liên quan trong bảng UserAccounts (theo ObjectID là donorID)
                 var userAccount = _myContext.UserAccounts.FirstOrDefault(u => u.ObjectID == donorDTO.DonorID.ToString() && u.Role == "Donor");
 

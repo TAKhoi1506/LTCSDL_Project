@@ -13,7 +13,7 @@ using DTO;
 
 namespace BloodBankManagement
 {
-    public partial class UC_UnitInformation: UserControl
+    public partial class UC_UnitInformation : UserControl
     {
         public UC_UnitInformation()
         {
@@ -43,7 +43,6 @@ namespace BloodBankManagement
             if (ruObj is ReceivingUnitDTO ruDto && account != null)
             {
                 txtUsername.Text = account.Username;
-                txtPassword.Text = account.Password;
 
                 txtUnitId.Text = ruDto.RU_ID;
                 txtUnitId.ForeColor = Color.Silver;
@@ -75,21 +74,40 @@ namespace BloodBankManagement
             }
         }
 
+        private void SetToolTip()
+        {
+            ToolTip toolTip = new ToolTip();
+
+            // Đặt thuộc tính cho ToolTip (tùy chọn)
+            toolTip.AutoPopDelay = 2000; // Thời gian hiển thị (ms)
+            toolTip.InitialDelay = 500;  // Thời gian chờ trước khi hiển thị
+            toolTip.ReshowDelay = 500;   // Thời gian chờ giữa các lần hiển thị
+            toolTip.ShowAlways = true;   // Hiển thị cả khi form không active
+
+            // Gán ToolTip cho TextBox
+            toolTip.SetToolTip(txtUsername, "Username cannot be changed");
+        }
+
 
         private void UC_UnitInformation_Load(object sender, EventArgs e)
         {
             Icons.SetupLeftIcon(btUpdate, "/Resources/update.jpg");
             Icons.SetupButtonIcon(btUpdate);
             LoadReceivingUnit();
+            SetToolTip();
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
+            string currentPassword = txtPassword.Text.Trim();
+            string newPassword = txtNewPassword.Text.Trim();
+
+            
             // Lấy dữ liệu từ các control trên form
             ReceivingUnitDTO updatedUnit = new ReceivingUnitDTO
             {
-                Username = txtUsername.Text.Trim(),
-                Password = txtPassword.Text.Trim(),
+                Username = txtUsername.Text,
+                Password = txtPassword.Text, // current password 
                 RU_ID = txtUnitId.Text.Trim(),
                 UnitName = txtUnitName.Text.Trim(),
                 Address = txtAddress.Text.Trim(),
@@ -99,17 +117,10 @@ namespace BloodBankManagement
                 UnitType = cbUnitType.SelectedItem?.ToString() ?? ""
             };
 
-
-            if (string.IsNullOrWhiteSpace(updatedUnit.Username) || string.IsNullOrWhiteSpace(updatedUnit.Password))
-            {
-                MessageBox.Show("Username and Password are required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
             // Gọi lớp BUS để cập nhật
             ReceivingUnitBUS bus = new ReceivingUnitBUS();
-            bool success = bus.Update(updatedUnit);
+
+            bool success = bus.Update(updatedUnit, newPassword);
 
             if (success)
             {
@@ -141,7 +152,7 @@ namespace BloodBankManagement
 
         private void toggleShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            txtPassword.PasswordChar = toggleShowPassword.Checked ? '\0' : '*';
+            txtNewPassword.PasswordChar = toggleShowPassword.Checked ? '\0' : '*';
         }
     }
 }

@@ -27,8 +27,6 @@ namespace BloodBankManagement.Admin
         }
 
 
-
-
         private void SetUpControl()
         {
             //Thiết lập splitContainer 
@@ -96,7 +94,8 @@ namespace BloodBankManagement.Admin
 
         private void UC_SendEmail_Load(object sender, EventArgs e)
         {
-            
+            Icons.SetupButtonIcon(btSend);
+            Icons.SetupLeftIcon(btSend, "/Resources/send.jpg");
             Icons.SetupLeftIcon(btRefresh, "/Resources/refresh.jpg");
             Icons.SetupButtonIcon(btRefresh);
             SetUpControl();

@@ -67,8 +67,7 @@ namespace BloodBankManagement
             if (donorObj is DonorDTO donorDto && account != null)
             {
                 txtUsername.Text = account.Username;
-                txtPassword.UseSystemPasswordChar = true;
-                txtPassword.Text = account.Password;
+                
 
                 txtFullName.Text = donorDto.FullName;
                 txtFullName.SelectionStart = 0;
@@ -100,14 +99,39 @@ namespace BloodBankManagement
             Icons.SetupLeftIcon(btUpdate, "/Resources/update.jpg");
             Icons.SetupButtonIcon(btUpdate);
             ShowDonorInfo();
+            SetToolTip();
+        }
+
+        private void SetToolTip()
+        {
+            ToolTip toolTip = new ToolTip();
+
+            // Đặt thuộc tính cho ToolTip (tùy chọn)
+            toolTip.AutoPopDelay = 2000; // Thời gian hiển thị (ms)
+            toolTip.InitialDelay = 500;  // Thời gian chờ trước khi hiển thị
+            toolTip.ReshowDelay = 500;   // Thời gian chờ giữa các lần hiển thị
+            toolTip.ShowAlways = true;   // Hiển thị cả khi form không active
+
+            // Gán ToolTip cho TextBox
+            toolTip.SetToolTip(txtUsername, "Username cannot be changed");
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
+            string currentPassword = txtCurrentPassword.Text.Trim();
+            string newPassword = txtNewPassword.Text.Trim();
+
+            //if (string.IsNullOrWhiteSpace(currentPassword) && !string.IsNullOrWhiteSpace(newPassword))
+            //{
+            //    MessageBox.Show("You must enter your current password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+
             DonorDTO updateDonor = new DonorDTO
             {
                 Username = txtUsername.Text.Trim(),
-                Password = txtPassword.Text.Trim(),
+                Password = txtCurrentPassword.Text.Trim(),
                 FullName = txtFullName.Text.Trim(),
                 DateOfBirth = dpDateOfBirth.Value,
                 Gender = cbGender.SelectedItem.ToString(),
@@ -117,17 +141,10 @@ namespace BloodBankManagement
                 LastDonationDate = dpLastDonationDate.Value
             };
 
-
-            if (string.IsNullOrWhiteSpace(updateDonor.Username) || string.IsNullOrWhiteSpace(updateDonor.Password))
-            {
-                MessageBox.Show("Username and Password are required.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
             // Gọi lớp BUS để cập nhật
             DonorBUS bus = new DonorBUS();
-            bool success = bus.UpdateByDonor(updateDonor);
+
+            bool success = bus.UpdateByDonor(updateDonor, newPassword);
 
             if (success)
             {

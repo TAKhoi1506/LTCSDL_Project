@@ -44,8 +44,8 @@ namespace BloodBankManagement
             this.StartPosition = FormStartPosition.CenterScreen;
             btnHashPasswords.Visible = false;
             //băm plain text trong db
-            //btnHashPasswords.Visible = true; // ẩn nút băm mật khẩu
-            //userBus.MigratePlainPasswordsToHashed();
+            btnHashPasswords.Visible = true; // ẩn nút băm mật khẩu
+            userBus.MigratePlainPasswordsToHashed();
         }
 
         private void btLogin_Click(object sender, EventArgs e)
