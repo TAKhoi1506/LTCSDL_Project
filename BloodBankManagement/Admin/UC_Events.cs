@@ -144,5 +144,37 @@ namespace BloodBankManagement
                 MessageBox.Show("Not found!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btAddEvent_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtEventName.Text) || string.IsNullOrEmpty(txtDescription.Text)||
+                string.IsNullOrEmpty(txtLocation.Text) || string.IsNullOrEmpty(cbStatus.Text) ||
+                numericAmount.Value <= 0)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin","Cảnh báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }    
+
+            EventDTO newEvent = new EventDTO
+            {
+                EventName = txtEventName.Text,
+                Description = txtDescription.Text,
+                Location = txtDescription.Text,
+                EventDate = dpEventDate.Value,
+                Status = cbStatus.Text,
+                AmountOfBlood = (int)numericAmount.Value
+            };
+
+            if (eventBUS.AddEvent(newEvent))
+            {
+                MessageBox.Show("Event added successfully!");
+                LoadEvents();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add event.");
+                return;
+            }
+        }
     }
 }

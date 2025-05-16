@@ -11,8 +11,11 @@ BEGIN
         -- Chỉ xử lý các bản ghi có Status mới là 'Approved'
         DECLARE @Approved TABLE (ID INT);
         INSERT INTO @Approved(ID)
-        SELECT ID FROM inserted WHERE Status = 'Approved';
-
+        SELECT DISTINCT d.RequirementID
+        FROM inserted i
+        JOIN BloodRequirementDetail d ON i.ID = d.RequirementID
+        JOIN BloodStock bs ON bs.BloodType = d.BloodType
+        WHERE i.Status = 'Approved' AND bs.Amount >= d.Amount;
         -- 1. Chèn vào BloodSupplyDetail
         INSERT INTO BloodSupplyDetail (RequirementDetailID, BloodDetailID, Amount)
         SELECT 
@@ -45,3 +48,7 @@ BEGIN
         JOIN @Approved i ON d.RequirementID = i.ID;
         END
 END
+
+
+
+DROP TRIGGER trg_BR_Approved
