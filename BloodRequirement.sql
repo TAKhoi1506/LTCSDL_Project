@@ -1,4 +1,3 @@
-﻿
 ﻿CREATE TRIGGER trg_BR_Approved
 ON BloodRequirement
 AFTER UPDATE

@@ -174,7 +174,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="txtLocation.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDescription.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAiAAAABICAYAAADPsU4CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAANqSURBVHhe7dw/a1tXGMBhjR4zdsyYj9CxY8eOGbP0W3To
@@ -244,7 +244,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtLocation.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAiAAAABICAYAAADPsU4CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAANqSURBVHhe7dw/a1tXGMBhjR4zdsyYj9CxY8eOGbP0W3To
@@ -276,5 +276,23 @@
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Arial'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="btSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAR4AAABUCAYAAABUfVhoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAALBSURBVHhe7dmhjhVJFIDhlkjkSiSPgESuRCIxvAWCByAh
+        2dfYBEeyigSFRKwnGTEGMhkmELqrilu11ZfekIEaAsy9R30n+cxUT1/3p6p6umpaazdqSvdrTs9rKa9r
+        ye9ayQ1gZG3EvhWf84uW0oPekJtbTn5uapn/7C856y5aHv8IwFBvRi3pQ+/Hed+8PNyycvWsheq1elZz
+        Pm8ljV8K8NPS+74LetXaxz+2zFyefXRKPtmlJY9fAPA70noMO2nzfGvLzddZdzqiAxzLev+z5ebL7O90
+        9ser8T8AXNcupY999/N4H53916uSz9zpAMdWSzpry3J7Wj97rTfQo4cADmmXltKPXE/Xu50XPpkDUfoJ
+        681UczodLQIcQ29OWcPzabQIcCzT6I8AxyQ8QDjhAcIJDxBOeIBwwgOEEx4gnPAA4YQHCCc8QDjhAcIJ
+        DxBOeIBwwgOEEx4gnPAA4YQHCCc8QDjhAcIJDxBOeIBwwgOEEx4gnPAA4YQHCCc8QDjhAcIJDxBOeIBw
+        wgOEEx4gnPAA4YQHCCc8QDjhAcIJDxBOeIBwwgOEEx4gnPAA4YQHCCc8QDjhAcIJDxBOeIBwwgOEEx4g
+        nPAA4YQHCCc8QDjhAcIJDxBOeIBwwgOEEx4gnPAA4YQHCCc8QDjhAcIJDxBOeIBwwgOEm2pOZbQAcCxT
+        LfndaAHgWHp4yqtW0nAR4ND6Keu0H7WWRzXnefQAwKHVz/nvqc3zrV6g89EDAAf2vi3LvWmdWuYnPT4f
+        Bg8BHMRuWXLvzD/76KzTWrtRS/l39DDA9aVWS3rbW3Nzy86X6duf275wAYfXo5PzWSvl7paby9MX7/T4
+        nOzS7LIZuLbdMuf9Tueq6Pw/27Hrrx6h7cLZp3bgF+Xcj1b5okfn5XfHqx/NWqj1s1cP0MXwxQADNadP
+        3fOa0v0tJ9/MNP0HVZp247AnnBkAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

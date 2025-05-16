@@ -22,3 +22,9 @@ D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyR
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DTO\obj\Debug\DTO.dll
 D:\OU\HK8\LTCSDL\Final Project\LTCSDL_Project\DTO\obj\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\bin\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\bin\Debug\DTO.pdb
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\obj\Debug\DTO.dll
+E:\OuCourses\DatabaseProgramming\BloodBank_Project\1605\LTCSDL_Project\DTO\obj\Debug\DTO.pdb

@@ -85,8 +85,9 @@ namespace DAL
         public List<EventDTO> SearchEvent(string search)
         {
             // Truy vấn các event có EventName bằng với chuỗi tìm kiếm
+            var lowerSearch = search.ToLower();
             var events = db.Events
-                                 .Where(e => e.EventName == search)
+                                 .Where(e => e.EventName.ToLower().Contains(lowerSearch))
                                  .Select(e => new EventDTO
                                  {
                                      EventID = e.EventID,

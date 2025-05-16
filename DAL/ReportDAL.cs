@@ -143,7 +143,7 @@ namespace DAL
         {
             using (var context = new MyContext())
             {
-                // Tổng lượng máu đã cung cấp (chỉ đếm các yêu cầu đã hoàn thành)
+                // Tổng lượng máu đã cung cấp (chỉ đếm các yêu cầu đã hoàn thành hoặc được chấp nhậ)
                 var distributed = context.BloodRequirements
                                      .Where(x => x.Status == "Completed" || x.Status == "Approved")
                                      .Join(context.BloodRequirementDetails,

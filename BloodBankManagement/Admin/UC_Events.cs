@@ -90,7 +90,7 @@ namespace BloodBankManagement
             {
                 LoadEvents(); // Nếu không có gì để tìm kiếm, load lại tất cả sự kiện
             }
-            
+
         }
 
         private void cbSort_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,13 +109,75 @@ namespace BloodBankManagement
 
         private void bunifuDataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
-            if(bunifuDataGridView1.IsCurrentCellDirty)
+            if (bunifuDataGridView1.IsCurrentCellDirty)
             {
                 bunifuDataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
 
         private void txtSearch_Click(object sender, EventArgs e)
+        {
+            bunifuDataGridView1.Rows.Clear();
+            string search = txtSearch.Text.Trim();
+            if (string.IsNullOrEmpty(search))
+            {
+                MessageBox.Show("Please enter Event Name to search!");
+                return;
+            }
+            var events = eventBUS.SearchEvent(search);
+            if (events != null && events.Count > 0)
+            {
+                foreach (var eve in events)
+                {
+                    bunifuDataGridView1.Rows.Add(
+                        eve.EventID,
+                        eve.EventName,
+                        eve.Description,
+                        eve.Location,
+                        eve.EventDate.ToString("dd/MM/yyyy"),
+                        eve.Status
+                    );
+                }
+            }
+            else
+            {
+                MessageBox.Show("Not found!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btAddEvent_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEventName.Text) || string.IsNullOrEmpty(txtDescription.Text) ||
+                string.IsNullOrEmpty(txtDescription.Text) || string.IsNullOrEmpty(cbStatus.Text) ||
+                numericAmount.Value <= 0)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            EventDTO newEvent = new EventDTO
+            {
+                EventName = txtEventName.Text,
+                Description = txtDescription.Text,
+                Location = txtDescription.Text,
+                EventDate = dpEventDate.Value,
+                Status = cbStatus.Text,
+                AmountOfBlood = (int)numericAmount.Value
+            };
+
+            if (eventBUS.AddEvent(newEvent))
+            {
+                MessageBox.Show("Event added successfully!");
+                LoadEvents();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add event.");
+                return;
+            }
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
         {
             bunifuDataGridView1.Rows.Clear();
             string search = txtSearch.Text.Trim();

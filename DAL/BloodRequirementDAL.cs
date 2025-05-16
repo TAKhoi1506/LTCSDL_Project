@@ -176,16 +176,36 @@ namespace DAL
             {
                 // Tìm yêu cầu theo ID
                 var requirement = db.BloodRequirements.FirstOrDefault(r => r.ID == requirementId);
-                if (requirement == null) return false; // Nếu không tìm thấy, trả về false
+                if (requirement == null) return false;
 
-                // Cập nhật trạng thái mới
+                // Nếu trạng thái mới là "Approved", kiểm tra tồn kho
+                if (newStatus == "Approved")
+                {
+                    // Lấy danh sách chi tiết yêu cầu máu của yêu cầu này
+                    var details = db.BloodRequirementDetails
+                                    .Where(d => d.RequirementID == requirementId)
+                                    .ToList();
+
+                    // Kiểm tra từng loại máu trong chi tiết
+                    foreach (var detail in details)
+                    {
+                        // Tìm BloodStock theo BloodType
+                        var stock = db.BloodStocks.FirstOrDefault(bs => bs.BloodType == detail.BloodType);
+                        if (stock == null || stock.Amount < detail.Amount)
+                        {
+                            // Không đủ máu => không được cập nhật trạng thái
+                            return false;
+                        }
+                    }
+                }
+
+                // Nếu đủ máu hoặc trạng thái không phải "Approved" => cập nhật
                 requirement.Status = newStatus;
-                db.SaveChanges(); // Lưu thay đổi
+                db.SaveChanges();
                 return true;
             }
             catch
             {
-                // Nếu có lỗi xảy ra, trả về false
                 return false;
             }
         }
