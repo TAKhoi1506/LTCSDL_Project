@@ -21,8 +21,6 @@ namespace BloodBankManagement.Admin
             InitializeComponent();
         }
 
-
-
         private DonorBUS donorBUS = new DonorBUS();
 
         private void btAddDonor_Click(object sender, EventArgs e)
@@ -86,6 +84,8 @@ namespace BloodBankManagement.Admin
             Icons.SetupButtonIcon(btAddDonor);
             Icons.SetupButtonIcon(btEdit);
             Icons.SetUpDgv(dgvDonors);
+            Icons.SetupLeftIcon(btnDelete, "\\Resources\\delete.jpg");
+            Icons.SetupLeftIcon(btSave, "\\Resources\\save.jpg");   
             LoadDonors();
         }
 

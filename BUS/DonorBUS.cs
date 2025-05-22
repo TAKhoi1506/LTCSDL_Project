@@ -96,20 +96,14 @@ namespace BUS
             UserAccountDAL accountDAL = new UserAccountDAL();
             var existingAccount = accountDAL.GetUserByUsername(donor.Username);
 
-            bool isCurrentPasswordValid = BCrypt.Net.BCrypt.Verify(donor.Password, existingAccount.Password);
-            if (!isCurrentPasswordValid)
-                return false;
-
-            if (!string.IsNullOrWhiteSpace(newPassword))
+            if (string.IsNullOrEmpty(donor.Password))
             {
-                donor.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                donor.Password = existingAccount.Password;
             }
             else
             {
-                // Không thay đổi mật khẩu => dùng lại mật khẩu đã hash trong DB
-                donor.Password = existingAccount.Password;
+                donor.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
             }
-
             return donorDAL.UpdateDonorByDonor(donor);
         }
 

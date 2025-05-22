@@ -42,6 +42,12 @@ namespace BloodBankManagement
         private void FrmSplash_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            bunifuPictureBox2.BorderRadius = 121;
+        }
+
+        private void bunifuPictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

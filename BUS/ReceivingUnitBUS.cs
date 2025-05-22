@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DAL.Domain;
 using DTO;
 
 namespace BUS
@@ -33,18 +34,13 @@ namespace BUS
             UserAccountDAL accountDAL = new UserAccountDAL();
             var existingAccount = accountDAL.GetUserByUsername(dto.Username);
 
-            bool isCurrentPasswordValid = BCrypt.Net.BCrypt.Verify(dto.Password, existingAccount.Password);
-            if (!isCurrentPasswordValid)
-                return false;
-
-            if (!string.IsNullOrWhiteSpace(newPassword))
+            if (string.IsNullOrEmpty(dto.Password))
             {
-                dto.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                dto.Password = existingAccount.Password;
             }
             else
             {
-                // Không thay đổi mật khẩu => dùng lại mật khẩu đã hash trong DB
-                dto.Password = existingAccount.Password;
+                dto.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
             }
 
             return dal.UpdateReceivingUnit(dto);

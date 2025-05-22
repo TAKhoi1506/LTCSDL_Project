@@ -130,6 +130,7 @@ namespace BloodBankManagement
 
             DonorDTO updateDonor = new DonorDTO
             {
+                DonorID = int.Parse(UserSession.ObjectID),
                 Username = txtUsername.Text.Trim(),
                 Password = txtCurrentPassword.Text.Trim(),
                 FullName = txtFullName.Text.Trim(),
@@ -140,6 +141,7 @@ namespace BloodBankManagement
                 Email = txtEmail.Text.Trim(),
                 LastDonationDate = dpLastDonationDate.Value
             };
+
 
             // Gọi lớp BUS để cập nhật
             DonorBUS bus = new DonorBUS();

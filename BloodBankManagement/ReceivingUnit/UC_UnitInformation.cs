@@ -108,7 +108,7 @@ namespace BloodBankManagement
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text, // current password 
-                RU_ID = txtUnitId.Text.Trim(),
+                RU_ID = UserSession.ObjectID,
                 UnitName = txtUnitName.Text.Trim(),
                 Address = txtAddress.Text.Trim(),
                 ContactName = txtContactName.Text.Trim(),

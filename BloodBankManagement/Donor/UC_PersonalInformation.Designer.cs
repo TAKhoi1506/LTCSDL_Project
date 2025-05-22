@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_PersonalInformation));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -54,12 +58,11 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.btUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.toggleShowPassword = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
+            this.txtNewPassword = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pbAvatar = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.txtAddress = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -81,9 +84,6 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txtNewPassword = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.toggleShowPassword = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
@@ -219,6 +219,120 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1348, 864);
             this.bunifuPanel1.TabIndex = 78;
+            // 
+            // toggleShowPassword
+            // 
+            this.toggleShowPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.toggleShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.toggleShowPassword.Checked = false;
+            this.toggleShowPassword.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.toggleShowPassword.CheckedSwitchColor = System.Drawing.Color.White;
+            this.toggleShowPassword.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.toggleShowPassword.Location = new System.Drawing.Point(1227, 220);
+            this.toggleShowPassword.Name = "toggleShowPassword";
+            this.toggleShowPassword.OutlineThickness = 2;
+            this.toggleShowPassword.Size = new System.Drawing.Size(99, 59);
+            this.toggleShowPassword.TabIndex = 97;
+            this.toggleShowPassword.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.toggleShowPassword.UncheckedSwitchColor = System.Drawing.Color.White;
+            this.toggleShowPassword.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.AcceptsReturn = false;
+            this.txtNewPassword.AcceptsTab = false;
+            this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNewPassword.AnimationSpeed = 200;
+            this.txtNewPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtNewPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtNewPassword.AutoSizeHeight = true;
+            this.txtNewPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtNewPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNewPassword.BackgroundImage")));
+            this.txtNewPassword.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtNewPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtNewPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtNewPassword.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtNewPassword.BorderRadius = 20;
+            this.txtNewPassword.BorderThickness = 1;
+            this.txtNewPassword.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtNewPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPassword.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNewPassword.DefaultText = "";
+            this.txtNewPassword.FillColor = System.Drawing.Color.White;
+            this.txtNewPassword.HideSelection = true;
+            this.txtNewPassword.IconLeft = null;
+            this.txtNewPassword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPassword.IconPadding = 10;
+            this.txtNewPassword.IconRight = null;
+            this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPassword.Lines = new string[0];
+            this.txtNewPassword.Location = new System.Drawing.Point(617, 210);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNewPassword.MaxLength = 32767;
+            this.txtNewPassword.MinimumSize = new System.Drawing.Size(3, 3);
+            this.txtNewPassword.Modified = false;
+            this.txtNewPassword.Multiline = false;
+            this.txtNewPassword.Name = "txtNewPassword";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNewPassword.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNewPassword.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNewPassword.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNewPassword.OnIdleState = stateProperties4;
+            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(6);
+            this.txtNewPassword.PasswordChar = '*';
+            this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtNewPassword.PlaceholderText = "";
+            this.txtNewPassword.ReadOnly = false;
+            this.txtNewPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNewPassword.SelectedText = "";
+            this.txtNewPassword.SelectionLength = 0;
+            this.txtNewPassword.SelectionStart = 0;
+            this.txtNewPassword.ShortcutsEnabled = true;
+            this.txtNewPassword.Size = new System.Drawing.Size(596, 69);
+            this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtNewPassword.TabIndex = 87;
+            this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNewPassword.TextMarginBottom = 0;
+            this.txtNewPassword.TextMarginLeft = 3;
+            this.txtNewPassword.TextMarginTop = 1;
+            this.txtNewPassword.TextPlaceholder = "";
+            this.txtNewPassword.UseSystemPasswordChar = false;
+            this.txtNewPassword.WordWrap = true;
+            // 
+            // bunifuLabel10
+            // 
+            this.bunifuLabel10.AllowParentOverrides = false;
+            this.bunifuLabel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuLabel10.AutoEllipsis = false;
+            this.bunifuLabel10.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.bunifuLabel10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel10.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.bunifuLabel10.Location = new System.Drawing.Point(296, 223);
+            this.bunifuLabel10.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuLabel10.Name = "bunifuLabel10";
+            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel10.Size = new System.Drawing.Size(258, 43);
+            this.bunifuLabel10.TabIndex = 86;
+            this.bunifuLabel10.Text = "New password:";
+            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pbAvatar
             // 
@@ -501,7 +615,7 @@
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPhoneNumber.PlaceholderText = "";
-            this.txtPhoneNumber.ReadOnly = true;
+            this.txtPhoneNumber.ReadOnly = false;
             this.txtPhoneNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.SelectionLength = 0;
@@ -598,7 +712,7 @@
             this.txtCurrentPassword.PasswordChar = '\0';
             this.txtCurrentPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCurrentPassword.PlaceholderText = "";
-            this.txtCurrentPassword.ReadOnly = true;
+            this.txtCurrentPassword.ReadOnly = false;
             this.txtCurrentPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCurrentPassword.SelectedText = "";
             this.txtCurrentPassword.SelectionLength = 0;
@@ -936,9 +1050,9 @@
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(297, 43);
+            this.bunifuLabel4.Size = new System.Drawing.Size(310, 43);
             this.bunifuLabel4.TabIndex = 62;
-            this.bunifuLabel4.Text = "Curent password:";
+            this.bunifuLabel4.Text = "Current password:";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -978,120 +1092,6 @@
             this.bunifuLabel19.Text = "Personal Information";
             this.bunifuLabel19.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel19.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // txtNewPassword
-            // 
-            this.txtNewPassword.AcceptsReturn = false;
-            this.txtNewPassword.AcceptsTab = false;
-            this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNewPassword.AnimationSpeed = 200;
-            this.txtNewPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtNewPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtNewPassword.AutoSizeHeight = true;
-            this.txtNewPassword.BackColor = System.Drawing.Color.Transparent;
-            this.txtNewPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNewPassword.BackgroundImage")));
-            this.txtNewPassword.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtNewPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtNewPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtNewPassword.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtNewPassword.BorderRadius = 20;
-            this.txtNewPassword.BorderThickness = 1;
-            this.txtNewPassword.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtNewPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPassword.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNewPassword.DefaultText = "";
-            this.txtNewPassword.FillColor = System.Drawing.Color.White;
-            this.txtNewPassword.HideSelection = true;
-            this.txtNewPassword.IconLeft = null;
-            this.txtNewPassword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPassword.IconPadding = 10;
-            this.txtNewPassword.IconRight = null;
-            this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPassword.Lines = new string[0];
-            this.txtNewPassword.Location = new System.Drawing.Point(617, 210);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNewPassword.MaxLength = 32767;
-            this.txtNewPassword.MinimumSize = new System.Drawing.Size(3, 3);
-            this.txtNewPassword.Modified = false;
-            this.txtNewPassword.Multiline = false;
-            this.txtNewPassword.Name = "txtNewPassword";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNewPassword.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNewPassword.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNewPassword.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNewPassword.OnIdleState = stateProperties4;
-            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(6);
-            this.txtNewPassword.PasswordChar = '\0';
-            this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewPassword.PlaceholderText = "";
-            this.txtNewPassword.ReadOnly = true;
-            this.txtNewPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.SelectionLength = 0;
-            this.txtNewPassword.SelectionStart = 0;
-            this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(596, 69);
-            this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewPassword.TabIndex = 87;
-            this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNewPassword.TextMarginBottom = 0;
-            this.txtNewPassword.TextMarginLeft = 3;
-            this.txtNewPassword.TextMarginTop = 1;
-            this.txtNewPassword.TextPlaceholder = "";
-            this.txtNewPassword.UseSystemPasswordChar = false;
-            this.txtNewPassword.WordWrap = true;
-            // 
-            // bunifuLabel10
-            // 
-            this.bunifuLabel10.AllowParentOverrides = false;
-            this.bunifuLabel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bunifuLabel10.AutoEllipsis = false;
-            this.bunifuLabel10.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.bunifuLabel10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel10.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.bunifuLabel10.Location = new System.Drawing.Point(296, 223);
-            this.bunifuLabel10.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuLabel10.Name = "bunifuLabel10";
-            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(258, 43);
-            this.bunifuLabel10.TabIndex = 86;
-            this.bunifuLabel10.Text = "New password:";
-            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // toggleShowPassword
-            // 
-            this.toggleShowPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.toggleShowPassword.BackColor = System.Drawing.Color.Transparent;
-            this.toggleShowPassword.Checked = false;
-            this.toggleShowPassword.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.toggleShowPassword.CheckedSwitchColor = System.Drawing.Color.White;
-            this.toggleShowPassword.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.toggleShowPassword.Location = new System.Drawing.Point(1227, 220);
-            this.toggleShowPassword.Name = "toggleShowPassword";
-            this.toggleShowPassword.OutlineThickness = 2;
-            this.toggleShowPassword.Size = new System.Drawing.Size(99, 59);
-            this.toggleShowPassword.TabIndex = 97;
-            this.toggleShowPassword.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.toggleShowPassword.UncheckedSwitchColor = System.Drawing.Color.White;
-            this.toggleShowPassword.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             // 
             // UC_PersonalInformation
             // 
